@@ -1,4 +1,4 @@
-namespace mathematics {
+namespace mathematics.test {
   /**
    * Retorna la suma de los dos operadores
    * @param a Primer sumando
@@ -7,6 +7,10 @@ namespace mathematics {
   export function sum(a: number, b: number): number {
     return a + b; // Suma de los operadores
   }
+
+  export function mu(a: number, b: number): number {
+    return a + b; // Multiplicación de los operadores
+  }
 }
 
-const result = mathematics.sum(1, 2);
+const asd = mathematics.test.sum + 'asd';
