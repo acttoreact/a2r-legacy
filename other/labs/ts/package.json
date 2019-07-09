@@ -1,0 +1,31 @@
+{
+  "name": "typescript-lab",
+  "version": "0.1.0",
+  "description": "Typescript Lab",
+  "main": "src/index.ts",
+  "scripts": {
+    "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/index.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "start": "ts-node-dev --transpileOnly ./src/index.ts"
+  },
+  "keywords": [
+    "A2R",
+    "typescript",
+    "lab"
+  ],
+  "author": "Miguel Rodríguez Rosales <miguel@binpar.com> (https://www.binpar.com)",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  }
+}
