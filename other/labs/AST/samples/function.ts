@@ -13,4 +13,4 @@ namespace mathematics.test {
   }
 }
 
-const asd = mathematics.test.sum + 'asd';
+const asd = `${mathematics.test.sum}asd`;
