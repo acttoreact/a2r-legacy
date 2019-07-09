@@ -1,15 +1,19 @@
-/*eslint no-console: "off" */
+/* eslint no-console: "off" */
 import fs from 'fs';
 import ts from 'typescript';
 import path from 'path';
 
 const normalizedPath = path.resolve('./samples');
+
+
 interface IJSDocContainer {
   jsDoc?: ts.JSDoc[];
   jsDocCache?: ts.JSDocTag[];
 }
 
-async function processFilesPath(pathToProcess: string): Promise<void> {
+async function processFilesPath(pathToProcess: string): Promise<void> {  
+
+  console.log('hello' + pathToProcess + '');
   function visit(node: ts.Node, fullNamespace: string[] = new Array<string>()): void {
     if (ts.isModuleDeclaration(node)) {
       const newNamespace = [...fullNamespace, node.name.getText()];
@@ -54,4 +58,3 @@ async function processFilesPath(pathToProcess: string): Promise<void> {
 processFilesPath(normalizedPath).then((): void => {
   console.log('OK');
 });
-  
