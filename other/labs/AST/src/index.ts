@@ -1,15 +1,15 @@
 import fs from 'fs';
-import ts, { isForOfStatement } from 'typescript';
+import ts from 'typescript';
 import path from 'path';
-import { promises } from 'dns';
 
 const normalizedPath = path.resolve('./samples');
-
 
 export interface IJSDocContainer {
   jsDoc?: ts.JSDoc[];                      // JSDoc that directly precedes this node
   jsDocCache?: ReadonlyArray<ts.JSDocTag>; // Cache for getJSDocTags
 }
+
+const files_to_process = 2;
 
 async function processFilesPath(path: string) {
   function visit(node: ts.Node, fullNamespace: string[] = new Array<string>()) {
@@ -54,5 +54,5 @@ async function processFilesPath(path: string) {
 }
 
 processFilesPath(normalizedPath).then(() => {
-  console.log('OK')
+  console.log('OK');
 });
