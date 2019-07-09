@@ -5,7 +5,6 @@ import path from 'path';
 
 const normalizedPath = path.resolve('./samples');
 
-
 interface IJSDocContainer {
   jsDoc?: ts.JSDoc[];
   jsDocCache?: ts.JSDocTag[];
