@@ -150,7 +150,6 @@ So our initial ```.eslintrc``` file looks like this (we added all the recommende
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-inferrable-types": "error",
     "@typescript-eslint/no-misused-new": "error",
-    "@typescript-eslint/no-namespace": "error",
     "@typescript-eslint/no-non-null-assertion": "error",
     "@typescript-eslint/no-object-literal-type-assertion": "error",
     "@typescript-eslint/no-parameter-properties": "error",
