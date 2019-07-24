@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,7 @@
     "prepublish": "npm run build",
     "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/index.ts",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
-    "start": "ts-node-dev --transpileOnly ./src/index.ts"
+    "start": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -36,9 +36,10 @@
     "typescript": "^3.5.3"
   },
   "bin": {
-    "a2r-setup": "./dist/index.js"
+    "a2r": "./dist/command.js"
   },
   "devDependencies": {
+    "@types/node": "^12.6.8",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "eslint": "^5.3.0",
