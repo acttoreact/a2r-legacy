@@ -9,6 +9,6 @@
   "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
   "license": "ISC",
   "dependencies": {
-    "a2r": "^0.1.16"
+    "a2r": "^0.1.19"
   }
 }

@@ -14,7 +14,7 @@ async function processFilesPath(pathToProcess: string): Promise<void> {
   function visit(
     node: ts.Node,
     fullNamespace: string[] = new Array<string>(),
-    defaultNamespace: string[] = new Array<string>(),
+    defaultNamespace: string[] = new Array<string>()
   ): void {
     if (ts.isModuleDeclaration(node)) {
       const newNamespace = [...fullNamespace, node.name.getText()];
@@ -33,7 +33,11 @@ async function processFilesPath(pathToProcess: string): Promise<void> {
         functionNamespace = '.';
       }
 
-      console.log(`**Function ${functionNamespace}.${functionNode.name ? functionNode.name.getText() : 'Unnamed function'} that returns type ${functionNode.type ? functionNode.type.getText() : ''}:`);
+      console.log(
+        `**Function ${functionNamespace}.${
+          functionNode.name ? functionNode.name.getText() : 'Unnamed function'
+        } that returns type ${functionNode.type ? functionNode.type.getText() : ''}:`
+      );
 
       if (jsdocNode && jsdocNode.jsDoc && jsdocNode.jsDoc.length === 1) {
         console.log(`   ${jsdocNode.jsDoc[0].getText()}`);
@@ -41,9 +45,15 @@ async function processFilesPath(pathToProcess: string): Promise<void> {
         console.log('Undocumented!');
       }
 
-      node.parameters.forEach((param): void => {
-        console.log(`\t\tParam named ${param.name.getText()} of type ${param.type ? param.type.getText() : ''}`);
-      });
+      node.parameters.forEach(
+        (param): void => {
+          console.log(
+            `\t\tParam named ${param.name.getText()} of type ${
+              param.type ? param.type.getText() : ''
+            }`
+          );
+        }
+      );
     } else {
       node.forEachChild((subNode): void => visit(subNode, fullNamespace));
     }
@@ -53,18 +63,27 @@ async function processFilesPath(pathToProcess: string): Promise<void> {
     const fileNames = await fs.promises.readdir(pathToProcess);
     const typeScriptFiles = fileNames.filter((name): boolean => name.endsWith('.ts'));
     await Promise.all(
-      typeScriptFiles.map(async (fileName): Promise<void> => {
-        const filePath = `${pathToProcess}/${fileName}`;
-        const sourceCode = await fs.promises.readFile(filePath, 'utf-8');
-        const sourceFile = ts.createSourceFile(filePath, sourceCode, ts.ScriptTarget.Latest, true);
-        visit(sourceFile);
-      }),
+      typeScriptFiles.map(
+        async (fileName): Promise<void> => {
+          const filePath = `${pathToProcess}/${fileName}`;
+          const sourceCode = await fs.promises.readFile(filePath, 'utf-8');
+          const sourceFile = ts.createSourceFile(
+            filePath,
+            sourceCode,
+            ts.ScriptTarget.Latest,
+            true
+          );
+          visit(sourceFile);
+        }
+      )
     );
   } catch (ex) {
     console.log(`Error process Files Path '${pathToProcess}': ${ex}`);
   }
 }
 
-processFilesPath(normalizedPath).then((): void => {
-  console.log('OK');
-});
+processFilesPath(normalizedPath).then(
+  (): void => {
+    console.log('OK');
+  }
+);
