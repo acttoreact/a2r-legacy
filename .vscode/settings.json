@@ -3,7 +3,16 @@
       "labs": "test"
   },
   "cSpell.words": [
+    "ESNEXT",
+    "Interop",
+    "binpar",
     "camelcase",
-    "respawn"
+    "downlevel",
+    "nextjs",
+    "reactjs",
+    "respawn",
+    "sourcemap",
+    "tslib",
+    "typechecking"
   ]
 }

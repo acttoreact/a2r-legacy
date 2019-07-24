@@ -18,7 +18,13 @@
   "keywords": [
     "a2r",
     "binpar",
-    "framework"
+    "framework",
+    "reactjs",
+    "react",
+    "nextjs",
+    "reactive",
+    "websocket",
+    "redis"
   ],
   "author": "Ignacio Ferro Picón <nacho@binpar.com> (https://www.binpar.com/)",
   "license": "ISC",
