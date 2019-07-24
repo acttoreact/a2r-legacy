@@ -1,8 +1,8 @@
 {
   "name": "a2r",
-  "version": "0.1.13",
+  "version": "0.1.18",
   "description": "A2R Framework",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
@@ -34,6 +34,9 @@
   "homepage": "https://github.com/acttoreact/A2R#readme",
   "dependencies": {
     "typescript": "^3.5.3"
+  },
+  "bin": {
+    "a2r-setup": "./dist/index.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.11.0",
