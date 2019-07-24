@@ -2,9 +2,11 @@
   "name": "a2r",
   "version": "0.1.0",
   "description": "A2R Framework",
-  "main": "src/index.ts",
+  "main": "dist/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepublish": "npm run build",
     "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/index.ts",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
     "start": "ts-node-dev --transpileOnly ./src/index.ts"
