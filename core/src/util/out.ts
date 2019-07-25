@@ -1,10 +1,4 @@
-import winston, {format} from 'winston';
-
-// File transport for both error and combined logs
-const transports = [
-  new winston.transports.File({ filename: 'log/error.log', level: 'error'}),
-  new winston.transports.File({ filename: 'log/combined.log' }),
-];
+import winston, { format } from 'winston';
 
 interface TransformableInfo {
   level: string;
@@ -12,22 +6,36 @@ interface TransformableInfo {
 }
 
 // Function to remove the colors for the message
-const removeColors = format((info: TransformableInfo): TransformableInfo => {
-    // eslint-disable-next-line no-param-reassign
-    info.message = info.message.replace(
+const removeColors = format(
+  (info: TransformableInfo): TransformableInfo => {
+    const newInfo = { message: info.message, level: info.level };
+    newInfo.message = newInfo.message.replace(
       // eslint-disable-next-line no-control-regex
       /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g,
       ''
     );
+    return newInfo;
+  }
+);
 
-  return info;
-});
+// File transport for both error and combined logs
+const transports = [
+  new winston.transports.File({
+    filename: 'log/error.log',
+    level: 'error',
+    format: removeColors()
+  }),
+  new winston.transports.File({
+    filename: 'log/combined.log',
+    format: format.combine(removeColors(), format.json())
+  })
+];
 
 // Winston logger
 const logger = winston.createLogger({
   level: 'info',
-  format: format.combine(removeColors(), format.json()),
-  transports,
+  format: format.json(),
+  transports
 });
 
 // If we're not in production then log to the `console` with the format:
@@ -35,8 +43,8 @@ const logger = winston.createLogger({
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
+      format: winston.format.simple()
+    })
   );
 }
 

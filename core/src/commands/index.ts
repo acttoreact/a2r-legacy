@@ -32,16 +32,18 @@ if (options.help) {
   }
 
   if (valid) {
-    if (options.init) {
-      out.info(
-        colors.bgGreen.bold(`>>> Initializing project for ${colors.yellow.bold('A2R')} Framework.`)
+    if (options.init) {      
+      process.stdout.write (
+        colors.yellow.bold(
+          `>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework\n`
+        )
       );
     } else {
-      out.info(
-        colors.bgGreen.bold(
-          `>>> Starting ${colors.yellow.bold('A2R')} Framework on port ${colors.yellow.bold(
-            options.port
-          )}`
+      process.stdout.write (
+        colors.bgBlue.bold(
+          `>>> Starting ${colors.yellow.magenta('A2R')} Framework on port ${colors.yellow.bold(
+            '9000'
+          )}\n`
         )
       );
     }
