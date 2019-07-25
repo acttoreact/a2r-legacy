@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import next from 'next';
 import colors from 'colors';
 import args from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
@@ -6,6 +7,7 @@ import out from '../util/out';
 import rules from './paramsRules';
 import commandLineInfo from './commandLineInfo';
 import setting from '../config/settings';
+
 
 const options = args(rules);
 
@@ -48,6 +50,7 @@ if (options.help) {
       out.info(
         colors.yellow.bold(`>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework`)
       );
+      next({dev: options.dev});
     } else {
       out.info(
         colors.bgBlue.bold(

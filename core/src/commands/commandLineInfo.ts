@@ -48,6 +48,12 @@ export default [
         description: 'Print this usage guide'
       },
       {
+        name: 'dev',
+        alias: 'd',
+        typeLabel: ' ',
+        description: 'Runs in development mode'
+      },
+      {
         name: 'port',
         alias: 'p',
         typeLabel: '{underline number}',
