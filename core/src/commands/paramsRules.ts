@@ -12,6 +12,11 @@ const rules = [
     type: Boolean,
   },
   {
+    name: 'dev',
+    alias: 'd',
+    type: Boolean,
+  },
+  {
     name: 'port',
     alias: 'p',
     type: Number,

@@ -50,7 +50,8 @@ if (options.help) {
       out.info(
         colors.yellow.bold(`>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework`)
       );
-      next({dev: options.dev});
+      // TODO: https://github.com/zeit/next.js#custom-server-and-routing
+      // next({dev: options.dev});
     } else {
       out.info(
         colors.bgBlue.bold(
