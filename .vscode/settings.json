@@ -10,6 +10,7 @@
     "camelcase",
     "downlevel",
     "nextjs",
+    "nqry",
     "reactjs",
     "respawn",
     "sourcemap",
