@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "a2r --dev --port 9000",
     "install": "npm uninstall a2r -s;rm -rf package-lock.json;rm -rf node_modules;npm install a2r -s"
   },
   "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
   "license": "ISC",
   "dependencies": {
-    "a2r": "^0.1.25"
+    "a2r": "^0.1.29"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8"
   }
 }
