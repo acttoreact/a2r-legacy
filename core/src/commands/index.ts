@@ -1,16 +1,21 @@
 #!/usr/bin/env node
 import colors from 'colors';
 import args from 'command-line-args';
+import commandLineUsage from 'command-line-usage';
 import out from '../util/out';
 import rules from './paramsRules';
+import commandLineInfo from './commandLineInfo';
 import setting from '../config/settings';
 
 const options = args(rules);
 
-const valid = !!options.help;
+out.setLevel(options.frameworkLogLevel);
+
+const valid = !options.help;
 
 if (options.help) {
-  out.warn(options.help);
+  // eslint-disable-next-line no-console
+  console.log(commandLineUsage(commandLineInfo));
 } else {
   if (options.port < 1000) {
     out.error(
@@ -29,21 +34,26 @@ if (options.help) {
         options.port.toString()
       )}`
     );
+  } else if (Number.isNaN(options.port)) {
+    out.error(
+      `${colors.red.bold('--port')}: port must be a number and it is set to ${colors.cyan.bold(
+        setting.defaultPort.toString()
+      )}`
+    );
+    options.port = setting.defaultPort;
   }
 
   if (valid) {
-    if (options.init) {      
-      process.stdout.write (
-        colors.yellow.bold(
-          `>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework\n`
-        )
+    if (options.init) {
+      out.info(
+        colors.yellow.bold(`>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework`)
       );
     } else {
-      process.stdout.write (
+      out.info(
         colors.bgBlue.bold(
           `>>> Starting ${colors.yellow.magenta('A2R')} Framework on port ${colors.yellow.bold(
-            '9000'
-          )}\n`
+            options.port.toString()
+          )}`
         )
       );
     }

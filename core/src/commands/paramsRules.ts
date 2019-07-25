@@ -7,11 +7,22 @@ const rules = [
     type: Boolean,
   },
   {
+    name: 'help',
+    alias: 'h',
+    type: Boolean,
+  },
+  {
     name: 'port',
     alias: 'p',
     type: Number,
     defaultValue: setting.defaultPort,
-  }
+  },
+  {
+    name: 'frameworkLogLevel',
+    alias: 'f',
+    type: String,
+    defaultValue: 'info',
+  },
 ];
 
 export default rules;
