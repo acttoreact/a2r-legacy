@@ -1,5 +1,6 @@
 src/
-tsconfig.json
-.eslintrc
-.eslintignore
-README.md
+log/
+/tsconfig.json
+/.eslintrc
+/.eslintignore
+/README.md

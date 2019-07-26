@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "a2r --dev --port 9000",
+    "a2rInit": "a2r --init --frameworkLogLevel verbose",
     "init": "npm uninstall a2r -s;rm -rf package-lock.json;rm -rf node_modules;npm install a2r -s;npm i"
   },
   "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
   "license": "ISC",
   "dependencies": {
-    "a2r": "^0.1.33"
+    "a2r": "^0.1.39"
   },
   "devDependencies": {
     "@types/node": "^12.6.8",
