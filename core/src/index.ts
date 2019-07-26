@@ -1,3 +1,3 @@
-import out from './util/out';
+import React from 'react';
 
-out.info('Hello A2R!');
+export {React};

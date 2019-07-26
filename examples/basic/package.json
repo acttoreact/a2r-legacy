@@ -10,7 +10,7 @@
   "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
   "license": "ISC",
   "dependencies": {
-    "a2r": "^0.1.30"
+    "a2r": "^0.1.33"
   },
   "devDependencies": {
     "@types/node": "^12.6.8",
