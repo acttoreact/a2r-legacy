@@ -1,15 +1,8 @@
 {
-  "name": "basic",
+  "name": "empty",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "a2r --dev --port 9000",
-    "a2rInit": "a2r --init --frameworkLogLevel verbose",
-    "init": "npm uninstall a2r -s;rm -rf package-lock.json;rm -rf node_modules;npm install a2r -s;npm i"
-  },
-  "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
-  "license": "ISC",
   "dependencies": {
     "a2r": "^0.1.55"
   },
@@ -29,5 +22,11 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2"
-  }
+  },
+  "scripts": {
+    "dev": "a2r --dev --port 9000"
+  },
+  "keywords": [],
+  "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
+  "license": "ISC"
 }
