@@ -86,59 +86,59 @@ export default async (): Promise<void> => {
   }
 
   if (!isNPMInit) {
-    out.error(
+    out.warn(
       colors.yellow.bold(
-        `It is required to run ${colors.yellow.green(
+        `Running ${colors.yellow.green(
           'npm init'
         )} in the project path to initialize the ${colors.yellow.magenta('A2R')} Framework`
       )
     );
-  } else {
-    const packageJsonText: string = await fs.promises.readFile(packageJsonPath, {
-      encoding: 'utf-8'
-    });
 
-    const packageJsonA2RText: string = await fs.promises.readFile(packageJsonA2RPath, {
-      encoding: 'utf-8'
-    });
-
-    out.info(colors.green(`Parsing ${colors.yellow.bold.cyan('package.json')}.`));
-
-    let parsedPackage = JSON.parse(packageJsonText);
-    const parsedA2RPackage = JSON.parse(packageJsonA2RText);
-
-    delete parsedA2RPackage.devDependencies['ts-node-dev'];
-
-    if (
-      parsedPackage.scripts &&
-      parsedPackage.scripts.test &&
-      parsedPackage.scripts.test.indexOf('no test specified') !== -1
-    ) {
-      delete parsedPackage.scripts.test;
-    }
-
-    parsedPackage = {
-      ...parsedPackage,
-      dependencies: {
-        a2r: `^${parsedA2RPackage.version}`,
-        ...parsedPackage.dependencies,
-        typescript: parsedA2RPackage.devDependencies.typescript
-      },
-      scripts: {
-        "dev": "a2r --dev --port 9000",
-        ...parsedPackage.scripts
-      },
-      devDependencies: {
-        ...parsedA2RPackage.devDependencies,
-        ...parsedPackage.devDependencies
-      }
-    };
-
-    fs.promises.writeFile(packageJsonPath, JSON.stringify(parsedPackage), {
-      encoding: 'utf-8'
-    });
-
-    await execPromise('npm install');
-    await copyModelContents('');
+    await execPromise('npm init --force');
   }
+  const packageJsonText: string = await fs.promises.readFile(packageJsonPath, {
+    encoding: 'utf-8'
+  });
+
+  const packageJsonA2RText: string = await fs.promises.readFile(packageJsonA2RPath, {
+    encoding: 'utf-8'
+  });
+
+  out.info(colors.green(`Parsing ${colors.yellow.bold.cyan('package.json')}.`));
+
+  let parsedPackage = JSON.parse(packageJsonText);
+  const parsedA2RPackage = JSON.parse(packageJsonA2RText);
+
+  delete parsedA2RPackage.devDependencies['ts-node-dev'];
+
+  if (
+    parsedPackage.scripts &&
+    parsedPackage.scripts.test &&
+    parsedPackage.scripts.test.indexOf('no test specified') !== -1
+  ) {
+    delete parsedPackage.scripts.test;
+  }
+
+  parsedPackage = {
+    ...parsedPackage,
+    dependencies: {
+      a2r: `^${parsedA2RPackage.version}`,
+      ...parsedPackage.dependencies,
+      typescript: parsedA2RPackage.devDependencies.typescript
+    },
+    scripts: {
+      dev: 'a2r --dev --port 9000',
+      ...parsedPackage.scripts
+    },
+    devDependencies: {
+      ...parsedA2RPackage.devDependencies,
+      ...parsedPackage.devDependencies
+    }
+  };
+
+  fs.promises.writeFile(packageJsonPath, JSON.stringify(parsedPackage), {
+    encoding: 'utf-8'
+  });
+  await execPromise('npm install');
+  await copyModelContents('');
 };
