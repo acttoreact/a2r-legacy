@@ -1,18 +1,16 @@
-import colors from "colors";
-import path from "path";
-import fs from "fs";
-import out from "../util/out";
+import colors from 'colors';
+import path from 'path';
+import fs from 'fs';
+import out from '../util/out';
 
 export default async (): Promise<void> => {
   out.info(
-    colors.yellow.bold(
-      `>>> Initializing project for ${colors.yellow.magenta("A2R")} Framework`
-    )
+    colors.yellow.bold(`>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework`)
   );
   out.verbose(`Current path is ${__dirname}`);
 
-  const modePath = path.join(__dirname, "../../model");
-  const targetPath = path.join(__dirname, "../../../..");
+  const modePath = path.join(__dirname, '../../model');
+  const targetPath = path.join(__dirname, '../../../..');
   out.verbose(`Model path is ${modePath}`);
   out.verbose(`Target path is ${targetPath}`);
 
@@ -30,27 +28,21 @@ export default async (): Promise<void> => {
   }
 
   async function copyModelContents(relPath: string): Promise<void> {
+    out.verbose(`Processing path: ${relPath}`);
     const contents = await fs.promises.readdir(modePath + relPath);
     await Promise.all(
       contents.map(
         async (content: string): Promise<void> => {
           let newContent = content;
 
-
           const fullSourcePath = `${modePath}${relPath}/${content}`;
-          let fullDestinationPath = `${modePath}${relPath}/${content}`;
+          let fullDestinationPath = `${targetPath}${relPath}/${content}`;
 
           out.verbose(`Full source path: ${fullSourcePath}`);
 
-          if (fullDestinationPath.endsWith(".model")) {
-            fullDestinationPath = fullDestinationPath.substring(
-              0,
-              fullDestinationPath.length - 6
-            );
-            newContent = newContent.substring(
-              0,
-              fullDestinationPath.length - 6
-            );
+          if (fullDestinationPath.endsWith('.model')) {
+            fullDestinationPath = fullDestinationPath.substring(0, fullDestinationPath.length - 6);
+            newContent = newContent.substring(0, newContent.length - 6);
           }
 
           out.verbose(`Full destination path: ${fullDestinationPath}`);
@@ -60,17 +52,18 @@ export default async (): Promise<void> => {
           out.verbose(`Source is directory: ${info.isDirectory()}`);
 
           if (info.isDirectory()) {
-            if (!existsPath(fullDestinationPath)) {
+            out.verbose(`Checking if path exists: ${fullDestinationPath}`);
+            const existsDestiny = await existsPath(fullDestinationPath);
+            if (!existsDestiny) {
               out.verbose(`Creating directory: ${fullDestinationPath}`);
               await fs.promises.mkdir(fullDestinationPath);
+              out.verbose(`Directory created: ${fullDestinationPath}`);
             }
             await copyModelContents(`${relPath}/${content}`);
           } else {
             out.info(
               colors.green(
-                `Generating file ${colors.yellow.bold.cyan(
-                  `${relPath}/${newContent}`
-                )}.`
+                `Generating file ${colors.yellow.bold.cyan(`${relPath}/${newContent}`)}.`
               )
             );
             await fs.promises.copyFile(fullSourcePath, fullDestinationPath);
