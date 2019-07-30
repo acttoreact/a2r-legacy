@@ -4,7 +4,9 @@
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "engines" : { "node" : ">=10" },
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
@@ -48,6 +50,7 @@
     "next": "^9.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "styled-components": "^5.0.0-beta.8",
     "typescript": "^3.5.3",
     "winston": "^3.2.1"
   },

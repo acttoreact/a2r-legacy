@@ -1,2 +1,3 @@
-# Documentación general del proyecto
+# General documentation of the project
 
+- [Pendent Tasks](./TODO.md)
