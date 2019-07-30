@@ -1,8 +1,11 @@
-import { React } from 'a2r';
+import { React, Head } from 'a2r';
 
 export default (): JSX.Element => (
   <React.Fragment>
-    <h1>Wellcome to A2R</h1>
+    <Head>
+      <title>Wellcome to A2R!</title>
+    </Head>
+    <h1>Wellcome to the A2R Framework</h1>
     <img src="/static/logo-principal.svg" alt="A2R Framework" />
   </React.Fragment>
 );
