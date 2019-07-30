@@ -7,6 +7,7 @@ import rules from './paramsRules';
 import commandLineInfo from './commandLineInfo';
 import setting from '../config/settings';
 import server from '../server';
+import init from './init';
 
 const options = args(rules);
 
@@ -46,9 +47,18 @@ if (options.help) {
 
   if (valid) {
     if (options.init) {
-      out.info(
-        colors.yellow.bold(`>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework`)
-      );      
+      init().then(
+        (): void => {
+          out.info(
+            colors.yellow.bold(`<<< Project initialized successfully`)
+          );
+        })
+        .catch(
+          (err: Error): void => {
+            out.error(
+              err.message, {stack: err.stack}
+            );
+          });
     } else {
       out.info(
         colors.bgBlue.bold(
