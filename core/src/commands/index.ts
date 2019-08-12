@@ -10,7 +10,8 @@ import commandLineInfo from './commandLineInfo';
 import setting from '../config/settings';
 import server from '../server';
 import init from './init';
-import logo from './logo';
+import { getCommandFunction } from './consoleCommands';
+import setupBasicConsoleCommands from './setupBasicConsoleCommands';
 
 const options = args(rules);
 
@@ -90,61 +91,40 @@ if (options.help) {
         );
         server(options.dev, port).then(
           (value): void => {
-            const rl = readline.createInterface(process.stdin, process.stdout);
-            rl.on(
-              'line',
-              (cmd: string): void => {
-                const params = cmd.trim().split(' ');
-                let command = params[0];
-                if (command === 'quit') command = 'exit';
+            if (options.dev) {
+              const rl = readline.createInterface(
+                process.stdin,
+                process.stdout
+              );
 
-                switch (command) {
-                  case 'exit':
-                    process.stdout.write(
-                      `Exiting  ${colors.magenta('A2R')} Framework\n`
-                    );
-                    value.close();
-                    rl.close();
-                    process.stdin.destroy();
-                    process.exit();
-                    break;
-                  case 'logo':
-                    process.stdout.write(`${logo}\n`);
-                    break;
-                  case 'setLogLevel':
-                    if (params.length === 2) {
-                      const level = params[1].toLowerCase();
-                      out.setLevel(level);
-                      process.stdout.write(
-                        `Log level set to ${colors.green(level)}.\n`
-                      );
-                    } else {
-                      process.stdout.write(
-                        `You need to specify a log level.\nUse ${colors.green('help')} for the command list.\n`
-                      );
+              setupBasicConsoleCommands(rl, value);
+
+              rl.on(
+                'line',
+                (cmd: string): void => {
+                  const params = cmd.trim().split(' ');
+                  let command = params[0];
+                  if (command === 'quit') command = 'exit';
+
+                  const onExecute = getCommandFunction(command);
+
+                  if (onExecute) {
+                    try {
+                      const [, ...rest] = params;
+                      onExecute(...rest);
+                    } catch (err) {
+                      out.error(err.message, { stack: err.stack });
                     }
-                    
-                    break;
-                  case 'help':
-                    process.stdout.write(`${logo}\n\n`);
-                    process.stdout.write(`Commands:\n`);
-                    process.stdout.write(`  ${colors.green('logo')}: display A2R Logo\n`);                    
-                    process.stdout.write(`  ${colors.green('setLogLevel error') }: Set the log leve to error\n`);
-                    process.stdout.write(`  ${colors.green('setLogLevel warning') }: Set the log leve to warning\n`);
-                    process.stdout.write(`  ${colors.green('setLogLevel info') }: Set the log leve to info\n`);
-                    process.stdout.write(`  ${colors.green('setLogLevel verbose') }: Set the log leve to verbose\n`);
-                    process.stdout.write(`  ${colors.green('exit')}: exit the A2R Framework\n`);
-                    process.stdout.write('\n');
-                    break;
-                  case '':
-                    break;
-                  default:
+                  } else {
                     process.stdout.write(
-                      `Unknown command: ${colors.red(command)}.\nUse ${colors.green('help')} for the command list.\n`
+                      `Unknown command: ${colors.red(
+                        command
+                      )}.\nUse ${colors.green('help')} for the command list.\n`
                     );
+                  }
                 }
-              }
-            );
+              );
+            }
           }
         );
       }
