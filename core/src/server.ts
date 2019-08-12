@@ -23,7 +23,7 @@ const server = (dev: boolean, port: number): Promise<ServerResponse> => {
 
           httpServer.get(
             '*',
-            (req, res): Promise<void> => {
+            (req: http.IncomingMessage, res: http.ServerResponse): Promise<void> => {
               return handle(req, res);
             }
           );
@@ -33,7 +33,7 @@ const server = (dev: boolean, port: number): Promise<ServerResponse> => {
 
           const listener = httpServer.listen(
             port,
-            (err): void => {
+            (err: Error): void => {
               if (err) {
                 out.error(err.message);
                 reject(err);
@@ -57,8 +57,7 @@ const server = (dev: boolean, port: number): Promise<ServerResponse> => {
             }
           );
           const close = (): void => {
-            listener.close();
-            // app.close();
+            listener.close();            
           }
           resolve({ server: listener, close});
         }

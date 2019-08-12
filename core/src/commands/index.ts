@@ -3,7 +3,6 @@ import colors from 'colors';
 import args from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
 import getPort from 'get-port';
-import http from 'http';
 import readline from 'readline';
 import out from '../util/out';
 import rules from './paramsRules';
@@ -11,9 +10,9 @@ import commandLineInfo from './commandLineInfo';
 import setting from '../config/settings';
 import server from '../server';
 import init from './init';
+import logo from './logo';
 
 const options = args(rules);
-let httpServer: http.Server;
 
 out.setLevel(options.frameworkLogLevel);
 
@@ -91,21 +90,31 @@ if (options.help) {
         );
         server(options.dev, port).then(
           (value): void => {
-            httpServer =  value.server;
             const rl = readline.createInterface(process.stdin, process.stdout);
             rl.on(
               'line',
               (cmd: string): void => {
-                const command = cmd.toLowerCase();
+                let command = cmd.toLowerCase().trim();
+                if (command === 'quit') command = 'exit';
+
                 switch (command) {
                   case 'exit':
+                    process.stdout.write(
+                      `Exiting  ${colors.magenta('A2R')} Framework\r`
+                    );
                     value.close();
+                    rl.close();
+                    process.stdin.destroy();
+                    process.exit();
+                    break;
+                  case 'logo':
+                    process.stdout.write(`${logo}\r`);
+                    break;
+                  case '':
                     break;
                   default:
-                    out.warn(
-                      colors.bgBlue.bold(
-                        `Unknown command: ${colors.red(command)}`
-                      )
+                    process.stdout.write(
+                      `Unknown command: ${colors.red(command)}.\rUse ${colors.green('help')} for the command list.\r`
                     );
                 }
               }
