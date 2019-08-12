@@ -9,6 +9,7 @@
     "binpar",
     "camelcase",
     "downlevel",
+    "middlewares",
     "nextjs",
     "nqry",
     "promisify",
