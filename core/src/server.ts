@@ -6,40 +6,61 @@ import open from 'open';
 import out from './util/out';
 import socket from './util/socket';
 
-const server = (dev: boolean, port: number): void => {
-  const app = next({ dev });
-  const handle = app.getRequestHandler();
+interface ServerResponse {
+  server: http.Server;
+  close: () => void;
+}
 
-  app.prepare().then(
-    (): void => {
-      const httpServer = express();
+const server = (dev: boolean, port: number): Promise<ServerResponse> => {
+  return new Promise<ServerResponse>(
+    (resolve, reject): void => {
+      const app = next({ dev });
+      const handle = app.getRequestHandler();
 
-      httpServer.get(
-        '*',
-        (req, res): Promise<void> => {
-          return handle(req, res);
-        }
-      );
+      app.prepare().then(
+        (): void => {
+          const httpServer = express();
 
-      socket(http);
-      http.createServer(httpServer);
+          httpServer.get(
+            '*',
+            (req, res): Promise<void> => {
+              return handle(req, res);
+            }
+          );
 
-      httpServer.listen(
-        port,
-        (err): void => {
-          if (err) {
-            out.error(err.message);
-          } else {
-            out.info(
-              colors.white.bold(
-                `Listening ${colors.yellow.bold(
-                  `http://localhost:${port.toString()}/`
-                )}`
-              )
-            );
+          socket(http);
+          http.createServer(httpServer);
 
-            open(`http://localhost:${port.toString()}/`);
+          const listener = httpServer.listen(
+            port,
+            (err): void => {
+              if (err) {
+                out.error(err.message);
+                reject(err);
+              } else {
+                out.info(
+                  colors.white.bold(
+                    `Listening ${colors.yellow.bold(
+                      `http://localhost:${port.toString()}/`
+                    )}`
+                  )
+                );
+
+                open(`http://localhost:${port.toString()}/`);
+              }
+            }
+          );
+          listener.on(
+            'close',
+            (): void => {
+              out.info(colors.white.bold('Http server closed'));
+            }
+          );
+          const close = (): void => {
+            listener.close();
+            // app.close();
           }
+          resolve({ server: listener, close});
         }
       );
     }

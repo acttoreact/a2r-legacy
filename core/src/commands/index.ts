@@ -3,6 +3,8 @@ import colors from 'colors';
 import args from 'command-line-args';
 import commandLineUsage from 'command-line-usage';
 import getPort from 'get-port';
+import http from 'http';
+import readline from 'readline';
 import out from '../util/out';
 import rules from './paramsRules';
 import commandLineInfo from './commandLineInfo';
@@ -11,6 +13,7 @@ import server from '../server';
 import init from './init';
 
 const options = args(rules);
+let httpServer: http.Server;
 
 out.setLevel(options.frameworkLogLevel);
 
@@ -86,20 +89,41 @@ if (options.help) {
             )} Framework on port ${colors.yellow.bold(port.toString())}`
           )
         );
-        server(options.dev, port);
+        server(options.dev, port).then(
+          (value): void => {
+            httpServer =  value.server;
+            const rl = readline.createInterface(process.stdin, process.stdout);
+            rl.on(
+              'line',
+              (cmd: string): void => {
+                const command = cmd.toLowerCase();
+                switch (command) {
+                  case 'exit':
+                    value.close();
+                    break;
+                  default:
+                    out.warn(
+                      colors.bgBlue.bold(
+                        `Unknown command: ${colors.red(command)}`
+                      )
+                    );
+                }
+              }
+            );
+          }
+        );
       }
     }
   };
-  initFramework().then(
-    (): void => {
-      out.verbose(
-        colors.yellow.bold('Framework initialized')
-      );
-    }
-  )
-  .catch(
-    (err: Error): void => {
-      out.error(err.message, { stack: err.stack });
-    }
-  );
+  initFramework()
+    .then(
+      (): void => {
+        out.verbose(colors.yellow.bold('Framework initialized'));
+      }
+    )
+    .catch(
+      (err: Error): void => {
+        out.error(err.message, { stack: err.stack });
+      }
+    );
 }
