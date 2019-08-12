@@ -62,7 +62,7 @@ if (options.help) {
     } else {
       out.info(
         colors.bgBlue.bold(
-          `>>> Starting ${colors.yellow.magenta('A2R')} Framework on port ${colors.yellow.bold(
+          `>>> Starting ${colors.magenta('A2R')} Framework on port ${colors.yellow.bold(
             options.port.toString()
           )}`
         )

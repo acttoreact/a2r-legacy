@@ -1,13 +1,15 @@
 import colors from 'colors';
 import path from 'path';
-import fs from 'fs';
 import util from 'util';
 import { exec } from 'child_process';
+import fs from '../util/fs';
 import out from '../util/out';
 
 export default async (): Promise<void> => {
   out.info(
-    colors.yellow.bold(`>>> Initializing project for ${colors.yellow.magenta('A2R')} Framework`)
+    colors.yellow.bold(
+      `>>> Initializing project for ${colors.magenta('A2R')} Framework`
+    )
   );
   out.verbose(`Current path is ${__dirname}`);
 
@@ -20,28 +22,15 @@ export default async (): Promise<void> => {
 
   const execPromise = util.promisify(exec);
 
-  function existsPath(pathToCheck: string): Promise<boolean> {
-    return new Promise<boolean>(
-      (resolve: (result: boolean) => void): void => {
-        fs.exists(
-          pathToCheck,
-          (exists: boolean): void => {
-            resolve(exists);
-          }
-        );
-      }
-    );
-  }
-
   const packageJsonPath = `${targetPath}/package.json`;
 
   const packageJsonA2RPath = `${basePackagePath}/package.json`;
 
-  const isNPMInit = await existsPath(packageJsonPath);
+  const isNPMInit = await fs.exists(packageJsonPath);
 
   async function copyModelContents(relPath: string): Promise<void> {
     out.verbose(`Processing path: ${relPath}`);
-    const contents = await fs.promises.readdir(modelPath + relPath);
+    const contents = await fs.readDir(modelPath + relPath);
     await Promise.all(
       contents.map(
         async (content: string): Promise<void> => {
@@ -53,32 +42,37 @@ export default async (): Promise<void> => {
           out.verbose(`Full source path: ${fullSourcePath}`);
 
           if (fullDestinationPath.endsWith('.model')) {
-            fullDestinationPath = fullDestinationPath.substring(0, fullDestinationPath.length - 6);
+            fullDestinationPath = fullDestinationPath.substring(
+              0,
+              fullDestinationPath.length - 6
+            );
             newContent = newContent.substring(0, newContent.length - 6);
           }
 
           out.verbose(`Full destination path: ${fullDestinationPath}`);
 
-          const info = await fs.promises.lstat(fullSourcePath);
+          const info = await fs.lStat(fullSourcePath);
 
           out.verbose(`Source is directory: ${info.isDirectory()}`);
 
           if (info.isDirectory()) {
             out.verbose(`Checking if path exists: ${fullDestinationPath}`);
-            const existsDestiny = await existsPath(fullDestinationPath);
+            const existsDestiny = await fs.exists(fullDestinationPath);
             if (!existsDestiny) {
               out.verbose(`Creating directory: ${fullDestinationPath}`);
-              await fs.promises.mkdir(fullDestinationPath);
+              await fs.mkDir(fullDestinationPath);
               out.verbose(`Directory created: ${fullDestinationPath}`);
             }
             await copyModelContents(`${relPath}/${content}`);
           } else {
             out.info(
               colors.green(
-                `Generating file ${colors.yellow.bold.cyan(`${relPath}/${newContent}`)}.`
+                `Generating file ${colors.yellow.bold.cyan(
+                  `${relPath}/${newContent}`
+                )}.`
               )
             );
-            await fs.promises.copyFile(fullSourcePath, fullDestinationPath);
+            await fs.copyFile(fullSourcePath, fullDestinationPath);
           }
         }
       )
@@ -90,18 +84,20 @@ export default async (): Promise<void> => {
       colors.yellow.bold(
         `Running ${colors.yellow.green(
           'npm init'
-        )} in the project path to initialize the ${colors.yellow.magenta('A2R')} Framework`
+        )} in the project path to initialize the ${colors.magenta(
+          'A2R'
+        )} Framework`
       )
     );
 
     await execPromise('npm init --force');
   }
-  const packageJsonText: string = await fs.promises.readFile(packageJsonPath, {
-    encoding: 'utf-8'
+  const packageJsonText: string = await fs.readFile(packageJsonPath, {
+    encoding: 'utf-8',
   });
 
-  const packageJsonA2RText: string = await fs.promises.readFile(packageJsonA2RPath, {
-    encoding: 'utf-8'
+  const packageJsonA2RText: string = await fs.readFile(packageJsonA2RPath, {
+    encoding: 'utf-8',
   });
 
   out.info(colors.green(`Parsing ${colors.yellow.bold.cyan('package.json')}.`));
@@ -124,20 +120,20 @@ export default async (): Promise<void> => {
     dependencies: {
       a2r: `^${parsedA2RPackage.version}`,
       ...parsedPackage.dependencies,
-      typescript: parsedA2RPackage.devDependencies.typescript
+      typescript: parsedA2RPackage.devDependencies.typescript,
     },
     scripts: {
       dev: 'a2r --dev --port 9000',
-      ...parsedPackage.scripts
+      ...parsedPackage.scripts,
     },
     devDependencies: {
       ...parsedA2RPackage.devDependencies,
-      ...parsedPackage.devDependencies
-    }
+      ...parsedPackage.devDependencies,
+    },
   };
 
-  fs.promises.writeFile(packageJsonPath, JSON.stringify(parsedPackage), {
-    encoding: 'utf-8'
+  await fs.writeFile(packageJsonPath, JSON.stringify(parsedPackage, null, 2), {
+    encoding: 'utf-8',
   });
   await execPromise('npm install');
   await copyModelContents('');
