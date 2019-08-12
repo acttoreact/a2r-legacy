@@ -2,6 +2,7 @@ import http from 'http';
 import express from 'express';
 import colors from 'colors';
 import next from 'next';
+import open from 'open';
 import out from './util/out';
 import socket from './util/socket';
 
@@ -20,7 +21,7 @@ const server = (dev: boolean, port: number): void => {
         }
       );
 
-      socket(http);      
+      socket(http);
       http.createServer(httpServer);
 
       httpServer.listen(
@@ -36,9 +37,11 @@ const server = (dev: boolean, port: number): void => {
                 )}`
               )
             );
+
+            open(`http://localhost:${port.toString()}/`);
           }
         }
-      );      
+      );
     }
   );
 };

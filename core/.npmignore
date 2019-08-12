@@ -1,5 +1,6 @@
 src/
 log/
+dist/tests/
 /tsconfig.json
 /.eslintrc
 /.eslintignore
