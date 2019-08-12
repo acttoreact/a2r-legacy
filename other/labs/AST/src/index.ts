@@ -5,7 +5,7 @@ import * as path from 'path';
 
 const normalizedPath = path.resolve('./samples');
 
-interface IJSDocContainer {
+interface JSDocContainer {
   jsDoc?: ts.JSDoc[];
   jsDocCache?: ts.JSDocTag[];
 }
@@ -21,7 +21,7 @@ async function processFilesPath(pathToProcess: string): Promise<void> {
       node.forEachChild((subNode): void => visit(subNode, newNamespace));
     } else if (ts.isFunctionDeclaration(node)) {
       const functionNode: ts.FunctionDeclaration = node as ts.FunctionDeclaration;
-      const jsdocNode: IJSDocContainer = node as IJSDocContainer;
+      const jsdocNode: JSDocContainer = node as JSDocContainer;
 
       let functionNamespace: string;
 
