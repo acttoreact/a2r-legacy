@@ -1,8 +1,25 @@
 {
   "cSpell.words": [
+    "ESNEXT",
+    "Inicializando",
     "Interop",
-    "babylonjs",
     "binpar",
-    "esnext"
+    "camelcase",
+    "dotenv",
+    "downlevel",
+    "eslintcache",
+    "jspm",
+    "middlewares",
+    "nextjs",
+    "nqry",
+    "pids",
+    "promisify",
+    "reactjs",
+    "respawn",
+    "sourcemap",
+    "tslib",
+    "typechecking",
+    "wscript",
+    "babylonjs"
   ]
 }

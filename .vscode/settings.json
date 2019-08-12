@@ -8,15 +8,21 @@
     "Interop",
     "binpar",
     "camelcase",
+    "dotenv",
     "downlevel",
+    "eslintcache",
+    "jspm",
     "middlewares",
     "nextjs",
     "nqry",
+    "pids",
     "promisify",
     "reactjs",
     "respawn",
     "sourcemap",
     "tslib",
-    "typechecking"
+    "typechecking",
+    "wscript",
+    "babylonjs"
   ]
 }
