@@ -45,8 +45,9 @@ const server = (dev: boolean, port: number): Promise<ServerResponse> => {
                     )}`
                   )
                 );
-
-                open(`http://localhost:${port.toString()}/`);
+                if (dev) {
+                  open(`http://localhost:${port.toString()}/`);
+                }
               }
             }
           );

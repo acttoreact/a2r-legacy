@@ -94,13 +94,14 @@ if (options.help) {
             rl.on(
               'line',
               (cmd: string): void => {
-                let command = cmd.toLowerCase().trim();
+                const params = cmd.trim().split(' ');
+                let command = params[0];
                 if (command === 'quit') command = 'exit';
 
                 switch (command) {
                   case 'exit':
                     process.stdout.write(
-                      `Exiting  ${colors.magenta('A2R')} Framework\r`
+                      `Exiting  ${colors.magenta('A2R')} Framework\n`
                     );
                     value.close();
                     rl.close();
@@ -108,13 +109,38 @@ if (options.help) {
                     process.exit();
                     break;
                   case 'logo':
-                    process.stdout.write(`${logo}\r`);
+                    process.stdout.write(`${logo}\n`);
+                    break;
+                  case 'setLogLevel':
+                    if (params.length === 2) {
+                      const level = params[1].toLowerCase();
+                      out.setLevel(level);
+                      process.stdout.write(
+                        `Log level set to ${colors.green(level)}.\n`
+                      );
+                    } else {
+                      process.stdout.write(
+                        `You need to specify a log level.\nUse ${colors.green('help')} for the command list.\n`
+                      );
+                    }
+                    
+                    break;
+                  case 'help':
+                    process.stdout.write(`${logo}\n\n`);
+                    process.stdout.write(`Commands:\n`);
+                    process.stdout.write(`  ${colors.green('logo')}: display A2R Logo\n`);                    
+                    process.stdout.write(`  ${colors.green('setLogLevel error') }: Set the log leve to error\n`);
+                    process.stdout.write(`  ${colors.green('setLogLevel warning') }: Set the log leve to warning\n`);
+                    process.stdout.write(`  ${colors.green('setLogLevel info') }: Set the log leve to info\n`);
+                    process.stdout.write(`  ${colors.green('setLogLevel verbose') }: Set the log leve to verbose\n`);
+                    process.stdout.write(`  ${colors.green('exit')}: exit the A2R Framework\n`);
+                    process.stdout.write('\n');
                     break;
                   case '':
                     break;
                   default:
                     process.stdout.write(
-                      `Unknown command: ${colors.red(command)}.\rUse ${colors.green('help')} for the command list.\r`
+                      `Unknown command: ${colors.red(command)}.\nUse ${colors.green('help')} for the command list.\n`
                     );
                 }
               }
