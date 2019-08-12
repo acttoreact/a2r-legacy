@@ -1,14 +1,9 @@
-import colors from "colors";
-import {
-  createServer,
-  RequestListener,
-  IncomingMessage,
-  ServerResponse,
-  Server
-} from "http";
-import { parse } from "url";
-import next from "next";
-import out from "./util/out";
+import http from 'http';
+import express from 'express';
+import colors from 'colors';
+import next from 'next';
+import out from './util/out';
+import socket from './util/socket';
 
 const server = (dev: boolean, port: number): void => {
   const app = next({ dev });
@@ -16,35 +11,34 @@ const server = (dev: boolean, port: number): void => {
 
   app.prepare().then(
     (): void => {
-      const requestListener: RequestListener = (
-        req: IncomingMessage,
-        res: ServerResponse
-      ): void => {
-        if (req.url) {
-          const parsedUrl = parse(req.url, true);
-          handle(req, res, parsedUrl);
-        }
-      };
+      const httpServer = express();
 
-      const httpServer: Server = createServer(requestListener);
-      httpServer.on(
-        'listening',
-        (): void => {
-          out.info(
-            colors.white.bold(
-              `Listening ${colors.yellow.bold(
-                `http://localhost:${  port.toString()}/`
-              )}`
-            )
-          );
+      httpServer.get(
+        '*',
+        (req, res): Promise<void> => {
+          return handle(req, res);
         }
       );
-      httpServer.on('error', (err: Error): void =>{
-        out.error(
-          err.message
-        );
-      });
-      httpServer.listen(port);
+
+      socket(http);      
+      http.createServer(httpServer);
+
+      httpServer.listen(
+        port,
+        (err): void => {
+          if (err) {
+            out.error(err.message);
+          } else {
+            out.info(
+              colors.white.bold(
+                `Listening ${colors.yellow.bold(
+                  `http://localhost:${port.toString()}/`
+                )}`
+              )
+            );
+          }
+        }
+      );      
     }
   );
 };
