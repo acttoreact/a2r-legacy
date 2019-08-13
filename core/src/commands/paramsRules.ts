@@ -12,6 +12,11 @@ const rules = [
     type: Boolean,
   },
   {
+    name: 'version',
+    alias: 'v',
+    type: Boolean,
+  },
+  {
     name: 'patch',
     type: Boolean,
   },

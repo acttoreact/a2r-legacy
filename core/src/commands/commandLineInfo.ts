@@ -21,6 +21,12 @@ export default [
         description: 'Initializes the project for the {underline A2R} {underline Framework}'
       },
       {
+        name: 'version',
+        alias: 'v',
+        typeLabel: ' ',
+        description: 'Gets the current version of the A2R Framework'
+      },
+      {
         name: 'update',
         alias: 'u',
         typeLabel: ' ',

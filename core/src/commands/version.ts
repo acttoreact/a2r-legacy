@@ -5,10 +5,11 @@ import { exec } from 'child_process';
 import out from '../util/out';
 import fs from '../util/fs';
 import getLastVersionOfA2R from './getLastVersionOfA2R';
+import { addCommand } from './consoleCommands';
 
-export default async (): Promise<void> => {
+const getVersion = async (): Promise<void> => {
   const execPromise = util.promisify(exec);
-  
+
   const basePackagePath = path.join(__dirname, '../..');
 
   const packageJsonA2RPath = `${basePackagePath}/package.json`;
@@ -26,16 +27,36 @@ export default async (): Promise<void> => {
   if (lastVersion === currentVersion) {
     out.info(
       colors.yellow.bold(
-        `Your project is using the last version (${colors.green(currentVersion)}) of the ${colors.magenta('A2R')} Framework`
+        `Your project is using the last version (${colors.green(
+          currentVersion
+        )}) of the ${colors.magenta('A2R')} Framework`
       )
     );
   } else {
     out.info(
       colors.yellow.bold(
-        `>>> Updating project for ${colors.magenta('A2R')} Framework from v${colors.green(currentVersion)} to v${colors.green(lastVersion)}.`
+        `Your project is using version (${colors.green(
+          currentVersion
+        )}) of the ${colors.magenta(
+          'A2R'
+        )} Framework. There is a v${colors.green(
+          lastVersion
+        )} available use ${colors.bgBlue.magenta(
+          'npx a2r ---update'
+        )} to upgrade the project.`
       )
     );
     await execPromise(`npm install a2r@${lastVersion} --save;`);
     await execPromise(`npx a2r@${lastVersion} --patch`);
   }
 };
+
+addCommand({
+  name: 'version',
+  description: 'Gets the current version of the A2R Framework',
+  onExecute: async (): Promise<void> => {
+    await getVersion();
+  },
+});
+
+export default getVersion;

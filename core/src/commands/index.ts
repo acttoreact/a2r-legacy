@@ -10,6 +10,7 @@ import commandLineInfo from './commandLineInfo';
 import setting from '../config/settings';
 import server from '../server';
 import init from './init';
+import version from './version';
 import update from './update';
 import patch from './patch';
 import { getCommandFunction } from './consoleCommands';
@@ -87,9 +88,7 @@ if (options.help) {
         update()
           .then(
             (): void => {
-              out.info(
-                colors.yellow.bold(`<<< Project updated successfully`)
-              );
+              out.info(colors.yellow.bold(`<<< Project updated successfully`));
             }
           )
           .catch(
@@ -101,11 +100,17 @@ if (options.help) {
         patch()
           .then(
             (): void => {
-              out.info(
-                colors.yellow.bold(`<<< Project patched successfully`)
-              );
+              out.info(colors.yellow.bold(`<<< Project patched successfully`));
             }
           )
+          .catch(
+            (err: Error): void => {
+              out.error(err.message, { stack: err.stack });
+            }
+          );
+      } else if (options.version) {
+        version()
+          .then((): void => {})
           .catch(
             (err: Error): void => {
               out.error(err.message, { stack: err.stack });
