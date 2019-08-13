@@ -7,6 +7,15 @@ const rules = [
     type: Boolean,
   },
   {
+    name: 'update',
+    alias: 'u',
+    type: Boolean,
+  },
+  {
+    name: 'patch',
+    type: Boolean,
+  },
+  {
     name: 'help',
     alias: 'h',
     type: Boolean,

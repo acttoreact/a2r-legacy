@@ -21,6 +21,17 @@ export default [
         description: 'Initializes the project for the {underline A2R} {underline Framework}'
       },
       {
+        name: 'update',
+        alias: 'u',
+        typeLabel: ' ',
+        description: 'Updates the project to the last version of the {underline A2R} {underline Framework}'
+      },
+      {
+        name: 'patch',
+        typeLabel: ' ',
+        description: 'Processes all the dependencies and additional files used the by the {underline A2R} {underline Framework}'
+      },
+      {
         name: 'help',
         alias: 'h',
         typeLabel: ' ',
