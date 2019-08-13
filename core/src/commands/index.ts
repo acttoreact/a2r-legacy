@@ -139,23 +139,27 @@ if (options.help) {
                 (cmd: string): void => {
                   const params = cmd.trim().split(' ');
                   let command = params[0];
-                  if (command === 'quit') command = 'exit';
+                  if (command) {
+                    if (command === 'quit') command = 'exit';
 
-                  const onExecute = getCommandFunction(command);
+                    const onExecute = getCommandFunction(command);
 
-                  if (onExecute) {
-                    try {
-                      const [, ...rest] = params;
-                      onExecute(...rest);
-                    } catch (err) {
-                      out.error(err.message, { stack: err.stack });
+                    if (onExecute) {
+                      try {
+                        const [, ...rest] = params;
+                        onExecute(...rest);
+                      } catch (err) {
+                        out.error(err.message, { stack: err.stack });
+                      }
+                    } else {
+                      process.stdout.write(
+                        `Unknown command: ${colors.red(
+                          command
+                        )}.\nUse ${colors.green(
+                          'help'
+                        )} for the command list.\n`
+                      );
                     }
-                  } else {
-                    process.stdout.write(
-                      `Unknown command: ${colors.red(
-                        command
-                      )}.\nUse ${colors.green('help')} for the command list.\n`
-                    );
                   }
                 }
               );

@@ -1,12 +1,12 @@
 import colors from 'colors';
 
 const logo = colors.magenta.bold(`
-                  :ooooooooooooooooooooo:\`               \`.:++++++++++++++++++++++++++//:-.\`         
+                  :ooooooooooooooooooooo:\`               \`.:++++++++++++++++++++++++++//:-.\`        
                 -ooooooooooooooooooo/.                      -/ooooooooooooooooooooooooooooo+:.      
                .ooooooooooooooooooo\`                          .+oooooooooooooooooooooooooooooo+-    
               \`oooooooooooooooooooo/                           \`+ooooooooooooooooooooooooooooooo+\`  
              \`+ooooooooooooooooooooo/     ${colors.yellow('`.-:///:-`-/-')}         \`ooooooooooooooooooooooooooooooooo\` 
-             +oooooooooooooooooo+////\`  ${colors.yellow('`-/oooooooooo+.`')}          :ooooooooooo:.....-:+oooooooooooo: 
+             +oooooooooooooooooo+////\`  ${colors.yellow('`-/oooooooooo+.`')}          :ooooooooooo:.....-:+oooooooooooo:
             /ooooooooooooooo/-.\`\`....${colors.yellow('-+ooooo+-.-oooo+')}            .ooooooooooo-        :oooooooooooo 
            :ooooooooooooooo+ ${colors.yellow('`/+oooooooooooo-   /ooo:')}            -ooooooooooo-         oooooooooooo 
           -ooooooooooooooooo\` ${colors.yellow('-/ooooooooooooo+/+ooo/')}             /ooooooooooo-        .ooooooooooo+ 
