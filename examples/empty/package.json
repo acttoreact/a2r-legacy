@@ -10,7 +10,7 @@
   "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
   "license": "ISC",
   "dependencies": {
-    "a2r": "^0.2.30"
+    "a2r": "^0.2.33"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",

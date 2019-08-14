@@ -530,7 +530,7 @@
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": {
-        "version": "e20631efd847ab7ec575b2e70802b5be7aed7bed64f3621b94845cf21c745006",
+        "version": "c06da6f3936875403ade02bb8ae1966df5f039a68e7b026312cd0b78634b5c3e",
         "signature": "8e05864afbd665b1d770fe2c6bce0e13ba918bad8207c05805dc2202ebb1964c"
       },
       "/data/Projects/A2R/core/src/commands/index.ts": {
@@ -538,7 +538,7 @@
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
       },
       "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": {
-        "version": "2e9c03fa8c15a0f08f5b6bf2c62ecc705f89166594e44c29ad6f8fc9e20cf26d",
+        "version": "9e223961992ead3444cc1d696b7f79d3bd87a026c741e8a48a727b2cf3733a54",
         "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
       },
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
@@ -1434,8 +1434,6 @@
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": [
-        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
-        "/data/Projects/A2R/core/src/util/out.ts",
         "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
         "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
