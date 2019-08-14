@@ -1,4 +1,5 @@
-import { React, Head } from 'a2r';
+import React from 'a2r/react';
+import Head from 'a2r/head';
 
 export default (): JSX.Element => (
   <React.Fragment>

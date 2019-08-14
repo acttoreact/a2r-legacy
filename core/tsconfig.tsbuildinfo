@@ -506,11 +506,11 @@
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/version.ts": {
-        "version": "7b6745c180ec30664ddeeee29a77f6949c3b4f383bd7dff9005aaeee8975811a",
+        "version": "3f3e9b6cdcd43629aa1cacd2b2801d0eb7bebaaa3168a327480b41364b5d27e3",
         "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
       },
       "/data/Projects/A2R/core/src/commands/update.ts": {
-        "version": "924876e6b20bfe2cc9fc43e6bb4b0e96c6526c5b626a631cbbd63c4b9cb0ca7a",
+        "version": "49093e210776583db957dd23520163ae3cc8667739cfbddab9c56042a2df1216",
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/patch.ts": {
@@ -522,7 +522,7 @@
         "signature": "8e05864afbd665b1d770fe2c6bce0e13ba918bad8207c05805dc2202ebb1964c"
       },
       "/data/Projects/A2R/core/src/commands/index.ts": {
-        "version": "8ddc06103f60670db4cf4b868d508edadda021f096263ae885bf6da3cf8f5811",
+        "version": "ea084e959df49916c1acb1eb1deb80d69530f968a0eb00ec0e4cd88d69eebcff",
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
       },
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
@@ -2390,11 +2390,8 @@
       "/data/Projects/A2R/core/src/commands/paramsRules.ts",
       "/data/Projects/A2R/core/src/util/fs.ts",
       "/data/Projects/A2R/core/src/commands/init.ts",
-      "/data/Projects/A2R/core/src/commands/version.ts",
-      "/data/Projects/A2R/core/src/commands/update.ts",
       "/data/Projects/A2R/core/src/commands/patch.ts",
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts",
-      "/data/Projects/A2R/core/src/commands/index.ts",
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
       "/data/Projects/A2R/core/src/helpers/api/processFiles.ts",
       "/data/Projects/A2R/core/src/tests/api/processFiles.ts",
@@ -2419,7 +2416,10 @@
       "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts",
-      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts"
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts",
+      "/data/Projects/A2R/core/src/commands/version.ts",
+      "/data/Projects/A2R/core/src/commands/update.ts",
+      "/data/Projects/A2R/core/src/commands/index.ts"
     ]
   },
   "version": "3.5.3"

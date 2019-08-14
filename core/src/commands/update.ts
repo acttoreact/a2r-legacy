@@ -35,6 +35,11 @@ export default async (): Promise<void> => {
         `>>> Updating project for ${colors.magenta('A2R')} Framework from v${colors.green(currentVersion)} to v${colors.green(lastVersion)}.`
       )
     );
+    out.info(
+      colors.yellow.bold(
+        '... ⏰ this process will take some minutes to run 🤷‍ ...'
+      )
+    );
     await execPromise(`npm install a2r@${lastVersion} --save;`);
     await execPromise(`npx a2r@${lastVersion} --patch`);
   }

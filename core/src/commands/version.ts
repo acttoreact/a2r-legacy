@@ -46,8 +46,6 @@ const getVersion = async (): Promise<void> => {
         )} to upgrade the project.`
       )
     );
-    await execPromise(`npm install a2r@${lastVersion} --save;`);
-    await execPromise(`npx a2r@${lastVersion} --patch`);
   }
 };
 
