@@ -469,6 +469,22 @@
         "version": "541cc4ab24960cf8b59fe6e98ae0161b70fb31173b05fc86725a7db05726c63f",
         "signature": "8ea8df22f43a9681deda3630c2198459f9ed16aaaa50d9ae4ebf058a5f8857a2"
       },
+      "/data/Projects/A2R/core/src/util/fs.ts": {
+        "version": "e9516395f1bb2a4117eb3893e8fab2fdbdedf60d2dbfd8637077cad32bfd202d",
+        "signature": "d32da94ec9fed48325d1be7246a20cbd866dea701912c8a4d7d46881dc383fed"
+      },
+      "/data/Projects/A2R/core/src/commands/packageInfoManager.ts": {
+        "version": "83e21231fb8d2d63395795318bd7cdf17f675d06f6cf1d70fe389ebf193b30e7",
+        "signature": "7ae5f80eddcfadb17f2e7cd638db6dd68e57dbf04f1de30cecb8355f42b6cacf"
+      },
+      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": {
+        "version": "afd441cb3f5399a472e7e04e425f07a7401837187dc32a66fe435b76711a6066",
+        "signature": "b10fd09ac3dcf7260ca25068eb8162e39816e5edce4e033b0a562ac7795d9215"
+      },
+      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": {
+        "version": "6c7c3f1bb578b4cdbf5ac1170eb94bb1e85fcbfb8442c9a015f9fab9c1bb8958",
+        "signature": "f253b76f6b101cd6ae5abdff82e6db2903e084b16ab3b7964c8b2f585897dce8"
+      },
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": {
         "version": "01767da1b594561bebbd5d74779ca51b8a65cdb0418d9e7a7b3f921cd782f915",
         "signature": "3640b9d727f97c0df15f6c89d42f09f8e293705e60bb17d2e3642428b1ff85e1"
@@ -497,24 +513,20 @@
         "version": "18b35258d4ed2a6c494f16b5ca710ff1c19d8bfcb43392275844f01e826250dc",
         "signature": "45ff0c47ad9e3267f3caae1c0c6ee4af6c081e4ae1a60a99e916a68557790829"
       },
-      "/data/Projects/A2R/core/src/util/fs.ts": {
-        "version": "e9516395f1bb2a4117eb3893e8fab2fdbdedf60d2dbfd8637077cad32bfd202d",
-        "signature": "d32da94ec9fed48325d1be7246a20cbd866dea701912c8a4d7d46881dc383fed"
-      },
       "/data/Projects/A2R/core/src/commands/init.ts": {
-        "version": "cbcf5a7c8c36c1de4ff86ebb7ca7aedaed7a50376da43225a90bc174d5ec5aff",
+        "version": "c7846d46cc24e233513d570c2e2d8c07e5226feaaaf2378c5bfaa7e542ff507f",
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/version.ts": {
-        "version": "710e40c485df0ec05707ad059afe17ef4230e2d19976e5058b1ce33862866681",
+        "version": "c5d9bb02f64729eb9a7a8f2d2d9ea225b9bec732c572bb342620193d7335740f",
         "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
       },
       "/data/Projects/A2R/core/src/commands/update.ts": {
-        "version": "2a3ceb318084fdcffe732609d9032f777e0b93e36803f46345c76de64058add5",
+        "version": "37655f72fb6c4fcd1c1b67e3aa098c2d5df1bea4a1603b6db20274af55e69686",
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/patch.ts": {
-        "version": "d2d6183ea1fb9d62d02a51e2a523c3953c2f100035f1069785b8b93c640aa9a8",
+        "version": "22c36a21feed319b6a38b3a72869e1dc924d01aef33e41a5b4bd660f522e5719",
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": {
@@ -524,6 +536,10 @@
       "/data/Projects/A2R/core/src/commands/index.ts": {
         "version": "ce31aa5eb4e1a451f9fad1f65143df5ecb2c0393970e2228e0c52adca382a923",
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
+      },
+      "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": {
+        "version": "6cc158afbdb7b77b79ee1f3daec73b0294969f3fb2bed8a4749eecf2aa39cdac",
+        "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
       },
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
         "version": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6",
@@ -542,7 +558,7 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/data/Projects/A2R/core/src/tools/increaseVersion.ts": {
-        "version": "67ade78509a6c2c6e3d88c078c3c886da798f7ddb1ad8e9eca1bf97d4730959d",
+        "version": "172ba8203071556e06150a57a341e066ad228a7735b15dcc01e1301667ea6128",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts": {
@@ -1287,6 +1303,28 @@
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/data/Projects/A2R/core/src/util/fs.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/packageInfoManager.ts": [
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
@@ -1322,11 +1360,6 @@
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/data/Projects/A2R/core/src/util/fs.ts": [
-        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/data/Projects/A2R/core/src/commands/init.ts": [
         "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
@@ -1334,27 +1367,26 @@
         "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
         "/data/Projects/A2R/core/src/util/fs.ts",
         "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/version.ts": [
         "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
         "/data/Projects/A2R/core/src/util/out.ts",
-        "/data/Projects/A2R/core/src/util/fs.ts",
         "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
         "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/update.ts": [
         "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
         "/data/Projects/A2R/core/src/util/out.ts",
-        "/data/Projects/A2R/core/src/util/fs.ts",
         "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/patch.ts": [
@@ -1364,6 +1396,8 @@
         "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
         "/data/Projects/A2R/core/src/util/fs.ts",
         "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": [
@@ -1395,6 +1429,15 @@
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -1420,9 +1463,8 @@
       ],
       "/data/Projects/A2R/core/src/tools/increaseVersion.ts": [
         "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
-        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
         "/data/Projects/A2R/core/src/util/out.ts",
-        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2131,6 +2173,15 @@
       "/data/Projects/A2R/core/src/server.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts"
       ],
+      "/data/Projects/A2R/core/src/util/fs.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": [
+        "/data/Projects/A2R/core/src/commands/packageInfoManager.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": [
+        "/data/Projects/A2R/core/src/commands/packageInfoManager.ts"
+      ],
       "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2155,9 +2206,6 @@
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/data/Projects/A2R/core/src/util/fs.ts": [
-        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts"
@@ -2381,6 +2429,10 @@
       "/data/Projects/A2R/core/src/server.ts",
       "/data/Projects/A2R/core/src/commands/logo.ts",
       "/data/Projects/A2R/core/src/commands/commandLineInfo.ts",
+      "/data/Projects/A2R/core/src/util/fs.ts",
+      "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
+      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
       "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts",
@@ -2388,13 +2440,13 @@
       "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts",
       "/data/Projects/A2R/core/node_modules/get-port/index.d.ts",
       "/data/Projects/A2R/core/src/commands/paramsRules.ts",
-      "/data/Projects/A2R/core/src/util/fs.ts",
       "/data/Projects/A2R/core/src/commands/init.ts",
       "/data/Projects/A2R/core/src/commands/version.ts",
       "/data/Projects/A2R/core/src/commands/update.ts",
       "/data/Projects/A2R/core/src/commands/patch.ts",
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts",
       "/data/Projects/A2R/core/src/commands/index.ts",
+      "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts",
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
       "/data/Projects/A2R/core/src/helpers/api/processFiles.ts",
       "/data/Projects/A2R/core/src/tests/api/processFiles.ts",

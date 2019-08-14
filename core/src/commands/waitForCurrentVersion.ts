@@ -5,8 +5,11 @@ import { addCommand } from './consoleCommands';
 import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
 
 const getVersion = async (): Promise<void> => {
-  const lastVersion = await getLastVersionOfA2R();
+
   const parsedA2RPackage = await getCurrentA2RPackageInfo();
+
+  const lastVersion = await getLastVersionOfA2R();
+
   const currentVersion = parsedA2RPackage.version;
 
   if (lastVersion === currentVersion) {

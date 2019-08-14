@@ -4,6 +4,10 @@ import util from 'util';
 import { exec } from 'child_process';
 import fs from '../util/fs';
 import out from '../util/out';
+import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
+import getCurrentProjectInfo, {
+  updateCurrentProjectPackageInfo,
+} from './getCurrentProjectInfo';
 
 export default async (): Promise<void> => {
   out.info(
@@ -21,10 +25,6 @@ export default async (): Promise<void> => {
   out.verbose(`Target path is ${targetPath}`);
 
   const execPromise = util.promisify(exec);
-
-  const packageJsonPath = `${targetPath}/package.json`;
-
-  const packageJsonA2RPath = `${basePackagePath}/package.json`;
 
   async function copyModelContents(relPath: string): Promise<void> {
     out.verbose(`Processing path: ${relPath}`);
@@ -77,18 +77,10 @@ export default async (): Promise<void> => {
     );
   }
 
-  const packageJsonText: string = await fs.readFile(packageJsonPath, {
-    encoding: 'utf-8',
-  });
-
-  const packageJsonA2RText: string = await fs.readFile(packageJsonA2RPath, {
-    encoding: 'utf-8',
-  });
-
   out.info(colors.green(`Parsing ${colors.yellow.bold.cyan('package.json')}.`));
 
-  let parsedPackage = JSON.parse(packageJsonText);
-  const parsedA2RPackage = JSON.parse(packageJsonA2RText);
+  let parsedPackage = await getCurrentProjectInfo();
+  const parsedA2RPackage = await getCurrentA2RPackageInfo();
 
   delete parsedA2RPackage.devDependencies['ts-node-dev'];
 
@@ -113,9 +105,7 @@ export default async (): Promise<void> => {
     },
   };
 
-  await fs.writeFile(packageJsonPath, JSON.stringify(parsedPackage, null, 2), {
-    encoding: 'utf-8',
-  });
+  await updateCurrentProjectPackageInfo(parsedPackage);
   await execPromise('npm install');
   await copyModelContents('');
 };

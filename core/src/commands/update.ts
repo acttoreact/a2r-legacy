@@ -1,23 +1,16 @@
 import colors from 'colors';
 import util from 'util';
-import path from 'path';
 import { exec } from 'child_process';
 import out from '../util/out';
-import fs from '../util/fs';
 import getLastVersionOfA2R from './getLastVersionOfA2R';
+import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
+
 
 export default async (): Promise<void> => {
+
   const execPromise = util.promisify(exec);
-  
-  const basePackagePath = path.join(__dirname, '../..');
 
-  const packageJsonA2RPath = `${basePackagePath}/package.json`;
-
-  const packageJsonA2RText: string = await fs.readFile(packageJsonA2RPath, {
-    encoding: 'utf-8',
-  });
-
-  const parsedA2RPackage = JSON.parse(packageJsonA2RText);
+  const parsedA2RPackage = await getCurrentA2RPackageInfo();
 
   const lastVersion = await getLastVersionOfA2R();
 

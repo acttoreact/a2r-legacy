@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.2.18",
+  "version": "0.2.24",
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
     "help": "ts-node-dev --respawn --transpileOnly ./src/commands/index.ts --frameworkLogLevel verbose -h",
     "start": "node ./dist/index.js",
     "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.1.105 -s;npx a2r --frameworkLogLevel verbose --init;",
-    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm show a2r version;npm install a2r@0.2.18 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
+    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm show a2r version;npm install a2r@0.2.24 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
     "uploadAndStartProject": "npm run upload;npm run initEmptyAndStartProject;"
   },
   "repository": {

@@ -1,26 +1,10 @@
 import colors from 'colors';
-import path from 'path';
 import out from '../util/out';
-import fs from '../util/fs';
+import getCurrentA2RPackageInfo, {updateCurrentA2RPackageInfo} from '../commands/getCurrentA2RPackageInfo';
 
 const increaseVersion = async (): Promise<string> => {
-  out.setLevel('verbose');
 
-  out.info(
-    colors.yellow.bold(
-      `>>> Increasing package version for ${colors.magenta('A2R')} Framework`
-    )
-  );
-
-  const packageJsonPath = path.join(__dirname, '../../package.json');
-
-  out.verbose(`package.son path is ${packageJsonPath}`);
-
-  const packageJsonText: string = await fs.readFile(packageJsonPath, {
-    encoding: 'utf-8',
-  });
-
-  const parsedPackage = JSON.parse(packageJsonText);
+  const parsedPackage = await getCurrentA2RPackageInfo();
 
   const currentVersion = parsedPackage.version;
 
@@ -43,9 +27,7 @@ const increaseVersion = async (): Promise<string> => {
       );
     }
   );
-  await fs.writeFile(packageJsonPath, JSON.stringify(parsedPackage, null, 2), {
-    encoding: 'utf-8',
-  });
+  await updateCurrentA2RPackageInfo(parsedPackage);
   return newVersion;
 };
 
