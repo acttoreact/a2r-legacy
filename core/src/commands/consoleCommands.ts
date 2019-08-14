@@ -2,7 +2,7 @@
  * Interface of the function tha will be executed by a console command
  */
 export interface OnExecute {
-  (param1?: string, param2?: string): void;
+  (param1?: string, param2?: string): Promise<void>;
 }
 
 /**

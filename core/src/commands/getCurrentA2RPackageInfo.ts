@@ -16,7 +16,7 @@ addCommand({
   onExecute: async (): Promise<void> => {
     const info = await commands.loadPackage();
     process.stdout.write(
-      `Current  ${colors.magenta('A2R')} Framework ${colors.green('package.json')}:\n ${colors.blue(
+      `Current ${colors.magenta('A2R')} Framework ${colors.green('package.json')}:\n ${colors.cyan(
         JSON.stringify(info, null, 2)
       )}`
     );

@@ -16,11 +16,14 @@ interface Closeable {
  * @param rl Console Interface
  * @param value Server Information
  */
-const setupBasicConsoleCommands = (rl: ReadLine.Interface, value: Closeable): void => {
+const setupBasicConsoleCommands = (
+  rl: ReadLine.Interface,
+  value: Closeable
+): void => {
   addCommand({
     name: 'exit',
     description: 'Exit the A2R Framework',
-    onExecute: (): void => {
+    onExecute: async (): Promise<void> => {
       process.stdout.write(`Exiting  ${colors.magenta('A2R')} Framework\n`);
       value.close();
       rl.close();
@@ -32,7 +35,7 @@ const setupBasicConsoleCommands = (rl: ReadLine.Interface, value: Closeable): vo
   addCommand({
     name: 'logo',
     description: 'Display A2R Logo',
-    onExecute: (): void => {
+    onExecute: async (): Promise<void> => {
       process.stdout.write(`${logo}\n`);
     },
   });
@@ -40,14 +43,16 @@ const setupBasicConsoleCommands = (rl: ReadLine.Interface, value: Closeable): vo
   addCommand({
     name: 'help',
     description: 'Displays this help window',
-    onExecute: (): void => {
+    onExecute: async (): Promise<void> => {
       process.stdout.write(`${logo}\n\n`);
       process.stdout.write(`Commands:\n`);
 
       getCommands().forEach(
         (command): void => {
           process.stdout.write(
-            `  ${colors.green(command.name)}: ${command.description}\n`
+            `  ${colors.green(command.name.padEnd(20))} ${
+              command.description
+            }\n`
           );
         }
       );
@@ -60,7 +65,7 @@ const setupBasicConsoleCommands = (rl: ReadLine.Interface, value: Closeable): vo
     name: 'setLogLevel',
     description:
       'Set the log leve to the value specified: error, warning, info or verbose',
-    onExecute: (param?: string): void => {
+    onExecute: async (param?: string): Promise<void> => {
       if (param) {
         const level = param.toLowerCase();
         out.setLevel(level);

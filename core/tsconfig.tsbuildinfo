@@ -158,8 +158,8 @@
         "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
       },
       "/data/Projects/A2R/core/src/commands/consoleCommands.ts": {
-        "version": "52d48a62b0ae2b88565878784a4f56586016524eeefcf2793ab02458d93238b4",
-        "signature": "b3bfc1c5859c6956f2dd9e7fb4577677124e0bf67f06813a90c6148904cc4e91"
+        "version": "df97118f2e69b16bfeded37a61e78732e0d06d9e9d2577f1be6eed07d6062e55",
+        "signature": "7b6a41a561610046d472a6b6c97c61b6383cffea129e097c28d50ebff43d18b8"
       },
       "/data/Projects/A2R/core/src/index.ts": {
         "version": "cd80918831d109afb23af28c52689c9ecefe09f3b9fc1c63ab787f82c6c4c850",
@@ -478,11 +478,11 @@
         "signature": "7ae5f80eddcfadb17f2e7cd638db6dd68e57dbf04f1de30cecb8355f42b6cacf"
       },
       "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": {
-        "version": "5ea2f5610e6fe77340df19b6b5c03251f1c3dc8446f4f02a9d0914144e9b758e",
+        "version": "84c95954daabbaa1c8e0a32e6e2563df88011b22d353896f67fd6cb37eb85376",
         "signature": "b10fd09ac3dcf7260ca25068eb8162e39816e5edce4e033b0a562ac7795d9215"
       },
       "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": {
-        "version": "6d0f16a7e1b754e95e35435deb90226b8cace30098fde83026d4aab9fc2b3a18",
+        "version": "1bec013b6c2684e1ecfc1eb533529d43c6ad7de997e2636d84aa108fb0c5cad6",
         "signature": "f253b76f6b101cd6ae5abdff82e6db2903e084b16ab3b7964c8b2f585897dce8"
       },
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": {
@@ -530,11 +530,11 @@
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
       "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": {
-        "version": "968f425d5e7b06515a0f1d99fe1d8e089f20048a32ccbe313e43f8d25a2a180a",
+        "version": "e20631efd847ab7ec575b2e70802b5be7aed7bed64f3621b94845cf21c745006",
         "signature": "8e05864afbd665b1d770fe2c6bce0e13ba918bad8207c05805dc2202ebb1964c"
       },
       "/data/Projects/A2R/core/src/commands/index.ts": {
-        "version": "ce31aa5eb4e1a451f9fad1f65143df5ecb2c0393970e2228e0c52adca382a923",
+        "version": "24693d4e6e68145c95497c72e39bd036022f23f9748732654b748a6b92b5dfbe",
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
       },
       "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": {
@@ -2434,6 +2434,8 @@
       "/data/Projects/A2R/core/src/commands/commandLineInfo.ts",
       "/data/Projects/A2R/core/src/util/fs.ts",
       "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
+      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
       "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts",
@@ -2472,9 +2474,7 @@
       "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts",
-      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts",
-      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
-      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts"
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts"
     ]
   },
   "version": "3.5.3"

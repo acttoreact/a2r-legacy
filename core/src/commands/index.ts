@@ -23,8 +23,7 @@ out.setLevel(options.frameworkLogLevel);
 const valid = !options.help;
 
 if (options.help) {
-  // eslint-disable-next-line no-console
-  console.log(commandLineUsage(commandLineInfo));
+  process.stdout.write(`${commandLineUsage(commandLineInfo)}\n\n`);
 } else {
   const initFramework = async (): Promise<void> => {
     if (options.port < 1000) {
@@ -140,7 +139,7 @@ if (options.help) {
 
               rl.on(
                 'line',
-                (cmd: string): void => {
+                async (cmd: string): Promise<void> => {
                   const params = cmd.trim().split(' ');
                   let command = params[0];
                   if (command) {
@@ -151,7 +150,7 @@ if (options.help) {
                     if (onExecute) {
                       try {
                         const [, ...rest] = params;
-                        onExecute(...rest);                        
+                        await onExecute(...rest);
                       } catch (err) {
                         out.error(err.message, { stack: err.stack });
                       }
