@@ -50,7 +50,7 @@ const setupBasicConsoleCommands = (
       getCommands().forEach(
         (command): void => {
           process.stdout.write(
-            `  ${colors.green(command.name.padEnd(20))} ${
+            `  ${colors.green(command.name.padEnd(25))} ${
               command.description
             }\n`
           );
