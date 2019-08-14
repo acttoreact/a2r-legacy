@@ -1,0 +1,2426 @@
+{
+  "program": {
+    "fileInfos": {
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0",
+        "signature": "1f753cee573dea40df8a9dc873fef5566957b19ad513874f6643d8dfb14842d0"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
+        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4",
+        "signature": "973df4e41aea3780ce77073777d37dd5896f684124f4c42409f3a832133837a4"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.iterable.d.ts": {
+        "version": "eb843da29336c7d5840bb439b24cf68a4a1652fd01c6e4e66ec74d8b136e944a",
+        "signature": "eb843da29336c7d5840bb439b24cf68a4a1652fd01c6e4e66ec74d8b136e944a"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b",
+        "signature": "fe4e59403e34c7ff747abe4ff6abbc7718229556d7c1a5b93473fb53156c913b"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.scripthost.d.ts": {
+        "version": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9",
+        "signature": "b9faa17292f17d2ad75e34fac77dd63a6403af1dba02d39cd0cbb9ffdf3de8b9"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52",
+        "signature": "2a0390a665763bcc90f0670e43c587928d8fefe2a94a11209c1e22cba7b09f52"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21",
+        "signature": "6c9f73334f8bf47aea685ca5b46a8f7e992a223e96fbceb030f26a4d2324ba21"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2",
+        "signature": "e6b8ff2798f8ebd7a1c7afd8671f2cb67ee1901c422f5964d74b0b34c6574ea2"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
+        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
+        "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
+        "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
+        "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
+        "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+        "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
+        "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.full.d.ts": {
+        "version": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594",
+        "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/react/global.d.ts": {
+        "version": "2bbdfc5ed049f38787376bb01b7bcfe5299eac853c76c16a3e21ab0279078314",
+        "signature": "2bbdfc5ed049f38787376bb01b7bcfe5299eac853c76c16a3e21ab0279078314"
+      },
+      "/data/Projects/A2R/core/node_modules/csstype/index.d.ts": {
+        "version": "599c67cf56a35a8a7bee5bcd877dece4cb71553efb763ebf1050c6987acfaefc",
+        "signature": "599c67cf56a35a8a7bee5bcd877dece4cb71553efb763ebf1050c6987acfaefc"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts": {
+        "version": "5e632216dfe01f2ff76f1c312c28632fde75364c24d659b732f2ee59e9ccf1b2",
+        "signature": "5e632216dfe01f2ff76f1c312c28632fde75364c24d659b732f2ee59e9ccf1b2"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts": {
+        "version": "81d7e951aa7e684a3901429a3141faf0db81348842daf1157d99d1ab98c5a3bb",
+        "signature": "81d7e951aa7e684a3901429a3141faf0db81348842daf1157d99d1ab98c5a3bb"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts": {
+        "version": "25b9f971bb149e692442be1477c708902b1747615b2ee23326d7912cc981b93d",
+        "signature": "25b9f971bb149e692442be1477c708902b1747615b2ee23326d7912cc981b93d"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/head.d.ts": {
+        "version": "e1f28a3d04c657f03165c8ce8f80d5fec454a57e54824f659de4b8fce7466220",
+        "signature": "e1f28a3d04c657f03165c8ce8f80d5fec454a57e54824f659de4b8fce7466220"
+      },
+      "/data/Projects/A2R/core/node_modules/next/head.d.ts": {
+        "version": "8389b00888de9479494ba17206aa52f936f85ffb75e30170eb9e38bee65f69cd",
+        "signature": "8389b00888de9479494ba17206aa52f936f85ffb75e30170eb9e38bee65f69cd"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": {
+        "version": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be",
+        "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
+      },
+      "/data/Projects/A2R/core/src/commands/consoleCommands.ts": {
+        "version": "52d48a62b0ae2b88565878784a4f56586016524eeefcf2793ab02458d93238b4",
+        "signature": "b3bfc1c5859c6956f2dd9e7fb4577677124e0bf67f06813a90c6148904cc4e91"
+      },
+      "/data/Projects/A2R/core/src/index.ts": {
+        "version": "cd80918831d109afb23af28c52689c9ecefe09f3b9fc1c63ab787f82c6c4c850",
+        "signature": "e6f0601dbc0da5a833265dd6a0771deb8af30299456630994e7e17e7312dc178"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts": {
+        "version": "e4461b72726848da76a31153b6b01af5e0be3b08dbfa2ec5741ad302eb20f2ed",
+        "signature": "e4461b72726848da76a31153b6b01af5e0be3b08dbfa2ec5741ad302eb20f2ed"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/assert.d.ts": {
+        "version": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f",
+        "signature": "58a52f282f1dad18179023804c1f3a7536bf875748a0a314abd43f60fd5b244f"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "1305b079a057355f496bdde048716189178877a6b4fe0e9267a46af67f8c7561",
+        "signature": "1305b079a057355f496bdde048716189178877a6b4fe0e9267a46af67f8c7561"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/buffer.d.ts": {
+        "version": "61215c1a376bbe8f51cab4cc4ddbf3746387015113c37a84d981d4738c21b878",
+        "signature": "61215c1a376bbe8f51cab4cc4ddbf3746387015113c37a84d981d4738c21b878"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts": {
+        "version": "123366127434e33eade36f3d06653dbc7457397fc93cfdd100776cfc12b6734c",
+        "signature": "123366127434e33eade36f3d06653dbc7457397fc93cfdd100776cfc12b6734c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/cluster.d.ts": {
+        "version": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a",
+        "signature": "ce629710e5e58724902b753212e97861fd73e2aa09f5d88cb6d55dc763cf8c8a"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/constants.d.ts": {
+        "version": "8ce9418c78d3c1fb703ddbe38c936d34a989ba278666979826590dfa0772a424",
+        "signature": "8ce9418c78d3c1fb703ddbe38c936d34a989ba278666979826590dfa0772a424"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts": {
+        "version": "77c1fb6a190212f87a5edb26351d419c31dff1992c48707540cdcf812e4655f1",
+        "signature": "77c1fb6a190212f87a5edb26351d419c31dff1992c48707540cdcf812e4655f1"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/dgram.d.ts": {
+        "version": "7954df44c35d39b851b996fdc1af0a252e4e23f862abfef388a058203bb94c30",
+        "signature": "7954df44c35d39b851b996fdc1af0a252e4e23f862abfef388a058203bb94c30"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts": {
+        "version": "ef226a42de7022eacdfa0f15aabf73b46c47af93044c8ebfab8aa8e3cf6c330c",
+        "signature": "ef226a42de7022eacdfa0f15aabf73b46c47af93044c8ebfab8aa8e3cf6c330c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/domain.d.ts": {
+        "version": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa",
+        "signature": "d5b7c8819ce1bd31a45f7675309e145ec28e3aa1b60a8e0637fd0e8916255baa"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts": {
+        "version": "0be551fde848d5adde38731272ee980bda2bde0f8bf2a76ce99e01b86985546c",
+        "signature": "0be551fde848d5adde38731272ee980bda2bde0f8bf2a76ce99e01b86985546c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts": {
+        "version": "6bd120d96313412155ae7d4766d586a38576a058b3e269be2152db7030fbc882",
+        "signature": "6bd120d96313412155ae7d4766d586a38576a058b3e269be2152db7030fbc882"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts": {
+        "version": "db6de49919cf11a300f9203371d8e251d58558c509b3b92cee3badadfdb34d36",
+        "signature": "db6de49919cf11a300f9203371d8e251d58558c509b3b92cee3badadfdb34d36"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/http2.d.ts": {
+        "version": "745494f14a9e133beee622ca51cdc59c8896ff77c9f3cd017a4ce735b30dac2d",
+        "signature": "745494f14a9e133beee622ca51cdc59c8896ff77c9f3cd017a4ce735b30dac2d"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/https.d.ts": {
+        "version": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6",
+        "signature": "dacbe08610729f6343ea9880ea8e737c6d7a6efa4a318d8f6acaf85db4aceed6"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/inspector.d.ts": {
+        "version": "4218ced3933a31eed1278d350dd63c5900df0f0904f57d61c054d7a4b83dbe4c",
+        "signature": "4218ced3933a31eed1278d350dd63c5900df0f0904f57d61c054d7a4b83dbe4c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts": {
+        "version": "1224b49e2c8f3b4ed618969d2989412d1282536d2a6a31c30c84d5da01d8b8e4",
+        "signature": "1224b49e2c8f3b4ed618969d2989412d1282536d2a6a31c30c84d5da01d8b8e4"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/os.d.ts": {
+        "version": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486",
+        "signature": "1a6016bd905855b2b45881e9edbd7ab8c7175f8bcbb711ff06989c4bcdc75486"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts": {
+        "version": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36",
+        "signature": "5fb30076f0e0e5744db8993648bfb67aadd895f439edad5cce039127a87a8a36"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f",
+        "signature": "27ef4001526ee9d8afa57687a60bb3b59c52b32d29db0a2260094ab64726164f"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/process.d.ts": {
+        "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
+        "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/punycode.d.ts": {
+        "version": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1",
+        "signature": "30ec6f9c683b988c3cfaa0c4690692049c4e7ed7dc6f6e94f56194c06b86f5e1"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts": {
+        "version": "e0070c45bf15b872f58eee948f71ad6f4f424f36330b2477753fc1aed3ece36e",
+        "signature": "e0070c45bf15b872f58eee948f71ad6f4f424f36330b2477753fc1aed3ece36e"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts": {
+        "version": "0870ded99753a8561f19452466e7d094f122ef12960024946ea45d8694693f54",
+        "signature": "0870ded99753a8561f19452466e7d094f122ef12960024946ea45d8694693f54"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/repl.d.ts": {
+        "version": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157",
+        "signature": "65dbe15ed8a8ed5d4707a63868178dc38111cfc06de28a2e50713ca017a9c157"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts": {
+        "version": "2350c09d0121a0b22c386a7bb8436d521b444c6b4b3e6ee37197d08a23f3b9dd",
+        "signature": "2350c09d0121a0b22c386a7bb8436d521b444c6b4b3e6ee37197d08a23f3b9dd"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "7e62aac2cc9c0710d772047ad89e8d7117f52592c791eb995ce1f865fedab432",
+        "signature": "7e62aac2cc9c0710d772047ad89e8d7117f52592c791eb995ce1f865fedab432"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts": {
+        "version": "af5f07deb33b2fb92ef67ea5ebb69670b81c74908b646e7cd4361a331d2a558a",
+        "signature": "af5f07deb33b2fb92ef67ea5ebb69670b81c74908b646e7cd4361a331d2a558a"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/trace_events.d.ts": {
+        "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
+        "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/tty.d.ts": {
+        "version": "08261bfa763b8cd7fa74c06debf70ee22268c299a18e5dc7c48736bc352be007",
+        "signature": "08261bfa763b8cd7fa74c06debf70ee22268c299a18e5dc7c48736bc352be007"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts": {
+        "version": "1e3da92862604b1f7a32265169f9aa712c4567742d42597704e04ae3e07019e7",
+        "signature": "1e3da92862604b1f7a32265169f9aa712c4567742d42597704e04ae3e07019e7"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts": {
+        "version": "0f6382d5032e45eec50b8f6c1e18c77544bc4db2ef8f854d196b254ec16add12",
+        "signature": "0f6382d5032e45eec50b8f6c1e18c77544bc4db2ef8f854d196b254ec16add12"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/v8.d.ts": {
+        "version": "e98d697adf809fc14dc88ed4e00e4f0e0e381ca23d6d9320cf01af87e801f725",
+        "signature": "e98d697adf809fc14dc88ed4e00e4f0e0e381ca23d6d9320cf01af87e801f725"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts": {
+        "version": "ad20b1311e55187f8eeefdd282a02dbc70e5ac0cf8ab4cabae99c142b32cc562",
+        "signature": "ad20b1311e55187f8eeefdd282a02dbc70e5ac0cf8ab4cabae99c142b32cc562"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "7780573ed8387aaadcc61d87f3d60d77dabf1e060da252dc72ab1d73401988bb",
+        "signature": "7780573ed8387aaadcc61d87f3d60d77dabf1e060da252dc72ab1d73401988bb"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/zlib.d.ts": {
+        "version": "2ffd50644d73fc1fa59c69d48859b6c843d3604609d7353725b6d2b001f05a2b",
+        "signature": "2ffd50644d73fc1fa59c69d48859b6c843d3604609d7353725b6d2b001f05a2b"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/base.d.ts": {
+        "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
+        "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "4926e99d2ad39c0bbd36f2d37cc8f52756bc7a5661ad7b12815df871a4b07ba1",
+        "signature": "4926e99d2ad39c0bbd36f2d37cc8f52756bc7a5661ad7b12815df871a4b07ba1"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
+        "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/range-parser/index.d.ts": {
+        "version": "4e88b833be14c7f384e0dcd57bb30acd799e8e34d212635d693e41a75a71164b",
+        "signature": "4e88b833be14c7f384e0dcd57bb30acd799e8e34d212635d693e41a75a71164b"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts": {
+        "version": "0e844fd1a3d13a837b300785b632ceb2cdced5797e189183ece36a0785a453e5",
+        "signature": "0e844fd1a3d13a837b300785b632ceb2cdced5797e189183ece36a0785a453e5"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/mime/index.d.ts": {
+        "version": "be27a64e821a3e5af838650e4aa25805c60f057d0c37a9762c378d19d364b3e6",
+        "signature": "be27a64e821a3e5af838650e4aa25805c60f057d0c37a9762c378d19d364b3e6"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/serve-static/index.d.ts": {
+        "version": "b27dd918d8c3f10270cadea529c69e3a9b37ce59db0852945a39068cc5c10fff",
+        "signature": "b27dd918d8c3f10270cadea529c69e3a9b37ce59db0852945a39068cc5c10fff"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/connect/index.d.ts": {
+        "version": "c3be42b83b5f57ae2f65280fa395f6d31f61304ac1a29b7b406b6a0e71da8c82",
+        "signature": "c3be42b83b5f57ae2f65280fa395f6d31f61304ac1a29b7b406b6a0e71da8c82"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/body-parser/index.d.ts": {
+        "version": "1b7919dbb6b43ff272f38f6f6522fb9f4e9e854356b2932a36aa4674f4a2fcf2",
+        "signature": "1b7919dbb6b43ff272f38f6f6522fb9f4e9e854356b2932a36aa4674f4a2fcf2"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/express/index.d.ts": {
+        "version": "a6742e25ac12860727c22a379707e050a126c48c4dd98ddd795a3a33dd0a63c7",
+        "signature": "a6742e25ac12860727c22a379707e050a126c48c4dd98ddd795a3a33dd0a63c7"
+      },
+      "/data/Projects/A2R/core/node_modules/colors/index.d.ts": {
+        "version": "a17e831d16c27cbe4d6f0bb238c1ded0d4a26c282009e431c68733be0b792f4f",
+        "signature": "a17e831d16c27cbe4d6f0bb238c1ded0d4a26c282009e431c68733be0b792f4f"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/react-dom/index.d.ts": {
+        "version": "5fe76ea99187e695f2e7ee00ddb0c9db41b217397ade188b8a137504728f687f",
+        "signature": "5fe76ea99187e695f2e7ee00ddb0c9db41b217397ade188b8a137504728f687f"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/get-page-files.d.ts": {
+        "version": "6d2a1f4be62ad8e0252ef5ea0f9af6d48d08ca7614c83c363ed85cc0774db940",
+        "signature": "6d2a1f4be62ad8e0252ef5ea0f9af6d48d08ca7614c83c363ed85cc0774db940"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts": {
+        "version": "f3f1203282ed002a37538c3093f8363da6934e2295554a5fa96aba6f0f0ebb93",
+        "signature": "f3f1203282ed002a37538c3093f8363da6934e2295554a5fa96aba6f0f0ebb93"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/render.d.ts": {
+        "version": "52a239d7bc3696e27fb021573f0dfedeb0097a99f784624eea3c35f0dc0a3f3c",
+        "signature": "52a239d7bc3696e27fb021573f0dfedeb0097a99f784624eea3c35f0dc0a3f3c"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/mitt.d.ts": {
+        "version": "6e1b354578c8ed8a5432ac004e6a6bebb340ceed54e127c4f5e75696842bded1",
+        "signature": "6e1b354578c8ed8a5432ac004e6a6bebb340ceed54e127c4f5e75696842bded1"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/router/router.d.ts": {
+        "version": "feeb83802a63a83a11ca58474008ef190aea927ff9934a32e4991bbd2f535f14",
+        "signature": "feeb83802a63a83a11ca58474008ef190aea927ff9934a32e4991bbd2f535f14"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts": {
+        "version": "c583cae23fffc25d42bf93eab0f06fb9cb09d199340b8b84a2515e200f650cb7",
+        "signature": "c583cae23fffc25d42bf93eab0f06fb9cb09d199340b8b84a2515e200f650cb7"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/router.d.ts": {
+        "version": "ac61201539e43f7df2af5d40ef9233f2cc4e8027a3850c7aef0d43c52ab10b67",
+        "signature": "ac61201539e43f7df2af5d40ef9233f2cc4e8027a3850c7aef0d43c52ab10b67"
+      },
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/next-server.d.ts": {
+        "version": "17b92811391da10a54606342fa2b272c8b066ef9460eef7dfda07906205b86ae",
+        "signature": "17b92811391da10a54606342fa2b272c8b066ef9460eef7dfda07906205b86ae"
+      },
+      "/data/Projects/A2R/core/node_modules/next/dist/server/next.d.ts": {
+        "version": "306c447e4dd56ffe817b88f92b40f3f7bbf58c3673797a434d3706687718810b",
+        "signature": "306c447e4dd56ffe817b88f92b40f3f7bbf58c3673797a434d3706687718810b"
+      },
+      "/data/Projects/A2R/core/node_modules/next/types/index.d.ts": {
+        "version": "2086cd5be47ffd89c6fb9702f555ec82e79b6ba4dc75e32baa7900eaa6eaa0b0",
+        "signature": "2086cd5be47ffd89c6fb9702f555ec82e79b6ba4dc75e32baa7900eaa6eaa0b0"
+      },
+      "/data/Projects/A2R/core/node_modules/open/index.d.ts": {
+        "version": "1d5adf522de176e09dcabab58740bce14bb99356fb6474f621a152461a5e4703",
+        "signature": "1d5adf522de176e09dcabab58740bce14bb99356fb6474f621a152461a5e4703"
+      },
+      "/data/Projects/A2R/core/node_modules/logform/index.d.ts": {
+        "version": "6dbcfbc6f4662840d93d1d9d7fb5cce1b1fa00f43caa595ffee1a70f1583a0b0",
+        "signature": "6dbcfbc6f4662840d93d1d9d7fb5cce1b1fa00f43caa595ffee1a70f1583a0b0"
+      },
+      "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts": {
+        "version": "d667ec244bc8f65d0ac176f7ea91ef9e2904e7aa10923fbbe843d19f1270593b",
+        "signature": "d667ec244bc8f65d0ac176f7ea91ef9e2904e7aa10923fbbe843d19f1270593b"
+      },
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/config/index.d.ts": {
+        "version": "e9c33c05be71c17c3b08988fe6755605632a09c5cdd267cede8de5558ec80027",
+        "signature": "e9c33c05be71c17c3b08988fe6755605632a09c5cdd267cede8de5558ec80027"
+      },
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/transports/index.d.ts": {
+        "version": "87ccbc897e31409ff604f0b0b0f7a29efa1e51f0858aaea9ec294deec863558c",
+        "signature": "87ccbc897e31409ff604f0b0b0f7a29efa1e51f0858aaea9ec294deec863558c"
+      },
+      "/data/Projects/A2R/core/node_modules/winston/index.d.ts": {
+        "version": "4bd85c7eeaceccc938121fcbd580883f6bb84d8326eb0db9c79a9961551a2bc5",
+        "signature": "4bd85c7eeaceccc938121fcbd580883f6bb84d8326eb0db9c79a9961551a2bc5"
+      },
+      "/data/Projects/A2R/core/src/util/out.ts": {
+        "version": "08e6f2559b6845754933107544017ad80392f8472b636fb84bc921ad6f0604e9",
+        "signature": "50b01f4eeb70aef9f6fd37974ce69dbc8132340fafbb6fc6dc1f512748b23b9e"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/socket.io/index.d.ts": {
+        "version": "2768abfccd13a3e8353f221244e40ea3133281dc7f77425718fea20c91515fc9",
+        "signature": "2768abfccd13a3e8353f221244e40ea3133281dc7f77425718fea20c91515fc9"
+      },
+      "/data/Projects/A2R/core/src/config/settings.ts": {
+        "version": "ed79ab9d73a0aa11dbeed574a5ad291e5c88cbb95b3872d2e4a77ae6b8b78982",
+        "signature": "fc2b9ac5f0d0e52644c905478d27128c0bdeefa8f020c4d94214ccd1ed052027"
+      },
+      "/data/Projects/A2R/core/src/util/socket.ts": {
+        "version": "7406bebf3bc33a2c0c5efec7eda625dbe304b98dbcf1093d5a0f155a7faf6635",
+        "signature": "a918c9d15eed3ab9aff2f7281ff09ba534eb77e5e6278980a34a76124f013b31"
+      },
+      "/data/Projects/A2R/core/src/server.ts": {
+        "version": "de59dddc6fcdee335674f14ca78bc91af654f8e71595952645be5850fda3f74a",
+        "signature": "9f10ceba3fcac2ac98984ab2accc70f11c19f480388e433db1f7edd0ae2a6d73"
+      },
+      "/data/Projects/A2R/core/src/commands/logo.ts": {
+        "version": "a4f8d184b689027e06f647667a2d74e942448607df1d617137265ce49d63d20a",
+        "signature": "8080962403632a0c4168303966051bd208c9731af1edd942b047a41c2438280e"
+      },
+      "/data/Projects/A2R/core/src/commands/commandLineInfo.ts": {
+        "version": "541cc4ab24960cf8b59fe6e98ae0161b70fb31173b05fc86725a7db05726c63f",
+        "signature": "8ea8df22f43a9681deda3630c2198459f9ed16aaaa50d9ae4ebf058a5f8857a2"
+      },
+      "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": {
+        "version": "01767da1b594561bebbd5d74779ca51b8a65cdb0418d9e7a7b3f921cd782f915",
+        "signature": "3640b9d727f97c0df15f6c89d42f09f8e293705e60bb17d2e3642428b1ff85e1"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts": {
+        "version": "e2790204f9394425bf7d8e93a919887823d03dc2830d31d09c8f6af5562634dd",
+        "signature": "e2790204f9394425bf7d8e93a919887823d03dc2830d31d09c8f6af5562634dd"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts": {
+        "version": "65fa9dd7434e469671c4fb384cc9c610ad8ffc572351adec3e3d46f36a68f358",
+        "signature": "65fa9dd7434e469671c4fb384cc9c610ad8ffc572351adec3e3d46f36a68f358"
+      },
+      "/data/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts": {
+        "version": "194c880a791931344ff527830c3bf7fd37ad5c39ee8682c875e40bb0b8b39ada",
+        "signature": "194c880a791931344ff527830c3bf7fd37ad5c39ee8682c875e40bb0b8b39ada"
+      },
+      "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts": {
+        "version": "9f11ccb462f5c529e8ee32b25fe93c395f6957a57687f07d8ff0236711ece6a7",
+        "signature": "9f11ccb462f5c529e8ee32b25fe93c395f6957a57687f07d8ff0236711ece6a7"
+      },
+      "/data/Projects/A2R/core/node_modules/get-port/index.d.ts": {
+        "version": "05fc6a9e65c64422efcb0dfc6a10fec5b2885afe158c9e1eda40a31a0ee799ac",
+        "signature": "05fc6a9e65c64422efcb0dfc6a10fec5b2885afe158c9e1eda40a31a0ee799ac"
+      },
+      "/data/Projects/A2R/core/src/commands/paramsRules.ts": {
+        "version": "18b35258d4ed2a6c494f16b5ca710ff1c19d8bfcb43392275844f01e826250dc",
+        "signature": "45ff0c47ad9e3267f3caae1c0c6ee4af6c081e4ae1a60a99e916a68557790829"
+      },
+      "/data/Projects/A2R/core/src/util/fs.ts": {
+        "version": "e9516395f1bb2a4117eb3893e8fab2fdbdedf60d2dbfd8637077cad32bfd202d",
+        "signature": "d32da94ec9fed48325d1be7246a20cbd866dea701912c8a4d7d46881dc383fed"
+      },
+      "/data/Projects/A2R/core/src/commands/init.ts": {
+        "version": "cbcf5a7c8c36c1de4ff86ebb7ca7aedaed7a50376da43225a90bc174d5ec5aff",
+        "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
+      },
+      "/data/Projects/A2R/core/src/commands/version.ts": {
+        "version": "7b6745c180ec30664ddeeee29a77f6949c3b4f383bd7dff9005aaeee8975811a",
+        "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
+      },
+      "/data/Projects/A2R/core/src/commands/update.ts": {
+        "version": "924876e6b20bfe2cc9fc43e6bb4b0e96c6526c5b626a631cbbd63c4b9cb0ca7a",
+        "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
+      },
+      "/data/Projects/A2R/core/src/commands/patch.ts": {
+        "version": "d2d6183ea1fb9d62d02a51e2a523c3953c2f100035f1069785b8b93c640aa9a8",
+        "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
+      },
+      "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": {
+        "version": "968f425d5e7b06515a0f1d99fe1d8e089f20048a32ccbe313e43f8d25a2a180a",
+        "signature": "8e05864afbd665b1d770fe2c6bce0e13ba918bad8207c05805dc2202ebb1964c"
+      },
+      "/data/Projects/A2R/core/src/commands/index.ts": {
+        "version": "8ddc06103f60670db4cf4b868d508edadda021f096263ae885bf6da3cf8f5811",
+        "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
+      },
+      "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
+        "version": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6",
+        "signature": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6"
+      },
+      "/data/Projects/A2R/core/src/helpers/api/processFiles.ts": {
+        "version": "08c8b7c2c082f19bd8e372c95e0d67ec08fa29ed7373d1f5188bb5ba6b6e4e11",
+        "signature": "810a5b78dab7d173bdf8d6cefc957347a18f1635fefdfc132fc0c3e2bd89d501"
+      },
+      "/data/Projects/A2R/core/src/tests/api/processFiles.ts": {
+        "version": "065c3b96a70774cc75c43feabd87371367683ccde1d7b6dff31bbf63f4644f41",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/data/Projects/A2R/core/src/tests/api/commands/getLastVersionOfA2R.ts": {
+        "version": "9c1c15bb18398ad02fd96d494939ec671869ebbf6e7df4cbc47705320f6b49ca",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/data/Projects/A2R/core/src/tools/increaseVersion.ts": {
+        "version": "67ade78509a6c2c6e3d88c078c3c886da798f7ddb1ad8e9eca1bf97d4730959d",
+        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts": {
+        "version": "bc12492fa90cd2ad3f73c10efa597503dbf59ebac0e3c9728cc10adaad6b0b87",
+        "signature": "bc12492fa90cd2ad3f73c10efa597503dbf59ebac0e3c9728cc10adaad6b0b87"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts": {
+        "version": "19fb2161edf60fbe73ee3650c1cee889df0525ed852eff2d5fa6e5480c132ae3",
+        "signature": "19fb2161edf60fbe73ee3650c1cee889df0525ed852eff2d5fa6e5480c132ae3"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts": {
+        "version": "44d81327b8fbb2d7ca0701f5b7bb73e48036eb99a87356acf95f19ed96e907aa",
+        "signature": "44d81327b8fbb2d7ca0701f5b7bb73e48036eb99a87356acf95f19ed96e907aa"
+      },
+      "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts": {
+        "version": "67fb81fcd13edc5410665fa72892dd0878654b54946e8b0f10af5adc234bfe8f",
+        "signature": "67fb81fcd13edc5410665fa72892dd0878654b54946e8b0f10af5adc234bfe8f"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/babel__template/index.d.ts": {
+        "version": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8",
+        "signature": "3e0a34f7207431d967dc32d593d1cda0c23975e9484bc8895b39d96ffca4a0d8"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/babel__core/index.d.ts": {
+        "version": "8f279d393b3572c5c0a8428d46d00281c38a5ef52dc9dd513fc861c31a5d6420",
+        "signature": "8f279d393b3572c5c0a8428d46d00281c38a5ef52dc9dd513fc861c31a5d6420"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/eslint-visitor-keys/index.d.ts": {
+        "version": "725d9be2fd48440256f4deb00649adffdbc5ecd282b09e89d4e200663792c34c",
+        "signature": "725d9be2fd48440256f4deb00649adffdbc5ecd282b09e89d4e200663792c34c"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts": {
+        "version": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd",
+        "signature": "9e951ec338c4232d611552a1be7b4ecec79a8c2307a893ce39701316fe2374bd"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-report/index.d.ts": {
+        "version": "70c61ff569aabdf2b36220da6c06caaa27e45cd7acac81a1966ab4ee2eadc4f2",
+        "signature": "70c61ff569aabdf2b36220da6c06caaa27e45cd7acac81a1966ab4ee2eadc4f2"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-reports/index.d.ts": {
+        "version": "93b59bc67329d5add033e3198583c39aa939cef891e6a2b763e0bea2b514ea9b",
+        "signature": "93b59bc67329d5add033e3198583c39aa939cef891e6a2b763e0bea2b514ea9b"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/jest-diff/index.d.ts": {
+        "version": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06",
+        "signature": "6ecb326999da47034eff85653423767152858fbb7acf0433f7603c9abf1e3f06"
+      },
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/types.d.ts": {
+        "version": "71ba0678a3c647f5c0706ae975c031ace0d464e60f9ce56eaa7f1678d065aab7",
+        "signature": "71ba0678a3c647f5c0706ae975c031ace0d464e60f9ce56eaa7f1678d065aab7"
+      },
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts": {
+        "version": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17",
+        "signature": "b2c5ded6320c45c5d3e1c481c5d2808adf24dd1a59ffc944b72a418e95da5b17"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/jest/index.d.ts": {
+        "version": "9dd180752ee664a74a525a05194afdd787295e56634b8adbc8525d7c0af64e96",
+        "signature": "9dd180752ee664a74a525a05194afdd787295e56634b8adbc8525d7c0af64e96"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts": {
+        "version": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30",
+        "signature": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts": {
+        "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
+        "signature": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts": {
+        "version": "4006c872e38a2c4e09c593bc0cdd32b7b4f5c4843910bea0def631c483fff6c5",
+        "signature": "4006c872e38a2c4e09c593bc0cdd32b7b4f5c4843910bea0def631c483fff6c5"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts": {
+        "version": "ab6aa3a65d473871ee093e3b7b71ed0f9c69e07d1d4295f45c9efd91a771241d",
+        "signature": "ab6aa3a65d473871ee093e3b7b71ed0f9c69e07d1d4295f45c9efd91a771241d"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts": {
+        "version": "8f3237f03af87871a18d49ff52dec94d71eabecca464d5f2a81e34b55fb60bb5",
+        "signature": "8f3237f03af87871a18d49ff52dec94d71eabecca464d5f2a81e34b55fb60bb5"
+      },
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts": {
+        "version": "11b37a33fc34df80dabf1ebcca0cd0b6d0a2bea9654bfab7c987778490246c7f",
+        "signature": "11b37a33fc34df80dabf1ebcca0cd0b6d0a2bea9654bfab7c987778490246c7f"
+      }
+    },
+    "options": {
+      "incremental": true,
+      "target": 4,
+      "module": 1,
+      "declaration": true,
+      "outDir": "/data/Projects/A2R/core/dist",
+      "rootDir": "/data/Projects/A2R/core/src",
+      "strict": true,
+      "moduleResolution": 2,
+      "esModuleInterop": true,
+      "configFilePath": "/data/Projects/A2R/core/tsconfig.json"
+    },
+    "referencedMap": {
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.full.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/react/global.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/csstype/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/csstype/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/global.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/head.d.ts": [
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next/head.d.ts": [
+        "/data/Projects/A2R/core/node_modules/next-server/head.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/consoleCommands.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/index.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next/head.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/assert.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/buffer.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/cluster.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/console.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/constants.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/dgram.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/domain.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/http2.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/https.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/inspector.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/module.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/os.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/perf_hooks.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/process.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/punycode.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/repl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/string_decoder.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/timers.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/trace_events.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/tty.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/v8.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/worker_threads.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/zlib.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/base.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/assert.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/buffer.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/cluster.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/console.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/constants.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dgram.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/domain.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http2.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/https.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/inspector.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/module.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/os.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/perf_hooks.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/punycode.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/repl.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/string_decoder.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/timers.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/trace_events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/tty.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/v8.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/worker_threads.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/zlib.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/base.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/globals.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/range-parser/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/range-parser/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/mime/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/serve-static/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/mime/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/connect/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/body-parser/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/connect/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/express/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/body-parser/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/serve-static/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/colors/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/react-dom/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/get-page-files.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/render.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/get-page-files.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/mitt.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/router/router.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/mitt.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/render.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/router/router.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/router.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/next-server.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/router.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next/dist/server/next.d.ts": [
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/next-server.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next/types/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next/dist/server/next.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react-dom/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/open/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/logform/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/logform/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/config/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/transports/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/logform/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston/lib/winston/config/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston/lib/winston/transports/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/util/out.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/socket.io/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/config/settings.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/util/socket.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/socket.io/index.d.ts",
+        "/data/Projects/A2R/core/src/config/settings.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/server.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/express/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next/types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/open/index.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/util/socket.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/logo.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/commandLineInfo.ts": [
+        "/data/Projects/A2R/core/src/commands/logo.ts",
+        "/data/Projects/A2R/core/src/config/settings.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts": [
+        "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/get-port/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/paramsRules.ts": [
+        "/data/Projects/A2R/core/src/config/settings.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/util/fs.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/init.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/version.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/update.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/patch.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/commands/logo.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/index.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/get-port/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/commands/paramsRules.ts",
+        "/data/Projects/A2R/core/src/commands/commandLineInfo.ts",
+        "/data/Projects/A2R/core/src/config/settings.ts",
+        "/data/Projects/A2R/core/src/server.ts",
+        "/data/Projects/A2R/core/src/commands/init.ts",
+        "/data/Projects/A2R/core/src/commands/version.ts",
+        "/data/Projects/A2R/core/src/commands/update.ts",
+        "/data/Projects/A2R/core/src/commands/patch.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+        "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/helpers/api/processFiles.ts": [
+        "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/tests/api/processFiles.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/src/helpers/api/processFiles.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/tests/api/commands/getLastVersionOfA2R.ts": [
+        "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/tools/increaseVersion.ts": [
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/src/util/out.ts",
+        "/data/Projects/A2R/core/src/util/fs.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__template/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__core/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/babel__template/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-reports/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-report/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/jest-diff/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/types.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/jest-diff/build/types.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/jest/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/jest-diff/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.full.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/react/global.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/csstype/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/csstype/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/global.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/head.d.ts": [
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next/head.d.ts": [
+        "/data/Projects/A2R/core/node_modules/next-server/head.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/index.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next/head.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/assert.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/buffer.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/cluster.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/console.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/constants.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/dgram.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/domain.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/http2.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/https.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/inspector.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/module.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/os.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/perf_hooks.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/process.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/punycode.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/repl.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/string_decoder.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/timers.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/trace_events.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/tty.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/v8.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/worker_threads.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/zlib.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/base.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/assert.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/buffer.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/cluster.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/console.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/constants.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dgram.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/domain.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http2.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/https.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/inspector.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/module.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/os.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/perf_hooks.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/punycode.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/repl.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/string_decoder.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/timers.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/trace_events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/tty.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/v8.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/worker_threads.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/zlib.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/base.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/globals.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/range-parser/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/range-parser/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/mime/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/serve-static/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/mime/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/connect/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/body-parser/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/connect/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/express/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/body-parser/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/serve-static/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/colors/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/react-dom/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/get-page-files.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/render.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/get-page-files.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/mitt.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/router/router.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/mitt.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/render.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/router/router.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/router.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/next-server.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/router.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next/dist/server/next.d.ts": [
+        "/data/Projects/A2R/core/node_modules/next-server/dist/server/next-server.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/next/types/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/next/dist/server/next.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/react-dom/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/open/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/logform/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/logform/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/config/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/transports/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/winston/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+        "/data/Projects/A2R/core/node_modules/logform/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston/lib/winston/config/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/winston/lib/winston/transports/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/socket.io/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/server.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts": [
+        "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/get-port/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/util/fs.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts"
+      ],
+      "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__template/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/babel__core/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/babel__template/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/eslint-visitor-keys/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-report/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-reports/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-report/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/jest-diff/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/types.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/jest-diff/build/types.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/jest/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/jest-diff/index.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts": [
+        "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es5.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.dom.iterable.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.scripthost.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.full.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/react/global.d.ts",
+      "/data/Projects/A2R/core/node_modules/csstype/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/react/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/head.d.ts",
+      "/data/Projects/A2R/core/node_modules/next/head.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
+      "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
+      "/data/Projects/A2R/core/src/index.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/globals.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/assert.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/buffer.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/child_process.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/cluster.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/console.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/constants.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/crypto.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/dgram.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/dns.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/domain.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/http.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/http2.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/https.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/inspector.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/module.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/net.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/os.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/perf_hooks.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/process.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/punycode.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/querystring.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/readline.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/repl.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/stream.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/string_decoder.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/timers.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/tls.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/trace_events.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/tty.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/url.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/v8.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/vm.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/worker_threads.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/zlib.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/base.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/globals.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/range-parser/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/express-serve-static-core/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/mime/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/serve-static/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/connect/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/body-parser/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/express/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/react-dom/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/get-page-files.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/types/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/render.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/mitt.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/router/router.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/lib/utils.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/router.d.ts",
+      "/data/Projects/A2R/core/node_modules/next-server/dist/server/next-server.d.ts",
+      "/data/Projects/A2R/core/node_modules/next/dist/server/next.d.ts",
+      "/data/Projects/A2R/core/node_modules/next/types/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/open/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/logform/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/winston-transport/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/config/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/winston/lib/winston/transports/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/winston/index.d.ts",
+      "/data/Projects/A2R/core/src/util/out.ts",
+      "/data/Projects/A2R/core/node_modules/@types/socket.io/index.d.ts",
+      "/data/Projects/A2R/core/src/config/settings.ts",
+      "/data/Projects/A2R/core/src/util/socket.ts",
+      "/data/Projects/A2R/core/src/server.ts",
+      "/data/Projects/A2R/core/src/commands/logo.ts",
+      "/data/Projects/A2R/core/src/commands/commandLineInfo.ts",
+      "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
+      "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts",
+      "/data/Projects/A2R/core/node_modules/type-fest/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/get-port/index.d.ts",
+      "/data/Projects/A2R/core/src/commands/paramsRules.ts",
+      "/data/Projects/A2R/core/src/util/fs.ts",
+      "/data/Projects/A2R/core/src/commands/init.ts",
+      "/data/Projects/A2R/core/src/commands/version.ts",
+      "/data/Projects/A2R/core/src/commands/update.ts",
+      "/data/Projects/A2R/core/src/commands/patch.ts",
+      "/data/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts",
+      "/data/Projects/A2R/core/src/commands/index.ts",
+      "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
+      "/data/Projects/A2R/core/src/helpers/api/processFiles.ts",
+      "/data/Projects/A2R/core/src/tests/api/processFiles.ts",
+      "/data/Projects/A2R/core/src/tests/api/commands/getLastVersionOfA2R.ts",
+      "/data/Projects/A2R/core/src/tools/increaseVersion.ts",
+      "/data/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@babel/parser/typings/babel-parser.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/babel__template/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/babel__core/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/eslint-visitor-keys/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-coverage/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-lib-report/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/istanbul-reports/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/jest-diff/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/types.d.ts",
+      "/data/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/jest/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts",
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts"
+    ]
+  },
+  "version": "3.5.3"
+}
