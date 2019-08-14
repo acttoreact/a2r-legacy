@@ -1,7 +1,6 @@
 import colors from 'colors';
 import out from '../util/out';
 import getLastVersionOfA2R from './getLastVersionOfA2R';
-import { addCommand } from './consoleCommands';
 import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
 
 const getVersion = async (): Promise<void> => {
@@ -36,13 +35,5 @@ const getVersion = async (): Promise<void> => {
     );
   }
 };
-
-addCommand({
-  name: 'version',
-  description: 'Gets the current version of the A2R Framework',
-  onExecute: async (): Promise<void> => {
-    await getVersion();
-  },
-});
 
 export default getVersion;
