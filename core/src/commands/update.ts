@@ -26,7 +26,7 @@ export default async (): Promise<void> => {
   if (lastVersion === currentVersion) {
     out.info(
       colors.yellow.bold(
-        `Your project is using the last version (${colors.green(currentVersion)}) of the ${colors.magenta('A2R')} Framework`
+        `Your project is using the last version (${colors.green(currentVersion)}) of the ${colors.magenta('A2R')} Framework 👌`
       )
     );
   } else {

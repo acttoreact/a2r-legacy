@@ -29,7 +29,7 @@ const getVersion = async (): Promise<void> => {
       colors.yellow.bold(
         `Your project is using the last version (${colors.green(
           currentVersion
-        )}) of the ${colors.magenta('A2R')} Framework`
+        )}) of the ${colors.magenta('A2R')} Framework 👌`
       )
     );
   } else {

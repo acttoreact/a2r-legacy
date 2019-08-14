@@ -88,7 +88,9 @@ if (options.help) {
         update()
           .then(
             (): void => {
-              out.info(colors.yellow.bold(`<<< 👌 Project updated successfully`));
+              out.info(
+                colors.yellow.bold(`<<< 👌 Project updated successfully`)
+              );
             }
           )
           .catch(
@@ -100,7 +102,9 @@ if (options.help) {
         patch()
           .then(
             (): void => {
-              out.info(colors.yellow.bold(`<<< 👌 Project patched successfully`));
+              out.info(
+                colors.yellow.bold(`<<< 👌 Project patched successfully`)
+              );
             }
           )
           .catch(
@@ -118,11 +122,11 @@ if (options.help) {
           );
       } else {
         out.info(
-          colors.bgBlue.bold(
+          `${colors.bgBlue.bold(
             `>>> Starting ${colors.magenta(
               'A2R'
-            )} Framework on port ${colors.yellow.bold(port.toString())} 🚀`
-          )
+            )} Framework on port ${colors.yellow.bold(port.toString())}`
+          )} 🚀`
         );
         server(options.dev, port).then(
           (value): void => {
