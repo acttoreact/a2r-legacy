@@ -9,14 +9,14 @@ export const updateCurrentA2RPackageInfo = commands.savePackage;
 export default commands.loadPackage;
 
 addCommand({
-  name: 'currentPackageInfo',
+  name: 'currentA2RPackageInfo',
   description: `Gets the information of the current ${colors.magenta(
     'A2R'
   )} Framework ${colors.green('package.json')}`,
   onExecute: async (): Promise<void> => {
-    const info = await commands.loadPackage;
+    const info = await commands.loadPackage();
     process.stdout.write(
-      `Current  ${colors.magenta('A2R')} Framework ${colors.green('package.json')}\n: ${colors.blue(
+      `Current  ${colors.magenta('A2R')} Framework ${colors.green('package.json')}:\n ${colors.blue(
         JSON.stringify(info, null, 2)
       )}`
     );

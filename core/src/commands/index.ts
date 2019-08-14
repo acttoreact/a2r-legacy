@@ -151,10 +151,11 @@ if (options.help) {
                     if (onExecute) {
                       try {
                         const [, ...rest] = params;
-                        onExecute(...rest);
+                        onExecute(...rest);                        
                       } catch (err) {
                         out.error(err.message, { stack: err.stack });
                       }
+                      process.stdout.write('\n');
                     } else {
                       process.stdout.write(
                         `Unknown command: ${colors.red(

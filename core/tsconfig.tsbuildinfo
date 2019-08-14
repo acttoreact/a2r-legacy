@@ -478,11 +478,11 @@
         "signature": "7ae5f80eddcfadb17f2e7cd638db6dd68e57dbf04f1de30cecb8355f42b6cacf"
       },
       "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": {
-        "version": "afd441cb3f5399a472e7e04e425f07a7401837187dc32a66fe435b76711a6066",
+        "version": "5ea2f5610e6fe77340df19b6b5c03251f1c3dc8446f4f02a9d0914144e9b758e",
         "signature": "b10fd09ac3dcf7260ca25068eb8162e39816e5edce4e033b0a562ac7795d9215"
       },
       "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": {
-        "version": "6c7c3f1bb578b4cdbf5ac1170eb94bb1e85fcbfb8442c9a015f9fab9c1bb8958",
+        "version": "6d0f16a7e1b754e95e35435deb90226b8cace30098fde83026d4aab9fc2b3a18",
         "signature": "f253b76f6b101cd6ae5abdff82e6db2903e084b16ab3b7964c8b2f585897dce8"
       },
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": {
@@ -538,7 +538,7 @@
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
       },
       "/data/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": {
-        "version": "6cc158afbdb7b77b79ee1f3daec73b0294969f3fb2bed8a4749eecf2aa39cdac",
+        "version": "2e9c03fa8c15a0f08f5b6bf2c62ecc705f89166594e44c29ad6f8fc9e20cf26d",
         "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
       },
       "/data/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
@@ -1315,13 +1315,17 @@
       ],
       "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
         "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": [
         "/data/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
         "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
+        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1433,7 +1437,6 @@
         "/data/Projects/A2R/core/node_modules/colors/index.d.ts",
         "/data/Projects/A2R/core/src/util/out.ts",
         "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
-        "/data/Projects/A2R/core/src/commands/consoleCommands.ts",
         "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/data/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2431,8 +2434,6 @@
       "/data/Projects/A2R/core/src/commands/commandLineInfo.ts",
       "/data/Projects/A2R/core/src/util/fs.ts",
       "/data/Projects/A2R/core/src/commands/packageInfoManager.ts",
-      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
-      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
       "/data/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
       "/data/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts",
@@ -2471,7 +2472,9 @@
       "/data/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts",
       "/data/Projects/A2R/core/node_modules/@types/yargs/index.d.ts",
-      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts"
+      "/data/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts",
+      "/data/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+      "/data/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts"
     ]
   },
   "version": "3.5.3"
