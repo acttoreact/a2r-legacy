@@ -7,7 +7,7 @@
     "dev": "a2r --dev --port 9000"
   },
   "keywords": [],
-  "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "a2r": "^0.2.33"
