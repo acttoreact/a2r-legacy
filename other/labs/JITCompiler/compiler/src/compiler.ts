@@ -14,9 +14,9 @@ function reportDiagnostic(diagnostic: ts.Diagnostic): void {
   out.error(
     `Error code ${colors.bgRed.white(
       diagnostic.code.toString()
-    )}:\n${ts.flattenDiagnosticMessageText(
-      diagnostic.messageText,
-      formatHost.getNewLine()
+    )} compiling A2R Framework API File:\n${ts.formatDiagnosticsWithColorAndContext(
+      [diagnostic],      
+      formatHost
     )}`
   );
 }
@@ -26,7 +26,7 @@ function reportDiagnostic(diagnostic: ts.Diagnostic): void {
  * This is mainly for messages like "Starting compilation" or "Compilation completed".
  */
 function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
-  out.info(ts.formatDiagnostic(diagnostic, formatHost));
+  out.verbose(ts.formatDiagnostic(diagnostic, formatHost));
 }
 
 function watchMain(): void {

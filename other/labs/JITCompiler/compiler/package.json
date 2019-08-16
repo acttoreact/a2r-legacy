@@ -9,7 +9,7 @@
     "build": "tsc",
     "test": "jest",
     "test-dev": "npx jest --watch",
-    "dev": "ts-node-dev --debug ./src/compiler.ts"
+    "dev": "ts-node-dev --debug ./src/compiler.ts --respawn --transpileOnly"
   },
   "repository": {
     "type": "git",

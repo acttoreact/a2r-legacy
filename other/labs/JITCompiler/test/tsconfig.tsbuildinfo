@@ -98,7 +98,7 @@
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api/test.ts": {
-        "version": "c9e62c58faf02b44611d653aec9af4e407e94d643486d86ac135193f6b7a0fcc",
+        "version": "492a0a4e9b83d3d581330a6d8e08f95a08f796ebcf9d7f494fe4d368de1cc20a",
         "signature": "bad3a3a412bb0898be1a72a2d00b77fc1dfea3517f008ba74fbe4af2419f03a5"
       }
     },
@@ -141,7 +141,19 @@
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.intl.d.ts",
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.full.d.ts",
-      "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api/test.ts"
+      [
+        "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api/test.ts",
+        [
+          {
+            "file": "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api/test.ts",
+            "start": 16,
+            "length": 2,
+            "code": 2322,
+            "category": 1,
+            "messageText": "Type '3' is not assignable to type 'string'."
+          }
+        ]
+      ]
     ]
   },
   "version": "3.5.3"
