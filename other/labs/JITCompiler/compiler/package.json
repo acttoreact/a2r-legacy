@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test-dev": "npx jest --watch"
+    "test-dev": "npx jest --watch",
+    "dev": "ts-node-dev --debug ./src/compiler.ts"
   },
   "repository": {
     "type": "git",
