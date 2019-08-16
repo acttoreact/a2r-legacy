@@ -8,7 +8,7 @@
     "a2rInit": "a2r --init --frameworkLogLevel verbose",
     "init": "npm uninstall a2r -s;rm -rf package-lock.json;rm -rf node_modules;npm install a2r -s;npm i"
   },
-  "author": "Ignacio <nacho@binpar.com> (https://www.binpar.com/)",
+  "author": "Ignacio <nacho@binpar.com> (https://a2r.com/)",
   "license": "ISC",
   "dependencies": {
     "a2r": "^0.1.55"
