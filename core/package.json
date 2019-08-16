@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.2.1",
+  "version": "0.3.2",
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
