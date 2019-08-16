@@ -6,6 +6,7 @@
     "ESNEXT",
     "Inicializando",
     "Interop",
+    "babylonjs",
     "binpar",
     "camelcase",
     "dotenv",
@@ -16,13 +17,13 @@
     "nextjs",
     "nqry",
     "pids",
+    "plusplus",
     "promisify",
     "reactjs",
     "respawn",
     "sourcemap",
     "tslib",
     "typechecking",
-    "wscript",
-    "babylonjs"
+    "wscript"
   ]
 }

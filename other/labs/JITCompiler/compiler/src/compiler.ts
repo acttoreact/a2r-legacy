@@ -36,7 +36,7 @@ function watchMain(): void {
     'tsconfig.json'
   );
   if (!configPath) {
-    throw new Error("Could not find a valid 'tsconfig.json'.");
+    throw new Error('Could not find a valid \'tsconfig.json\'.');
   }
 
   const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
@@ -62,7 +62,7 @@ function watchMain(): void {
     currentHost: ts.CompilerHost | undefined,
     oldProgram: ts.SemanticDiagnosticsBuilderProgram | undefined,
   ): ts.SemanticDiagnosticsBuilderProgram => {
-    out.verbose("We're about to create the program!");
+    out.verbose('We are about to create the program!');
     return origCreateProgram(rootNames, options, currentHost, oldProgram);
   };
 
