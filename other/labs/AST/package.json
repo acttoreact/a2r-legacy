@@ -1,0 +1,40 @@
+{
+  "name": "ast_lab",
+  "version": "1.0.0",
+  "description": "AST Testing Project",
+  "main": "src/index.ts",
+  "scripts": {
+    "run": "ts-node-dev --transpileOnly ./src/index.ts",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acttoreact/A2R.git"
+  },
+  "keywords": [
+    "AST",
+    "TypeScript",
+    "Lab"
+  ],
+  "author": "Ignacio Ferro Picón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acttoreact/A2R/issues"
+  },
+  "homepage": "https://github.com/acttoreact/A2R#readme",
+  "dependencies": {
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.1",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^5",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "ts-node-dev": "^1.0.0-pre.40"
+  }
+}

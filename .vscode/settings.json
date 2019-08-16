@@ -1,0 +1,28 @@
+{
+  "material-icon-theme.folders.associations": {
+      "labs": "test"
+  },
+  "cSpell.words": [
+    "ESNEXT",
+    "Inicializando",
+    "Interop",
+    "binpar",
+    "camelcase",
+    "dotenv",
+    "downlevel",
+    "eslintcache",
+    "jspm",
+    "middlewares",
+    "nextjs",
+    "nqry",
+    "pids",
+    "promisify",
+    "reactjs",
+    "respawn",
+    "sourcemap",
+    "tslib",
+    "typechecking",
+    "wscript",
+    "babylonjs"
+  ]
+}
