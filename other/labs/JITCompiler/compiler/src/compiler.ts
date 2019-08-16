@@ -31,7 +31,7 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
 
 function watchMain(): void {
   const configPath = ts.findConfigFile(
-    /* searchPath */ '../source',
+    /* searchPath */ '../test',
     ts.sys.fileExists,
     'tsconfig.json'
   );

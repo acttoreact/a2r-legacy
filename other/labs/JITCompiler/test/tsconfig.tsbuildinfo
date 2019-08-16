@@ -97,7 +97,7 @@
         "version": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594",
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
-      "/home/nacho/Projects/A2R/other/labs/JITCompiler/source/api/test.ts": {
+      "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api/test.ts": {
         "version": "c9e62c58faf02b44611d653aec9af4e407e94d643486d86ac135193f6b7a0fcc",
         "signature": "bad3a3a412bb0898be1a72a2d00b77fc1dfea3517f008ba74fbe4af2419f03a5"
       }
@@ -107,12 +107,12 @@
       "target": 4,
       "module": 1,
       "declaration": true,
-      "outDir": "/home/nacho/Projects/A2R/other/labs/JITCompiler/source/server",
-      "rootDir": "/home/nacho/Projects/A2R/other/labs/JITCompiler/source/api",
+      "outDir": "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/server",
+      "rootDir": "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api",
       "strict": true,
       "moduleResolution": 2,
       "esModuleInterop": true,
-      "configFilePath": "/home/nacho/Projects/A2R/other/labs/JITCompiler/source/tsconfig.json"
+      "configFilePath": "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/tsconfig.json"
     },
     "referencedMap": {},
     "exportedModulesMap": {},
@@ -141,7 +141,7 @@
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.intl.d.ts",
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
       "/home/nacho/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.full.d.ts",
-      "/home/nacho/Projects/A2R/other/labs/JITCompiler/source/api/test.ts"
+      "/home/nacho/Projects/A2R/other/labs/JITCompiler/test/api/test.ts"
     ]
   },
   "version": "3.5.3"
