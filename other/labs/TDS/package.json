@@ -13,7 +13,7 @@
     "typescript",
     "lab"
   ],
-  "author": "Miguel Rodríguez Rosales <miguel@binpar.com> (https://www.binpar.com)",
+  "author": "Miguel Rodríguez Rosales <miguel@binpar.com> (https://a2r.com)",
   "license": "ISC",
   "dependencies": {
     "typescript": "^3.5.3"
