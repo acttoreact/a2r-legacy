@@ -11,14 +11,14 @@ export default commands.loadPackage;
 addCommand({
   name: 'currentPackageInfo',
   description: `Gets the information of the current project ${colors.green(
-    'package.json'
+    'package.json',
   )}`,
   onExecute: async (): Promise<void> => {
     const info = await commands.loadPackage();
     process.stdout.write(
       `Current ${colors.green('package.json')}:\n ${colors.cyan(
-        JSON.stringify(info, null, 2)
-      )}`
+        JSON.stringify(info, null, 2),
+      )}`,
     );
   },
 });
