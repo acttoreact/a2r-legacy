@@ -1,11 +1,17 @@
 import ts from 'typescript';
+import chokidar from 'chokidar';
 import colors from 'colors';
+import path from 'path';
 import out from './util/out';
+import fs from './util/fs';
 
 out.setLevel('verbose');
 
+const sorcePath = path.join(__dirname, '../../test/api');
+const destPath = path.join(__dirname, '../../test/server');
+
 const formatHost: ts.FormatDiagnosticsHost = {
-  getCanonicalFileName: (path): string => path,
+  getCanonicalFileName: (fileNamePath): string => fileNamePath,
   getCurrentDirectory: ts.sys.getCurrentDirectory,
   getNewLine: (): string => ts.sys.newLine,
 };
@@ -15,11 +21,34 @@ function reportDiagnostic(diagnostic: ts.Diagnostic): void {
     `Error code ${colors.bgRed.white(
       diagnostic.code.toString()
     )} compiling A2R Framework API File:\n${ts.formatDiagnosticsWithColorAndContext(
-      [diagnostic],      
+      [diagnostic],
       formatHost
     )}`
   );
 }
+
+const deleteIfExists = async (fileNameToDelete:string): Promise<void> => {
+  console.log(fileNameToDelete);
+}
+
+// Purge removed files
+chokidar.watch(sorcePath).on(
+  'unlink',
+  async (fileNamePath: string): Promise<void> => {
+    out.verbose(
+      `Watcher detected file deletion (unlink): ${fileNamePath} with extension ${path.extname(
+        fileNamePath
+      )}`
+    );
+    const fileInfo = path.parse(fileNamePath);
+    if (fileInfo.ext.toLowerCase() === '.ts') {
+      await deleteIfExists(path.join(destPath, `./${fileInfo.name}.js`));
+      await deleteIfExists(path.join(destPath, `./${fileInfo.name}.d.ts`));
+      await deleteIfExists(path.join(destPath, `./${fileInfo.name}.js.map`));
+      
+    }
+  }
+);
 
 /**
  * Prints a diagnostic every time the watch status changes.
@@ -30,14 +59,7 @@ function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
 }
 
 function watchMain(): void {
-  const configPath = ts.findConfigFile(
-    /* searchPath */ '../test',
-    ts.sys.fileExists,
-    'tsconfig.json'
-  );
-  if (!configPath) {
-    throw new Error('Could not find a valid \'tsconfig.json\'.');
-  }
+  const configPath = path.join(sorcePath, '../tsconfig-api.json');
 
   const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
 
@@ -60,7 +82,7 @@ function watchMain(): void {
     rootNames: readonly string[] | undefined,
     options: ts.CompilerOptions | undefined,
     currentHost: ts.CompilerHost | undefined,
-    oldProgram: ts.SemanticDiagnosticsBuilderProgram | undefined,
+    oldProgram: ts.SemanticDiagnosticsBuilderProgram | undefined
   ): ts.SemanticDiagnosticsBuilderProgram => {
     out.verbose('We are about to create the program!');
     return origCreateProgram(rootNames, options, currentHost, oldProgram);
