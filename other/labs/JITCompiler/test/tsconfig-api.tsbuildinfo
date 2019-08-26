@@ -253,8 +253,8 @@
       "/data/Projects/A2R/other/labs/JITCompiler/compiler/node_modules/typescript/lib/lib.es2017.full.d.ts",
       "/data/Projects/A2R/other/labs/JITCompiler/test/api/cas.ts",
       "/data/Projects/A2R/other/labs/JITCompiler/test/api/other.ts",
-      "/data/Projects/A2R/other/labs/JITCompiler/test/api/test.ts",
-      "/data/Projects/A2R/other/labs/JITCompiler/test/api/other/test.ts"
+      "/data/Projects/A2R/other/labs/JITCompiler/test/api/other/test.ts",
+      "/data/Projects/A2R/other/labs/JITCompiler/test/api/test.ts"
     ]
   },
   "version": "3.5.3"
