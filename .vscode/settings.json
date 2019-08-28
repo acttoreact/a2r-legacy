@@ -13,6 +13,7 @@
     "dotenv",
     "downlevel",
     "eslintcache",
+    "gtag",
     "jspm",
     "middlewares",
     "nextjs",
