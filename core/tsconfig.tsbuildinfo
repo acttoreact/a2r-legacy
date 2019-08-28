@@ -474,23 +474,23 @@
         "signature": "020902fda20b7d8937c30699f217e198054a0d0d5c1c309dab7d588adadfcade"
       },
       "/home/nacho/Projects/A2R/core/src/util/fs.ts": {
-        "version": "a559c462ada8e1bca294b6a739ce5421fbdd65895b1cb53769a17eee19d6998c",
+        "version": "848ff0c39ac51fe819810571d55006dec0e52938e4bf1bc41e166924d106d9a8",
         "signature": "0d38650e863d130aee8870dc335694a6c431ce91bb401b9f6c96fadac3c34d72"
       },
-      "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts": {
-        "version": "c4a075aa02cfdff436df0d9747131204bbc5c49c3e0f4d75da53ac4fcf2ea06a",
+      "/home/nacho/Projects/A2R/core/src/services/tsCompiler/index.ts": {
+        "version": "de2a85b91b9342f9d3f733d94fa0db5d5106a0787c4e9a8cfef931d5a2237db9",
         "signature": "3aa11abe94a43fc44b75bd1cc06e837e33c32486112fca87ff2edaa2916d8f10"
       },
       "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts": {
-        "version": "f1d6f59c43795e252571f6957c9cd5116d2e202077ad1ffdad8e33c790ad3e4a",
+        "version": "44593630497b2dcc1221c52b7d1b9f3b72c716f352382d62016dec37d884742b",
         "signature": "ce8c09afa30e578428e6cb0f58690729d2f93579b65c3cf418d8f388d6d90c6c"
       },
       "/home/nacho/Projects/A2R/core/src/services/index.ts": {
-        "version": "7fbf5657d3db1ca23f428621feb2443141b0a74199f3cf86e8299c4d2a03d45c",
-        "signature": "e05ad32df512b6534f2e7ca340431e6e1a2dd59857dfe3d1ee04c7d80be491c4"
+        "version": "81a1312d19534066b617909a0ddee6c3f11b2d54a14ff876010ce57cd62d412f",
+        "signature": "54b1f31c6707ff3a21fa9a6fb173e12af13899d4f630a45d94689f64d68e14c3"
       },
       "/home/nacho/Projects/A2R/core/src/server.ts": {
-        "version": "579c0d7e75a1fc71c662c304d79bb6e627b0942e24d222fe924cd515a8189302",
+        "version": "787428d75936c0b848b2395baf89a784e685f0200d56b3b970c29da6c01774bd",
         "signature": "9f10ceba3fcac2ac98984ab2accc70f11c19f480388e433db1f7edd0ae2a6d73"
       },
       "/home/nacho/Projects/A2R/core/src/commands/logo.ts": {
@@ -1346,7 +1346,7 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts": [
+      "/home/nacho/Projects/A2R/core/src/services/tsCompiler/index.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/chokidar/types/index.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/colors/index.d.ts",
@@ -1357,8 +1357,11 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/colors/index.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/path.d.ts",
-        "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts",
+        "/home/nacho/Projects/A2R/core/src/util/out.ts",
+        "/home/nacho/Projects/A2R/core/src/services/tsCompiler/index.ts",
+        "/home/nacho/Projects/A2R/core/src/util/fs.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2551,7 +2554,6 @@
       "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts",
       "/home/nacho/Projects/A2R/core/src/util/fs.ts",
-      "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts",
       "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts",
       "/home/nacho/Projects/A2R/core/src/services/index.ts",
       "/home/nacho/Projects/A2R/core/src/server.ts",
@@ -2600,7 +2602,8 @@
       "/home/nacho/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/yargs/index.d.ts",
-      "/home/nacho/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts"
+      "/home/nacho/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts",
+      "/home/nacho/Projects/A2R/core/src/services/tsCompiler/index.ts"
     ]
   },
   "version": "3.5.3"

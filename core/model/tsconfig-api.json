@@ -4,7 +4,7 @@
     "target": "ES2017",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "./.a2r/server",
+    "outDir": "./.a2r/api/server",
     "rootDir": "api",
     "strict": true,
     "moduleResolution": "node",

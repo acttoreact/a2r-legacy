@@ -12,10 +12,11 @@ interface ServerResponse {
   close: () => void;
 }
 
-// Starts all the services
-services();
-
 const server = (dev: boolean, port: number): Promise<ServerResponse> => {
+
+  // Starts all the services
+  services();
+
   return new Promise<ServerResponse>(
     (resolve, reject): void => {
       const app = next({ dev });

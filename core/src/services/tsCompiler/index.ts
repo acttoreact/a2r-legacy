@@ -12,9 +12,15 @@ const compileFiles = async (
   const existsDestPath = await fs.exists(destPath);
 
   if (existsDestPath) {
-    await fs.rimraf(destPath);
-  }
-  await fs.mkDir(destPath);
+    try {
+      await fs.rimraf(destPath);
+      await fs.mkDir(destPath);
+    } catch (ex) {    
+      out.error(
+        `Error calling ${colors.bgRed.white('rimraf')}: ${ex.message}\n${ex.stack}`);
+      console.log(fs);
+    }
+  }  
 
   const formatHost: ts.FormatDiagnosticsHost = {
     getCanonicalFileName: (fileNamePath): string => fileNamePath,
@@ -105,7 +111,7 @@ const compileFiles = async (
     const origPostProgramCreate = host.afterProgramCreate;
 
     host.afterProgramCreate = (program): void => {
-      out.info('We finished making the program!');
+      out.verbose('We finished making the program!');
       origPostProgramCreate!(program);
     };
 

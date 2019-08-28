@@ -1,3 +1,3 @@
-const ping = (): string => 'pong';
+const ping = (): string => '2';
 
 export default ping;

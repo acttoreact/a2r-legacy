@@ -2,7 +2,6 @@ import fs from 'fs';
 import rimraf from 'rimraf';
 import util from 'util';
 
-
 export default {
   readFile: util.promisify(fs.readFile),
   readDir: util.promisify(fs.readdir),
