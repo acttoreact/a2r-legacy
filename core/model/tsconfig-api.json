@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ES2017",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./.a2r/server",
+    "rootDir": "api",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+  },
+  "exclude": [
+    "./*.ts",
+    ".a2r",
+    "server",
+    "pages",
+    "static",
+  ]
+}
+

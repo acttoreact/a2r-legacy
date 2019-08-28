@@ -1,4 +1,5 @@
 import fs from 'fs';
+import rimraf from 'rimraf';
 import util from 'util';
 
 
@@ -10,4 +11,7 @@ export default {
   copyFile: util.promisify(fs.copyFile),
   writeFile: util.promisify(fs.writeFile),
   exists: util.promisify(fs.exists),
+  unlink: util.promisify(fs.unlink),
+  rmDir: util.promisify(fs.rmdir),
+  rimraf: util.promisify(rimraf),
 };

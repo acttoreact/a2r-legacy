@@ -125,10 +125,6 @@
         "version": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594",
         "signature": "873c09f1c309389742d98b7b67419a8e0a5fa6f10ce59fd5149ecd31a2818594"
       },
-      "/home/nacho/Projects/A2R/core/src/fragment.ts": {
-        "version": "aff977e13f5f1151df7422240d541d9c670053beee2ed14927f621bdc828c677",
-        "signature": "bad3a3a412bb0898be1a72a2d00b77fc1dfea3517f008ba74fbe4af2419f03a5"
-      },
       "/home/nacho/Projects/A2R/core/node_modules/@types/react/global.d.ts": {
         "version": "2bbdfc5ed049f38787376bb01b7bcfe5299eac853c76c16a3e21ab0279078314",
         "signature": "2bbdfc5ed049f38787376bb01b7bcfe5299eac853c76c16a3e21ab0279078314"
@@ -157,17 +153,9 @@
         "version": "8389b00888de9479494ba17206aa52f936f85ffb75e30170eb9e38bee65f69cd",
         "signature": "8389b00888de9479494ba17206aa52f936f85ffb75e30170eb9e38bee65f69cd"
       },
-      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": {
-        "version": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be",
-        "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
-      },
-      "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts": {
-        "version": "df97118f2e69b16bfeded37a61e78732e0d06d9e9d2577f1be6eed07d6062e55",
-        "signature": "7b6a41a561610046d472a6b6c97c61b6383cffea129e097c28d50ebff43d18b8"
-      },
       "/home/nacho/Projects/A2R/core/src/index.ts": {
-        "version": "cd80918831d109afb23af28c52689c9ecefe09f3b9fc1c63ab787f82c6c4c850",
-        "signature": "e6f0601dbc0da5a833265dd6a0771deb8af30299456630994e7e17e7312dc178"
+        "version": "1279d1efc8d3aa7e3756ff22aa397b9e060df4eb47560cf4e0ed3f98cd1794a1",
+        "signature": "bd1ee4f4b9a6480106b840db5294702628aa7da81b18dd360edb0bcba12cab4f"
       },
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/globals.d.ts": {
         "version": "e4461b72726848da76a31153b6b01af5e0be3b08dbfa2ec5741ad302eb20f2ed",
@@ -184,6 +172,10 @@
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/buffer.d.ts": {
         "version": "61215c1a376bbe8f51cab4cc4ddbf3746387015113c37a84d981d4738c21b878",
         "signature": "61215c1a376bbe8f51cab4cc4ddbf3746387015113c37a84d981d4738c21b878"
+      },
+      "/home/nacho/Projects/A2R/core/node_modules/@types/events/index.d.ts": {
+        "version": "400db42c3a46984118bff14260d60cec580057dc1ab4c2d7310beb643e4f5935",
+        "signature": "400db42c3a46984118bff14260d60cec580057dc1ab4c2d7310beb643e4f5935"
       },
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/child_process.d.ts": {
         "version": "123366127434e33eade36f3d06653dbc7457397fc93cfdd100776cfc12b6734c",
@@ -461,8 +453,44 @@
         "version": "7406bebf3bc33a2c0c5efec7eda625dbe304b98dbcf1093d5a0f155a7faf6635",
         "signature": "a918c9d15eed3ab9aff2f7281ff09ba534eb77e5e6278980a34a76124f013b31"
       },
+      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
+        "version": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6",
+        "signature": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6"
+      },
+      "/home/nacho/Projects/A2R/core/node_modules/chokidar/types/index.d.ts": {
+        "version": "c55b3a2c2478025ba62d052ce0186996698fe8f5987abcdeb71140ebfec69d82",
+        "signature": "c55b3a2c2478025ba62d052ce0186996698fe8f5987abcdeb71140ebfec69d82"
+      },
+      "/home/nacho/Projects/A2R/core/node_modules/@types/minimatch/index.d.ts": {
+        "version": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
+        "signature": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633"
+      },
+      "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts": {
+        "version": "d852d6282c8dc8156d26d6bda83ab4bde51fee05ba2fe0ecdc165ddda009d3ee",
+        "signature": "d852d6282c8dc8156d26d6bda83ab4bde51fee05ba2fe0ecdc165ddda009d3ee"
+      },
+      "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts": {
+        "version": "020902fda20b7d8937c30699f217e198054a0d0d5c1c309dab7d588adadfcade",
+        "signature": "020902fda20b7d8937c30699f217e198054a0d0d5c1c309dab7d588adadfcade"
+      },
+      "/home/nacho/Projects/A2R/core/src/util/fs.ts": {
+        "version": "a559c462ada8e1bca294b6a739ce5421fbdd65895b1cb53769a17eee19d6998c",
+        "signature": "0d38650e863d130aee8870dc335694a6c431ce91bb401b9f6c96fadac3c34d72"
+      },
+      "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts": {
+        "version": "c4a075aa02cfdff436df0d9747131204bbc5c49c3e0f4d75da53ac4fcf2ea06a",
+        "signature": "3aa11abe94a43fc44b75bd1cc06e837e33c32486112fca87ff2edaa2916d8f10"
+      },
+      "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts": {
+        "version": "f1d6f59c43795e252571f6957c9cd5116d2e202077ad1ffdad8e33c790ad3e4a",
+        "signature": "ce8c09afa30e578428e6cb0f58690729d2f93579b65c3cf418d8f388d6d90c6c"
+      },
+      "/home/nacho/Projects/A2R/core/src/services/index.ts": {
+        "version": "7fbf5657d3db1ca23f428621feb2443141b0a74199f3cf86e8299c4d2a03d45c",
+        "signature": "e05ad32df512b6534f2e7ca340431e6e1a2dd59857dfe3d1ee04c7d80be491c4"
+      },
       "/home/nacho/Projects/A2R/core/src/server.ts": {
-        "version": "579580428c7f43083a9764376fcfa55aebaddf3228558e5ff5cc43b05c0a3137",
+        "version": "579c0d7e75a1fc71c662c304d79bb6e627b0942e24d222fe924cd515a8189302",
         "signature": "9f10ceba3fcac2ac98984ab2accc70f11c19f480388e433db1f7edd0ae2a6d73"
       },
       "/home/nacho/Projects/A2R/core/src/commands/logo.ts": {
@@ -470,12 +498,12 @@
         "signature": "8080962403632a0c4168303966051bd208c9731af1edd942b047a41c2438280e"
       },
       "/home/nacho/Projects/A2R/core/src/commands/commandLineInfo.ts": {
-        "version": "541cc4ab24960cf8b59fe6e98ae0161b70fb31173b05fc86725a7db05726c63f",
+        "version": "4ff81176abcbe8e956dccfefe359cb587dd409f6cf037c48b257e9337f18a10a",
         "signature": "8ea8df22f43a9681deda3630c2198459f9ed16aaaa50d9ae4ebf058a5f8857a2"
       },
-      "/home/nacho/Projects/A2R/core/src/util/fs.ts": {
-        "version": "e9516395f1bb2a4117eb3893e8fab2fdbdedf60d2dbfd8637077cad32bfd202d",
-        "signature": "d32da94ec9fed48325d1be7246a20cbd866dea701912c8a4d7d46881dc383fed"
+      "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts": {
+        "version": "df97118f2e69b16bfeded37a61e78732e0d06d9e9d2577f1be6eed07d6062e55",
+        "signature": "7b6a41a561610046d472a6b6c97c61b6383cffea129e097c28d50ebff43d18b8"
       },
       "/home/nacho/Projects/A2R/core/src/commands/packageInfoManager.ts": {
         "version": "83e21231fb8d2d63395795318bd7cdf17f675d06f6cf1d70fe389ebf193b30e7",
@@ -486,7 +514,7 @@
         "signature": "b10fd09ac3dcf7260ca25068eb8162e39816e5edce4e033b0a562ac7795d9215"
       },
       "/home/nacho/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts": {
-        "version": "1bec013b6c2684e1ecfc1eb533529d43c6ad7de997e2636d84aa108fb0c5cad6",
+        "version": "b177bafdad6d80e0ce826b25df411f104513adfb8f6667c1ea891103b377d71a",
         "signature": "f253b76f6b101cd6ae5abdff82e6db2903e084b16ab3b7964c8b2f585897dce8"
       },
       "/home/nacho/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts": {
@@ -544,10 +572,6 @@
       "/home/nacho/Projects/A2R/core/src/commands/waitForCurrentVersion.ts": {
         "version": "3d8f8a58a14c58daee98494f5f38add29a514ddf4c10570c95c8539dbf2b86c9",
         "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
-      },
-      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": {
-        "version": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6",
-        "signature": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6"
       },
       "/home/nacho/Projects/A2R/core/src/helpers/api/processFiles.ts": {
         "version": "08c8b7c2c082f19bd8e372c95e0d67ec08fa29ed7373d1f5188bb5ba6b6e4e11",
@@ -628,6 +652,10 @@
       "/home/nacho/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts": {
         "version": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30",
         "signature": "751b8d5b85eee82bd38964a6ff43e89e61a586c64f653e3d1eb8fa7eb372ed30"
+      },
+      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": {
+        "version": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be",
+        "signature": "7255e9138b74f3fe8a9910bf3e711d43be1399ab8a0554bad34dc766511059be"
       },
       "/home/nacho/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts": {
         "version": "41422586881bcd739b4e62d9b91cd29909f8572aa3e3cdf316b7c50f14708d49",
@@ -787,10 +815,6 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/src/fragment.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/home/nacho/Projects/A2R/core/node_modules/@types/react/global.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -825,19 +849,9 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/home/nacho/Projects/A2R/core/src/index.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/react/index.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/next/head.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
-        "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -854,6 +868,10 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/buffer.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/events/index.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1293,6 +1311,63 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/chokidar/types/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/minimatch/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/minimatch/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/src/util/fs.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/chokidar/types/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/colors/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/home/nacho/Projects/A2R/core/src/util/out.ts",
+        "/home/nacho/Projects/A2R/core/src/util/fs.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/path.d.ts",
+        "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/src/services/index.ts": [
+        "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts",
+        "/home/nacho/Projects/A2R/core/src/util/out.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/nacho/Projects/A2R/core/src/server.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/http.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/express/index.d.ts",
@@ -1301,6 +1376,7 @@
         "/home/nacho/Projects/A2R/core/node_modules/open/index.d.ts",
         "/home/nacho/Projects/A2R/core/src/util/out.ts",
         "/home/nacho/Projects/A2R/core/src/util/socket.ts",
+        "/home/nacho/Projects/A2R/core/src/services/index.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1315,8 +1391,7 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/src/util/fs.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1451,10 +1526,6 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/home/nacho/Projects/A2R/core/src/helpers/api/processFiles.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
         "/home/nacho/Projects/A2R/core/src/util/fs.ts",
@@ -1558,6 +1629,10 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1741,15 +1816,9 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/home/nacho/Projects/A2R/core/src/index.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/react/index.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/next/head.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
-        "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts"
+        "/home/nacho/Projects/A2R/core/node_modules/next/head.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/globals.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
@@ -1764,6 +1833,10 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/buffer.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/events/index.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2187,11 +2260,41 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/home/nacho/Projects/A2R/core/src/server.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/http.d.ts"
+      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/chokidar/types/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/minimatch/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/events.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/minimatch/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/src/util/fs.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts"
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/fs.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts"
+      ],
+      "/home/nacho/Projects/A2R/core/src/server.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/http.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts": [
         "/home/nacho/Projects/A2R/core/src/commands/packageInfoManager.ts"
@@ -2226,10 +2329,6 @@
       ],
       "/home/nacho/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/readline.d.ts"
-      ],
-      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts": [
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
-        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/home/nacho/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
@@ -2307,6 +2406,10 @@
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts": [
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
+        "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/home/nacho/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts": [
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/util.d.ts",
         "/home/nacho/Projects/A2R/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2360,7 +2463,6 @@
       "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/lib.es2017.full.d.ts",
-      "/home/nacho/Projects/A2R/core/src/fragment.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/react/global.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/csstype/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/prop-types/index.d.ts",
@@ -2368,9 +2470,6 @@
       "/home/nacho/Projects/A2R/core/node_modules/next-server/dist/lib/head.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/next-server/head.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/next/head.d.ts",
-      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts",
-      "/home/nacho/Projects/A2R/core/src/index.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/globals.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/assert.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/node/async_hooks.d.ts",
@@ -2442,30 +2541,21 @@
       "/home/nacho/Projects/A2R/core/node_modules/winston/index.d.ts",
       "/home/nacho/Projects/A2R/core/src/util/out.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io/index.d.ts",
-      "/home/nacho/Projects/A2R/core/src/server.ts",
+      "/home/nacho/Projects/A2R/core/src/config/settings.ts",
+      "/home/nacho/Projects/A2R/core/src/util/socket.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
       "/home/nacho/Projects/A2R/core/src/commands/logo.ts",
-      "/home/nacho/Projects/A2R/core/src/util/fs.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/packageInfoManager.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/consoleCommands.ts",
       "/home/nacho/Projects/A2R/core/src/commands/getLastVersionOfA2R.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/command-line-args/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/command-line-usage/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/type-fest/source/package-json.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/type-fest/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/get-port/index.d.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/init.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/version.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/update.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/patch.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/paramsRules.ts",
       "/home/nacho/Projects/A2R/core/src/commands/setupBasicConsoleCommands.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/waitForCurrentVersion.ts",
-      "/home/nacho/Projects/A2R/core/node_modules/typescript/lib/typescript.d.ts",
-      "/home/nacho/Projects/A2R/core/src/helpers/api/processFiles.ts",
-      "/home/nacho/Projects/A2R/core/src/tests/api/processFiles.ts",
       "/home/nacho/Projects/A2R/core/src/tests/api/commands/getLastVersionOfA2R.ts",
       "/home/nacho/Projects/A2R/core/src/tests/jit/dynamicLoad.ts",
-      "/home/nacho/Projects/A2R/core/src/tools/increaseVersion.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@babel/types/lib/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/babel__generator/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/babel__traverse/index.d.ts",
@@ -2481,16 +2571,36 @@
       "/home/nacho/Projects/A2R/core/node_modules/jest-diff/build/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/jest/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/json-schema/index.d.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/@types/socket.io-client/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/stack-utils/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/strip-bom/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/strip-json-comments/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/yargs/index.d.ts",
       "/home/nacho/Projects/A2R/core/node_modules/@types/zen-observable/index.d.ts",
-      "/home/nacho/Projects/A2R/core/src/config/settings.ts",
-      "/home/nacho/Projects/A2R/core/src/util/socket.ts",
+      "/home/nacho/Projects/A2R/core/src/index.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/@types/events/index.d.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/chokidar/types/index.d.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/@types/minimatch/index.d.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/@types/glob/index.d.ts",
+      "/home/nacho/Projects/A2R/core/node_modules/@types/rimraf/index.d.ts",
+      "/home/nacho/Projects/A2R/core/src/util/fs.ts",
+      "/home/nacho/Projects/A2R/core/src/services/compiler/index.ts",
+      "/home/nacho/Projects/A2R/core/src/services/apiCompiler.ts",
+      "/home/nacho/Projects/A2R/core/src/services/index.ts",
+      "/home/nacho/Projects/A2R/core/src/server.ts",
       "/home/nacho/Projects/A2R/core/src/commands/commandLineInfo.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/paramsRules.ts",
-      "/home/nacho/Projects/A2R/core/src/commands/index.ts"
+      "/home/nacho/Projects/A2R/core/src/commands/packageInfoManager.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/getCurrentA2RPackageInfo.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/getCurrentProjectInfo.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/init.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/version.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/update.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/patch.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/index.ts",
+      "/home/nacho/Projects/A2R/core/src/commands/waitForCurrentVersion.ts",
+      "/home/nacho/Projects/A2R/core/src/helpers/api/processFiles.ts",
+      "/home/nacho/Projects/A2R/core/src/tests/api/processFiles.ts",
+      "/home/nacho/Projects/A2R/core/src/tools/increaseVersion.ts"
     ]
   },
   "version": "3.5.3"

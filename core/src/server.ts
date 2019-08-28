@@ -5,11 +5,15 @@ import next from 'next';
 import open from 'open';
 import out from './util/out';
 import socket from './util/socket';
+import services from './services';
 
 interface ServerResponse {
   server: http.Server;
   close: () => void;
 }
+
+// Starts all the services
+services();
 
 const server = (dev: boolean, port: number): Promise<ServerResponse> => {
   return new Promise<ServerResponse>(
