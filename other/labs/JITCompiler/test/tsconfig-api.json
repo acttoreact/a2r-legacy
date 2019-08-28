@@ -8,7 +8,7 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
   "exclude": [
     "./*.ts",
@@ -17,6 +17,6 @@
     "server/**/*.*",
     "node_modules",
     "pages",
-    "static",
+    "static"
   ]
 }
