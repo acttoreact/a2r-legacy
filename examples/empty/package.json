@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "a2r": "^0.2.33"
+    "a2r": "^0.3.6"
   },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
