@@ -74,6 +74,9 @@ const compileFiles = async (
    * This is mainly for messages like "Starting compilation" or "Compilation completed".
    */
   function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
+    if(diagnostic.messageText.toString().indexOf('0 errors') !== -1) {
+      out.info(`${colors.yellow.bold('API')} transpilation ${colors.green.bold('OK')}`)
+    }    
     out.verbose(ts.formatDiagnostic(diagnostic, formatHost));
   }
 
@@ -110,9 +113,8 @@ const compileFiles = async (
     const origPostProgramCreate = host.afterProgramCreate;
 
     host.afterProgramCreate = (program): void => {
-      out.verbose('We finished making the program!');
-      out.info(`${colors.magenta('A2R')} ${colors.yellow('API')} transpilation ${colors.green.bold('OK')}`)
-      origPostProgramCreate!(program);      
+      out.verbose('We finished making the program!');      
+      origPostProgramCreate!(program);
     };
 
     // `createWatchProgram` creates an initial program, watches files, and updates
