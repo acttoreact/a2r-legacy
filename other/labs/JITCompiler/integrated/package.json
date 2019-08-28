@@ -10,7 +10,7 @@
     "start": "node ./dist/index.js",
     "test": "jest",
     "test-dev": "npx jest --watch",
-    "dev": "ts-node-dev --debug ./src/index.ts --respawn --transpileOnly"
+    "dev": "ts-node-dev --ignore-watch test --debug ./src/index.ts --respawn --transpileOnly"
   },
   "repository": {
     "type": "git",

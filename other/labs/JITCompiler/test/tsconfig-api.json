@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "incremental": true,
     "target": "ES2017",
     "module": "commonjs",
     "declaration": true,
@@ -9,13 +8,15 @@
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "sourceMap": true,
+    "sourceMap": true
   },
   "exclude": [
     "./*.ts",
     "server",
+    "server/**",
+    "server/**/*.*",
     "node_modules",
     "pages",
-    "static",
+    "static"
   ]
 }
