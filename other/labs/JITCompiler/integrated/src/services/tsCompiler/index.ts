@@ -2,11 +2,8 @@ import ts from 'typescript';
 import chokidar from 'chokidar';
 import colors from 'colors';
 import path from 'path';
-
-import out from './util/out';
-import fs from './util/fs';
-
-out.setLevel('verbose');
+import out from '../../util/out';
+import fs from '../../util/fs';
 
 const compileFiles = async (
   sourcePath: string,
@@ -15,9 +12,14 @@ const compileFiles = async (
   const existsDestPath = await fs.exists(destPath);
 
   if (existsDestPath) {
-    await fs.rimraf(destPath);
-  }
-  await fs.mkDir(destPath);
+    try {
+      await fs.rimraf(destPath);
+      await fs.mkDir(destPath);
+    } catch (ex) {    
+      out.error(
+        `Error calling ${colors.bgRed.white('rimraf')}: ${ex.message}\n${ex.stack}`);
+    }
+  }  
 
   const formatHost: ts.FormatDiagnosticsHost = {
     getCanonicalFileName: (fileNamePath): string => fileNamePath,
@@ -72,6 +74,9 @@ const compileFiles = async (
    * This is mainly for messages like "Starting compilation" or "Compilation completed".
    */
   function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
+    if(diagnostic.messageText.toString().indexOf('0 errors') !== -1) {
+      out.info(`${colors.yellow.bold('API')} transpilation ${colors.green.bold('OK')}`)
+    }    
     out.verbose(ts.formatDiagnostic(diagnostic, formatHost));
   }
 
@@ -108,7 +113,7 @@ const compileFiles = async (
     const origPostProgramCreate = host.afterProgramCreate;
 
     host.afterProgramCreate = (program): void => {
-      out.info('We finished making the program!');
+      out.verbose('We finished making the program!');      
       origPostProgramCreate!(program);
     };
 
@@ -120,7 +125,4 @@ const compileFiles = async (
   watchMain();
 };
 
-const sourcePathDir = path.join(__dirname, '../../test/api');
-const destPathDir = path.join(__dirname, '../../test/server');
-
-compileFiles(sourcePathDir, destPathDir);
+export default compileFiles;

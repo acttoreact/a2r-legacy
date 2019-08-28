@@ -18,7 +18,6 @@ const compileFiles = async (
     } catch (ex) {    
       out.error(
         `Error calling ${colors.bgRed.white('rimraf')}: ${ex.message}\n${ex.stack}`);
-      console.log(fs);
     }
   }  
 
@@ -112,7 +111,8 @@ const compileFiles = async (
 
     host.afterProgramCreate = (program): void => {
       out.verbose('We finished making the program!');
-      origPostProgramCreate!(program);
+      out.info(`${colors.magenta('A2R')} ${colors.yellow('API')} transpilation ${colors.green.bold('OK')}`)
+      origPostProgramCreate!(program);      
     };
 
     // `createWatchProgram` creates an initial program, watches files, and updates
