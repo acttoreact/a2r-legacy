@@ -2,6 +2,7 @@ import colors from 'colors';
 import path from 'path';
 import out from '../util/out';
 import compiler from './tsCompiler/index';
+import { buildApi, APIStructure, APIModule } from './apiBuilder/index';
 import fs from '../util/fs';
 
 out.setLevel('verbose');
@@ -22,6 +23,12 @@ const apiCompiler = async (): Promise<void> => {
     await fs.mkDir(apiPath);
   }
   await compiler(sourcePathDir, destPathDir);
+  const api: APIStructure = await buildApi(destPathDir);
+  console.log('api', api);
+  const cas = (api.cas as APIModule).default;
+  console.log('cas', cas);
+  const otherTest = (api.other as APIStructure).test as APIModule;
+  console.log('otherTest.default()', otherTest.default());
 }
 
 export default apiCompiler;
