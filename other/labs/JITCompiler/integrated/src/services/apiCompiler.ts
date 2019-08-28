@@ -21,7 +21,7 @@ const apiCompiler = async (): Promise<void> => {
   if(!existsAPIPath) {
     await fs.mkDir(apiPath);
   }
-  return compiler(sourcePathDir, destPathDir);
+  await compiler(sourcePathDir, destPathDir);
 }
 
 export default apiCompiler;
