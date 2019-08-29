@@ -47,7 +47,7 @@ const importModules = async (
           methods.push(cleanName);
           await import(pathName).then((mod): void => {
             res[moduleName] = mod;
-            pathsDictionary[pathName] = moduleName;
+            pathsDictionary[path.normalize(pathName)] = moduleName;
           });
         }
       },
@@ -82,7 +82,8 @@ const importModules = async (
 };
 
 export const disposeModule = async (modulePath: string): Promise<void> => {
-  const moduleName = pathsDictionary[modulePath];
+  const normalizedPath = path.normalize(modulePath)
+  const moduleName = pathsDictionary[normalizedPath];
   if (moduleName) {
     const mod = api[moduleName] as APIModule;
     if (mod) {
@@ -96,7 +97,7 @@ export const disposeModule = async (modulePath: string): Promise<void> => {
         out.verbose(`Dispose done for module ${colors.italic(moduleName)}`);
       }
       delete api[moduleName];
-      delete pathsDictionary[modulePath];
+      delete pathsDictionary[normalizedPath];
       out.verbose(
         `API module ${colors.italic(moduleName)} has been ${colors.green.bold(
           'successfully',
