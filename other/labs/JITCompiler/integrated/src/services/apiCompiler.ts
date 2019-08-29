@@ -23,7 +23,8 @@ const apiCompiler = async (): Promise<void> => {
     await fs.mkDir(apiPath);
   }
   await compiler(sourcePathDir, destPathDir);
-  await buildApi(destPathDir);
+  const api = await buildApi(destPathDir);
+  console.log(api);
 }
 
 export default apiCompiler;
