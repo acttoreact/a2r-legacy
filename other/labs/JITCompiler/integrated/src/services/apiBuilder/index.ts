@@ -14,61 +14,6 @@ import api, {
 } from './api';
 
 /**
- * Import modules and sub-modules from a given path
- *
- * @param {string} folder Path to process
- * @param {string} [prefix] Prefix for method key
- */
-export const importModules = async (
-  folder: string,
-  prefix?: string,
-): Promise<APIStructure> => {
-  const folderPath = path.normalize(folder);
-  out.verbose(`Import modules from ${folderPath}`);
-  const contents = await fs.readDir(folderPath, { withFileTypes: true });
-  const methods: string[] = [];
-  const subModules: string[] = [];
-
-  await Promise.all(
-    contents.map(
-      async (content): Promise<void> => {
-        const { name: fileName } = content;
-        out.verbose(`Processing content ${fileName}`);
-        if (content.isDirectory()) {
-          subModules.push(fileName);
-        } else if (path.extname(fileName).toLowerCase() === '.js') {
-          const cleanName = fileName.replace(/\.js$/, '');
-          methods.push(cleanName);
-          addModuleToApi(folderPath, fileName, cleanName, prefix);
-        }
-      },
-    ),
-  );
-
-  await Promise.all(
-    subModules.map(
-      async (name): Promise<void> => {
-        const modulePrefix: string = [prefix, name]
-          .filter((s): boolean => !!s)
-          .join('.');
-        if (methods.indexOf(name) === -1) {
-          const pathName = path.resolve(folderPath, name);
-          await importModules(pathName, modulePrefix);
-        } else {
-          out.error(
-            `API Module ${colors.yellow(
-              modulePrefix,
-            )} can't be processed. There's already a method with that name`,
-          );
-        }
-      },
-    ),
-  );
-
-  return api;
-};
-
-/**
  * Update an existing API module from a given path
  *
  * Will check for an existing module coming from the given path.
@@ -189,6 +134,61 @@ export const importModule = async (
       `Wrong path given when trying to import ${colors.yellow(modulePath)}`,
     );
   }
+  return api;
+};
+
+/**
+ * Import modules and sub-modules from a given path
+ *
+ * @param {string} folder Path to process
+ * @param {string} [prefix] Prefix for method key
+ */
+const importModules = async (
+  folder: string,
+  prefix?: string,
+): Promise<APIStructure> => {
+  const folderPath = path.normalize(folder);
+  out.verbose(`Import modules from ${folderPath}`);
+  const contents = await fs.readDir(folderPath, { withFileTypes: true });
+  const methods: string[] = [];
+  const subModules: string[] = [];
+
+  await Promise.all(
+    contents.map(
+      async (content): Promise<void> => {
+        const { name: fileName } = content;
+        out.verbose(`Processing content ${fileName}`);
+        if (content.isDirectory()) {
+          subModules.push(fileName);
+        } else if (path.extname(fileName).toLowerCase() === '.js') {
+          const cleanName = fileName.replace(/\.js$/, '');
+          methods.push(cleanName);
+          addModuleToApi(folderPath, fileName, cleanName, prefix);
+        }
+      },
+    ),
+  );
+
+  await Promise.all(
+    subModules.map(
+      async (name): Promise<void> => {
+        const modulePrefix: string = [prefix, name]
+          .filter((s): boolean => !!s)
+          .join('.');
+        if (methods.indexOf(name) === -1) {
+          const pathName = path.resolve(folderPath, name);
+          await importModules(pathName, modulePrefix);
+        } else {
+          out.error(
+            `API Module ${colors.yellow(
+              modulePrefix,
+            )} can't be processed. There's already a method with that name`,
+          );
+        }
+      },
+    ),
+  );
+
   return api;
 };
 
