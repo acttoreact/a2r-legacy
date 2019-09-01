@@ -38,6 +38,7 @@
     "no-unused-vars": "off",
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
+    "max-lines": ["warn", { "max": 500 }],
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": "error",
