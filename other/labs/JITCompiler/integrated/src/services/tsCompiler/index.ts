@@ -82,6 +82,7 @@ const compileFiles = async (
 
   function watchMain(): void {
     const configPath = path.join(sourcePath, '../tsconfig-api.json');
+    console.log('configPath: ', configPath);
 
     const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
 

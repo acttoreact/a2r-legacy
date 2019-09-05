@@ -10,8 +10,9 @@ out.setLevel('verbose');
 
 const sourcePathDir = path.join(__dirname, '../../../test/api');
 const destPathDir = path.join(__dirname, '../../../test/server');
-const newDestPathDir = path.join(__dirname, '../../../test/server/api2');
-const configPath = path.join(__dirname, '../../../test/tsconfig-api.json');
+const newSourcePathDir = path.join(__dirname, '../../../test2/api');
+const newDestPathDir = path.join(__dirname, '../../../test2/server');
+// const configPath = path.join(__dirname, '../../../test/tsconfig-api.json');
 
 const apiCompiler = async (): Promise<void> => {
   out.verbose(
@@ -29,9 +30,9 @@ const apiCompiler = async (): Promise<void> => {
   if (!existsAPIPath) {
     await fs.mkDir(apiPath);
   }
-  await compiler(sourcePathDir, destPathDir);
+  // await compiler(sourcePathDir, destPathDir);
 
-  watcher(sourcePathDir, newDestPathDir, configPath);
+  watcher(newSourcePathDir, newDestPathDir);
 
   // const api = await buildApi(destPathDir);
   // console.log(api);

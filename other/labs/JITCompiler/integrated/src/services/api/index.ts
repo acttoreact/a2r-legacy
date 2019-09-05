@@ -13,6 +13,8 @@ import api, {
   moduleToPathDictionary,
 } from './api';
 
+const apiInLogs = colors.yellow.bold('API');
+
 /**
  * Update an existing API module from a given path
  *
@@ -31,18 +33,19 @@ export const updateModule = async (
   if (moduleName) {
     const mod = api[moduleName] as APIModule;
     if (mod) {
+      delete require.cache[modulePath];
       await import(modulePath)
         .then(
           async (newMod): Promise<void> => {
             if (mod.dispose) {
               out.verbose(
-                `Module ${colors.italic(
+                `${apiInLogs}: Module ${colors.italic(
                   moduleName,
                 )} has dispose method. Calling it...`,
               );
               await mod.dispose();
               out.verbose(
-                `Disposal method done for module ${colors.italic(moduleName)}`,
+                `${apiInLogs}: Disposal method done for module ${colors.italic(moduleName)}`,
               );
             }
             delete api[moduleName];
@@ -51,24 +54,24 @@ export const updateModule = async (
         )
         .catch((ex): void => {
           out.error(
-            `Error importing module ${colors.yellow(modulePath)} for update: ${
+            `${apiInLogs}: Error importing module ${colors.yellow(modulePath)} for update: ${
               ex.message
             }\n${ex.stack}`,
           );
         });
       out.verbose(
-        `API module ${colors.italic(moduleName)} has been ${colors.green.bold(
+        `${apiInLogs}: Module ${colors.italic(moduleName)} has been ${colors.green.bold(
           'successfully',
-        )} disposed`,
+        )} updated`,
       );
     } else {
       out.warn(
-        `Couldn't find any module for name ${colors.italic(moduleName)}`,
+        `${apiInLogs}: Couldn't find any module for name ${colors.italic(moduleName)}`,
       );
     }
   } else {
     out.warn(
-      `Couldn't find any module or sub-module name for path ${colors.yellow(
+      `${apiInLogs}: Couldn't find any module or sub-module name for path ${colors.yellow(
         modulePath,
       )}`,
     );
@@ -102,7 +105,7 @@ export const disposeModule = async (
     );
   } else {
     out.warn(
-      `Couldn't find any module name for path ${colors.yellow(modulePath)}`,
+      `${apiInLogs}: Couldn't find any module name for path ${colors.yellow(modulePath)}`,
     );
   }
   return api;
@@ -132,7 +135,7 @@ export const importModule = async (
     );
   } else {
     out.error(
-      `Wrong path given when trying to import ${colors.yellow(modulePath)}`,
+      `${apiInLogs}: Wrong path given when trying to import ${colors.yellow(modulePath)}`,
     );
   }
   return api;
@@ -149,7 +152,7 @@ const importModules = async (
   prefix?: string,
 ): Promise<APIStructure> => {
   const folderPath = path.normalize(folder);
-  out.verbose(`Import modules from ${folderPath}`);
+  out.verbose(`${apiInLogs}: Importing modules from ${folderPath}`);
   const contents = await fs.readDir(folderPath, { withFileTypes: true });
   const methods: string[] = [];
   const subModules: string[] = [];
@@ -158,12 +161,12 @@ const importModules = async (
     contents.map(
       async (content): Promise<void> => {
         const { name: fileName } = content;
-        out.verbose(`Processing content ${fileName}`);
         if (content.isDirectory()) {
           subModules.push(fileName);
         } else {
           const extension = path.extname(fileName);
           if (extension.toLowerCase() === '.js') {
+            out.verbose(`${apiInLogs}: Processing content ${fileName}`);
             const cleanName = path.basename(fileName, extension);
             methods.push(cleanName);
             addModuleToApi(folderPath, fileName, cleanName, prefix);
@@ -184,7 +187,7 @@ const importModules = async (
           await importModules(pathName, modulePrefix);
         } else {
           out.error(
-            `API Module ${colors.yellow(
+            `${apiInLogs}: Module ${colors.yellow(
               modulePrefix,
             )} can't be processed. There's already a method with that name`,
           );
@@ -210,12 +213,12 @@ export const buildApi = async (mainPath: string): Promise<APIStructure> => {
   const exists = await fs.exists(apiPath);
 
   if (exists) {
-    out.verbose('Building API');
+    out.verbose(`${apiInLogs}: Building...`);
     moduleToPathDictionary[apiPathKey] = apiPath;
     await importModules(apiPath);
-    out.info(`${colors.yellow.bold('API')} built ${colors.green.bold('OK')}`);
+    out.info(`${apiInLogs}: Built ${colors.green.bold('OK')}`);
   } else {
-    out.error(`API main path not found: ${colors.grey(apiPath)}`);
+    out.error(`${apiInLogs}: Main path not found: ${colors.grey(apiPath)}`);
   }
 
   return api;
