@@ -54,16 +54,17 @@ const watchFolder = async (
     }
     await fs.mkDir(normalizedDestPath, { recursive: true });
 
-    const watcher = chokidar.watch(normalizedSourcePath, options);
+    const apiPath = path.join(normalizedDestPath, 'api');
     const rootDir = path.resolve(normalizedSourcePath, '../');
+
+    const watcher = chokidar.watch(normalizedSourcePath, options);
     watcher.on('all', async (eventName, eventPath, stats): Promise<void> => {
       const rootFile = path.relative(process.cwd(), eventPath);
       const relativePath = path.relative(normalizedSourcePath, eventPath);
-      const jsDestPath = path.join(normalizedDestPath, 'api', relativePath.replace(/\.ts$/, '.js'));
+      const jsDestPath = path.join(apiPath, relativePath.replace(/\.ts$/, '.js'));
       const isFile = await fs.isFile(eventPath, stats);
       const fileAdded = eventName === 'add';
       const fileChanged = eventName === 'change' && isFile;
-      const folderChanged = eventName === 'change' && !isFile;
       const fileRemoved = eventName === 'unlink';
       const folderRemoved = eventName === 'unlinkDir';
       if (fileAdded || fileChanged) {
@@ -89,10 +90,6 @@ const watchFolder = async (
           const api = await method(jsDestPath);
           out.verbose(`${watcherInLogs}: API Updated:`, api);
         }
-      }
-
-      if (folderChanged) {
-        out.verbose(`${watcherInLogs}: Folder changed: ${eventPath}`);
       }
 
       if (fileRemoved || folderRemoved) {
