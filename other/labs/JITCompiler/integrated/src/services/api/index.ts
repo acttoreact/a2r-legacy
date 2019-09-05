@@ -51,9 +51,10 @@ export const updateModule = async (
         )
         .catch((ex): void => {
           out.error(
-            `Error importing module ${colors.yellow(modulePath)} for update`,
+            `Error importing module ${colors.yellow(modulePath)} for update: ${
+              ex.message
+            }\n${ex.stack}`,
           );
-          out.error(ex.stack);
         });
       out.verbose(
         `API module ${colors.italic(moduleName)} has been ${colors.green.bold(
@@ -160,10 +161,13 @@ const importModules = async (
         out.verbose(`Processing content ${fileName}`);
         if (content.isDirectory()) {
           subModules.push(fileName);
-        } else if (path.extname(fileName).toLowerCase() === '.js') {
-          const cleanName = fileName.replace(/\.js$/, '');
-          methods.push(cleanName);
-          addModuleToApi(folderPath, fileName, cleanName, prefix);
+        } else {
+          const extension = path.extname(fileName);
+          if (extension.toLowerCase() === '.js') {
+            const cleanName = path.basename(fileName, extension);
+            methods.push(cleanName);
+            addModuleToApi(folderPath, fileName, cleanName, prefix);
+          }
         }
       },
     ),

@@ -33,8 +33,7 @@ const addModuleToApi = async (
       }
     })
     .catch((ex): void => {
-      out.error(`Error importing module ${colors.yellow(pathName)}`);
-      out.error(ex.stack);
+      out.error(`Error importing module ${colors.yellow(pathName)}: ${ex.message}\n${ex.stack}`);
     });
 };
 
