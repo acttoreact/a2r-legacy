@@ -25,6 +25,23 @@ const formatHost: ts.FormatDiagnosticsHost = {
 };
 
 let watcherReady = false;
+let promiseRunning = false;
+const promisesQueue: Function[] = [];
+
+const processPromisesQueue = (): void => {
+  if (!promiseRunning) {
+    const promiseProvider = promisesQueue.shift();
+    if (promiseProvider) {
+      promiseRunning = true;
+      promiseProvider().catch((ex: Error): void => {
+        out.error(`${watcherInLogs}: Error removing path: ${ex.message}\n${ex.stack}`);
+      }).finally((): void => {
+        promiseRunning = false;
+        processPromisesQueue();
+      });
+    }
+  }
+};
 
 /**
  * Watch folder recursively for files changes
@@ -67,6 +84,7 @@ const watchFolder = async (
       const fileChanged = eventName === 'change' && isFile;
       const fileRemoved = eventName === 'unlink';
       const folderRemoved = eventName === 'unlinkDir';
+      // const folderRemoved = eventName === 'unlink' && !isFile;
       if (fileAdded || fileChanged) {
         if (watcherReady) {
           out.verbose(`${watcherInLogs}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
@@ -92,9 +110,21 @@ const watchFolder = async (
         }
       }
 
-      if (fileRemoved || folderRemoved) {
-        out.verbose(`${watcherInLogs}: ${fileRemoved ? 'File' : 'Folder'} removed: ${eventPath}`);
-        // disposeModule(eventPath);
+      if (fileRemoved) {
+        out.verbose(`${watcherInLogs}: File removed: ${eventPath}`);
+        const mapDestPath = `${jsDestPath}.map`;
+        const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+        promisesQueue.push((): Promise<void> => fs.unlink(jsDestPath));
+        promisesQueue.push((): Promise<void> => fs.unlink(mapDestPath));
+        promisesQueue.push((): Promise<void> => fs.unlink(dtsDestPath));
+        processPromisesQueue();
+        const api = await disposeModule(jsDestPath);
+        out.verbose(`${watcherInLogs}: API Updated:`, api);
+      }
+
+      if (folderRemoved) {
+        promisesQueue.push((): Promise<void> => fs.rmDir(jsDestPath));
+        processPromisesQueue();
       }
     });
     
@@ -104,6 +134,7 @@ const watchFolder = async (
       const api = await buildApi(normalizedDestPath);
       out.verbose('', api);
     });
+
     watcher.on('error', (ex): void => {
       out.error(`${watcherInLogs}: Error: ${ex.message}\n${ex.stack}`);
     });

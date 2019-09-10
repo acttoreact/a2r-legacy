@@ -22,7 +22,7 @@ const apiInLogs = colors.yellow.bold('API');
  * If an API module is found, it will be disposed (module `dispose` method will be called if exists)
  * and then replaced by the new module.
  *
- * @param {string} modulePath
+ * @param {string} modulePath Absolute file path for module
  * @returns {Promise<APIStructure>} The resulting APIStructure object
  */
 export const updateModule = async (
@@ -33,8 +33,8 @@ export const updateModule = async (
   if (moduleName) {
     const mod = api[moduleName] as APIModule;
     if (mod) {
-      delete require.cache[modulePath];
-      await import(modulePath)
+      delete require.cache[normalizedPath];
+      await import(normalizedPath)
         .then(
           async (newMod): Promise<void> => {
             if (mod.dispose) {
@@ -54,7 +54,7 @@ export const updateModule = async (
         )
         .catch((ex): void => {
           out.error(
-            `${apiInLogs}: Error importing module ${colors.yellow(modulePath)} for update: ${
+            `${apiInLogs}: Error importing module ${colors.yellow(normalizedPath)} for update: ${
               ex.message
             }\n${ex.stack}`,
           );
@@ -72,7 +72,7 @@ export const updateModule = async (
   } else {
     out.warn(
       `${apiInLogs}: Couldn't find any module or sub-module name for path ${colors.yellow(
-        modulePath,
+        normalizedPath,
       )}`,
     );
   }
@@ -96,11 +96,18 @@ export const disposeModule = async (
   const moduleName = pathToModuleDictionary[normalizedPath];
   const modulesNames = pathToSubModuleDictionary[normalizedPath];
   if (moduleName) {
+    delete require.cache[normalizedPath];
     await removeModuleFromApi(moduleName);
   } else if (modulesNames) {
     await Promise.all(
       modulesNames.map(
-        (modName): Promise<void> => removeModuleFromApi(modName),
+        (modName): Promise<void> => {
+          const modPath = moduleToPathDictionary[modName];
+          if (modPath) {
+            delete require.cache[modPath];
+          }
+          return removeModuleFromApi(modName)
+        },
       ),
     );
   } else {
