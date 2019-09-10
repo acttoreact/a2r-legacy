@@ -11,9 +11,8 @@ import api, {
   pathToModuleDictionary,
   pathToSubModuleDictionary,
   moduleToPathDictionary,
+  apiInLogs,
 } from './api';
-
-const apiInLogs = colors.yellow.bold('API');
 
 /**
  * Update an existing API module from a given path

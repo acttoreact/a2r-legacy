@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import colors from 'colors';
+
 export const apiPathKey = '_apiPath';
 
 export interface APIModule {
@@ -29,6 +31,8 @@ export interface PathToSubModuleDictionary {
 export const pathToModuleDictionary: PathToModuleDictionary = {};
 export const moduleToPathDictionary: PathToModuleDictionary = {};
 export const pathToSubModuleDictionary: PathToSubModuleDictionary = {};
+
+export const apiInLogs = colors.yellow.bold('API');
 
 const api: APIStructure = {};
 
