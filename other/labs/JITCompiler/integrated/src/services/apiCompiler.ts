@@ -3,7 +3,6 @@ import path from 'path';
 import out from '../util/out';
 import watcher from './watcher';
 import compiler from './tsCompiler/index';
-import { buildApi } from './api';
 import fs from '../util/fs';
 
 out.setLevel('verbose');
@@ -30,12 +29,9 @@ const apiCompiler = async (): Promise<void> => {
   if (!existsAPIPath) {
     await fs.mkDir(apiPath);
   }
+
   // await compiler(sourcePathDir, destPathDir);
-
-  watcher(newSourcePathDir, newDestPathDir);
-
-  // const api = await buildApi(destPathDir);
-  // console.log(api);
+  await watcher(newSourcePathDir, newDestPathDir);
 };
 
 export default apiCompiler;

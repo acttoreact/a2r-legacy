@@ -2,7 +2,6 @@ import fs from 'fs';
 import originalRimraf from 'rimraf';
 import util from 'util';
 
-
 const copyFile = util.promisify(fs.copyFile);
 const exists = util.promisify(fs.exists);
 const lStat = util.promisify(fs.lstat);
