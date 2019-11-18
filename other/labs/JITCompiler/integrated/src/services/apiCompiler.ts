@@ -2,7 +2,6 @@ import colors from 'colors';
 import path from 'path';
 import out from '../util/out';
 import watcher from './watcher';
-import compiler from './tsCompiler/index';
 import fs from '../util/fs';
 
 out.setLevel('verbose');
@@ -30,7 +29,6 @@ const apiCompiler = async (): Promise<void> => {
     await fs.mkDir(apiPath);
   }
 
-  // await compiler(sourcePathDir, destPathDir);
   await watcher(newSourcePathDir, newDestPathDir);
 };
 

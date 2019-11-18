@@ -5,6 +5,7 @@ import api, { APIModule, moduleToPathDictionary, pathToModuleDictionary } from '
 
 /**
  * Remove a single module from API
+ *
  * @param {string} moduleName Module name (file name without extension)
  * @returns {Promise<void>}
  */
