@@ -1,15 +1,31 @@
 import colors from 'colors';
 import path from 'path';
-import util from 'util';
-import { exec } from 'child_process';
+
+import exec from '../util/exec';
 import fs from '../util/fs';
 import out from '../util/out';
+import copyModelContents from '../tools/copyModelContents';
+import ensureNpmInit from '../tools/ensureNpmInit';
 import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
 import getCurrentProjectInfo, {
   updateCurrentProjectPackageInfo,
 } from './getCurrentProjectInfo';
 
-export default async (): Promise<void> => {
+const getProjectPath = async (destPath?: string): Promise<string> => {
+  if (destPath) {
+    await fs.ensureDir(destPath);
+    return destPath;
+  }
+  // `__dirname` should be like `[projectPath]/node_modules/a2r/dist/commands
+  return path.resolve(__dirname, '../../../..');
+};
+
+/**
+ * Init method. Called when using `a2r --init` command.
+ * @param {string?} destPath Destination path containing project
+ * @returns {Promise<void>}
+ */
+const init = async (destPath?: string): Promise<void> => {
   out.info(
     colors.yellow.bold(
       `>>> Initializing project for ${colors.magenta('A2R')} Framework`
@@ -17,82 +33,17 @@ export default async (): Promise<void> => {
   );
   out.verbose(`Current path is ${__dirname}`);
 
-  const basePackagePath = path.join(__dirname, '../..');
-
-  const modelPath = `${basePackagePath}/model`;
-  const targetPath = path.join(__dirname, '../../../..');
+  const projectPath = await getProjectPath(destPath);
+  const basePackagePath = path.resolve(projectPath, 'node_modules/a2r');
+  const modelPath = path.resolve(basePackagePath, 'model');
   out.verbose(`Model path is ${modelPath}`);
-  out.verbose(`Target path is ${targetPath}`);
+  out.verbose(`Project path is ${projectPath}`);
 
-  const execPromise = util.promisify(exec);
+  out.verbose(`Ensuring npm is initialized in path "${projectPath}"`);
+  await ensureNpmInit(projectPath);
 
-  const packageJsonPath = `${targetPath}/package.json`;
-  const isNPMInit = await fs.exists(packageJsonPath);
-
-  async function copyModelContents(relPath: string): Promise<void> {
-    out.verbose(`Processing path: ${relPath}`);
-    const contents = await fs.readDir(modelPath + relPath);
-    await Promise.all(
-      contents.map(
-        async (content: string): Promise<void> => {
-          let newContent = content;
-
-          const fullSourcePath = `${modelPath}${relPath}/${content}`;
-          let fullDestinationPath = `${targetPath}${relPath}/${content}`;
-
-          out.verbose(`Full source path: ${fullSourcePath}`);
-
-          if (fullDestinationPath.endsWith('.model')) {
-            fullDestinationPath = fullDestinationPath.substring(
-              0,
-              fullDestinationPath.length - 6
-            );
-            newContent = newContent.substring(0, newContent.length - 6);
-          }
-
-          out.verbose(`Full destination path: ${fullDestinationPath}`);
-
-          const info = await fs.lStat(fullSourcePath);
-
-          out.verbose(`Source is directory: ${info.isDirectory()}`);
-
-          if (info.isDirectory()) {
-            out.verbose(`Checking if path exists: ${fullDestinationPath}`);
-            const existsDestiny = await fs.exists(fullDestinationPath);
-            if (!existsDestiny) {
-              out.verbose(`Creating directory: ${fullDestinationPath}`);
-              await fs.mkDir(fullDestinationPath);
-              out.verbose(`Directory created: ${fullDestinationPath}`);
-            }
-            await copyModelContents(`${relPath}/${content}`);
-          } else {
-            out.info(
-              colors.green(
-                `Generating file ${colors.yellow.bold.cyan(
-                  `${relPath}/${newContent}`
-                )}.`
-              )
-            );
-            await fs.copyFile(fullSourcePath, fullDestinationPath);
-          }
-        }
-      )
-    );
-  }
-
-  if (!isNPMInit) {
-    out.warn(
-      colors.yellow.bold(
-        `Running ${colors.yellow.green(
-          'npm init'
-        )} in the project path to initialize the ${colors.magenta(
-          'A2R'
-        )} Framework`
-      )
-    );
-
-    await execPromise('npm init --force');
-  }
+  out.verbose(`Copying model contents from path "${modelPath}"`);
+  await copyModelContents(modelPath, projectPath);
 
   let parsedPackage = await getCurrentProjectInfo();
   const parsedA2RPackage = await getCurrentA2RPackageInfo();
@@ -125,6 +76,7 @@ export default async (): Promise<void> => {
   };
 
   await updateCurrentProjectPackageInfo(parsedPackage);
-  await execPromise('npm install');
-  await copyModelContents('');
+  await exec('npm', 'install');
 };
+
+export default init;

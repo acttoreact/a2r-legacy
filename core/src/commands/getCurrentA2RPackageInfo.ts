@@ -1,6 +1,6 @@
 import path from 'path';
 import colors from 'colors';
-import packageInfoManager from './packageInfoManager';
+import packageInfoManager from '../tools/packageInfoManager';
 import { addCommand } from './consoleCommands';
 
 const basePackagePath = path.join(__dirname, '../..');
