@@ -1,9 +1,9 @@
 import { ConsoleCommand } from '../services/commands/consoleCommands';
-import { logo as logoOnLogs } from '../util/terminalStyles';
+import { logo as logoOnLogs, framework } from '../util/terminalStyles';
 
 const logo: ConsoleCommand = {
   name: 'logo',
-  description: 'Display A2R Logo',
+  description: `Display ${framework} Logo`,
   onExecute: async (write): Promise<void> => {
     write(`${logoOnLogs}\n`);
   },

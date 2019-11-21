@@ -6,7 +6,7 @@ import out from '../util/out';
 const setLogLevel: ConsoleCommand = {
   name: 'setLogLevel',
   description:
-    'Set the log leve to the value specified: error, warning, info or verbose',
+    'Set the log level to the value specified: error, warning, info or verbose',
   onExecute: async (write, param?: string): Promise<void> => {
     if (param) {
       const level = param.toLowerCase();

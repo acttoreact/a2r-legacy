@@ -1,17 +1,18 @@
 import colors from 'colors';
 
 import { ConsoleCommand } from '../../commands/consoleCommands';
+import { api as apiOnLogs } from '../../../util/terminalStyles';
 import api from '../api';
 
 const apiMethods: ConsoleCommand = {
   name: 'apiMethods',
-  description: 'Prints API Structure',
+  description: `Lists ${apiOnLogs} modules`,
   onExecute: async (write): Promise<void> => {
     write(
-      `${colors.green.bold(Object.keys(api).length.toString())} API methods:`,
+      `There are ${colors.green.bold(Object.keys(api).length.toString())} ${apiOnLogs} methods:\n`,
     );
     Object.keys(api).forEach((methodKey): void => {
-      write(`${colors.green(methodKey)}`);
+      write(`- ${colors.green(methodKey)}\n`);
     });
   },
 };

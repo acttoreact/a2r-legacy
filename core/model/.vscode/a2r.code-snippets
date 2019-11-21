@@ -1,0 +1,8 @@
+{
+	"Console command": {
+		"scope": "typescript",
+		"prefix": "cmd",
+		"body": "const ${1:command} = {\n\tname: '${1:command}',\n\tdescription: '${2:description}',\n\tonExecute: async (): Promise<void> => {},\n};\n\nexport default ${1:command};\n",
+		"description": "A2R Framework console command definition"
+	}
+}

@@ -51,7 +51,7 @@ const addCommand = (command: ConsoleCommand): void => {
   out.verbose(
     `Added console command ${colors.cyan(
       command.name,
-    )} ${command.onExecute ? colors.green('with') : colors.red('without')} for a total of ${colors.green(
+    )} for a total of ${colors.green(
       Object.keys(commandList).length.toString(),
     )} commands`,
   );

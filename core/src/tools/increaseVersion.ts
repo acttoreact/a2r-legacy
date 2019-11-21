@@ -1,8 +1,19 @@
+import path from 'path';
 import colors from 'colors';
+
+import fs from '../util/fs';
 import out from '../util/out';
 import getCurrentA2RPackageInfo, {
   updateCurrentA2RPackageInfo,
 } from './getCurrentA2RPackageInfo';
+
+const snippetsFileName = 'a2r.code-snippets';
+
+const updateSnippets = async (): Promise<void> => {
+  const a2rSnippetsPath = path.resolve(__dirname, `../../../.vscode/${snippetsFileName}`);
+  const modelSnippetsPath = path.resolve(__dirname, `../../model/.vscode/${snippetsFileName}`);
+  await fs.copyFile(a2rSnippetsPath, modelSnippetsPath);
+};
 
 const increaseVersion = async (): Promise<string> => {
   const parsedPackage = await getCurrentA2RPackageInfo();
@@ -25,6 +36,7 @@ const increaseVersion = async (): Promise<string> => {
     );
   });
   await updateCurrentA2RPackageInfo(parsedPackage);
+  await updateSnippets();
   return newVersion;
 };
 

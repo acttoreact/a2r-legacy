@@ -34,7 +34,6 @@ const addCommandsFromPath = async (commandsFolder: string): Promise<void> => {
                     )} has wrong format: ${util.inspect(command)}`,
                   );
                 }
-                out.verbose('');
                 resolve();
               })
               .catch((ex): void => {

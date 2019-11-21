@@ -24,9 +24,9 @@ const setup = async (
 ): Promise<void> => {
   addCommand({
     name: 'exit',
-    description: 'Exit the A2R Framework',
+    description: `Exit the ${framework}`,
     onExecute: async (write): Promise<void> => {
-      write(`Exiting ${framework}`);
+      write(`Exiting ${framework}\n`);
       serverListener.close();
       rl.close();
       process.stdin.destroy();
