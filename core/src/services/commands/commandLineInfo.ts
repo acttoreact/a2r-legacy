@@ -1,4 +1,4 @@
-import logo from '../../commands/logo';
+import { logo } from '../../util/terminalStyles';
 import setting from '../../config/settings';
 
 export default [

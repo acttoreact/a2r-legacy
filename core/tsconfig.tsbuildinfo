@@ -141,17 +141,13 @@
         "version": "81d7e951aa7e684a3901429a3141faf0db81348842daf1157d99d1ab98c5a3bb",
         "signature": "81d7e951aa7e684a3901429a3141faf0db81348842daf1157d99d1ab98c5a3bb"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/head.d.ts": {
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/head.d.ts": {
         "version": "25b9f971bb149e692442be1477c708902b1747615b2ee23326d7912cc981b93d",
         "signature": "25b9f971bb149e692442be1477c708902b1747615b2ee23326d7912cc981b93d"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/head.d.ts": {
-        "version": "e1f28a3d04c657f03165c8ce8f80d5fec454a57e54824f659de4b8fce7466220",
-        "signature": "e1f28a3d04c657f03165c8ce8f80d5fec454a57e54824f659de4b8fce7466220"
-      },
       "/users/miguel/proyectos/a2r/core/node_modules/next/head.d.ts": {
-        "version": "8389b00888de9479494ba17206aa52f936f85ffb75e30170eb9e38bee65f69cd",
-        "signature": "8389b00888de9479494ba17206aa52f936f85ffb75e30170eb9e38bee65f69cd"
+        "version": "d37d571aa706edfc60f426239c6973414ab78c194f851d43f036b0d935125687",
+        "signature": "d37d571aa706edfc60f426239c6973414ab78c194f851d43f036b0d935125687"
       },
       "/users/miguel/proyectos/a2r/core/src/index.ts": {
         "version": "1279d1efc8d3aa7e3756ff22aa397b9e060df4eb47560cf4e0ed3f98cd1794a1",
@@ -373,45 +369,41 @@
         "version": "5fe76ea99187e695f2e7ee00ddb0c9db41b217397ade188b8a137504728f687f",
         "signature": "5fe76ea99187e695f2e7ee00ddb0c9db41b217397ade188b8a137504728f687f"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/get-page-files.d.ts": {
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/get-page-files.d.ts": {
         "version": "6d2a1f4be62ad8e0252ef5ea0f9af6d48d08ca7614c83c363ed85cc0774db940",
         "signature": "6d2a1f4be62ad8e0252ef5ea0f9af6d48d08ca7614c83c363ed85cc0774db940"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts": {
-        "version": "f3f1203282ed002a37538c3093f8363da6934e2295554a5fa96aba6f0f0ebb93",
-        "signature": "f3f1203282ed002a37538c3093f8363da6934e2295554a5fa96aba6f0f0ebb93"
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/render.d.ts": {
+        "version": "acea2e5e3e0d184b8e727662926dc55874127fa1cccd827a142b3b0349c84b18",
+        "signature": "acea2e5e3e0d184b8e727662926dc55874127fa1cccd827a142b3b0349c84b18"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/render.d.ts": {
-        "version": "52a239d7bc3696e27fb021573f0dfedeb0097a99f784624eea3c35f0dc0a3f3c",
-        "signature": "52a239d7bc3696e27fb021573f0dfedeb0097a99f784624eea3c35f0dc0a3f3c"
-      },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/mitt.d.ts": {
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/mitt.d.ts": {
         "version": "6e1b354578c8ed8a5432ac004e6a6bebb340ceed54e127c4f5e75696842bded1",
         "signature": "6e1b354578c8ed8a5432ac004e6a6bebb340ceed54e127c4f5e75696842bded1"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/router/router.d.ts": {
-        "version": "feeb83802a63a83a11ca58474008ef190aea927ff9934a32e4991bbd2f535f14",
-        "signature": "feeb83802a63a83a11ca58474008ef190aea927ff9934a32e4991bbd2f535f14"
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/router/router.d.ts": {
+        "version": "8b17a93a675d51c4130cf92a601a6fcb734d769c547ac7a5a3ce8c28063f4056",
+        "signature": "8b17a93a675d51c4130cf92a601a6fcb734d769c547ac7a5a3ce8c28063f4056"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts": {
-        "version": "c583cae23fffc25d42bf93eab0f06fb9cb09d199340b8b84a2515e200f650cb7",
-        "signature": "c583cae23fffc25d42bf93eab0f06fb9cb09d199340b8b84a2515e200f650cb7"
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts": {
+        "version": "d391fb29f3863c23f192a6fcf1fefa176688598217d042318722f544aa709275",
+        "signature": "d391fb29f3863c23f192a6fcf1fefa176688598217d042318722f544aa709275"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/router.d.ts": {
-        "version": "ac61201539e43f7df2af5d40ef9233f2cc4e8027a3850c7aef0d43c52ab10b67",
-        "signature": "ac61201539e43f7df2af5d40ef9233f2cc4e8027a3850c7aef0d43c52ab10b67"
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/router.d.ts": {
+        "version": "27011d8bc04c029b2d4ae6153c23bb101ceb4a92bc466b34bba12bb3896df1b4",
+        "signature": "27011d8bc04c029b2d4ae6153c23bb101ceb4a92bc466b34bba12bb3896df1b4"
       },
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/next-server.d.ts": {
-        "version": "17b92811391da10a54606342fa2b272c8b066ef9460eef7dfda07906205b86ae",
-        "signature": "17b92811391da10a54606342fa2b272c8b066ef9460eef7dfda07906205b86ae"
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/next-server.d.ts": {
+        "version": "dfec9cec577980c079447fef23723c7a9f666a95f57a7515932a45bdb2f5a493",
+        "signature": "dfec9cec577980c079447fef23723c7a9f666a95f57a7515932a45bdb2f5a493"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/next/dist/server/next.d.ts": {
-        "version": "306c447e4dd56ffe817b88f92b40f3f7bbf58c3673797a434d3706687718810b",
-        "signature": "306c447e4dd56ffe817b88f92b40f3f7bbf58c3673797a434d3706687718810b"
+        "version": "670bedd57582dc5c22e6d9537f662135701ccdcc928500d9ecf0ca66559fd7f3",
+        "signature": "670bedd57582dc5c22e6d9537f662135701ccdcc928500d9ecf0ca66559fd7f3"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts": {
-        "version": "2086cd5be47ffd89c6fb9702f555ec82e79b6ba4dc75e32baa7900eaa6eaa0b0",
-        "signature": "2086cd5be47ffd89c6fb9702f555ec82e79b6ba4dc75e32baa7900eaa6eaa0b0"
+        "version": "d7dca39845218823c83ae242b39595c1b6171646d301d2fb070780aeaede5715",
+        "signature": "d7dca39845218823c83ae242b39595c1b6171646d301d2fb070780aeaede5715"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/open/index.d.ts": {
         "version": "1d5adf522de176e09dcabab58740bce14bb99356fb6474f621a152461a5e4703",
@@ -438,20 +430,8 @@
         "signature": "4bd85c7eeaceccc938121fcbd580883f6bb84d8326eb0db9c79a9961551a2bc5"
       },
       "/users/miguel/proyectos/a2r/core/src/util/out.ts": {
-        "version": "08e6f2559b6845754933107544017ad80392f8472b636fb84bc921ad6f0604e9",
+        "version": "862824da1dc0fbaa7806486f0733fe158aac885c422f8c804cbbb5f17725e94c",
         "signature": "50b01f4eeb70aef9f6fd37974ce69dbc8132340fafbb6fc6dc1f512748b23b9e"
-      },
-      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts": {
-        "version": "2768abfccd13a3e8353f221244e40ea3133281dc7f77425718fea20c91515fc9",
-        "signature": "2768abfccd13a3e8353f221244e40ea3133281dc7f77425718fea20c91515fc9"
-      },
-      "/users/miguel/proyectos/a2r/core/src/config/settings.ts": {
-        "version": "9aec464318aeb6234baf9b3ef944a0adf023c954645cb6f5ea457173857c14e9",
-        "signature": "4f7c743193e2c183f05c87880adc4741d5db830fe9f8ef60d31c967219c73a96"
-      },
-      "/users/miguel/proyectos/a2r/core/src/util/socket.ts": {
-        "version": "7406bebf3bc33a2c0c5efec7eda625dbe304b98dbcf1093d5a0f155a7faf6635",
-        "signature": "a918c9d15eed3ab9aff2f7281ff09ba534eb77e5e6278980a34a76124f013b31"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts": {
         "version": "a84e4f748005e815471f04da8372f96d9090381a958dfb9019436d00762cfbc6",
@@ -460,6 +440,14 @@
       "/users/miguel/proyectos/a2r/core/node_modules/chokidar/types/index.d.ts": {
         "version": "c55b3a2c2478025ba62d052ce0186996698fe8f5987abcdeb71140ebfec69d82",
         "signature": "c55b3a2c2478025ba62d052ce0186996698fe8f5987abcdeb71140ebfec69d82"
+      },
+      "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts": {
+        "version": "c2468dab8148a9f4290b012f7bca499512a24fa18305a3cd291573dbf96b6fae",
+        "signature": "f5261e85e795aee270e3ef96f930d7b4602c9dc2793479f422deef7007740f5a"
+      },
+      "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts": {
+        "version": "53c111e0787da0d2a6cc3616c428adf20d465ee1a165b9f979c50d102f33a0ef",
+        "signature": "76e7817079ac1399d1dadbd08d7789ac5bdedb8a6dc4a0ffb8a625386381439c"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/@types/minimatch/index.d.ts": {
         "version": "1d1e6bd176eee5970968423d7e215bfd66828b6db8d54d17afec05a831322633",
@@ -477,61 +465,129 @@
         "version": "275b4f05a5a3c28456d6bc97df45c336868cb4af0ebea642dbe49d33c29576ce",
         "signature": "081bffbc3c9bcd7fc3ab4cacb5af78ad3e0fa169b18f3b10660e0923489df01c"
       },
-      "/users/miguel/proyectos/a2r/core/src/services/tscompiler/index.ts": {
-        "version": "ebfff61126de9e590d325618d5a7765a03f9a032ab1f82c0ead1b31344d4be47",
-        "signature": "3aa11abe94a43fc44b75bd1cc06e837e33c32486112fca87ff2edaa2916d8f10"
-      },
-      "/users/miguel/proyectos/a2r/core/src/services/apicompiler.ts": {
-        "version": "44593630497b2dcc1221c52b7d1b9f3b72c716f352382d62016dec37d884742b",
-        "signature": "ce8c09afa30e578428e6cb0f58690729d2f93579b65c3cf418d8f388d6d90c6c"
-      },
-      "/users/miguel/proyectos/a2r/core/src/services/index.ts": {
-        "version": "81a1312d19534066b617909a0ddee6c3f11b2d54a14ff876010ce57cd62d412f",
-        "signature": "54b1f31c6707ff3a21fa9a6fb173e12af13899d4f630a45d94689f64d68e14c3"
-      },
-      "/users/miguel/proyectos/a2r/core/src/server.ts": {
-        "version": "787428d75936c0b848b2395baf89a784e685f0200d56b3b970c29da6c01774bd",
-        "signature": "9f10ceba3fcac2ac98984ab2accc70f11c19f480388e433db1f7edd0ae2a6d73"
-      },
-      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts": {
-        "version": "a4f8d184b689027e06f647667a2d74e942448607df1d617137265ce49d63d20a",
-        "signature": "8080962403632a0c4168303966051bd208c9731af1edd942b047a41c2438280e"
-      },
-      "/users/miguel/proyectos/a2r/core/src/commands/commandlineinfo.ts": {
-        "version": "4ff81176abcbe8e956dccfefe359cb587dd409f6cf037c48b257e9337f18a10a",
-        "signature": "8ea8df22f43a9681deda3630c2198459f9ed16aaaa50d9ae4ebf058a5f8857a2"
-      },
-      "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts": {
-        "version": "df97118f2e69b16bfeded37a61e78732e0d06d9e9d2577f1be6eed07d6062e55",
-        "signature": "7b6a41a561610046d472a6b6c97c61b6383cffea129e097c28d50ebff43d18b8"
-      },
-      "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts": {
-        "version": "c2468dab8148a9f4290b012f7bca499512a24fa18305a3cd291573dbf96b6fae",
-        "signature": "f5261e85e795aee270e3ef96f930d7b4602c9dc2793479f422deef7007740f5a"
+      "/users/miguel/proyectos/a2r/core/src/util/reportdiagnostic.ts": {
+        "version": "4e0cdf1c904e7cfd15d6e4e9d57f3cee29a8f05e9cb719996804793ad0240d0d",
+        "signature": "c1aabce2360338c6a0d47a3c797297cad93fb37c8da5d330f8f37692539d983b"
       },
       "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts": {
-        "version": "c60f4e261956f5c3cf4dec16d25d83f51993a1988682c2697e92e0b020062dc1",
-        "signature": "109b958fb5b660f133e65c98b557c0da6f92dbef72e40d2b4866cc69df4d65f7"
+        "version": "8cc61d20790071d820ef2a998034469320f0838c422ce1e5b6d4920a2ce402c9",
+        "signature": "3cd07f7d08f4582be4777aa83af97b505c6789f0ca9a32b7bd33e2d4ca2e9ca6"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/api.ts": {
+        "version": "c234ca46df343f5742540920e7d803aa44ed2e0c7cbd8fef8bb9043349381420",
+        "signature": "05b4ba99fe1aa073081fcd229c72ffb31aebd69868d971960a9c59a5a3fde0a8"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletosubmoduledictionary.ts": {
+        "version": "17a5c06c605769d3e179e92044b573d854f3d55e23f903b477f3098cf812cb05",
+        "signature": "356a39ffe43542ac6a564b6393d743663f24f2990e26d933679de6a383b45f8b"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletoapi.ts": {
+        "version": "148749bf9a3efbc005bc0b0d181ac8ea5464b93624990ba8c12f75edf2058ebd",
+        "signature": "7becd4a6d58002a1be209ec6b903bcf4fdf4c71f88f6fcaaccd2bb2add640dc2"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromsubmoduledictionary.ts": {
+        "version": "4099dc07cebfbf54a7a818f2b588d1dbc7a27e0801e4637b27ff540b168a4200",
+        "signature": "de0f616b671115bd7e3aaa64479ca69c6fffee35a1adc6226fa47230cfbfa4dd"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromapi.ts": {
+        "version": "a543aa39430994eb0b2a1eceecbb4cdca80fa29a5b9b6c078a1a4fa1ebcadeba",
+        "signature": "ac1430704c811f8e162e9ac241506bddd2d7db11d190ed08d6815e1367c7438b"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts": {
+        "version": "13db9d3c5f7c67fba8dfe32ec09fcad0742755331ac57683f095d3d97566d39d",
+        "signature": "747b02101d4131296c4f2dd74c3e7aa37e531aac6297efe2d40269a07c67d2e3"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/commands/addcommandsfrompath.ts": {
+        "version": "dd82e5c0a484ad907b77806159c678e552b1668f278de20e8d83ee3c175a9b24",
+        "signature": "718c8b5d99de534aac1ea173d2ed05c216173ac4870bf796669697d61b04df6c"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/index.ts": {
+        "version": "2a58811adddf8f365a62c35744a3c2c29592c030702b172b2f95e13a9e879d4c",
+        "signature": "e1c997e820a8c886f7f2a786818c7c44308774a9541c1ed9d31c10e7767511c1"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/watcher/index.ts": {
+        "version": "1203f39a19862037f74bb00cb11d64162466082302f7fe3397205cfbdb7a953e",
+        "signature": "178b8297fa3060a53f44283fa70a22bb9fd9e3425393f447d444bde04c31736e"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/index.ts": {
+        "version": "cea6db489880dc66b77404d968d2440e3d3ceaf3883b78f877618965b51239ac",
+        "signature": "54b1f31c6707ff3a21fa9a6fb173e12af13899d4f630a45d94689f64d68e14c3"
+      },
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts": {
+        "version": "2768abfccd13a3e8353f221244e40ea3133281dc7f77425718fea20c91515fc9",
+        "signature": "2768abfccd13a3e8353f221244e40ea3133281dc7f77425718fea20c91515fc9"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/connection.ts": {
+        "version": "17c091e40c47cf74757a1b661283dc886b93b82abc0b96782a9c3a795fb67ce7",
+        "signature": "0d5d0bd1b2dfecc1dca16e8104417ca7c8d866ce5e28baddbbbc5c9e842e7ee1"
+      },
+      "/users/miguel/proyectos/a2r/core/src/config/settings.ts": {
+        "version": "9aec464318aeb6234baf9b3ef944a0adf023c954645cb6f5ea457173857c14e9",
+        "signature": "4f7c743193e2c183f05c87880adc4741d5db830fe9f8ef60d31c967219c73a96"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/index.ts": {
+        "version": "66331671e04e567c14142566de7ef62d911fbbabd4fd24a806b4924197d23399",
+        "signature": "c36422be75c286d8f8441e298050b322a395656530bdcd8e7538c4959963ff4b"
+      },
+      "/users/miguel/proyectos/a2r/core/src/server.ts": {
+        "version": "14f53f3d2e80e804af20f01eaff990820f573a7ee6deaaf1662354554de78bf7",
+        "signature": "ee3fc073709ce42ef9254a7d85dfc1e41cca1485d3bd29ee5bc3dd58d3d8d965"
       },
       "/users/miguel/proyectos/a2r/core/src/tools/packageinfomanager.ts": {
         "version": "e2fa2a8b4f6c3af23ae9a97b1855ccca203b962b9e789b59ba171adf475be96b",
         "signature": "7ae5f80eddcfadb17f2e7cd638db6dd68e57dbf04f1de30cecb8355f42b6cacf"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts": {
-        "version": "e673962c101176e83a038bbf1b8b4d9c369569eff477c8faf747d8bd6b17e5d2",
-        "signature": "b52dff0f91c2d5e4d852d9e3daf9c4866a3531f348cc6dd4b9ca0f048d315b69"
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts": {
+        "version": "ae2e88a1293a0e613b05948bb5bf2aa6072f84d001f503b69d09e7c8e9e5842e",
+        "signature": "b10fd09ac3dcf7260ca25068eb8162e39816e5edce4e033b0a562ac7795d9215"
       },
-      "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts": {
-        "version": "810d709f9b9c11fe34b65d289181a37dbbded1b319cbf0c7f7a46141e3d96d2a",
-        "signature": "76e7817079ac1399d1dadbd08d7789ac5bdedb8a6dc4a0ffb8a625386381439c"
+      "/users/miguel/proyectos/a2r/core/src/commands/currenta2rpackageinfo.ts": {
+        "version": "ef7048ecf9370f1e4472b0c65d2e2b502d7392ea22aa4aada19293c4f5367aa7",
+        "signature": "4435015f01350c07aadc30d63d1233fb1b67639a6c049bc62544f4c47f166ad9"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrentprojectinfo.ts": {
-        "version": "ceb9eb959dc035096ad2c7030b1ca126d644f004b0bd38d5a20bb7fc00eb30da",
-        "signature": "cc8eed1a8b03c9f856889cbebd4f957e39424ee62e2ff08b6994c7f342415d9f"
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts": {
+        "version": "d00735dd051a67048c2ef5844d2ec9c3de4580abdd82613cd937eb2159199375",
+        "signature": "f253b76f6b101cd6ae5abdff82e6db2903e084b16ab3b7964c8b2f585897dce8"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts": {
-        "version": "01767da1b594561bebbd5d74779ca51b8a65cdb0418d9e7a7b3f921cd782f915",
+      "/users/miguel/proyectos/a2r/core/src/commands/currentpackageinfo.ts": {
+        "version": "5bcd58120796c8195ea5c8e1946477a11990a8c4bda2cc0f7bd263d73d3a89b1",
+        "signature": "4435015f01350c07aadc30d63d1233fb1b67639a6c049bc62544f4c47f166ad9"
+      },
+      "/users/miguel/proyectos/a2r/core/src/commands/help.ts": {
+        "version": "3671e9291248d735d94aee8e075697ea086c6c1e6e61513b96e9b76c11f322ee",
+        "signature": "126ddca3d6a9c5a62bc13b6d4f025ed4db9d6a6b7ac31674a090194052cc7962"
+      },
+      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts": {
+        "version": "c1982389270dbf7a3f0d86bbf194f8dc7250b9935782d9d2ba6614cac0245fa2",
+        "signature": "4435015f01350c07aadc30d63d1233fb1b67639a6c049bc62544f4c47f166ad9"
+      },
+      "/users/miguel/proyectos/a2r/core/src/commands/setloglevel.ts": {
+        "version": "5854a468d9e4330604bbb2685e303518283024439d341e074a27fca4eea48f7e",
+        "signature": "ce0a4f3d5c08f79c6d1f8446997f27dec5ace7bcbefe4bfb0d2f55d6a3afc8f6"
+      },
+      "/users/miguel/proyectos/a2r/core/src/util/exec.ts": {
+        "version": "b632604b704bd08b261fe8ea290e420ddf10ddf3ccbd3c64652d2a2b135bf9a6",
+        "signature": "611c7e4dde638f263f4d54e3a7a1285e15987973a5ebdbb2d856808f6aa59a06"
+      },
+      "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts": {
+        "version": "7337cf6a69dc1c1c2c733934d1980ce1dfc7d16c040007e2ff8436c2dedadbe9",
         "signature": "3640b9d727f97c0df15f6c89d42f09f8e293705e60bb17d2e3642428b1ff85e1"
+      },
+      "/users/miguel/proyectos/a2r/core/src/tools/getversion.ts": {
+        "version": "d4cd3ffc7d079abc56a72e367b9817d78df17ed24175d5d347ec8e66d2266722",
+        "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
+      },
+      "/users/miguel/proyectos/a2r/core/src/commands/version.ts": {
+        "version": "53b47b0357e14e31bd6b08b469a6b656c3ee9d805ab85d9337fc28ddef468b3c",
+        "signature": "9bea9cdafbdaee6a0f6e8ff651beb9335c74295cec7da1fc09976ef00eb49092"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/api/commands/apimethods.ts": {
+        "version": "13855f35e7b3238587281e49b05a0b486253a3dc2804b9f61b923477f0a70742",
+        "signature": "bfd52aee56b979d5c8e1c99b2e7005fb1e1df67cf8e43bb0cd7b4847a2526ee0"
+      },
+      "/users/miguel/proyectos/a2r/core/src/services/commands/commandlineinfo.ts": {
+        "version": "b96bf2793542a2d1834696bb373ecd8d0a563da89080e5fbce1cadbcd4671d74",
+        "signature": "8ea8df22f43a9681deda3630c2198459f9ed16aaaa50d9ae4ebf058a5f8857a2"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-args/index.d.ts": {
         "version": "e2790204f9394425bf7d8e93a919887823d03dc2830d31d09c8f6af5562634dd",
@@ -553,16 +609,16 @@
         "version": "05fc6a9e65c64422efcb0dfc6a10fec5b2885afe158c9e1eda40a31a0ee799ac",
         "signature": "05fc6a9e65c64422efcb0dfc6a10fec5b2885afe158c9e1eda40a31a0ee799ac"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/paramsrules.ts": {
-        "version": "18b35258d4ed2a6c494f16b5ca710ff1c19d8bfcb43392275844f01e826250dc",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/paramsrules.ts": {
+        "version": "bda11a9ab14b3b98bf118714de3c458059b7cdd9e4216eafe4809b1f28cf3302",
         "signature": "45ff0c47ad9e3267f3caae1c0c6ee4af6c081e4ae1a60a99e916a68557790829"
       },
-      "/users/miguel/proyectos/a2r/core/src/util/exec.ts": {
-        "version": "b632604b704bd08b261fe8ea290e420ddf10ddf3ccbd3c64652d2a2b135bf9a6",
-        "signature": "611c7e4dde638f263f4d54e3a7a1285e15987973a5ebdbb2d856808f6aa59a06"
+      "/users/miguel/proyectos/a2r/core/src/services/commands/setup.ts": {
+        "version": "88efd1cbcb8691432009e0b10457d74f8c15ec0ba24f641a09cbd098bb6eff7e",
+        "signature": "58f6232e9c8aa2f504f8d61bbf3a17367bcb6c42d4e94c2720cec62382fbe55a"
       },
       "/users/miguel/proyectos/a2r/core/src/tools/copymodelcontents.ts": {
-        "version": "64600b6182f9dfabd80af5585ad5b5175383a1af405d6cf9733af4cb6a1753a4",
+        "version": "b899e71b3b78b73782c6b5d2cbc14a3330e96415394284b363175507e10ff180",
         "signature": "f387b4bd7a793ef7c0cccd022fde70cc33eb9c5e9b4b06739557fd11e3e76be3"
       },
       "/users/miguel/proyectos/a2r/core/src/tools/ensurenpminit.ts": {
@@ -570,47 +626,39 @@
         "signature": "2e6aebff2c538d428147354cd991d2d547a2c0dc9cdf393f7f6b21af0b6a5bcb"
       },
       "/users/miguel/proyectos/a2r/core/src/tools/packagesetup.ts": {
-        "version": "00e51ec5ee4742df2708fbc431f8c7b92c4a151537449bf65a191ce0d51ba9d7",
+        "version": "47afbb30900f77610d8b426155a39ec05a28ef32d006694a38a01b6995bffa8b",
         "signature": "c071065ea9859fe87edcdffcb03cc9bfb338de8c3eacb4e123678f3a5d1da843"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/init.ts": {
-        "version": "4dfd5de24097b65645e3d084cde8772ab80d9f07ff89c173777012b8e7916083",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/init.ts": {
+        "version": "9dc6a710beae30bee11610d0620c1dc1cdb6c544b5fe607c4c4d2d835a5c7cd6",
         "signature": "814ee0d4ecfacb98e7bf89c577c8a54a9398c2516bb514cdd0665bc5aed22ecd"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/version.ts": {
-        "version": "c5d9bb02f64729eb9a7a8f2d2d9ea225b9bec732c572bb342620193d7335740f",
-        "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
-      },
-      "/users/miguel/proyectos/a2r/core/src/commands/update.ts": {
-        "version": "37655f72fb6c4fcd1c1b67e3aa098c2d5df1bea4a1603b6db20274af55e69686",
+      "/users/miguel/proyectos/a2r/core/src/tools/update.ts": {
+        "version": "d30fecaf6aebd6e38b3730231f7eb8da06116cc7bf8706f9eaa36a9ba8d35e17",
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/patch.ts": {
-        "version": "22c36a21feed319b6a38b3a72869e1dc924d01aef33e41a5b4bd660f522e5719",
+      "/users/miguel/proyectos/a2r/core/src/tools/patch.ts": {
+        "version": "87be6e2e6d609184cdab1c6072d624e0595be6caab3294027aa55a3d3acd9e66",
         "signature": "fefaf643ad02c05059e06244a8291c4cb3a2693ec928c843599c25d00ee9f574"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/setupbasicconsolecommands.ts": {
-        "version": "c06da6f3936875403ade02bb8ae1966df5f039a68e7b026312cd0b78634b5c3e",
-        "signature": "8e05864afbd665b1d770fe2c6bce0e13ba918bad8207c05805dc2202ebb1964c"
+      "/users/miguel/proyectos/a2r/core/src/util/write.ts": {
+        "version": "5d32bc9e6cd085c0bbf355620b406435d47f204da0abd5d86dc1696bdda539ff",
+        "signature": "aaeb28a53e8a61760358b409f2296890add5e589b7d29fbb42b662d18ce594b8"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/index.ts": {
-        "version": "d1ded3c5b2beb27f4af710e0ff27676db8d7252f63f0f886e9a98e02e08eda3f",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/index.ts": {
+        "version": "26cb730f155f5cabf53f729a0f9e4a1100b42aca6224886c0e889117767bf05e",
         "signature": "43e818adf60173644896298637f47b01d5819b17eda46eaa32d0c7d64724d012"
       },
-      "/users/miguel/proyectos/a2r/core/src/commands/waitforcurrentversion.ts": {
-        "version": "3d8f8a58a14c58daee98494f5f38add29a514ddf4c10570c95c8539dbf2b86c9",
-        "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
+      "/users/miguel/proyectos/a2r/core/src/services/compiler/index.ts": {
+        "version": "3a34b6b786c25d9b22038dddbc2282ea88646e7d99791393662189ed69e0270e",
+        "signature": "3aa11abe94a43fc44b75bd1cc06e837e33c32486112fca87ff2edaa2916d8f10"
       },
-      "/users/miguel/proyectos/a2r/core/src/helpers/api/processfiles.ts": {
-        "version": "08c8b7c2c082f19bd8e372c95e0d67ec08fa29ed7373d1f5188bb5ba6b6e4e11",
-        "signature": "810a5b78dab7d173bdf8d6cefc957347a18f1635fefdfc132fc0c3e2bd89d501"
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/commands/list.ts": {
+        "version": "2c269acc21849fb6b28215bfa56fbab05e7d7d5f212647fca5a53e6a225b4ad3",
+        "signature": "badafeafbb9a6b9b9055bab9c3d58a4419e3d60f015f6ff060bea07c3ce69021"
       },
-      "/users/miguel/proyectos/a2r/core/src/tests/api/processfiles.ts": {
-        "version": "065c3b96a70774cc75c43feabd87371367683ccde1d7b6dff31bbf63f4644f41",
-        "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
-      },
-      "/users/miguel/proyectos/a2r/core/src/tests/api/commands/getlastversionofa2r.ts": {
-        "version": "9c1c15bb18398ad02fd96d494939ec671869ebbf6e7df4cbc47705320f6b49ca",
+      "/users/miguel/proyectos/a2r/core/src/tests/commands/getlastversionofa2r.ts": {
+        "version": "a3854aa730583855489fe65337b326bea8293a52b9aa7bab09deee0c1e5d4eff",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "/users/miguel/proyectos/a2r/core/src/tests/jit/dynamicload.ts": {
@@ -618,8 +666,24 @@
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "/users/miguel/proyectos/a2r/core/src/tools/increaseversion.ts": {
-        "version": "172ba8203071556e06150a57a341e066ad228a7735b15dcc01e1301667ea6128",
+        "version": "2447d6aeff0fc8f04fa6354f39f2dc0b43c7dce67a3428116a77037ae742e1ce",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "/users/miguel/proyectos/a2r/core/src/tools/waitforcurrentversion.ts": {
+        "version": "3d8f8a58a14c58daee98494f5f38add29a514ddf4c10570c95c8539dbf2b86c9",
+        "signature": "04c6c77ca20f4f72a63520971fb44bc5b16aa1477be5e47989fada3421ce3398"
+      },
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/triple-beam/index.d.ts": {
+        "version": "342106c24d20db13a4dfc39d588b2137c8debbf62c596cce53ebd770e9d9c509",
+        "signature": "342106c24d20db13a4dfc39d588b2137c8debbf62c596cce53ebd770e9d9c509"
+      },
+      "/users/miguel/proyectos/a2r/core/src/util/customconsoletransport.ts": {
+        "version": "5284bbdc8994e31c2fec47de8ae05ac5b8653588538bf6d59680c9243ace7498",
+        "signature": "0059ddaf21ba4dba7fa5902ded60d99728fe4b5fd97c0e0ca951bda44ad6ff4b"
+      },
+      "/users/miguel/proyectos/a2r/core/src/util/socket.ts": {
+        "version": "7406bebf3bc33a2c0c5efec7eda625dbe304b98dbcf1093d5a0f155a7faf6635",
+        "signature": "a918c9d15eed3ab9aff2f7281ff09ba534eb77e5e6278980a34a76124f013b31"
       },
       "/users/miguel/proyectos/a2r/core/node_modules/@babel/types/lib/index.d.ts": {
         "version": "bc12492fa90cd2ad3f73c10efa597503dbf59ebac0e3c9728cc10adaad6b0b87",
@@ -862,18 +926,13 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/head.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/head.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/head.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/head.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/miguel/proyectos/a2r/core/node_modules/next/head.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/head.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/head.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1204,75 +1263,70 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/get-page-files.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/get-page-files.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/render.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/render.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/get-page-files.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/get-page-files.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/mitt.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/mitt.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/router/router.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/router/router.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/mitt.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/mitt.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/render.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/router/router.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/render.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/router/router.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/router.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/router.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/next-server.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/next-server.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/router.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/router.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/next/dist/server/next.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/next-server.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/next-server.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/next/dist/server/next.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react-dom/index.d.ts",
@@ -1324,21 +1378,6 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/config/settings.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/util/socket.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -1347,6 +1386,17 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/fs.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/events.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/fs.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1374,28 +1424,128 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/services/tscompiler/index.ts": [
+      "/users/miguel/proyectos/a2r/core/src/util/reportdiagnostic.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/chokidar/types/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/services/apicompiler.ts": [
+      "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/api.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletosubmoduledictionary.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletoapi.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/services/tscompiler/index.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletosubmoduledictionary.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromsubmoduledictionary.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromapi.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromsubmoduledictionary.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/commands/addcommandsfrompath.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/index.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletoapi.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromapi.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/addcommandsfrompath.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/watcher/index.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/chokidar/types/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/reportdiagnostic.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/index.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/src/services/index.ts": [
-        "/users/miguel/proyectos/a2r/core/src/services/apicompiler.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/watcher/index.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/connection.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/config/settings.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/index.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/sockets/connection.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/index.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/addcommandsfrompath.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1406,33 +1556,8 @@
         "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/open/index.d.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/socket.ts",
         "/users/miguel/proyectos/a2r/core/src/services/index.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/commands/commandlineinfo.ts": [
-        "/users/miguel/proyectos/a2r/core/src/commands/logo.ts",
-        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/sockets/index.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1443,34 +1568,91 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts": [
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts",
         "/users/miguel/proyectos/a2r/core/src/tools/packageinfomanager.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/fs.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrentprojectinfo.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/currenta2rpackageinfo.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
         "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts",
         "/users/miguel/proyectos/a2r/core/src/tools/packageinfomanager.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts": [
+      "/users/miguel/proyectos/a2r/core/src/commands/currentpackageinfo.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/help.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/setloglevel.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/util/exec.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/child_process.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts": [
+        "/users/miguel/proyectos/a2r/core/src/util/exec.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tools/getversion.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/version.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getversion.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/commands/apimethods.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/commands/commandlineinfo.ts": [
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-args/index.d.ts": [
@@ -1498,13 +1680,18 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/paramsrules.ts": [
+      "/users/miguel/proyectos/a2r/core/src/services/commands/paramsrules.ts": [
         "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/util/exec.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/child_process.d.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/setup.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/readline.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/addcommandsfrompath.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1528,19 +1715,18 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/src/tools/packagesetup.ts": [
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrentprojectinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/init.ts": [
+      "/users/miguel/proyectos/a2r/core/src/services/commands/init.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
         "/users/miguel/proyectos/a2r/core/src/util/exec.ts",
         "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
         "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
-        "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts",
         "/users/miguel/proyectos/a2r/core/src/tools/copymodelcontents.ts",
         "/users/miguel/proyectos/a2r/core/src/tools/ensurenpminit.ts",
         "/users/miguel/proyectos/a2r/core/src/tools/packagesetup.ts",
@@ -1548,87 +1734,71 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/version.ts": [
+      "/users/miguel/proyectos/a2r/core/src/tools/update.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/exec.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/update.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/child_process.d.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/commands/patch.ts": [
+      "/users/miguel/proyectos/a2r/core/src/tools/patch.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/child_process.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/exec.ts",
         "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrentprojectinfo.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/commands/setupbasicconsolecommands.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/readline.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/logo.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/index.ts": [
+      "/users/miguel/proyectos/a2r/core/src/util/write.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/commands/index.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-args/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-usage/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/get-port/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/readline.d.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/paramsrules.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/commandlineinfo.ts",
-        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
         "/users/miguel/proyectos/a2r/core/src/server.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/init.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/version.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/update.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/patch.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/setupbasicconsolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/paramsrules.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/setup.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/init.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/commandlineinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/update.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/patch.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getversion.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/write.ts",
         "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/waitforcurrentversion.ts": [
-        "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/helpers/api/processfiles.ts": [
+      "/users/miguel/proyectos/a2r/core/src/services/compiler/index.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
-        "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/src/tests/api/processfiles.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/chokidar/types/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/path.d.ts",
-        "/users/miguel/proyectos/a2r/core/src/helpers/api/processfiles.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
+        "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/tests/api/commands/getlastversionofa2r.ts": [
-        "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/commands/list.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+        "/users/miguel/proyectos/a2r/core/src/services/sockets/connection.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tests/commands/getlastversionofa2r.ts": [
+        "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1639,7 +1809,31 @@
       "/users/miguel/proyectos/a2r/core/src/tools/increaseversion.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
         "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-        "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tools/waitforcurrentversion.ts": [
+        "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts",
+        "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/triple-beam/index.d.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/util/customconsoletransport.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/os.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/winston/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/triple-beam/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/winston/lib/winston/transports/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/util/socket.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1888,18 +2082,13 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/head.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/head.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/head.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/head.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/miguel/proyectos/a2r/core/node_modules/next/head.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/head.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/head.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -2228,75 +2417,70 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/get-page-files.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/get-page-files.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/render.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/render.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/get-page-files.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/get-page-files.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/mitt.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/mitt.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/router/router.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/router/router.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/mitt.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/mitt.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/render.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/router/router.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/render.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/router/router.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/router.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/router.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/next-server.d.ts": [
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/next-server.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/querystring.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/url.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/router.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/router.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/next/dist/server/next.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/next-server.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/next-server.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/next/dist/server/next.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/react-dom/index.d.ts",
@@ -2342,11 +2526,6 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts": [
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
-        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2380,14 +2559,52 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/fs.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/rimraf/index.d.ts"
       ],
+      "/users/miguel/proyectos/a2r/core/src/util/reportdiagnostic.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/index.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/api/api.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/watcher/index.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/chokidar/types/index.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/connection.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts"
+      ],
       "/users/miguel/proyectos/a2r/core/src/server.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/http.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts": [
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts": [
         "/users/miguel/proyectos/a2r/core/src/tools/packageinfomanager.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrentprojectinfo.ts": [
+      "/users/miguel/proyectos/a2r/core/src/commands/currenta2rpackageinfo.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts": [
         "/users/miguel/proyectos/a2r/core/src/tools/packageinfomanager.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/currentpackageinfo.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/help.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/setloglevel.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/commands/version.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/api/commands/apimethods.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-args/index.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
@@ -2414,8 +2631,19 @@
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/miguel/proyectos/a2r/core/src/commands/setupbasicconsolecommands.ts": [
+      "/users/miguel/proyectos/a2r/core/src/services/commands/setup.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/readline.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/commands/list.ts": [
+        "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/triple-beam/index.d.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/miguel/proyectos/a2r/core/src/util/customconsoletransport.ts": [
+        "/users/miguel/proyectos/a2r/core/node_modules/winston/index.d.ts",
+        "/users/miguel/proyectos/a2r/core/node_modules/winston/lib/winston/transports/index.d.ts"
       ],
       "/users/miguel/proyectos/a2r/core/node_modules/@babel/types/lib/index.d.ts": [
         "/users/miguel/proyectos/a2r/core/node_modules/@types/node/util.d.ts",
@@ -2554,8 +2782,7 @@
       "/users/miguel/proyectos/a2r/core/node_modules/csstype/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/prop-types/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/react/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/head.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/head.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/head.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/next/head.d.ts",
       "/users/miguel/proyectos/a2r/core/src/index.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/node/globals.d.ts",
@@ -2612,14 +2839,13 @@
       "/users/miguel/proyectos/a2r/core/node_modules/@types/express/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/colors/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/react-dom/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/get-page-files.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/types/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/render.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/mitt.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/router/router.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/lib/utils.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/router.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/next-server/dist/server/next-server.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/get-page-files.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/render.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/mitt.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/router/router.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/lib/utils.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/router.d.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/next/dist/next-server/server/next-server.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/next/dist/server/next.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/next/types/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/open/index.d.ts",
@@ -2629,50 +2855,69 @@
       "/users/miguel/proyectos/a2r/core/node_modules/winston/lib/winston/transports/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/winston/index.d.ts",
       "/users/miguel/proyectos/a2r/core/src/util/out.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
-      "/users/miguel/proyectos/a2r/core/src/util/socket.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/typescript/lib/typescript.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/chokidar/types/index.d.ts",
+      "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/minimatch/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/glob/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/rimraf/index.d.ts",
       "/users/miguel/proyectos/a2r/core/src/util/fs.ts",
-      "/users/miguel/proyectos/a2r/core/src/services/tscompiler/index.ts",
-      "/users/miguel/proyectos/a2r/core/src/services/apicompiler.ts",
-      "/users/miguel/proyectos/a2r/core/src/services/index.ts",
-      "/users/miguel/proyectos/a2r/core/src/server.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/commandlineinfo.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/consolecommands.ts",
+      "/users/miguel/proyectos/a2r/core/src/util/reportdiagnostic.ts",
       "/users/miguel/proyectos/a2r/core/src/util/terminalstyles.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/api.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletosubmoduledictionary.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/addmoduletoapi.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromsubmoduledictionary.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/removemodulefromapi.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/consolecommands.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/addcommandsfrompath.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/index.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/watcher/index.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/index.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/socket.io/index.d.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/connection.ts",
+      "/users/miguel/proyectos/a2r/core/src/config/settings.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/index.ts",
+      "/users/miguel/proyectos/a2r/core/src/server.ts",
       "/users/miguel/proyectos/a2r/core/src/tools/packageinfomanager.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrenta2rpackageinfo.ts",
-      "/users/miguel/proyectos/a2r/core/src/tools/getprojectpath.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/getcurrentprojectinfo.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/getlastversionofa2r.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrenta2rpackageinfo.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/currenta2rpackageinfo.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/getcurrentprojectinfo.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/currentpackageinfo.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/help.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/logo.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/setloglevel.ts",
+      "/users/miguel/proyectos/a2r/core/src/util/exec.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/getlastversionofa2r.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/getversion.ts",
+      "/users/miguel/proyectos/a2r/core/src/commands/version.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/api/commands/apimethods.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/commandlineinfo.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-args/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/command-line-usage/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/type-fest/source/package-json.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/type-fest/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/get-port/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/paramsrules.ts",
-      "/users/miguel/proyectos/a2r/core/src/util/exec.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/paramsrules.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/setup.ts",
       "/users/miguel/proyectos/a2r/core/src/tools/copymodelcontents.ts",
       "/users/miguel/proyectos/a2r/core/src/tools/ensurenpminit.ts",
       "/users/miguel/proyectos/a2r/core/src/tools/packagesetup.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/init.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/version.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/update.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/patch.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/setupbasicconsolecommands.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/index.ts",
-      "/users/miguel/proyectos/a2r/core/src/commands/waitforcurrentversion.ts",
-      "/users/miguel/proyectos/a2r/core/src/helpers/api/processfiles.ts",
-      "/users/miguel/proyectos/a2r/core/src/tests/api/processfiles.ts",
-      "/users/miguel/proyectos/a2r/core/src/tests/api/commands/getlastversionofa2r.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/init.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/update.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/patch.ts",
+      "/users/miguel/proyectos/a2r/core/src/util/write.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/commands/index.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/compiler/index.ts",
+      "/users/miguel/proyectos/a2r/core/src/services/sockets/commands/list.ts",
+      "/users/miguel/proyectos/a2r/core/src/tests/commands/getlastversionofa2r.ts",
       "/users/miguel/proyectos/a2r/core/src/tests/jit/dynamicload.ts",
       "/users/miguel/proyectos/a2r/core/src/tools/increaseversion.ts",
+      "/users/miguel/proyectos/a2r/core/src/tools/waitforcurrentversion.ts",
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/triple-beam/index.d.ts",
+      "/users/miguel/proyectos/a2r/core/src/util/customconsoletransport.ts",
+      "/users/miguel/proyectos/a2r/core/src/util/socket.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@babel/types/lib/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/babel__generator/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/babel__traverse/index.d.ts",
@@ -2693,8 +2938,7 @@
       "/users/miguel/proyectos/a2r/core/node_modules/@types/strip-bom/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/strip-json-comments/index.d.ts",
       "/users/miguel/proyectos/a2r/core/node_modules/@types/yargs/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/node_modules/@types/zen-observable/index.d.ts",
-      "/users/miguel/proyectos/a2r/core/src/config/modulepath.ts"
+      "/users/miguel/proyectos/a2r/core/node_modules/@types/zen-observable/index.d.ts"
     ]
   },
   "version": "3.5.3"

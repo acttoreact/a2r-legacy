@@ -1,10 +1,10 @@
 import path from 'path';
 import ReadLine from 'readline';
-import colors from 'colors';
 
 import { addCommand } from './consoleCommands';
 import modulePath from '../../config/modulePath';
 import addCommandsFromPath from './addCommandsFromPath';
+import { framework } from '../../util/terminalStyles';
 
 /**
  * Element that can be closed
@@ -14,27 +14,27 @@ interface Closeable {
 }
 
 /**
- * Setups all the commands that can by used by te console
+ * Setups all the commands that can be used by te console
  * @param rl Console Interface
- * @param value Server Information
+ * @param serverListener Server Information
  */
 const setup = async (
   rl: ReadLine.Interface,
-  value: Closeable
+  serverListener: Closeable
 ): Promise<void> => {
   addCommand({
     name: 'exit',
     description: 'Exit the A2R Framework',
-    onExecute: async (): Promise<void> => {
-      process.stdout.write(`Exiting  ${colors.magenta('A2R')} Framework\n`);
-      value.close();
+    onExecute: async (write): Promise<void> => {
+      write(`Exiting ${framework}`);
+      serverListener.close();
       rl.close();
       process.stdin.destroy();
       process.exit();
     },
   });
 
-  const commandsPath = path.join(modulePath, 'src', 'commands');
+  const commandsPath = path.join(modulePath, 'dist', 'commands');
   addCommandsFromPath(commandsPath);
 };
 

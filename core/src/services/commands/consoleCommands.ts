@@ -1,3 +1,7 @@
+import colors from 'colors';
+
+import out from '../../util/out';
+
 export interface WriteMethod {
   (text: string): void;
 }
@@ -13,9 +17,24 @@ export interface OnExecute {
  * Interface used to implement a console command
  */
 export interface ConsoleCommand {
-  name: string /** Name of the command */;
-  description: string /** Description used in the help */;
-  onExecute: OnExecute /** Method called when the user executes de command in the console */;
+  /**
+   * Name of the command
+   * @type {string}
+   * @memberof ConsoleCommand
+   */
+  name: string;
+  /**
+   * Description used in the help
+   * @type {string}
+   * @memberof ConsoleCommand
+   */
+  description: string;
+  /**
+   * Method called when the user executes de command in the console
+   * @type {OnExecute}
+   * @memberof ConsoleCommand
+   */
+  onExecute: OnExecute;
 }
 
 /**
@@ -29,6 +48,13 @@ const commandList: { [key: string]: ConsoleCommand } = {};
  */
 const addCommand = (command: ConsoleCommand): void => {
   commandList[command.name] = command;
+  out.verbose(
+    `Added console command ${colors.cyan(
+      command.name,
+    )} ${command.onExecute ? colors.green('with') : colors.red('without')} for a total of ${colors.green(
+      Object.keys(commandList).length.toString(),
+    )} commands`,
+  );
 };
 
 /**

@@ -16,8 +16,16 @@ import packageSetup from '../../tools/packageSetup';
 
 import modulePath from '../../config/modulePath';
 
+/**
+ * Returns project path.
+ * 
+ * If a path is given by init command, that's the path we'll be using.
+ * 
+ * If not, working directory will be used.
+ * @param {string} [destPath] Destination path passed by init command
+ * @returns {Promise<string>} Project path
+ */
 const getProjectPath = async (destPath?: string): Promise<string> => {
-  // `__dirname` should be like `[projectPath]/node_modules/a2r/dist/commands
   const projectPath = destPath || process.cwd();
   if (projectPath) {
     await fs.ensureDir(projectPath);
@@ -33,7 +41,6 @@ const getProjectPath = async (destPath?: string): Promise<string> => {
 const init = async (destPath?: string): Promise<void> => {
   out.info(colors.yellow.bold(`>>> Initializing project with ${framework}`));
   const projectPath = await getProjectPath(destPath);
-  out.verbose(`__dirname is ${fullPath(__dirname)}`);
   out.verbose(`Framework path is ${fullPath(modulePath)}`);
   out.verbose(`Project path is ${fullPath(projectPath)}`);
   const modelPath = path.resolve(modulePath, 'model');

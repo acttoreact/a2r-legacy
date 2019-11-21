@@ -12,33 +12,33 @@ import setup from './setup';
 import init from './init';
 import commandLineInfo from './commandLineInfo';
 import out from '../../util/out';
-import setting from '../../config/settings';
 import update from '../../tools/update';
 import patch from '../../tools/patch';
 import getVersion from '../../tools/getVersion';
+import write from '../../util/write';
 import { framework } from '../../util/terminalStyles';
+
+import settings from '../../config/settings';
 
 const options = args(rules);
 
-out.setLevel(options.frameworkLogLevel);
-
-const valid = !options.help;
+out.setLevel(options.dev ? 'verbose' : options.frameworkLogLevel);
 
 if (options.help) {
-  process.stdout.write(`${commandLineUsage(commandLineInfo)}\n\n`);
+  write(`${commandLineUsage(commandLineInfo)}\n\n`);
 } else {
   const initFramework = async (): Promise<void> => {
-    if (options.port < 1000) {
+    if (options.port < 100) {
       out.error(
         `${colors.red.bold(
           '--port',
         )}: port < 100 is forbidden and it is set to ${colors.cyan.bold(
           options.port.toString(),
         )} the port will be set to the default value ${colors.cyan.green(
-          setting.defaultPort.toString(),
+          settings.defaultPort.toString(),
         )}`,
       );
-      options.port = setting.defaultPort;
+      options.port = settings.defaultPort;
     } else if (options.port < 8000) {
       out.warn(
         `${colors.red.bold(
@@ -52,13 +52,13 @@ if (options.help) {
         `${colors.red.bold(
           '--port',
         )}: port must be a number and it is set to ${colors.cyan.bold(
-          setting.defaultPort.toString(),
+          settings.defaultPort.toString(),
         )}`,
       );
-      options.port = setting.defaultPort;
+      options.port = settings.defaultPort;
     }
 
-    const port = await getPort({ port: options.port });
+    const port = await getPort({ port: options.port || settings.defaultPort });
 
     if (port !== options.port) {
       out.warn(
@@ -70,95 +70,92 @@ if (options.help) {
       );
     }
 
-    if (valid) {
-      if (options.init) {
-        init()
-          .then((): void => {
-            out.info(
-              colors.yellow.bold(`<<< 👌 Project initialized successfully`),
-            );
-          })
-          .catch((err: Error): void => {
-            out.error(err.message, { stack: err.stack });
-          });
-      } else if (options.update) {
-        update()
-          .then((): void => {
-            out.info(colors.yellow.bold(`<<< 👌 Project updated successfully`));
-          })
-          .catch((err: Error): void => {
-            out.error(err.message, { stack: err.stack });
-          });
-      } else if (options.patch) {
-        patch()
-          .then((): void => {
-            out.info(colors.yellow.bold(`<<< 👌 Project patched successfully`));
-          })
-          .catch((err: Error): void => {
-            out.error(err.message, { stack: err.stack });
-          });
-      } else if (options.version) {
-        getVersion()
-          .then((): void => {})
-          .catch((err: Error): void => {
-            out.error(err.message, { stack: err.stack });
-          });
-      } else {
-        out.info(
-          `${colors.bgBlue.bold(
-            `>>> Starting ${framework} on port ${colors.yellow.bold(
-              port.toString(),
-            )}`,
-          )} 🚀`,
-        );
-        createServer(options.dev, port).then(
-          async (value): Promise<void> => {
-            if (options.dev) {
-              const write = (text: string): void => {
-                process.stdout.write(text);
-              };
-              const rl = readline.createInterface(
-                process.stdin,
-                process.stdout,
-              );
+    if (options.init) {
+      init()
+        .then((): void => {
+          out.info(
+            colors.yellow.bold(`<<< 👌 Project initialized successfully`),
+          );
+        })
+        .catch((err: Error): void => {
+          out.error(err.message, { stack: err.stack });
+        });
+    } else if (options.update) {
+      update()
+        .then((): void => {
+          out.info(colors.yellow.bold(`<<< 👌 Project updated successfully`));
+        })
+        .catch((err: Error): void => {
+          out.error(err.message, { stack: err.stack });
+        });
+    } else if (options.patch) {
+      patch()
+        .then((): void => {
+          out.info(colors.yellow.bold(`<<< 👌 Project patched successfully`));
+        })
+        .catch((err: Error): void => {
+          out.error(err.message, { stack: err.stack });
+        });
+    } else if (options.version) {
+      getVersion()
+        .then((): void => {})
+        .catch((err: Error): void => {
+          out.error(err.message, { stack: err.stack });
+        });
+    } else {
+      out.info(
+        `${colors.bgBlue.bold(
+          `>>> Starting ${framework} on port ${colors.yellow.bold(
+            port.toString(),
+          )}`,
+        )} 🚀`,
+      );
 
-              await setup(rl, value);
-              rl.on(
-                'line',
-                async (cmd: string): Promise<void> => {
-                  const params = cmd.trim().split(' ');
-                  let command = params[0];
-                  if (command) {
-                    if (command === 'quit') {
-                      command = 'exit';
-                    }
-                    const onExecute = getCommandFunction(command);
-                    if (onExecute) {
-                      try {
-                        const [, ...rest] = params;
-                        await onExecute(write, ...rest);
-                      } catch (err) {
-                        out.error(err.message, { stack: err.stack });
-                      }
-                      write('\n');
-                    } else {
-                      write(
-                        `Unknown command: ${colors.red(
-                          command,
-                        )}.\nUse ${colors.green(
-                          'help',
-                        )} for the command list.\n`,
-                      );
-                    }
+      await createServer(options.dev, port).then(
+        async (value): Promise<void> => {
+          if (options.dev) {
+            const rl = readline.createInterface(
+              process.stdin,
+              process.stdout,
+            );
+
+            await setup(rl, value);
+            rl.on(
+              'line',
+              async (cmd: string): Promise<void> => {
+                const params = cmd.trim().split(' ');
+                let command = params[0];
+                if (command) {
+                  if (command === 'quit') {
+                    command = 'exit';
                   }
-                },
-              );
-            }
-          },
-        );
-      }
+                  const onExecute = getCommandFunction(command);
+                  if (onExecute) {
+                    try {
+                      const [, ...rest] = params;
+                      await onExecute(write, ...rest);
+                    } catch (err) {
+                      out.error(err.message, { stack: err.stack });
+                    }
+                    write('\n');
+                  } else {
+                    write(
+                      `Unknown command: ${colors.red(
+                        command,
+                      )}.\nUse ${colors.green(
+                        'help',
+                      )} for the command list.\n`,
+                    );
+                  }
+                }
+              },
+            );
+          }
+        },
+      );
     }
   };
+
   initFramework()
     .then((): void => {
       out.verbose(colors.yellow.bold('Framework initialized'));

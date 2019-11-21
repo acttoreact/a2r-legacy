@@ -11,7 +11,7 @@ const getProjectPath = (targetPath: string = workingDirectory): string => {
   const packageJsonPath = path.join(targetPath, 'package.json');
   const exists = fs.existsSync(packageJsonPath);
   if (exists) {
-    projectPath = packageJsonPath;
+    projectPath = path.dirname(packageJsonPath);
     return packageJsonPath;
   }
   const nextTarget = path.dirname(targetPath);

@@ -6,12 +6,12 @@ import { fileName } from '../util/terminalStyles';
 
 const logo: ConsoleCommand = {
   name: 'currentPackageInfo',
-  description: `Gets the information of the current project ${colors.green(
+  description: `Gets the information of the current project ${fileName(
     'package.json',
   )}`,
-  onExecute: async (): Promise<void> => {
+  onExecute: async (write): Promise<void> => {
     const info = await getCurrentProjectInfo();
-    process.stdout.write(
+    write(
       `Current ${fileName('package.json')}:\n ${colors.cyan(
         JSON.stringify(info, null, 2),
       )}`,
