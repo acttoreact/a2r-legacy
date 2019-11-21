@@ -1,6 +1,5 @@
 import React from 'a2r/react';
 import Head from 'a2r/head';
-import API from 'a2r/api';
 
 export default (): JSX.Element => (
   <React.Fragment>

@@ -1,4 +1,6 @@
 import fs from '../util/fs';
+import out from '../util/out';
+import { fullPath } from '../util/terminalStyles';
 
 export interface PackageJSON extends Object {
   name: string;
@@ -22,6 +24,7 @@ interface PackageManager {
 }
 
 const packageManagerFunctions = (fullPackagePath: string): PackageManager => {
+  out.verbose(`Getting package info for package ${fullPath(fullPackagePath)}`);
   return {
     loadPackage: async (): Promise<PackageJSON> => {
       const packageJsonA2RText: string = await fs.readFile(fullPackagePath, {

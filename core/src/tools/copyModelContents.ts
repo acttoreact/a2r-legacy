@@ -1,11 +1,13 @@
-import originalFs from 'fs';
+import fsModule from 'fs';
 import path from 'path';
-import colors from 'colors';
 
 import out from '../util/out';
 import fs from '../util/fs';
+import { fullPath, fileName } from '../util/terminalStyles';
 
 const modelExtensionRegExp = /\.model$/i;
+
+const filesToIgnore = ['.gitkeep'];
 
 /**
  * Copies contents recursively from `fromPath` to `destPath`
@@ -19,32 +21,29 @@ const copyContents = async (
   relativePath: string = '',
 ): Promise<void> => {
   const contentsPath = path.resolve(fromPath, relativePath);
-  out.verbose(`Processing path "${contentsPath}"`);
+  out.verbose(`Processing path ${fullPath(contentsPath)}`);
   await fs.ensureDir(destPath);
   const contents = await fs.readDir(contentsPath, { withFileTypes: true });
   await Promise.all(
     contents.map(
-      async (pathInfo: originalFs.Dirent): Promise<void> => {
+      async (pathInfo: fsModule.Dirent): Promise<void> => {
         const { name: relPath } = pathInfo;
-        const fullRelPath = path.resolve(relativePath, relPath);
+        const fullRelPath = path.join(relativePath, relPath);
         const sourcePath = path.resolve(fromPath, fullRelPath);
         const targetPath = path
           .resolve(destPath, fullRelPath)
           .replace(modelExtensionRegExp, '');
 
         if (pathInfo.isDirectory()) {
-          out.verbose(`Path "${contentsPath}" is directory`);
+          out.verbose(`Path ${fileName(relPath)} is directory`);
+          await fs.ensureDir(targetPath);
           await copyContents(fromPath, destPath, fullRelPath);
-        } else {
+        } else if (filesToIgnore.indexOf(relPath) === -1) {
           out.verbose(
-            `Copying ${colors.cyan(sourcePath)}" to "${colors.green(
-              targetPath,
-            )}"`,
+            `Copying ${fullPath(sourcePath)} to ${fullPath(targetPath)}`,
           );
           await fs.copyFile(sourcePath, targetPath);
         }
-
-        out.verbose(`Full source path: ${sourcePath}`);
       },
     ),
   );
