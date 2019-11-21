@@ -1,0 +1,35 @@
+# A2R Core Files Structure
+
+- `/model/`: after every build, this folder will contain every file that will be copied as part of the framework boilerplate when executing `a2r --init` command:
+  - `/model/api/`: where users will build API structure and methods.
+    - `/model/api/ping.ts`: sample method.
+  - `/model/logs/`: Framework logs. Should be created by writing the first log regarding initialization.
+  - `/model/middlewares/`: user Express.js middlewares. Example needed?
+  - `/model/pages/`: where users will add pages.
+    - `/model/pages/index.tsx`: sample page. Will import and use `react` and `next/head` as an example.
+  - `/model/services/`: where users will create parallel tasks and/or microservices.
+  - `/model/static/`: where users will put static contents.
+    - `/model/static/logo.svg`: A2R Framework logo as an example.
+  - `/model/tests/`: where users will create unit tests.
+    - `/model/tests/basic/sample.ts`: basic tests examples. Must pass after initialization.
+  - `/model/.eslintignore`: patterns for eslint to ignore.
+  - `/model/.eslintrc`: eslint settings.
+  - `/model/.gitignore`: patterns for git to ignore.
+  - `/model/.prettierignore`: patterns for prettier to ignore.
+  - `/model/.prettierrc`: prettier settings.
+  - `/model/jest.config.js`: jest settings.
+  - `/model/next-env.d.ts`: ¿?
+  - `/model/ts-config.json`: ¿?
+- `/src/`: framework core files:
+  - `/src/commands/`: framework terminal commands, one per file.
+  - `/src/components/`: framework React components.
+    - `/src/components/logo.tsx`: Logo component as an example.
+  - `/src/config/`: containing one only file:
+    - `/src/config/settings.ts`: all settings must be here.
+  - `/src/hooks/`: framework React hooks.
+  - `/src/server/`: everything related to automatic server creation and setup. Will export a main method that should be called once framework is initialized and user wants to run the application.
+  - `/src/services/`: every service used by framework (api, watcher, compiler, sockets, etc).
+  - `/src/tests/`: framework unit tests.
+  - `/src/tools/`: helper methods, one per file. If more than one method is needed and file gets too big, file will turn a whole folder with an `index.ts` file and helpers files.
+  - `/src/util/`: utils like `out` for logging or `fs` with promisified and additional methods.
+  - `/src/index.ts`: every package or public method will need to be exported in this file

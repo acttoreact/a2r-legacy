@@ -3,76 +3,77 @@ import express from 'express';
 import colors from 'colors';
 import next from 'next';
 import open from 'open';
+
 import out from './util/out';
-import socket from './util/socket';
+// import socket from './util/socket';
 import services from './services';
+import sockets from './services/sockets';
+
 
 interface ServerResponse {
   server: http.Server;
   close: () => void;
 }
 
-const server = (dev: boolean, port: number): Promise<ServerResponse> => {
+const createServer = (dev: boolean, port: number): Promise<ServerResponse> =>
+  new Promise<ServerResponse>(async (resolve, reject): Promise<void> => {
+    await services();
 
-  // Starts all the services
-  services();
+    const app = next({ dev });
+    const handle = app.getRequestHandler();
 
-  return new Promise<ServerResponse>(
-    (resolve, reject): void => {
-      const app = next({ dev });
-      const handle = app.getRequestHandler();
+    app.prepare().then((): void => {
+      const httpServer = express();
 
-      app.prepare().then(
-        (): void => {
-          const httpServer = express();
-
-          httpServer.get(
-            '*',
-            (
-              req: http.IncomingMessage,
-              res: http.ServerResponse
-            ): Promise<void> => {
-              return handle(req, res);
-            }
-          );
-
-          socket(http);
-          http.createServer(httpServer);
-
-          const listener = httpServer.listen(
-            port,
-            (err: Error): void => {
-              if (err) {
-                out.error(err.message);
-                reject(err);
-              } else {
-                out.info(
-                  colors.white.bold(
-                    `Listening ${colors.yellow.bold(
-                      `http://localhost:${port.toString()}/`
-                    )}`
-                  )
-                );
-                if (dev) {
-                  open(`http://localhost:${port.toString()}/`);
-                }
-              }
-            }
-          );
-          listener.on(
-            'close',
-            (): void => {
-              out.info(colors.white.bold('Http server closed'));
-            }
-          );
-          const close = (): void => {
-            listener.close();
-          };
-          resolve({ server: listener, close });
+      httpServer.get(
+        '*',
+        (
+          req: http.IncomingMessage,
+          res: http.ServerResponse
+        ): Promise<void> => {
+          return handle(req, res);
         }
       );
-    }
-  );
-};
 
-export default server;
+      // TODO: middlewares?
+      // TODO: handlers
+      // TODO: commands
+
+      sockets(http);
+      http.createServer(httpServer);
+
+      const listener = httpServer.listen(
+        port,
+        (err: Error): void => {
+          if (err) {
+            out.error(err.message);
+            reject(err);
+          } else {
+            out.info(
+              colors.white.bold(
+                `Listening ${colors.yellow.bold(
+                  `http://localhost:${port.toString()}/`
+                )}`
+              )
+            );
+            if (dev) {
+              open(`http://localhost:${port.toString()}/`);
+            }
+          }
+        }
+      );
+      listener.on(
+        'close',
+        (): void => {
+          out.info(colors.white.bold('Http server closed'));
+        }
+      );
+      const close = (): void => {
+        listener.close();
+      };
+      resolve({ server: listener, close });
+    });
+  });
+  
+
+export default createServer;

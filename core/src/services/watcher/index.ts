@@ -2,12 +2,15 @@ import ts from 'typescript';
 import path from 'path';
 import chokidar from 'chokidar';
 import colors from 'colors';
+
+import modulePath from '../../config/modulePath';
+import getProjectPath from '../../tools/getProjectPath';
 import fs from '../../util/fs';
 import out from '../../util/out';
 import reportDiagnostic from '../../util/reportDiagnostic';
+import { watcher as watcherInLogs, fullPath } from '../../util/terminalStyles';
 import { importModule, updateModule, disposeModule, buildApi } from '../api';
-
-const watcherInLogs = colors.cyan.bold('Watcher');
+import { addCommand } from '../commands/consoleCommands'
 
 const compileOptions = {
   declaration: true,
@@ -51,14 +54,13 @@ const processPromisesQueue = (): void => {
  * @param {string} destPath Destination path where processed contents are placed
  * @param {WatcherOptions} options WatchOptions for [chokidar](https://github.com/paulmillr/chokidar#api)
  */
-const watchFolder = async (
-  sourcePath: string,
-  destPath: string,
-  options?: chokidar.WatchOptions,
-): Promise<void> => {
-  return new Promise(async (resolve): Promise<void> => {
+const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
+  new Promise(async (resolve): Promise<void> => {
+    const projectPath = getProjectPath();
+    const sourcePath = path.join(projectPath, 'api');
     const normalizedSourcePath = path.normalize(sourcePath);
     const sourceExists = await fs.exists(normalizedSourcePath);
+    const destPath = path.join(modulePath, 'server');
   
     if (sourceExists) {
       const normalizedDestPath = path.normalize(destPath);
@@ -142,6 +144,24 @@ const watchFolder = async (
         await buildApi(normalizedDestPath);
         out.verbose(`${watcherInLogs}: API built in ${+new Date() - start}ms and watching for changes at ${colors.yellow(normalizedSourcePath)}`);
         resolve();
+        addCommand({
+          name: 'watcherSource',
+          description: 'Prints the path watcher is using as API source',
+          onExecute: async (write): Promise<void> => {
+            write(
+              `${watcherInLogs}: Source path is ${fullPath(normalizedSourcePath)}`,
+            );
+          },
+        });
+        addCommand({
+          name: 'watcherDest',
+          description: 'Prints the path watcher is using as compilation destination',
+          onExecute: async (write): Promise<void> => {
+            write(
+              `${watcherInLogs}: Dest path is ${fullPath(normalizedDestPath)}`,
+            );
+          },
+        });
       });
   
       watcher.on('error', (ex): void => {
@@ -152,6 +172,5 @@ const watchFolder = async (
     }
 
   });
-};
 
 export default watchFolder;
