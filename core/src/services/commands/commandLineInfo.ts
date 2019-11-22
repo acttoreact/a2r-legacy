@@ -1,10 +1,14 @@
-import { logo } from '../../util/terminalStyles';
-import setting from '../../config/settings';
+import colors from 'colors';
+
+import { logo, framework } from '../../util/terminalStyles';
+import settings from '../../config/settings';
 
 export default [
   {
-    header: 'A2R Framework',
-    content: 'The isomorphic, reactive {italic framework} that scales.',
+    header: framework,
+    content: `The isomorphic, reactive ${colors.italic(
+      'framework',
+    )} that scales.`,
   },
   {
     content: logo,
@@ -17,27 +21,24 @@ export default [
         name: 'init',
         alias: 'i',
         typeLabel: ' ',
-        description:
-          'Initializes the project for the {underline A2R} {underline Framework}',
+        description: `Initializes the project for ${framework}`,
       },
       {
         name: 'version',
         alias: 'v',
         typeLabel: ' ',
-        description: 'Gets the current version of the A2R Framework',
+        description: `Gets the current version of ${framework}`,
       },
       {
         name: 'update',
         alias: 'u',
         typeLabel: ' ',
-        description:
-          'Updates the project to the last version of the {underline A2R} {underline Framework}',
+        description: `Updates the project to the last version of ${framework}`,
       },
       {
         name: 'patch',
         typeLabel: ' ',
-        description:
-          'Processes all the dependencies and additional files used the by the {underline A2R} {underline Framework}',
+        description: `Processes all the dependencies and additional files used the by ${framework}`,
       },
       {
         name: 'help',
@@ -55,16 +56,18 @@ export default [
         name: 'port',
         alias: 'p',
         typeLabel: '{underline number}',
-        description: `Set the port that will be used by the framework ({bold ${
-          setting.defaultPort
-        }} by default)`,
+        description: `Set the port that will be used by ${framework} (${colors.bold(
+          settings.defaultPort.toString(),
+        )} by default)`,
       },
       {
         name: 'frameworkLogLevel',
         alias: 'f',
         typeLabel: '{underline string}',
         description:
-          'Set the log level (error, warning, info or verbose) that will be used by the {underline A2R} {underline Framework} ({bold info} by default)',
+          `Set the log level (error, warning, info or verbose) that will be used by ${
+            framework
+          } (${colors.bold(settings.defaultLogLevel)})`,
       },
     ],
   },

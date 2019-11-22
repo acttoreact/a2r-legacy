@@ -40,7 +40,6 @@ const rules = [
     name: 'frameworkLogLevel',
     alias: 'f',
     type: String,
-    defaultValue: 'info',
   },
 ];
 
