@@ -1,7 +1,14 @@
 {
   "material-icon-theme.folders.associations": {
-      "labs": "test"
+    "labs": "test",
+    "handlers": "middleware"
   },
+  "eslint.validate":  [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "cSpell.words": [
     "ESNEXT",
     "Inicializando",
