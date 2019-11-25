@@ -20,9 +20,15 @@ import { framework } from '../../util/terminalStyles';
 
 import settings from '../../config/settings';
 
+const { defaultDevLogLevel, defaultLogLevel, defaultPort } = settings;
+
 const options = args(rules);
 
-out.setLevel(options.dev ? 'verbose' : options.frameworkLogLevel);
+if (options.frameworkLogLevel) {
+  out.setLevel(options.frameworkLogLevel);
+} else {
+  out.setLevel(options.dev ? defaultDevLogLevel : defaultLogLevel);
+}
 
 if (options.help) {
   write(`${commandLineUsage(commandLineInfo)}\n\n`);
@@ -35,10 +41,10 @@ if (options.help) {
         )}: port < 100 is forbidden and it is set to ${colors.cyan.bold(
           options.port.toString(),
         )} the port will be set to the default value ${colors.cyan.green(
-          settings.defaultPort.toString(),
+          defaultPort.toString(),
         )}`,
       );
-      options.port = settings.defaultPort;
+      options.port = defaultPort;
     } else if (options.port < 8000) {
       out.warn(
         `${colors.red.bold(
@@ -52,13 +58,13 @@ if (options.help) {
         `${colors.red.bold(
           '--port',
         )}: port must be a number and it is set to ${colors.cyan.bold(
-          settings.defaultPort.toString(),
+          defaultPort.toString(),
         )}`,
       );
-      options.port = settings.defaultPort;
+      options.port = defaultPort;
     }
 
-    const port = await getPort({ port: options.port || settings.defaultPort });
+    const port = await getPort({ port: options.port || defaultPort });
 
     if (port !== options.port) {
       out.warn(
@@ -102,6 +108,8 @@ if (options.help) {
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
+    } else if (options.frameworkLogLevel) {
+      
     } else {
       out.info(
         `${colors.bgBlue.bold(
