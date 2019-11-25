@@ -2,9 +2,9 @@ import path from 'path';
 import ReadLine from 'readline';
 
 import { addCommand } from './consoleCommands';
-import modulePath from '../../config/modulePath';
-import addCommandsFromPath from './addCommandsFromPath';
 import { framework } from '../../util/terminalStyles';
+import getFrameworkPath from '../../tools/getFrameworkPath';
+import addCommandsFromPath from './addCommandsFromPath';
 
 /**
  * Element that can be closed
@@ -34,6 +34,7 @@ const setup = async (
     },
   });
 
+  const modulePath = await getFrameworkPath();
   const commandsPath = path.join(modulePath, 'dist', 'commands');
   addCommandsFromPath(commandsPath);
 };

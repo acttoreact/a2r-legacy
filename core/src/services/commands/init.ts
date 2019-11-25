@@ -1,6 +1,7 @@
 import colors from 'colors';
 import path from 'path';
 
+import getFrameworkPath from '../../tools/getFrameworkPath';
 import exec from '../../util/exec';
 import fs from '../../util/fs';
 import out from '../../util/out';
@@ -14,33 +15,15 @@ import copyModelContents from '../../tools/copyModelContents';
 import ensureNpmInit from '../../tools/ensureNpmInit';
 import packageSetup from '../../tools/packageSetup';
 
-import modulePath from '../../config/modulePath';
-
-/**
- * Returns project path.
- * 
- * If a path is given by init command, that's the path we'll be using.
- * 
- * If not, working directory will be used.
- * @param {string} [destPath] Destination path passed by init command
- * @returns {Promise<string>} Project path
- */
-const getProjectPath = async (destPath?: string): Promise<string> => {
-  const projectPath = destPath || process.cwd();
-  if (projectPath) {
-    await fs.ensureDir(projectPath);
-  }
-  return projectPath;
-};
-
 /**
  * Init method. Called when using `a2r --init` command.
- * @param {string?} destPath Destination path containing project
+ * @param {string} [projectPath=process.cwd()] Destination path containing project
  * @returns {Promise<void>}
  */
-const init = async (destPath?: string): Promise<void> => {
+const init = async (projectPath: string = process.cwd()): Promise<void> => {
   out.info(colors.yellow.bold(`>>> Initializing project with ${framework}`));
-  const projectPath = await getProjectPath(destPath);
+  const modulePath = await getFrameworkPath();
+  await fs.ensureDir(projectPath);
   out.verbose(`Framework path is ${fullPath(modulePath)}`);
   out.verbose(`Project path is ${fullPath(projectPath)}`);
   const modelPath = path.resolve(modulePath, 'model');

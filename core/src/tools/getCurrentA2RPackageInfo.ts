@@ -1,8 +1,26 @@
 import path from 'path';
 
-import modulePath from '../config/modulePath';
-import packageInfoManager from './packageInfoManager';
+import getFrameworkPath from './getFrameworkPath';
+import packageInfoManager, { PackageManager, PackageJSON } from './packageInfoManager';
 
-const commands = packageInfoManager(path.join(modulePath, 'package.json'));
-export const updateCurrentA2RPackageInfo = commands.savePackage;
-export default commands.loadPackage;
+let manager: PackageManager | null = null;
+
+const getManager = async (): Promise<PackageManager> => {
+  if (!manager) {
+    const frameworkPath = await getFrameworkPath();
+    manager = packageInfoManager(path.join(frameworkPath, 'package.json'));
+  }
+  return manager;
+};
+
+export const updateCurrentA2RPackageInfo = async (newPackage: PackageJSON): Promise<void> => {
+  const infoManager = await getManager();
+  await infoManager.savePackage(newPackage);
+};
+
+const loadPackage = async (): Promise<PackageJSON> => {
+  const infoManager = await getManager();
+  return infoManager.loadPackage();
+};
+
+export default loadPackage;

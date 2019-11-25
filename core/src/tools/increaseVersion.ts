@@ -3,9 +3,7 @@ import colors from 'colors';
 
 import fs from '../util/fs';
 import out from '../util/out';
-import getCurrentA2RPackageInfo, {
-  updateCurrentA2RPackageInfo,
-} from './getCurrentA2RPackageInfo';
+import packageInfoManager from './packageInfoManager';
 
 const snippetsFileName = 'a2r.code-snippets';
 
@@ -16,7 +14,9 @@ const updateSnippets = async (): Promise<void> => {
 };
 
 const increaseVersion = async (): Promise<string> => {
-  const parsedPackage = await getCurrentA2RPackageInfo();
+  const packageJsonPath = path.resolve(__dirname, '../../package.json');
+  const { loadPackage, savePackage } = packageInfoManager(packageJsonPath);
+  const parsedPackage = await loadPackage();
   const currentVersion = parsedPackage.version;
   const currentVersionValues = currentVersion
     .split('.')
@@ -35,7 +35,7 @@ const increaseVersion = async (): Promise<string> => {
       `a2r@${newVersion}`,
     );
   });
-  await updateCurrentA2RPackageInfo(parsedPackage);
+  await savePackage(parsedPackage);
   await updateSnippets();
   return newVersion;
 };

@@ -18,7 +18,7 @@ export interface ScriptsMap {
   [scriptName: string]: string;
 }
 
-interface PackageManager {
+export interface PackageManager {
   loadPackage: () => Promise<PackageJSON>;
   savePackage: (newPackage: PackageJSON) => Promise<void>;
 }

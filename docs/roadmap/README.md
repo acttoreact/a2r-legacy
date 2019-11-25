@@ -3,7 +3,8 @@
 *Last Update: November 2019*
 
 - [MVP](#mvp)
-- [Main TO-DO](#main-to-do)
+- [Backlog](#backlog)
+- [Wishlist, other ideas, etc](#wishlist-other-ideas-etc)
 
 ## MVP
 
@@ -19,7 +20,7 @@ This is the current MVP definition.
 - Isomorphic render model.
   - Subscriptions by route? Route determines needed data?
 
-## Main TO-DO
+## Backlog
 
 This is first approach a list of every desired functionality:
 
@@ -37,3 +38,7 @@ This is first approach a list of every desired functionality:
 - Expo and multiple proxies
 - Generic hooks
 - Generic components?
+
+## Wishlist, other ideas, etc
+
+For any other idea or wish, we can use [a not very clean doc](./think-tank.md) where we can write down everything that crosses our minds. We'll have time to pick the good ideas and add them to the official roadmap.

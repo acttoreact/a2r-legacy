@@ -1,18 +1,26 @@
 import path from 'path';
-import fs from 'fs';
+
+import fs from '../util/fs';
+import out from '../util/out';
+import { fileName, fullPath } from '../util/terminalStyles';
 
 export const workingDirectory = process.cwd();
 let projectPath = '';
 
-const getProjectPath = (targetPath: string = workingDirectory): string => {
+const getProjectPath = async (targetPath: string = workingDirectory): Promise<string> => {
   if (projectPath) {
     return projectPath;
   }
   const packageJsonPath = path.join(targetPath, 'package.json');
-  const exists = fs.existsSync(packageJsonPath);
+  const exists = await fs.exists(packageJsonPath);
   if (exists) {
     projectPath = path.dirname(packageJsonPath);
-    return packageJsonPath;
+    out.verbose(
+      `${fileName('package.json')} found, project path is ${fullPath(
+        projectPath,
+      )}`,
+    );
+    return projectPath;
   }
   const nextTarget = path.dirname(targetPath);
   if (nextTarget !== '/') {

@@ -2,7 +2,7 @@ import ts from 'typescript';
 import path from 'path';
 import chokidar from 'chokidar';
 
-import modulePath from '../../config/modulePath';
+import getFrameworkPath from '../../tools/getFrameworkPath';
 import getProjectPath from '../../tools/getProjectPath';
 import fs from '../../util/fs';
 import out from '../../util/out';
@@ -66,7 +66,8 @@ const processPromisesQueue = (): void => {
 const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
   new Promise(
     async (resolve): Promise<void> => {
-      const projectPath = getProjectPath();
+      const modulePath = await getFrameworkPath();
+      const projectPath = await getProjectPath();
       const sourcePath = path.join(projectPath, 'api');
       const normalizedSourcePath = path.normalize(sourcePath);
       const sourceExists = await fs.exists(normalizedSourcePath);

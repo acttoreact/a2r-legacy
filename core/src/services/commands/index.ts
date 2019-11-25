@@ -108,8 +108,6 @@ if (options.help) {
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
-    } else if (options.frameworkLogLevel) {
-      
     } else {
       out.info(
         `${colors.bgBlue.bold(
