@@ -9,6 +9,7 @@
   - [Sockets](#sockets)
   - [Pages](#pages)
   - [Etc](#etc)
+- [Roadmap](#roadmap)
 
 ## Core
 
@@ -16,7 +17,7 @@ Framework heart. Everything will be here.
 
 ### Files Structure
 
-A [brief explanation about the files structure](../docs/core/coreFilesStructure.md) so you know where to look when you're looking for something in particular.
+A [brief explanation about the files structure](./docs/core/coreFilesStructure.md) so you know where to look when you're looking for something in particular.
 
 ### Initialization
 
@@ -24,7 +25,7 @@ Single command initialization.
 
 ### Developing with A2R
 
-Single run command.
+Single command for developing.
 
 ### API Runtime Transpiler
 
@@ -39,3 +40,7 @@ Forget about updating all your dependencies on every project. You just need to u
 ### Pages
 
 ### Etc
+
+## Roadmap
+
+Current [roadmap, to-do and wishlist](./docs/roadmap/README.md).
