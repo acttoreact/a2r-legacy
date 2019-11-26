@@ -1,4 +1,3 @@
-import ts from 'typescript';
 import path from 'path';
 import chokidar from 'chokidar';
 
@@ -6,7 +5,6 @@ import getFrameworkPath from '../../tools/getFrameworkPath';
 import getProjectPath from '../../tools/getProjectPath';
 import fs from '../../util/fs';
 import out from '../../util/out';
-import reportDiagnostic from '../../util/reportDiagnostic';
 import {
   watcher as watcherOnLogs,
   api as apiOnLogs,
@@ -14,53 +12,16 @@ import {
   terminalCommand,
 } from '../../util/terminalStyles';
 import replacer from '../../util/apiStringifyReplacer';
+import compileFile from '../compiler';
 import { importModule, updateModule, disposeModule, buildApi } from '../api';
 import { addCommand } from '../commands/consoleCommands';
-
-const compileOptions = {
-  declaration: true,
-  module: ts.ModuleKind.CommonJS,
-  moduleResolution: ts.ModuleResolutionKind.NodeJs,
-  skipLibCheck: true,
-  sourceMap: true,
-  strict: true,
-  target: ts.ScriptTarget.ES2017,
-};
-
-const formatHost: ts.FormatDiagnosticsHost = {
-  getCanonicalFileName: (fileNamePath): string => fileNamePath,
-  getCurrentDirectory: ts.sys.getCurrentDirectory,
-  getNewLine: (): string => ts.sys.newLine,
-};
+import { promisesQueue, processPromisesQueue } from './queue';
 
 let watcherReady = false;
-let promiseRunning = false;
-const promisesQueue: Function[] = [];
-
-const processPromisesQueue = (): void => {
-  if (!promiseRunning) {
-    const promiseProvider = promisesQueue.shift();
-    if (promiseProvider) {
-      promiseRunning = true;
-      promiseProvider()
-        .catch((ex: Error): void => {
-          out.error(
-            `${watcherOnLogs}: Error removing path: ${ex.message}\n${ex.stack}`,
-          );
-        })
-        .finally((): void => {
-          promiseRunning = false;
-          processPromisesQueue();
-        });
-    }
-  }
-};
 
 /**
- * Watch folder recursively for files changes
+ * Watch project API folder recursively for files changes
  *
- * @param {string} sourcePath Main folder to be watched and whose contents will be processed
- * @param {string} destPath Destination path where processed contents are placed
  * @param {WatcherOptions} options WatchOptions for [chokidar](https://github.com/paulmillr/chokidar#api)
  */
 const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
@@ -131,23 +92,7 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
                 );
               }
 
-              const program = ts.createProgram([rootFile], {
-                ...compileOptions,
-                rootDir,
-                outDir: normalizedDestPath,
-              });
-
-              const emitResult = program.emit();
-              const diagnostics = [
-                ...ts.getPreEmitDiagnostics(program),
-                ...emitResult.diagnostics,
-                ...program.getSyntacticDiagnostics(),
-              ];
-              if (diagnostics && diagnostics.length) {
-                diagnostics.forEach((diagnostic): void => {
-                  reportDiagnostic(diagnostic, formatHost);
-                });
-              }
+              compileFile(rootFile, rootDir, normalizedDestPath);
 
               if (watcherReady) {
                 const method = fileAdded ? importModule : updateModule;
