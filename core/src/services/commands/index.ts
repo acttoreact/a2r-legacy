@@ -104,11 +104,12 @@ if (options.help) {
         });
     } else if (options.version) {
       getVersion()
-        .then((): void => {})
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
     } else {
+      await getVersion();
+
       out.info(
         `${colors.bgBlue.bold(
           `>>> Starting ${framework} on port ${colors.yellow.bold(

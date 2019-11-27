@@ -29,9 +29,10 @@ const exec = (command: string, ...args: readonly string[]): Promise<CommandRespo
 
     const cmd = spawn(command, [...args]);
 
-    cmd.on('data', (data): void => {
+    cmd.stdout.on('data', (data): void => {
       res.out += data.toString();
     });
+
     cmd.on('error', (err): void => {
       res.error = err;
       reject(res);

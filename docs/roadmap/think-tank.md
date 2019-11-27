@@ -11,3 +11,17 @@ This document has no intend to be a clean and organized place. This is just the 
     - There is a command to install extensions, we could use it (we need Linter and Prettier extensions for VS Code). More info [here](https://code.visualstudio.com/docs/editor/extension-gallery#_command-line-extension-management).
 - Add more commands to `package.json` (test, etc)
 - When running on development mode, could be useful to add automatically `displayName` to page components (easier to work with React Chrome dev tools).
+- When working on framework, you can use `npm link` in `core` folder and then `npm link a2r` in any project you are using to test the framework. Would be nice to have a command flag so you can init a project this way, which is the best way to test framework features outside the framework without having to publish nor update packages.
+
+## Commands
+
+List of command that would be nice having:
+
+- apiRebuild: rebuilds API
+- apiMethodInfo: shows method info based on passed argument
+
+## Enhancements
+
+### Watcher
+
+- Watcher process should be stronger. Queue should be implemented and improve performance and pending tasks execution. Example: we might save one file multiple times in a short period of time... in these cases watcher shouldn't compile file more than once. Instead of compiling inside the event handler, pending tasks should be added to a queue. Whenever a new task starts being processed, it should check for tasks about same file and remove extra tasks.

@@ -2,6 +2,7 @@ import colors from 'colors';
 import out from '../util/out';
 import getLastVersionOfA2R from './getLastVersionOfA2R';
 import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
+import { framework } from '../util/terminalStyles';
 
 const getVersion = async (): Promise<void> => {
   const lastVersion = await getLastVersionOfA2R();
@@ -11,24 +12,22 @@ const getVersion = async (): Promise<void> => {
   if (lastVersion === currentVersion) {
     out.info(
       colors.yellow.bold(
-        `Your project is using the last version (${colors.green(
-          currentVersion
-        )}) of the ${colors.magenta('A2R')} Framework 👌`
-      )
+        `Your project is using the latest version (${colors.green(
+          currentVersion,
+        )}) of ${framework} 👌`,
+      ),
     );
   } else {
     out.info(
       colors.yellow.bold(
         `Your project is using version (${colors.green(
-          currentVersion
-        )}) of the ${colors.magenta(
-          'A2R'
-        )} Framework. There is a v${colors.green(
-          lastVersion
+          currentVersion,
+        )}) of ${framework}. There is a v${colors.green(
+          lastVersion,
         )} available use ${colors.bgBlue.magenta(
-          'npx a2r ---update'
-        )} to upgrade the project.`
-      )
+          'npx a2r ---update',
+        )} to upgrade the project.`,
+      ),
     );
   }
 };

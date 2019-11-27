@@ -13,7 +13,10 @@ import {
 } from '../../util/terminalStyles';
 import replacer from '../../util/apiStringifyReplacer';
 import compileFile from '../compiler';
-import { importModule, updateModule, disposeModule, buildApi } from '../api';
+import { buildApi } from '../api';
+import importModule from '../api/importModule';
+import updateModule from '../api/updateModule';
+import disposeModule from '../api/disposeModule';
 import { addCommand } from '../commands/consoleCommands';
 import { promisesQueue, processPromisesQueue } from './queue';
 
@@ -92,22 +95,30 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
                 );
               }
 
-              compileFile(rootFile, rootDir, normalizedDestPath);
+              try {
+                await compileFile(rootFile, rootDir, normalizedDestPath);
 
-              if (watcherReady) {
-                const method = fileAdded ? importModule : updateModule;
-                out.verbose(
-                  `${watcherOnLogs}: ${
-                    fileAdded ? 'Importing' : 'Updating'
-                  } ${apiOnLogs} method from ${fullPath(jsDestPath)}`,
-                );
-                const api = await method(jsDestPath);
-                out.verbose(
-                  `${watcherOnLogs}: ${apiOnLogs} Updated:\n${JSON.stringify(
-                    api,
-                    replacer,
-                    2,
-                  )}`,
+                if (watcherReady) {
+                  const method = fileAdded ? importModule : updateModule;
+                  out.verbose(
+                    `${watcherOnLogs}: ${
+                      fileAdded ? 'Importing' : 'Updating'
+                    } ${apiOnLogs} method from ${fullPath(jsDestPath)}`,
+                  );
+                  const api = await method(jsDestPath);
+                  out.verbose(
+                    `${watcherOnLogs}: ${apiOnLogs} Updated:\n${JSON.stringify(
+                      api,
+                      replacer,
+                      2,
+                    )}`,
+                  );
+                }
+              } catch (ex) {
+                out.error(
+                  `${watcherOnLogs}: Error compiling file ${fullPath(
+                    rootFile,
+                  )}: ${ex.message}`,
                 );
               }
             }

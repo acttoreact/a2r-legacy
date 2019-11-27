@@ -31,3 +31,4 @@ export const sockets = colors.bgYellow.black('Sockets');
 export const terminalCommand = (command: string): string => colors.green(command);
 export const fullPath = (path: string): string => colors.cyan(path);
 export const fileName = (name: string): string => colors.cyan.bold(name);
+export const method = (name: string): string => colors.bgWhite.black(name);
