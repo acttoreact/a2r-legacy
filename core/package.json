@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.3.76",
+  "version": "0.3.77",
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,9 +15,9 @@
     "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/services/commands/index.ts",
     "help": "ts-node-dev --respawn --transpileOnly ./src/services/commands/index.ts --frameworkLogLevel verbose -h",
     "start": "node ./dist/index.js",
-    "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.76 -s;npx a2r --frameworkLogLevel verbose --init;",
-    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.76 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
-    "initFromScratch": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm install a2r@0.3.76 -s;npx a2r --frameworkLogLevel verbose --init;",
+    "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.77 -s;npx a2r --frameworkLogLevel verbose --init;",
+    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.77 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
+    "initFromScratch": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm install a2r@0.3.77 -s;npx a2r --frameworkLogLevel verbose --init;",
     "uploadAndInitFromScratch": "npm run upload;ts-node-dev ./src/tools/waitForCurrentVersion.ts;npm run initFromScratch;",
     "uploadAndInstallGlobally": "ts-node-dev ./src/tools/increaseVersion.ts;npm run build;npm publish;sleep 10s;npm i -g a2r",
     "uploadAndStartProject": "npm run upload;ts-node-dev ./src/tools/waitForCurrentVersion.ts;npm run initEmptyAndStartProject;"

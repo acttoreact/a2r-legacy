@@ -35,7 +35,7 @@ if (options.help) {
   write(`${commandLineUsage(commandLineInfo)}\n\n`);
 } else {
   const initFramework = async (): Promise<void> => {
-    await checkNodeVersion();
+    checkNodeVersion();
 
     if (options.port < 100) {
       out.error(

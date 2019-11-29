@@ -1,8 +1,3 @@
-import exec from '../util/exec';
-
-const getNodeVersion = async (): Promise<string> => {
-  const res = await exec('node', '--version');
-  return res.out.trim();
-};
+const getNodeVersion = (): string => process.version.replace('v', '');
 
 export default getNodeVersion;

@@ -8,17 +8,17 @@ import settings from '../config/settings';
 const { minNodeVersion } = settings;
 const minVersionParts = minNodeVersion.split('.');
 
-const checkNodeVersion = async (): Promise<void> => {
-  const userNodeVersion = await getNodeVersion();
+const checkNodeVersion = (): void => {
+  const userNodeVersion = getNodeVersion();
   const userVersionParts = userNodeVersion.split('.');
 
-  for (let i = 0, l = minVersionParts.length; i < l; i += 0) {
+  for (let i = 0, l = minVersionParts.length; i < l; i += 1) {
     const minPart = parseInt(minVersionParts[i], 10);
     const userPart = parseInt(userVersionParts[i], 10);
     if (userPart < minPart) {
       throw Error(
         `Node.js version ${colors.bold('must')} be at least ${colors.green(
-          minNodeVersion,
+          `v${minNodeVersion}`,
         )}`,
       );
     }
