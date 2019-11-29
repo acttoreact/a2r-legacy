@@ -71,14 +71,14 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
             const rootFile = path.relative(process.cwd(), eventPath);
             const relativePath = path.relative(normalizedSourcePath, eventPath);
             out.verbose(
-              `${watcherOnLogs}: relativePath => ${fullPath(relativePath)}`,
+              `${watcherOnLogs}: file relative path => ${fullPath(relativePath)}`,
             );
             const jsDestPath = path.join(
               apiPath,
               relativePath.replace(/\.ts$/, '.js'),
             );
             out.verbose(
-              `${watcherOnLogs}: jsDestPath => ${fullPath(jsDestPath)}`,
+              `${watcherOnLogs}: js file destination path => ${fullPath(jsDestPath)}`,
             );
             const isFile = await fs.isFile(eventPath, stats);
             const fileAdded = eventName === 'add';

@@ -16,10 +16,9 @@ const importModule = async (
 ): Promise<APIStructure> => {
   const apiPath = moduleToPathDictionary[apiPathKey];
   const relativePath = path.relative(apiPath, modulePath);
-  const pathLevels = relativePath.split(path.sep);
-  const fileName = pathLevels.pop();
+  const { name, ext, dir: prefix } = path.parse(relativePath);
+  const fileName = `${name}${ext}`;
   if (fileName) {
-    const prefix = pathLevels.join('.');
     const folderPath = modulePath.replace(new RegExp(`${fileName}$`), '');
     await addModule(
       folderPath,

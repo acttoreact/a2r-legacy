@@ -3,6 +3,7 @@ export interface FrameworkSettings {
   defaultLogLevel: string;
   defaultPort: number;
   socketPath: string;
+  minNodeVersion: string;
 };
 
 const settings: FrameworkSettings = {
@@ -10,6 +11,7 @@ const settings: FrameworkSettings = {
   defaultLogLevel: 'info',
   defaultPort: 9230,
   socketPath: '/ws',
+  minNodeVersion: '10.10',
 };
 
 export default settings;

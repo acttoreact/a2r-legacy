@@ -1,4 +1,5 @@
 import path from 'path';
+import colors from 'colors';
 
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
@@ -35,6 +36,7 @@ const addModuleToApi = async (
       }
       api[moduleName] = mod;
       pathToModuleDictionary[pathName] = moduleName;
+      out.verbose(`Added module ${colors.italic(moduleName)} from path ${fullPath(pathName)}`);
       moduleToPathDictionary[moduleName] = pathName;
       if (prefix) {
         addModuleToSubModuleDictionary(folderPath, moduleName, prefix);

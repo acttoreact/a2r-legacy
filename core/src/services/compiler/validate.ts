@@ -23,6 +23,11 @@ const getMainFunctionName = (nodes: ts.Node[]): string => {
   return name;
 };
 
+// const getFunctionReturnType = (node: ts.Node): string => {
+//   // Must have an Identifier => getText() => 'Promise'
+//   // Must have a keyword (getText() => 'string', 'number', etc) OR a TypeReference (with an Identifier inside)
+// };
+
 const validateNode = (node: ts.Node, mainFunctionName: string): void => {
   if (ts.isFunctionDeclaration(node) || ts.isArrowFunction(node)) {
     const functionName = getFunctionName(node);

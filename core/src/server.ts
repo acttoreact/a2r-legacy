@@ -37,10 +37,9 @@ const createServer = (dev: boolean, port: number): Promise<ServerResponse> =>
 
       // TODO: middlewares?
       // TODO: handlers
-      // TODO: commands
 
-      sockets(http);
-      http.createServer(httpServer);
+      const server = http.createServer(httpServer);
+      sockets(server);
 
       const listener = httpServer.listen(
         port,

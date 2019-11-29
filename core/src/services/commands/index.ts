@@ -15,6 +15,7 @@ import out from '../../util/out';
 import update from '../../tools/update';
 import patch from '../../tools/patch';
 import getVersion from '../../tools/getVersion';
+import checkNodeVersion from '../../tools/checkNodeVersion';
 import write from '../../util/write';
 import { framework } from '../../util/terminalStyles';
 
@@ -34,6 +35,8 @@ if (options.help) {
   write(`${commandLineUsage(commandLineInfo)}\n\n`);
 } else {
   const initFramework = async (): Promise<void> => {
+    await checkNodeVersion();
+
     if (options.port < 100) {
       out.error(
         `${colors.red.bold(

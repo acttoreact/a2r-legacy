@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import http from 'http';
 import path from 'path';
 import io from 'socket.io';
 import colors from 'colors';
 
-import out from '../../util/out';
 import { socketList } from './connection';
+import { MethodCall } from './sockets';
+import out from '../../util/out';
 import api from '../api';
 import { APIModule } from '../api/api';
 import addCommandsFromPath from '../commands/addCommandsFromPath';
@@ -13,13 +15,6 @@ import { sockets as socketsInLogs } from '../../util/terminalStyles';
 import settings from '../../config/settings';
 
 const options = { path: settings.socketPath };
-let ioServer: io.Server | undefined;
-
-export interface MethodCall {
-  method: string;
-  id: string;
-  params: any[];
-};
 
 const onDisconnect = (socket: io.Socket): void => {
   out.verbose(
@@ -28,8 +23,8 @@ const onDisconnect = (socket: io.Socket): void => {
   delete socketList[socket.id];
 };
 
-const setup = (express: Express.Application): void => {
-  ioServer = io(express, options);
+const setup = (httpServer: http.Server): void => {
+  const ioServer = io(httpServer, options);
   
   ioServer.on('connection', (socket): void => {
     out.verbose(
