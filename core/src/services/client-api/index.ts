@@ -1,58 +1,67 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import io from 'socket.io-client';
-import generateId from 'shortid';
+import path from 'path';
+// import generateId from 'shortid';
 
-import { MethodCall, SocketMessage } from '../sockets/sockets';
+// import getPath from './getPath';
+// import getSocket from './getSocket';
+// import { MethodCall, SocketMessage } from '../sockets/sockets';
+import getFrameworkPath from '../../tools/getFrameworkPath';
+// import out from '../../util/out';
+import build from './build';
 
-const socket = io('url', {
-  autoConnect: false,
-  path: '/ws',
-});
+// const methodWrapper = (method: string, ...args: any[]): Promise<any> =>
+//   new Promise<SocketMessage>((resolve, reject): void => {
+//     const socket = getSocket();
 
-const methodWrapper = (method: string, ...args: any[]): Promise<any> =>
-  new Promise<SocketMessage>((resolve, reject): void => {
-    const id = generateId();
+//     if (socket) {
+//       const id = generateId();
+//       socket.on(id, (res: SocketMessage): void => {
+//         socket.off(id);
+//         if (res.o) {
+//           resolve(res.d);
+//         } else {
+//           const error = new Error(res.e);
+//           error.stack = res.s;
+//           reject(error);
+//         }
+//       });
 
-    if (socket) {
-      socket.on(id, (res: SocketMessage): void => {
-        socket.off(id);
-        if (res.o) {
-          resolve(res.d);
-        } else {
-          const error = new Error(res.e);
-          error.stack = res.s;
-          reject(error);
-        }
-      });
-    }
-
-    const call: MethodCall = {
-      method,
-      id,
-      params: args,
-    };
-    
-    socket.emit('*', call);
-  });
+//       const call: MethodCall = {
+//         method,
+//         id,
+//         params: args,
+//       };
+      
+//       socket.emit('*', call);
+//     } else {
+//       out.error('No client socket available!');
+//     }
+//   });
 
 // Add docs from original method here
-const usersLogin = (...args: any[]): Promise<any> =>
-  methodWrapper('users.login', ...args);
+// const usersLogin = (...args: any[]): Promise<any> =>
+//   methodWrapper('users.login', ...args);
   
 // (...args: any[]): Promise<SocketMessage> => methodWrapper('users.login', ...args)
 
-const apiObject = {
-  users: {
-    login: usersLogin,
-  },
+// const apiObject = {
+//   users: {
+//     login: usersLogin,
+//   },
+// };
+
+// export { setup as setupSocket } from './getSocket';
+
+const buildClientApi = async(): Promise<void> => {
+  const frameworkPath = await getFrameworkPath();
+  const mainFilePath = path.resolve(frameworkPath, 'server', 'api.ts');
+  await build(mainFilePath);
+  // const clientApiPath = await getPath();
+  // Copy files
+  // Compile?
+  // Build main file: imports, export default like an object
+  // Build package.json and stuff
+  // Copy contents to node_modules/api
 };
 
-export const buildClientApi = (): void => {
-// Copy files
-// Compile?
-// Build main file: imports, export default like an object
-// Build package.json and stuff
-// Copy contents to node_modules/api
-};
-
-export default apiObject;
+export default buildClientApi;

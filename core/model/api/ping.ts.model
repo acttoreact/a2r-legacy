@@ -1,3 +1,7 @@
+/**
+ * Sample ping method
+ * @returns {Promise<string>}
+ */
 const ping = async (): Promise<string> => 'pong';
 
 export default ping;

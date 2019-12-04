@@ -1,11 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const getText = () => 'pong';
 /**
- * Ping method description
- *
+ * Sample ping method
  * @returns {Promise<string>}
  */
-const ping = async () => getText();
+const ping = async () => 'pong';
 exports.default = ping;
 //# sourceMappingURL=ping.js.map

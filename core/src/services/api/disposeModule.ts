@@ -2,7 +2,12 @@ import path from 'path';
 
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
-import api, { APIStructure, pathToModuleDictionary, pathToSubModuleDictionary, moduleToPathDictionary } from './api';
+import api, {
+  APIStructure,
+  pathToModuleDictionary,
+  pathToSubModuleDictionary,
+  moduleToPathDictionary,
+} from './api';
 import removeModule from './removeModule';
 
 /**
@@ -15,9 +20,7 @@ import removeModule from './removeModule';
  * @param {string} modulePath
  * @returns {Promise<APIStructure>} The resulting APIStructure object
  */
-const disposeModule = async (
-  modulePath: string,
-): Promise<APIStructure> => {
+const disposeModule = async (modulePath: string): Promise<APIStructure> => {
   const normalizedPath = path.normalize(modulePath);
   const moduleName = pathToModuleDictionary[normalizedPath];
   const modulesNames = pathToSubModuleDictionary[normalizedPath];
@@ -32,14 +35,12 @@ const disposeModule = async (
           if (modPath) {
             delete require.cache[modPath];
           }
-          return removeModule(modName)
+          return removeModule(modName);
         },
       ),
     );
   } else {
-    out.warn(
-      `${apiInLogs}: Couldn't find any module name for path ${fullPath(modulePath)}`,
-    );
+    out.warn(`${apiInLogs}: Couldn't find any module name for path ${fullPath(modulePath)}`);
   }
   return api;
 };

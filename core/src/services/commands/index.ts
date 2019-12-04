@@ -122,14 +122,16 @@ if (options.help) {
       );
 
       await createServer(options.dev, port).then(
-        async (value): Promise<void> => {
+        async (server): Promise<void> => {
           if (options.dev) {
             const rl = readline.createInterface(
               process.stdin,
               process.stdout,
             );
 
-            await setup(rl, value);
+            await setup(rl, server);
+            // setupClientApi(port);
+
             rl.on(
               'line',
               async (cmd: string): Promise<void> => {

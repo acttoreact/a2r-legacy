@@ -1,7 +1,8 @@
 import colors from 'colors';
 import out from '../../util/out';
 import removeModuleFromSubModuleDictionary from './removeModuleFromSubModuleDictionary';
-import api, { APIModule, moduleToPathDictionary, pathToModuleDictionary } from './api';
+import api, { moduleToPathDictionary, pathToModuleDictionary } from './api';
+import buildClientApi from '../client-api';
 
 /**
  * Remove a single module from API
@@ -9,7 +10,7 @@ import api, { APIModule, moduleToPathDictionary, pathToModuleDictionary } from '
  * @returns {Promise<void>}
  */
 const removeModuleFromApi = async (moduleName: string): Promise<void> => {
-  const mod = api[moduleName] as APIModule;
+  const mod = api[moduleName];
   if (mod) {
     if (mod.dispose) {
       out.verbose(
@@ -25,6 +26,7 @@ const removeModuleFromApi = async (moduleName: string): Promise<void> => {
     delete moduleToPathDictionary[moduleName];
     delete pathToModuleDictionary[modulePath];
     removeModuleFromSubModuleDictionary(moduleName);
+    await buildClientApi();
     out.verbose(
       `API module ${colors.italic(moduleName)} has been ${colors.green.bold(
         'successfully',

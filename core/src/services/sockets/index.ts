@@ -8,7 +8,6 @@ import { socketList } from './connection';
 import { MethodCall } from './sockets';
 import out from '../../util/out';
 import api from '../api';
-import { APIModule } from '../api/api';
 import addCommandsFromPath from '../commands/addCommandsFromPath';
 import { sockets as socketsInLogs } from '../../util/terminalStyles';
 
@@ -35,7 +34,7 @@ const setup = (httpServer: http.Server): void => {
 
     socket.on('*', async (info: MethodCall): Promise<void> => {
       const { method, params, id } = info;
-      const apiModule = api[method] as APIModule;
+      const apiModule = api[method];
       try {
         const result = await apiModule.default(...params);
         socket.emit(id, { o: 1, d: result });
@@ -50,5 +49,7 @@ const setup = (httpServer: http.Server): void => {
   const commandsPath = path.join(__dirname, 'commands');
   addCommandsFromPath(commandsPath)
 }
+
+export * from './sockets';
 
 export default setup;

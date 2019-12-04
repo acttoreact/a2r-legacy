@@ -12,8 +12,8 @@ import {
   terminalCommand,
 } from '../../util/terminalStyles';
 import replacer from '../../util/apiStringifyReplacer';
-import compileFile from '../compiler';
-import { buildApi } from '../api';
+import compileFile, { ValidationErrorLevel } from '../compiler';
+import { setupApi } from '../api';
 import importModule from '../api/importModule';
 import updateModule from '../api/updateModule';
 import disposeModule from '../api/disposeModule';
@@ -96,27 +96,36 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
               }
 
               try {
-                await compileFile(rootFile, rootDir, normalizedDestPath);
-
                 if (watcherReady) {
-                  const method = fileAdded ? importModule : updateModule;
-                  out.verbose(
-                    `${watcherOnLogs}: ${
-                      fileAdded ? 'Importing' : 'Updating'
-                    } ${apiOnLogs} method from ${fullPath(jsDestPath)}`,
-                  );
-                  const api = await method(jsDestPath);
-                  out.verbose(
-                    `${watcherOnLogs}: ${apiOnLogs} Updated:\n${JSON.stringify(
-                      api,
-                      replacer,
-                      2,
-                    )}`,
-                  );
+                  const compilerInfo = await compileFile(rootFile, rootDir, normalizedDestPath);
+
+                  if (compilerInfo && compilerInfo.mainMethodNode) {
+                    if (compilerInfo.validationErrors.length) {
+                      const errors = compilerInfo.validationErrors.reduce((t, e): string[] => {
+                        if (e.level === ValidationErrorLevel.Error) {
+                          t.push(e.message);
+                        }
+                        return t;
+                      }, new Array<string>());
+                      throw Error(`${errors.length > 1 ? '\n- ' : ''}${errors.join('\n- ')}`);
+                    } else {
+                      const method = fileAdded ? importModule : updateModule;
+                      out.verbose(
+                        `${watcherOnLogs}: ${
+                          fileAdded ? 'Importing' : 'Updating'
+                        } ${apiOnLogs} method from ${fullPath(jsDestPath)}`,
+                      );
+                      await method(jsDestPath, compilerInfo);
+                      out.verbose(`${watcherOnLogs}: ${apiOnLogs} Updated`);
+
+                    }
+                  } else {
+                    throw Error(`there is no main method or it's not exported as default`);
+                  }
                 }
               } catch (ex) {
                 out.error(
-                  `${watcherOnLogs}: Error compiling file ${fullPath(
+                  `${watcherOnLogs}: Error(s) compiling file ${fullPath(
                     rootFile,
                   )}: ${ex.message}`,
                 );
@@ -131,14 +140,8 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
               promisesQueue.push((): Promise<void> => fs.unlink(mapDestPath));
               promisesQueue.push((): Promise<void> => fs.unlink(dtsDestPath));
               processPromisesQueue();
-              const api = await disposeModule(jsDestPath);
-              out.verbose(
-                `${watcherOnLogs}: ${apiOnLogs} Updated:\n${JSON.stringify(
-                  api,
-                  replacer,
-                  2,
-                )}`,
-              );
+              await disposeModule(jsDestPath);
+              out.verbose(`${watcherOnLogs}: ${apiOnLogs} Updated`);
             }
 
             if (folderRemoved) {
@@ -157,7 +160,7 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
                 watcherStart}ms. Starting API.`,
             );
             const start = +new Date();
-            await buildApi(normalizedDestPath);
+            await setupApi(normalizedDestPath);
             out.verbose(
               `${watcherOnLogs}: API built in ${+new Date() -
                 start}ms and watching for changes at ${fullPath(

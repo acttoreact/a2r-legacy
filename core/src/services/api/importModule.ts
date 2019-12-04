@@ -4,6 +4,7 @@ import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import api, { APIStructure, apiPathKey, moduleToPathDictionary } from './api';
 import addModule from './addModule';
+import { CompilerFileInfo } from '../compiler';
 
 /**
  * Import a single module to API from a single path
@@ -13,6 +14,7 @@ import addModule from './addModule';
  */
 const importModule = async (
   modulePath: string,
+  compilerInfo: CompilerFileInfo,
 ): Promise<APIStructure> => {
   const apiPath = moduleToPathDictionary[apiPathKey];
   const relativePath = path.relative(apiPath, modulePath);
@@ -24,6 +26,8 @@ const importModule = async (
       folderPath,
       fileName,
       fileName.replace(/\.js$/, ''),
+      relativePath,
+      compilerInfo,
       prefix,
     );
   } else {

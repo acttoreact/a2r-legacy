@@ -5,6 +5,8 @@ import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import addModuleToSubModuleDictionary from './addModuleToSubModuleDictionary';
 import api, { pathToModuleDictionary, moduleToPathDictionary } from './api';
+import { CompilerFileInfo } from '../compiler';
+import buildClientApi from '../client-api';
 
 /**
  * Adds a single module to API
@@ -15,10 +17,12 @@ import api, { pathToModuleDictionary, moduleToPathDictionary } from './api';
  * @param {string} [prefix] Module prefix
  * @returns {Promise<void>}
  */
-const addModuleToApi = async (
+const addModule = async (
   folderPath: string,
   fileName: string,
   cleanName: string,
+  relativePath: string,
+  compilerInfo: CompilerFileInfo,
   prefix?: string,
 ): Promise<void> => {
   const moduleName: string = [prefix, cleanName]
@@ -26,7 +30,7 @@ const addModuleToApi = async (
     .join('.');
   const pathName = path.normalize(path.resolve(folderPath, fileName));
   await import(pathName)
-    .then((mod): void => {
+    .then(async (mod): Promise<void> => {
       if (!mod.default) {
         out.warn(
           `${apiInLogs}: Module imported from ${fullPath(
@@ -34,13 +38,18 @@ const addModuleToApi = async (
           )} doesn't contain a default property`,
         );
       }
-      api[moduleName] = mod;
+      api[moduleName] = {
+        ...mod,
+        relativePath,
+        compilerInfo,
+      };
       pathToModuleDictionary[pathName] = moduleName;
       out.verbose(`Added module ${colors.italic(moduleName)} from path ${fullPath(pathName)}`);
       moduleToPathDictionary[moduleName] = pathName;
       if (prefix) {
         addModuleToSubModuleDictionary(folderPath, moduleName, prefix);
       }
+      await buildClientApi();
     })
     .catch((ex): void => {
       out.error(
@@ -51,4 +60,4 @@ const addModuleToApi = async (
     });
 };
 
-export default addModuleToApi;
+export default addModule;

@@ -1,36 +1,29 @@
 import path from 'path';
 import ReadLine from 'readline';
 
+import { Closeable } from '../../types';
 import { addCommand } from './consoleCommands';
 import { framework } from '../../util/terminalStyles';
+import exit from '../../util/exit';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import addCommandsFromPath from './addCommandsFromPath';
 
 /**
- * Element that can be closed
- */
-interface Closeable {
-  close: () => void;
-}
-
-/**
  * Setups all the commands that can be used by te console
- * @param rl Console Interface
- * @param serverListener Server Information
+ * 
+ * @param rl Console interface
+ * @param server Server instance
  */
 const setup = async (
   rl: ReadLine.Interface,
-  serverListener: Closeable
+  server: Closeable
 ): Promise<void> => {
   addCommand({
     name: 'exit',
     description: `Exit the ${framework}`,
     onExecute: async (write): Promise<void> => {
       write(`Exiting ${framework}\n`);
-      serverListener.close();
-      rl.close();
-      process.stdin.destroy();
-      process.exit();
+      exit(server, rl);
     },
   });
 

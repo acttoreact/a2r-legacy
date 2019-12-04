@@ -10,6 +10,7 @@
   - [Pages](#pages)
   - [Etc](#etc)
 - [Roadmap](#roadmap)
+- [Misc](#misc)
 
 ## Core
 
@@ -44,3 +45,7 @@ Forget about updating all your dependencies on every project. You just need to u
 ## Roadmap
 
 Current [roadmap, to-do and wishlist](./docs/roadmap/README.md).
+
+## Misc
+
+Everything worth to be written that doesn't fit anywhere else. You can find it [here](./docs/misc.md).

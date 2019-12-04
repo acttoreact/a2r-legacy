@@ -56,7 +56,7 @@ const createServer = (dev: boolean, port: number): Promise<ServerResponse> =>
               )
             );
             if (dev) {
-              open(`http://localhost:${port.toString()}/`);
+              // open(`http://localhost:${port.toString()}/`);
             }
           }
         }
