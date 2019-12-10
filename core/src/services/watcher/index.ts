@@ -11,16 +11,13 @@ import {
   fullPath,
   terminalCommand,
 } from '../../util/terminalStyles';
-import replacer from '../../util/apiStringifyReplacer';
 import compileFile, { ValidationErrorLevel } from '../compiler';
 import { setupApi } from '../api';
 import importModule from '../api/importModule';
 import updateModule from '../api/updateModule';
 import disposeModule from '../api/disposeModule';
 import { addCommand } from '../commands/consoleCommands';
-import { promisesQueue, processPromisesQueue } from './queue';
-
-let watcherReady = false;
+import { addTask } from './queue';
 
 /**
  * Watch project API folder recursively for files changes
@@ -87,18 +84,17 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
             const folderRemoved = eventName === 'unlinkDir';
 
             if (fileAdded || fileChanged) {
-              if (watcherReady) {
-                out.verbose(
-                  `${watcherOnLogs}: File ${
-                    fileAdded ? 'added' : 'changed'
-                  }: ${eventPath}`,
-                );
-              }
-
-              try {
-                if (watcherReady) {
+              addTask({
+                path: eventPath,
+                handler: async (): Promise<void> => {
+                  out.verbose(
+                    `${watcherOnLogs}: File ${
+                      fileAdded ? 'added' : 'changed'
+                    }: ${eventPath}`,
+                  );
+    
                   const compilerInfo = await compileFile(rootFile, rootDir, normalizedDestPath);
-
+  
                   if (compilerInfo && compilerInfo.mainMethodNode) {
                     if (compilerInfo.validationErrors.length) {
                       const errors = compilerInfo.validationErrors.reduce((t, e): string[] => {
@@ -117,36 +113,40 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
                       );
                       await method(jsDestPath, compilerInfo);
                       out.verbose(`${watcherOnLogs}: ${apiOnLogs} Updated`);
-
+  
                     }
                   } else {
                     throw Error(`there is no main method or it's not exported as default`);
                   }
+                },
+                onError: (ex): void => {
+                  out.error(
+                    `${watcherOnLogs}: Error(s) compiling file ${fullPath(
+                      rootFile,
+                    )}: ${ex.message}`,
+                  );
                 }
-              } catch (ex) {
-                out.error(
-                  `${watcherOnLogs}: Error(s) compiling file ${fullPath(
-                    rootFile,
-                  )}: ${ex.message}`,
-                );
-              }
+              });
             }
 
             if (fileRemoved) {
-              out.verbose(`${watcherOnLogs}: File removed: ${eventPath}`);
-              const mapDestPath = `${jsDestPath}.map`;
-              const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
-              promisesQueue.push((): Promise<void> => fs.unlink(jsDestPath));
-              promisesQueue.push((): Promise<void> => fs.unlink(mapDestPath));
-              promisesQueue.push((): Promise<void> => fs.unlink(dtsDestPath));
-              processPromisesQueue();
-              await disposeModule(jsDestPath);
-              out.verbose(`${watcherOnLogs}: ${apiOnLogs} Updated`);
+              addTask({ path: eventPath, handler: async (): Promise<void> => {
+                out.verbose(`${watcherOnLogs}: File removed: ${eventPath}`);
+                const mapDestPath = `${jsDestPath}.map`;
+                const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+                await fs.unlink(jsDestPath);
+                await fs.unlink(mapDestPath);
+                await fs.unlink(dtsDestPath);
+                await disposeModule(jsDestPath);
+                out.verbose(`${watcherOnLogs}: ${apiOnLogs} Updated`);
+              }});
             }
 
             if (folderRemoved) {
-              promisesQueue.push((): Promise<void> => fs.rmDir(jsDestPath));
-              processPromisesQueue();
+              addTask({ path: eventPath, handler: async (): Promise<void> => {
+                out.verbose(`${watcherOnLogs}: Folder removed: ${eventPath}`);
+                await fs.rmDir(jsDestPath);
+              }});
             }
           },
         );
@@ -154,16 +154,13 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
         watcher.on(
           'ready',
           async (): Promise<void> => {
-            watcherReady = true;
             out.verbose(
               `${watcherOnLogs}: Ready in ${+new Date() -
-                watcherStart}ms. Starting API.`,
+                watcherStart}ms. Starting API Setup.`,
             );
-            const start = +new Date();
             await setupApi(normalizedDestPath);
             out.verbose(
-              `${watcherOnLogs}: API built in ${+new Date() -
-                start}ms and watching for changes at ${fullPath(
+              `${watcherOnLogs}: API ready and watching for changes at ${fullPath(
                 normalizedSourcePath,
               )}`,
             );
@@ -205,5 +202,7 @@ const watchFolder = async (options?: chokidar.WatchOptions): Promise<void> =>
       }
     },
   );
+
+export * from './watcher';
 
 export default watchFolder;

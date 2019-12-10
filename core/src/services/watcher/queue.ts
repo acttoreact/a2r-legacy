@@ -1,25 +1,49 @@
 import out from '../../util/out';
 import { watcher } from '../../util/terminalStyles';
+import { WatcherEventInfo } from './watcher';
 
-let promiseRunning = false;
+import settings from '../../config/settings';
 
-export const promisesQueue: Function[] = [];
+const { taskConcurrency } = settings;
 
-export const processPromisesQueue = (): void => {
-  if (!promiseRunning) {
-    const promiseProvider = promisesQueue.shift();
-    if (promiseProvider) {
-      promiseRunning = true;
-      promiseProvider()
+const taskQueue: WatcherEventInfo[] = [];
+const runningPromises: Function[] = [];
+
+export const processTask = (): void => {
+  if (runningPromises.length < taskConcurrency) {
+    const task = taskQueue.shift();
+    if (task) {
+      const samePathTasks = taskQueue.filter((i): boolean => i.path === task.path);
+      const { handler, onError } = samePathTasks.pop() as WatcherEventInfo;
+      for (let i = 0, l = samePathTasks.length; i < l; i += 1) {
+        taskQueue.splice(taskQueue.indexOf(samePathTasks[i]), 1);
+      }
+      runningPromises.push(handler);
+      out.verbose(`Running task (${runningPromises.length} / ${taskConcurrency})`);
+      handler()
         .catch((ex: Error): void => {
-          out.error(
-            `${watcher}: Error removing path: ${ex.message}\n${ex.stack}`,
-          );
+          if (onError) {
+            onError(ex);
+          } else {
+            out.error(
+              `${watcher}: Error on task: ${ex.message}\n${ex.stack}`,
+            );
+          }
         })
         .finally((): void => {
-          promiseRunning = false;
-          processPromisesQueue();
+          runningPromises.splice(runningPromises.indexOf(handler), 1);
+          processTask();
         });
+      processTask();
     }
   }
+};
+
+export const addTask = (info: WatcherEventInfo, unshift: boolean = false): void => {
+  if (unshift) {
+    taskQueue.unshift(info);
+  } else {
+    taskQueue.push(info);
+  }
+  processTask();
 };

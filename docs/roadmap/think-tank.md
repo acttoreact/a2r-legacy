@@ -25,3 +25,7 @@ List of command that would be nice having:
 ### Watcher
 
 - Watcher process should be stronger. Queue should be implemented and improve performance and pending tasks execution. Example: we might save one file multiple times in a short period of time... in these cases watcher shouldn't compile file more than once. Instead of compiling inside the event handler, pending tasks should be added to a queue. Whenever a new task starts being processed, it should check for tasks about same file and remove extra tasks.
+
+## Doubts
+
+- When should we update main libraries like `typescript`?

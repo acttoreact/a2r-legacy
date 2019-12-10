@@ -36,18 +36,19 @@ const getFunctionReturnTypeInfo = (
       const child = children[i];
       if (ts.isIdentifier(child)) {
         identifier = child.getText().trim();
-      } else {
-        type = child.getText().trim();
-        typeNode = child;
-        if (ts.isTypeReferenceNode(child)) {
+      } else if (child.kind === ts.SyntaxKind.SyntaxList) {
+        typeNode = child.getChildAt(0);
+        type = typeNode.getText().trim();
+        if (ts.isTypeReferenceNode(typeNode)) {
           isTypeReference = true;
           // TODO: Check if type is imported and store type reference path
           typeReferencePath = 'test';
         } else if (ts.isArrayTypeNode(child)) {
           // TODO: Check if array type is primitive type
         }
+      } else {
         out.verbose(
-          `Unknown node type looking for function return type ${
+          `Skipping unknown node type looking for function return type ${
             ts.SyntaxKind[child.kind]
           }`,
         );

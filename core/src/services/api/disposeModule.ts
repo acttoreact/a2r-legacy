@@ -9,6 +9,7 @@ import api, {
   moduleToPathDictionary,
 } from './api';
 import removeModule from './removeModule';
+import buildClientApi from '../client-api';
 
 /**
  * Dispose an existing API module from a given path
@@ -27,6 +28,7 @@ const disposeModule = async (modulePath: string): Promise<APIStructure> => {
   if (moduleName) {
     delete require.cache[normalizedPath];
     await removeModule(moduleName);
+    await buildClientApi();
   } else if (modulesNames) {
     await Promise.all(
       modulesNames.map(
@@ -39,6 +41,7 @@ const disposeModule = async (modulePath: string): Promise<APIStructure> => {
         },
       ),
     );
+    await buildClientApi();
   } else {
     out.warn(`${apiInLogs}: Couldn't find any module name for path ${fullPath(modulePath)}`);
   }

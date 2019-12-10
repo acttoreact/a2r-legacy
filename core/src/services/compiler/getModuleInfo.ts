@@ -10,7 +10,6 @@ import { method as methodOnLogs, fullPath } from '../../util/terminalStyles';
 import fs from '../../util/fs';
 import out from '../../util/out';
 
-
 const must = colors.bold('must');
 
 const getModuleInfo = async (filePath: string): Promise<CompilerFileInfo | null> => {
@@ -58,9 +57,10 @@ const getModuleInfo = async (filePath: string): Promise<CompilerFileInfo | null>
         });
       }
     }
+    // TODO: Inspect params and collect their types info as well
+    out.verbose(`Module main method name: ${moduleInfo.mainMethodName}`);
+    out.verbose(`Module main method number of params: ${moduleInfo.mainMethodParamNodes.length}`);
   }
-  out.verbose(`Module main method name: ${moduleInfo.mainMethodName}`);
-  out.verbose(`Module main method number of params: ${moduleInfo.mainMethodParamNodes.length}`);
   return moduleInfo;
 };
 

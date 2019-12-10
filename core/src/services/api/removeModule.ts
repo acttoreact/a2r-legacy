@@ -2,7 +2,6 @@ import colors from 'colors';
 import out from '../../util/out';
 import removeModuleFromSubModuleDictionary from './removeModuleFromSubModuleDictionary';
 import api, { moduleToPathDictionary, pathToModuleDictionary } from './api';
-import buildClientApi from '../client-api';
 
 /**
  * Remove a single module from API
@@ -26,7 +25,6 @@ const removeModuleFromApi = async (moduleName: string): Promise<void> => {
     delete moduleToPathDictionary[moduleName];
     delete pathToModuleDictionary[modulePath];
     removeModuleFromSubModuleDictionary(moduleName);
-    await buildClientApi();
     out.verbose(
       `API module ${colors.italic(moduleName)} has been ${colors.green.bold(
         'successfully',

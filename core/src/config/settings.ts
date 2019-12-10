@@ -4,6 +4,7 @@ export interface FrameworkSettings {
   defaultPort: number;
   socketPath: string;
   minNodeVersion: string;
+  taskConcurrency: number;
 };
 
 const settings: FrameworkSettings = {
@@ -12,6 +13,7 @@ const settings: FrameworkSettings = {
   defaultPort: 9230,
   socketPath: '/ws',
   minNodeVersion: '10.10',
+  taskConcurrency: 4,
 };
 
 export default settings;
