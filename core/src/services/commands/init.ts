@@ -26,7 +26,7 @@ const init = async (projectPath: string = process.cwd()): Promise<void> => {
   await fs.ensureDir(projectPath);
   out.verbose(`Framework path is ${fullPath(modulePath)}`);
   out.verbose(`Project path is ${fullPath(projectPath)}`);
-  const modelPath = path.resolve(modulePath, 'model');
+  const modelPath = path.resolve(modulePath, 'template');
   out.verbose(`Model path is ${fullPath(modelPath)}`);
 
   out.verbose(`Ensuring npm is initialized in path ${fullPath(projectPath)}`);

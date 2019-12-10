@@ -1,7 +1,8 @@
 {
   "material-icon-theme.folders.associations": {
     "labs": "test",
-    "handlers": "middleware"
+    "handler": "Middleware",
+    "handlers": "Middleware"
   },
   "eslint.validate":  [
     "javascript",

@@ -1,19 +1,15 @@
 import ts from 'typescript';
 
-import { CompilerFileInfo } from './compiler';
-import getModuleInfo from './getModuleInfo';
 import getProjectPath from '../../tools/getProjectPath';
 import reportDiagnostic from '../../util/reportDiagnostic';
-import compileOptions from './compileOptions';
-import formatHost from './formatHost';
+import compileOptions from '../compiler/compileOptions';
+import formatHost from '../compiler/formatHost';
 
 const compileFile = async (
   rootFile: string,
   outDir: string,
   rootDir?: string,
-): Promise<CompilerFileInfo | null> => {
-  const moduleInfo = await getModuleInfo(rootFile);
-
+): Promise<void> => {
   const program = ts.createProgram([rootFile], {
     ...compileOptions,
     outDir,
@@ -32,10 +28,6 @@ const compileFile = async (
       reportDiagnostic(diagnostic, formatHost);
     });
   }
-
-  return moduleInfo;
 };
-
-export * from './compiler';
 
 export default compileFile;

@@ -1,9 +1,10 @@
 # Roadmap <!-- omit in toc -->
 
-*Last Update: November 2019*
+> *Last Update: December 2019*
 
 - [MVP](#mvp)
 - [Backlog](#backlog)
+  - [Small tasks](#small-tasks)
 - [Wishlist, other ideas, etc](#wishlist-other-ideas-etc)
 
 ## MVP
@@ -38,6 +39,10 @@ This is first approach a list of every desired functionality:
 - Expo and multiple proxies
 - Generic hooks
 - Generic components?
+
+### Small tasks
+
+- Review `patch` and similar tools and use proper path functions instead of string manipulation.
 
 ## Wishlist, other ideas, etc
 

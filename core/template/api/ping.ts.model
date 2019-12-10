@@ -1,0 +1,9 @@
+import PingResult from '../model/pingResult'
+
+/**
+ * Sample ping method
+ * @returns {Promise<PingResult>}
+ */
+const ping = async (): Promise<PingResult> => ({ result: 'pong' });
+
+export default ping;

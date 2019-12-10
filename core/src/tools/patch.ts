@@ -19,7 +19,7 @@ export default async (): Promise<void> => {
 
   const basePackagePath = path.join(__dirname, '../..');
 
-  const modelPath = `${basePackagePath}/model`;
+  const modelPath = `${basePackagePath}/template`;
   const targetPath = path.join(__dirname, '../../../..');
   out.verbose(`Model path is ${modelPath}`);
   out.verbose(`Target path is ${targetPath}`);
