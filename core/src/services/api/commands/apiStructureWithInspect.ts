@@ -1,6 +1,6 @@
 import util from 'util';
 
-import { ConsoleCommand } from '../../commands/consoleCommands';
+import { ConsoleCommand } from '../../../model/commands';
 import { api as apiOnLogs, terminalCommand } from '../../../util/terminalStyles';
 import api from '../api';
 

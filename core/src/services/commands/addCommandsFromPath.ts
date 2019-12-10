@@ -4,7 +4,8 @@ import util from 'util';
 import fs from '../../util/fs';
 import out from '../../util/out';
 import { fullPath, fileName } from '../../util/terminalStyles';
-import { addCommand, ConsoleCommand } from './consoleCommands';
+import { ConsoleCommand } from '../../model/commands';
+import { addCommand } from './consoleCommands';
 
 interface CommandImportResult {
   default: ConsoleCommand;

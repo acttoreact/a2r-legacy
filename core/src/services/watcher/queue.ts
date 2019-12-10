@@ -1,6 +1,6 @@
 import out from '../../util/out';
 import { watcher } from '../../util/terminalStyles';
-import { WatcherEventInfo } from './watcher';
+import { WatcherEventInfo } from '../../model/watcher';
 
 import settings from '../../config/settings';
 
@@ -13,7 +13,7 @@ export const processTask = (): void => {
   if (runningPromises.length < taskConcurrency) {
     const task = taskQueue.shift();
     if (task) {
-      const samePathTasks = taskQueue.filter((i): boolean => i.path === task.path);
+      const samePathTasks = [task, ...taskQueue.filter((i): boolean => i.path === task.path)];
       const { handler, onError } = samePathTasks.pop() as WatcherEventInfo;
       for (let i = 0, l = samePathTasks.length; i < l; i += 1) {
         taskQueue.splice(taskQueue.indexOf(samePathTasks[i]), 1);

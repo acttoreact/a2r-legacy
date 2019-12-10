@@ -11,7 +11,11 @@ const log = (message: string): void => {
   out.info(colors.yellow.bold(message));
 };
 
-export default async (): Promise<void> => {
+/**
+ * Updates and installs latest A2R Framework version on project
+ * @returns {Promise<void>}
+ */
+const update = async (): Promise<void> => {
   const parsedA2RPackage = await getCurrentA2RPackageInfo();
   const lastVersion = await getLastVersionOfA2R();
   const { version: currentVersion } = parsedA2RPackage;
@@ -33,3 +37,5 @@ export default async (): Promise<void> => {
     await exec('npx', `a2r@${lastVersion}`, '--patch');
   }
 };
+
+export default update;

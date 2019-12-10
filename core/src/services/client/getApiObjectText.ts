@@ -1,4 +1,4 @@
-import { ApiNamespace } from './client-api';
+import { ApiNamespace } from '../../model/client';
 
 const namespaceToText = (namespace: ApiNamespace, level: number = 0): string => {
   const namespaces = namespace.namespaces.map((n): string => {

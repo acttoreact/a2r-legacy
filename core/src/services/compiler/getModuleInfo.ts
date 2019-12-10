@@ -1,7 +1,7 @@
 import ts from 'typescript';
 import colors from 'colors';
 
-import { CompilerFileInfo, ValidationErrorLevel } from './compiler';
+import { CompilerFileInfo, ValidationErrorLevel } from '../../model/compiler';
 import getMainMethodName from './getMainMethodName';
 import getMainMethodNode from './getMainMethodNode';
 import getFunctionDocContainer from './getFunctionDocContainer';

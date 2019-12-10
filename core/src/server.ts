@@ -2,7 +2,7 @@ import http from 'http';
 import express from 'express';
 import colors from 'colors';
 import next from 'next';
-import open from 'open';
+// import open from 'open';
 
 import out from './util/out';
 // import socket from './util/socket';

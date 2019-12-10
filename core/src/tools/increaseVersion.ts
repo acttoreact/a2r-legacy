@@ -5,11 +5,20 @@ import fs from '../util/fs';
 import out from '../util/out';
 import packageInfoManager from './packageInfoManager';
 
+import settings from '../config/settings';
+
+const { boilerplatePath } = settings;
+
 const snippetsFileName = 'a2r.code-snippets';
 
 const updateSnippets = async (): Promise<void> => {
   const a2rSnippetsPath = path.resolve(__dirname, `../../../.vscode/${snippetsFileName}`);
-  const modelSnippetsPath = path.resolve(__dirname, `../../model/.vscode/${snippetsFileName}`);
+  const modelSnippetsPath = path.resolve(
+    __dirname,
+    '../../',
+    boilerplatePath,
+    `.vscode/${snippetsFileName}`,
+  );
   await fs.copyFile(a2rSnippetsPath, modelSnippetsPath);
 };
 
@@ -30,10 +39,7 @@ const increaseVersion = async (): Promise<string> => {
   const { scripts } = parsedPackage;
   const versionRX = new RegExp(`a2r@${currentVersion}`, 'g');
   Object.keys(scripts).forEach((key): void => {
-    scripts[key] = (scripts[key] as string).replace(
-      versionRX,
-      `a2r@${newVersion}`,
-    );
+    scripts[key] = (scripts[key] as string).replace(versionRX, `a2r@${newVersion}`);
   });
   await savePackage(parsedPackage);
   await updateSnippets();
@@ -42,9 +48,7 @@ const increaseVersion = async (): Promise<string> => {
 
 increaseVersion()
   .then((newVersion): void => {
-    out.info(
-      colors.yellow(`Version increased to ${colors.green.bold(newVersion)}`),
-    );
+    out.info(colors.yellow(`Version increased to ${colors.green.bold(newVersion)}`));
   })
   .catch((err: Error): void => {
     out.error(err.message, { stack: err.stack });

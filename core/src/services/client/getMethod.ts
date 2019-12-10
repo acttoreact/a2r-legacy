@@ -1,6 +1,6 @@
 import ts from 'typescript';
 
-import { ParamInfo } from './client-api';
+import { ParamInfo } from '../../model/client';
 import { ReturnTypeInfo } from '../compiler';
 import out from '../../util/out';
 

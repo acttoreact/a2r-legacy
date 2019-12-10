@@ -1,10 +1,10 @@
 import colors from 'colors';
 
-import { ConsoleCommand } from '../../commands/consoleCommands';
+import { ConsoleCommand } from '../../../model/commands';
 import { socketList } from '../connection';
 
 const list: ConsoleCommand = {
-  name: 'list',
+  name: 'listConnectedUsers',
   description: 'List all users connected to the server',
   onExecute: async (write): Promise<void> => {
     write(

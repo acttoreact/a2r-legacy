@@ -1,7 +1,7 @@
 import path from 'path';
 import ReadLine from 'readline';
 
-import { Closeable } from '../../types';
+import { Closeable } from '../../model';
 import { addCommand } from './consoleCommands';
 import { framework } from '../../util/terminalStyles';
 import exit from '../../util/exit';

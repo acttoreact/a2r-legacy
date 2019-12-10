@@ -1,4 +1,4 @@
-import { ApiNamespace } from './client-api';
+import { ApiNamespace } from '../../model/client';
 
 const updateApiObject = (
   structure: ApiNamespace,

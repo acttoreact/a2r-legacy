@@ -1,6 +1,6 @@
 import colors from 'colors';
 
-import { ConsoleCommand } from '../services/commands/consoleCommands';
+import { ConsoleCommand } from '../model/commands';
 import getCurrentProjectInfo from '../tools/getCurrentProjectInfo';
 import { fileName } from '../util/terminalStyles';
 

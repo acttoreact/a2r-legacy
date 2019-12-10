@@ -3,8 +3,8 @@ import colors from 'colors';
 
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
+import { APIStructure } from '../../model/api';
 import api, {
-  APIStructure,
   pathToModuleDictionary,
   moduleToPathDictionary,
   apiPathKey,

@@ -1,6 +1,6 @@
 import colors from 'colors';
 
-import { ConsoleCommand } from '../services/commands/consoleCommands';
+import { ConsoleCommand } from '../model/commands';
 import out from '../util/out';
 
 const setLogLevel: ConsoleCommand = {

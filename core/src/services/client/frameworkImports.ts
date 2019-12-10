@@ -1,4 +1,4 @@
-import { ImportItem } from './client-api';
+import { ImportItem } from '../../model/client';
 
 const frameworkImports: ImportItem[] = [
   {

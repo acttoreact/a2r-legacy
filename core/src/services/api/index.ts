@@ -22,6 +22,5 @@ export const setupApi = async (mainPath: string): Promise<void> => {
   await addCommandsFromPath(commandsPath);
 };
 
-export * from './api';
-
+export * from '../../model/api';
 export default api;

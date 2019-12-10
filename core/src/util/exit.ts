@@ -1,4 +1,4 @@
-import { Closeable } from '../types';
+import { Closeable } from '../model';
 
 const exit = (...closeableItems: Closeable[]): void => {
   closeableItems.forEach((closeable): void => closeable.close());

@@ -29,3 +29,4 @@ List of command that would be nice having:
 ## Doubts
 
 - When should we update main libraries like `typescript`?
+- Should we execute `patch` as part of `update` command? We are copying template contents again, could be some overwrite being done and also some deleted files coming back to life...

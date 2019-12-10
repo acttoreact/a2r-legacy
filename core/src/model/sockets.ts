@@ -1,4 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+/**
+ * Method call information
+ */
 export interface MethodCall {
   /**
    * API Method name corresponding to complete key (like 'users.login')
@@ -20,6 +24,9 @@ export interface MethodCall {
   params: any[];
 };
 
+/**
+ * Socket standard message
+ */
 export interface SocketMessage {
   /**
    * Operation was ok (0) or not (1)

@@ -1,15 +1,15 @@
 import path from 'path';
 
+import { APIStructure } from '../../model/api';
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import api, {
-  APIStructure,
   pathToModuleDictionary,
   pathToSubModuleDictionary,
   moduleToPathDictionary,
 } from './api';
 import removeModule from './removeModule';
-import buildClientApi from '../client-api';
+import buildClientApi from '../client';
 
 /**
  * Dispose an existing API module from a given path

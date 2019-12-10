@@ -3,7 +3,7 @@ import path from 'path';
 import fs from '../../util/fs';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import build from './build';
-import getPath from './getPath';
+// import getPath from './getPath';
 
 const buildClientApi = async(): Promise<void> => {
   const frameworkPath = await getFrameworkPath();
@@ -11,7 +11,7 @@ const buildClientApi = async(): Promise<void> => {
   await fs.ensureDir(clientPath);
   const mainFilePath = path.resolve(clientPath, 'api.ts');
   await build(mainFilePath);
-  const apiModulePath = await getPath();
+  // const apiModulePath = await getPath();
   // Copy files
   // Compile?
   // Build main file: imports, export default like an object
@@ -20,6 +20,5 @@ const buildClientApi = async(): Promise<void> => {
   // Copy contents to node_modules/api
 };
 
-export * from './client-api';
-
+export * from '../../model/client';
 export default buildClientApi;

@@ -1,8 +1,9 @@
 import path from 'path';
 import ts from 'typescript';
 
-import api, { APIModule } from '../api';
-import { ApiNamespace } from './client-api';
+import { APIModule } from '../../model/api';
+import { ApiNamespace } from '../../model/client';
+import api from '../api';
 import getImports from './getImports';
 import getMethod from './getMethod';
 import getMethodWrapper from './getMethodWrapper';

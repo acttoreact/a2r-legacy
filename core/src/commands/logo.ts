@@ -1,4 +1,4 @@
-import { ConsoleCommand } from '../services/commands/consoleCommands';
+import { ConsoleCommand } from '../model/commands';
 import { logo as logoOnLogs, framework } from '../util/terminalStyles';
 
 const logo: ConsoleCommand = {

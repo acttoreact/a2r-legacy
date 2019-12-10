@@ -1,11 +1,4 @@
-export interface FrameworkSettings {
-  defaultDevLogLevel: string;
-  defaultLogLevel: string;
-  defaultPort: number;
-  socketPath: string;
-  minNodeVersion: string;
-  taskConcurrency: number;
-};
+import { FrameworkSettings } from '../model';
 
 const settings: FrameworkSettings = {
   defaultDevLogLevel: 'verbose',
@@ -14,6 +7,7 @@ const settings: FrameworkSettings = {
   socketPath: '/ws',
   minNodeVersion: '10.10',
   taskConcurrency: 4,
+  boilerplatePath: 'template',
 };
 
 export default settings;

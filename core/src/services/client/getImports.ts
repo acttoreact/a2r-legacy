@@ -1,7 +1,7 @@
 import path from 'path';
 import ts from 'typescript';
 
-import { ImportItem } from './client-api';
+import { ImportItem } from '../../model/client';
 
 // '../../services/sockets' => '../dist/services/sockets'
 // './getSocket' => '../dist/client-api/getSocket'

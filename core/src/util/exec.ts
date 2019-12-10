@@ -1,12 +1,6 @@
 import { spawn } from 'child_process';
 
-export interface CommandResponse {
-  command: string;
-  args: string;
-  code: number;
-  out: string;
-  error: Error | null;
-};
+import { CommandResponse } from '../model';
 
 /**
  * Executes command on terminal passing all received arguments
@@ -15,7 +9,7 @@ export interface CommandResponse {
  * `exec('mkdir', '-m', '777', 'mydir')`.
  * @param {string} command Command to execute (i.e. `mkdir`)
  * @param {...readonly string[]} args Arguments for command (i.e `-m` and `777`)
- * @returns {Promise<CommandResponse>} Promise that returns a `CommandResponse`
+ * @returns {Promise<CommandResponse>} Command response
  */
 const exec = (command: string, ...args: readonly string[]): Promise<CommandResponse> =>
   new Promise(async (resolve, reject): Promise<void> => {

@@ -1,4 +1,4 @@
-import { ConsoleCommand } from '../services/commands/consoleCommands';
+import { ConsoleCommand } from '../model/commands';
 import { framework } from '../util/terminalStyles';
 import getVersion from '../tools/getVersion';
 
@@ -11,5 +11,3 @@ const version: ConsoleCommand = {
 };
 
 export default version;
-
-

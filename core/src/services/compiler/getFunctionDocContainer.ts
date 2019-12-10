@@ -1,6 +1,6 @@
 import ts from 'typescript';
 
-import { JSDocContainer } from './compiler';
+import { JSDocContainer } from '../../model/compiler';
 
 const getFunctionDocContainer = (node: ts.FunctionDeclaration | ts.ArrowFunction): JSDocContainer | null => {
   if (ts.isFunctionDeclaration(node)) {

@@ -15,6 +15,10 @@ import copyModelContents from '../../tools/copyModelContents';
 import ensureNpmInit from '../../tools/ensureNpmInit';
 import packageSetup from '../../tools/packageSetup';
 
+import settings from '../../config/settings';
+
+const { boilerplatePath } = settings;
+
 /**
  * Init method. Called when using `a2r --init` command.
  * @param {string} [projectPath=process.cwd()] Destination path containing project
@@ -26,7 +30,7 @@ const init = async (projectPath: string = process.cwd()): Promise<void> => {
   await fs.ensureDir(projectPath);
   out.verbose(`Framework path is ${fullPath(modulePath)}`);
   out.verbose(`Project path is ${fullPath(projectPath)}`);
-  const modelPath = path.resolve(modulePath, 'template');
+  const modelPath = path.resolve(modulePath, boilerplatePath);
   out.verbose(`Model path is ${fullPath(modelPath)}`);
 
   out.verbose(`Ensuring npm is initialized in path ${fullPath(projectPath)}`);

@@ -5,7 +5,7 @@ import io from 'socket.io';
 import colors from 'colors';
 
 import { socketList } from './connection';
-import { MethodCall } from './sockets';
+import { MethodCall } from '../../model/sockets';
 import out from '../../util/out';
 import api from '../api';
 import addCommandsFromPath from '../commands/addCommandsFromPath';
@@ -50,6 +50,5 @@ const setup = (httpServer: http.Server): void => {
   addCommandsFromPath(commandsPath)
 }
 
-export * from './sockets';
-
+export * from '../../model/sockets';
 export default setup;

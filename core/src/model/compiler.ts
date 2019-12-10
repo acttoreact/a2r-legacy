@@ -1,14 +1,34 @@
 import ts from 'typescript';
 
+/**
+ * Compiler validation error level
+ */
 export enum ValidationErrorLevel {
+  /**
+   * File won't be processed because of this error
+   */
   Error = 0,
+  /**
+   * File will be processed regardless of this error
+   */
   Warning = 1,
 }
 
+/**
+ * For typescript nodes casting as docs container purposes
+ */
 export interface JSDocContainer {
+  /**
+   * Optional JSDoc array
+   * @type {ts.JSDoc[]}
+   * @memberof JSDocContainer
+   */
   jsDoc?: ts.JSDoc[];
 }
 
+/**
+ * Information regarding the return type of a function extracted using AST
+ */
 export interface ReturnTypeInfo {
   /**
    * Return identifier
@@ -42,6 +62,9 @@ export interface ReturnTypeInfo {
   typeReferencePath?: string;
 }
 
+/**
+ * Validation error while or after extracting info
+ */
 export interface ValidationError {
   /**
    * Error level
@@ -57,6 +80,9 @@ export interface ValidationError {
   message: string;
 }
 
+/**
+ * Compiler AST extracted info
+ */
 export interface CompilerFileInfo {
   mainMethodNode?: ts.FunctionDeclaration | ts.ArrowFunction | null;
   /**

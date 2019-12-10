@@ -1,6 +1,6 @@
 import colors from 'colors';
 
-import { ConsoleCommand } from '../services/commands/consoleCommands';
+import { ConsoleCommand } from '../model/commands';
 import getCurrentA2RPackageInfo from '../tools/getCurrentA2RPackageInfo';
 import { framework, fileName } from '../util/terminalStyles';
 

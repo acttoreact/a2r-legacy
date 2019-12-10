@@ -1,12 +1,12 @@
 import path from 'path';
 import colors from 'colors';
 
+import { CompilerFileInfo } from '../../model/compiler';
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import addModuleToSubModuleDictionary from './addModuleToSubModuleDictionary';
 import api, { pathToModuleDictionary, moduleToPathDictionary } from './api';
-import { CompilerFileInfo } from '../compiler';
-import buildClientApi from '../client-api';
+import buildClientApi from '../client';
 
 /**
  * Adds a single module to API
@@ -14,6 +14,8 @@ import buildClientApi from '../client-api';
  * @param {string} folderPath Path where module is
  * @param {string} fileName Module file name
  * @param {string} cleanName Like `fileName` without extension
+ * @param {string} relativePath Module path relative from main folder
+ * @param {CompilerFileInfo} compilerInfo Module info from AST
  * @param {string} [prefix] Module prefix
  * @returns {Promise<void>}
  */

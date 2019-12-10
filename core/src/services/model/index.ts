@@ -1,33 +1,10 @@
-import ts from 'typescript';
+import path from 'path';
+import addCommandsFromPath from '../commands/addCommandsFromPath';
+import model from './model';
 
-import getProjectPath from '../../tools/getProjectPath';
-import reportDiagnostic from '../../util/reportDiagnostic';
-import compileOptions from '../compiler/compileOptions';
-import formatHost from '../compiler/formatHost';
-
-const compileFile = async (
-  rootFile: string,
-  outDir: string,
-  rootDir?: string,
-): Promise<void> => {
-  const program = ts.createProgram([rootFile], {
-    ...compileOptions,
-    outDir,
-    rootDir: rootDir || (await getProjectPath()),
-  });
-
-  const emitResult = program.emit();
-  const diagnostics = [
-    ...ts.getPreEmitDiagnostics(program),
-    ...emitResult.diagnostics,
-    ...program.getSyntacticDiagnostics(),
-  ];
-
-  if (diagnostics && diagnostics.length) {
-    diagnostics.forEach((diagnostic): void => {
-      reportDiagnostic(diagnostic, formatHost);
-    });
-  }
+export const setupModel = async (): Promise<void> => {
+  const commandsPath = path.resolve(__dirname, 'commands');
+  await addCommandsFromPath(commandsPath);
 };
 
-export default compileFile;
+export default model;

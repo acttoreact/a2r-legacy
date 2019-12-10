@@ -1,4 +1,4 @@
-import PingResult from '../model/pingResult'
+import { PingResult } from '../model/pingResult';
 
 /**
  * Sample ping method

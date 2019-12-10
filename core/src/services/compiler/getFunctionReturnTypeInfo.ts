@@ -1,6 +1,6 @@
 import ts from 'typescript';
 
-import { ReturnTypeInfo } from './compiler';
+import { ReturnTypeInfo } from '../../model/compiler';
 // import isKeywordNode from '../../tools/isKeywordNode';
 import out from '../../util/out';
 

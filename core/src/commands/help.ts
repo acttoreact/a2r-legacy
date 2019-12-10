@@ -1,6 +1,7 @@
 import colors from 'colors';
 
-import { ConsoleCommand, getCommands } from '../services/commands/consoleCommands';
+import { ConsoleCommand } from '../model/commands';
+import { getCommands } from '../services/commands/consoleCommands';
 import { logo } from '../util/terminalStyles';
 
 const help: ConsoleCommand = {

@@ -1,4 +1,4 @@
-import { ConsoleCommand } from '../../commands/consoleCommands';
+import { ConsoleCommand } from '../../../model/commands';
 import { api as apiOnLogs } from '../../../util/terminalStyles';
 import replacer from '../../../util/apiStringifyReplacer';
 import api from '../api';

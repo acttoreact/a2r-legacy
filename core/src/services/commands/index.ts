@@ -176,3 +176,5 @@ if (options.help) {
       out.error(err.message, { stack: err.stack });
     });
 }
+
+export * from '../../model/commands';

@@ -2,7 +2,8 @@ import path from 'path';
 
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
-import api, { APIStructure, apiPathKey, moduleToPathDictionary } from './api';
+import { APIStructure } from '../../model/api';
+import api, { apiPathKey, moduleToPathDictionary } from './api';
 import addModule from './addModule';
 import { CompilerFileInfo } from '../compiler';
 
