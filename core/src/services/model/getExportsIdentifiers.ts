@@ -17,7 +17,10 @@ const getIdentifier = (nodes: ts.Node[]): string => {
   return res;
 };
 
-const getExportsIdentifiersFromNodes = (nodes: ts.Node[], keys: string[] = new Array<string>()): string[] => {
+const getExportsIdentifiersFromNodes = (
+  nodes: ts.Node[],
+  keys: string[] = new Array<string>(),
+): string[] => {
   const res = [...keys];
   for (let i = 0, l = nodes.length; i < l; i += 1) {
     const node = nodes[i];
@@ -51,7 +54,11 @@ const getExportsIdentifiers = async (filePath: string): Promise<string[]> => {
       const identifier = identifiers[i];
       const keyPath = model.get(identifier);
       if (keyPath && keyPath !== filePath) {
-        throw Error(`There is already a type, interface or enum called ${colors.bold(identifier)} on file ${fullPath(keyPath)}`);
+        throw Error(
+          `There is already a type, interface or enum called ${colors.bold(
+            identifier,
+          )} on file ${fullPath(keyPath)}`,
+        );
       }
       keys.push(...identifiers);
     }

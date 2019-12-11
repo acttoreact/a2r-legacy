@@ -1,0 +1,10 @@
+import capitalize from '../tools/capitalize';
+import { PingResult } from 'model';
+
+/**
+ * Sample ping method
+ * @returns {Promise<PingResult>}
+ */
+const ping = async (): Promise<PingResult> => ({ result: capitalize('pong') });
+
+export default ping;

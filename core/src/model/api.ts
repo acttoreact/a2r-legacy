@@ -19,12 +19,6 @@ export interface APIModule {
    * @memberof APIModule
    */
   compilerInfo: CompilerFileInfo;
-  /**
-   * Module relative path from main api folder
-   * @type {string}
-   * @memberof APIModule
-   */
-  relativePath: string;
 }
 
 export interface APIStructure {

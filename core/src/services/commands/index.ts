@@ -90,7 +90,7 @@ if (options.help) {
           out.error(err.message, { stack: err.stack });
         });
     } else if (options.update) {
-      update()
+      update(options.skipPatch)
         .then((): void => {
           out.info(colors.yellow.bold(`<<< 👌 Project updated successfully`));
         })

@@ -8,6 +8,7 @@ const settings: FrameworkSettings = {
   minNodeVersion: '10.10',
   taskConcurrency: 4,
   boilerplatePath: 'template',
+  modelPath: 'model',
 };
 
 export default settings;

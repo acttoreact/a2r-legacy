@@ -5,7 +5,7 @@ import out from '../util/out';
 import fs from '../util/fs';
 import { fullPath, fileName } from '../util/terminalStyles';
 
-const modelExtensionRegExp = /\.model$/i;
+const modelExtensionRegExp = /\.template$/i;
 
 const filesToIgnore = ['.gitkeep'];
 

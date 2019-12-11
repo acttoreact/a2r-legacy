@@ -8,6 +8,9 @@ import addModuleToSubModuleDictionary from './addModuleToSubModuleDictionary';
 import api, { pathToModuleDictionary, moduleToPathDictionary } from './api';
 import buildClientApi from '../client';
 
+// apiPath: /Users/miguel/Proyectos/test-virgin-a2r/node_modules/a2r/server/api
+
+
 /**
  * Adds a single module to API
  *
@@ -23,7 +26,6 @@ const addModule = async (
   folderPath: string,
   fileName: string,
   cleanName: string,
-  relativePath: string,
   compilerInfo: CompilerFileInfo,
   prefix?: string,
 ): Promise<void> => {
@@ -42,7 +44,6 @@ const addModule = async (
       }
       api[moduleName] = {
         ...mod,
-        relativePath,
         compilerInfo,
       };
       pathToModuleDictionary[pathName] = moduleName;

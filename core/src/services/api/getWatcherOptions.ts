@@ -2,22 +2,28 @@ import path from 'path';
 
 import { WatcherOptions } from '../../model/watcher';
 import { ValidationErrorLevel } from '../../model/compiler';
-import { addTask } from '../watcher/watchFolder';
+import { addTask, processTasks } from '../watcher/watchFolder';
 import { addCommand } from '../commands/consoleCommands';
 import fs from '../../util/fs';
 import out from '../../util/out';
-import { watcher, api, fullPath } from '../../util/terminalStyles';
+import { watcher as watcherOnLogs, api, fullPath } from '../../util/terminalStyles';
 import compileFile from '../compiler';
 import getModuleInfo from '../compiler/getModuleInfo';
+import getFrameworkPath from '../../tools/getFrameworkPath';
 import importModule from './importModule';
 import updateModule from './updateModule';
 import disposeModule from './disposeModule';
 import { setupApi } from '.';
 
+const watcher = `${watcherOnLogs} (API)`;
+
 const sourceDir = 'api';
 const destDir = 'server';
 
+let ready = false;
+
 const getOptions = async (): Promise<WatcherOptions> => {
+  const modulePath = await getFrameworkPath();
   return {
     sourceDir,
     destDir,
@@ -25,9 +31,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
       out.verbose(`${watcher}: Event ${eventName} from path ${fullPath(eventPath)}`);
       const rootFile = path.relative(process.cwd(), eventPath);
       const relativePath = path.relative(sourcePath, eventPath);
-      const jsDestPath = path.join(destDir, sourceDir, relativePath.replace(/\.ts$/, '.js'));
-      out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
-      out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
+      const jsDestPath = path.join(modulePath, destDir, sourceDir, relativePath.replace(/\.ts$/, '.js'));
 
       const isFile = await fs.isFile(eventPath, stats);
       const fileAdded = eventName === 'add';
@@ -36,73 +40,88 @@ const getOptions = async (): Promise<WatcherOptions> => {
       const folderRemoved = eventName === 'unlinkDir';
 
       if (fileAdded || fileChanged) {
-        addTask({
-          path: eventPath,
-          handler: async (): Promise<void> => {
-            out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
+        addTask(
+          {
+            path: eventPath,
+            handler: async (): Promise<void> => {
+              out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
+              out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
+              out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
 
-            const compilerInfo = await getModuleInfo(rootFile);
-            await compileFile(rootFile, destPath);
+              const compilerInfo = await getModuleInfo(rootFile);
+              await compileFile(rootFile, destPath);
 
-            if (compilerInfo && compilerInfo.mainMethodNode) {
-              if (compilerInfo.validationErrors.length) {
-                const errors = compilerInfo.validationErrors.reduce((t, e): string[] => {
-                  if (e.level === ValidationErrorLevel.Error) {
-                    t.push(e.message);
-                  }
-                  return t;
-                }, new Array<string>());
-                throw Error(`${errors.length > 1 ? '\n- ' : ''}${errors.join('\n- ')}`);
+              if (compilerInfo && compilerInfo.mainMethodNode) {
+                if (compilerInfo.validationErrors.length) {
+                  const errors = compilerInfo.validationErrors.reduce((t, e): string[] => {
+                    if (e.level === ValidationErrorLevel.Error) {
+                      t.push(e.message);
+                    }
+                    return t;
+                  }, new Array<string>());
+                  throw Error(`${errors.length > 1 ? '\n- ' : ''}${errors.join('\n- ')}`);
+                } else {
+                  const method = fileAdded ? importModule : updateModule;
+                  out.verbose(
+                    `${watcher}: ${
+                      fileAdded ? 'Importing' : 'Updating'
+                    } ${api} method from ${fullPath(jsDestPath)}`,
+                  );
+                  await method(jsDestPath, compilerInfo);
+                  out.verbose(`${watcher}: API Updated`);
+                }
               } else {
-                const method = fileAdded ? importModule : updateModule;
-                out.verbose(
-                  `${watcher}: ${
-                    fileAdded ? 'Importing' : 'Updating'
-                  } ${api} method from ${fullPath(jsDestPath)}`,
-                );
-                await method(jsDestPath, compilerInfo);
-                out.verbose(`${watcher}: ${api} Updated`);
+                throw Error(`there is no main method or it's not exported as default`);
               }
-            } else {
-              throw Error(`there is no main method or it's not exported as default`);
-            }
+            },
+            onError: (ex): void => {
+              out.error(
+                `${watcher}: Error(s) compiling API file ${fullPath(rootFile)}: ${ex.message}`,
+              );
+            },
           },
-          onError: (ex): void => {
-            out.error(`${watcher}: Error(s) compiling file ${fullPath(rootFile)}: ${ex.message}`);
-          },
-        });
+          ready,
+        );
       }
 
       if (fileRemoved) {
-        addTask({
-          path: eventPath,
-          handler: async (): Promise<void> => {
-            out.verbose(`${watcher}: File removed: ${eventPath}`);
-            const mapDestPath = `${jsDestPath}.map`;
-            const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
-            await fs.unlink(jsDestPath);
-            await fs.unlink(mapDestPath);
-            await fs.unlink(dtsDestPath);
-            await disposeModule(jsDestPath);
-            out.verbose(`${watcher}: ${api} Updated`);
+        addTask(
+          {
+            path: eventPath,
+            handler: async (): Promise<void> => {
+              out.verbose(`${watcher}: File removed: ${eventPath}`);
+              const mapDestPath = `${jsDestPath}.map`;
+              const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+              await fs.unlink(jsDestPath);
+              await fs.unlink(mapDestPath);
+              await fs.unlink(dtsDestPath);
+              await disposeModule(jsDestPath);
+              out.verbose(`${watcher}: API Updated`);
+            },
           },
-        });
+          ready,
+        );
       }
 
       if (folderRemoved) {
-        addTask({
-          path: eventPath,
-          handler: async (): Promise<void> => {
-            out.verbose(`${watcher}: Folder removed: ${eventPath}`);
-            await fs.rmDir(jsDestPath);
+        addTask(
+          {
+            path: eventPath,
+            handler: async (): Promise<void> => {
+              out.verbose(`${watcher}: API Folder removed: ${eventPath}`);
+              await fs.rmDir(jsDestPath);
+            },
           },
-        });
+          ready,
+        );
       }
     },
     onReady: async (sourcePath, destPath): Promise<void> => {
       out.verbose(`${watcher}: Ready. Starting API Setup.`);
+      ready = true;
       await setupApi(destPath);
-      out.verbose(`${watcher}: Model ready and watching for changes at ${fullPath(sourcePath)}`);
+      processTasks();
+      out.verbose(`${watcher}: Setup ready and watching for changes at ${fullPath(sourcePath)}`);
       addCommand({
         name: 'apiWatcherSource',
         description: `Prints the path ${watcher} is using as ${api} source`,

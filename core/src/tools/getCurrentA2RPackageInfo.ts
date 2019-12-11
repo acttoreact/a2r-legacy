@@ -1,7 +1,8 @@
 import path from 'path';
 
 import getFrameworkPath from './getFrameworkPath';
-import packageInfoManager, { PackageManager, PackageJSON } from './packageInfoManager';
+import { PackageManager, PackageJSON } from '../model';
+import packageInfoManager from './packageInfoManager';
 
 let manager: PackageManager | null = null;
 

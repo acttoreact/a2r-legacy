@@ -1,27 +1,7 @@
+import { PackageManager, PackageJSON } from '../model';
 import fs from '../util/fs';
 import out from '../util/out';
 import { fullPath } from '../util/terminalStyles';
-
-export interface PackageJSON extends Object {
-  name: string;
-  version: string;
-  dependencies: DependencyMap;
-  devDependencies: DependencyMap;
-  scripts: ScriptsMap;
-}
-
-export interface DependencyMap {
-  [dependencyName: string]: string;
-}
-
-export interface ScriptsMap {
-  [scriptName: string]: string;
-}
-
-export interface PackageManager {
-  loadPackage: () => Promise<PackageJSON>;
-  savePackage: (newPackage: PackageJSON) => Promise<void>;
-}
 
 const packageManagerFunctions = (fullPackagePath: string): PackageManager => {
   out.verbose(`Getting package info for package ${fullPath(fullPackagePath)}`);

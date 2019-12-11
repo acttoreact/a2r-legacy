@@ -4,11 +4,7 @@ import colors from 'colors';
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import { APIStructure } from '../../model/api';
-import api, {
-  pathToModuleDictionary,
-  moduleToPathDictionary,
-  apiPathKey,
-} from './api';
+import api, { pathToModuleDictionary } from './api';
 import importModule from './importModule';
 import { CompilerFileInfo } from '../compiler';
 
@@ -48,11 +44,8 @@ const updateModule = async (
               );
             }
             delete api[moduleName];
-            const apiPath = moduleToPathDictionary[apiPathKey];
-            const relativePath = path.relative(apiPath, modulePath);
             api[moduleName] = {
               ...newMod,
-              relativePath,
               compilerInfo,
             };
           },

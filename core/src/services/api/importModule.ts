@@ -1,11 +1,15 @@
 import path from 'path';
 
 import out from '../../util/out';
-import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
+import { api as apiInLogs, fullPath, fileName as fileNameOnLogs } from '../../util/terminalStyles';
 import { APIStructure } from '../../model/api';
 import api, { apiPathKey, moduleToPathDictionary } from './api';
 import addModule from './addModule';
 import { CompilerFileInfo } from '../compiler';
+
+// apiPath: /Users/miguel/Proyectos/test-virgin-a2r/node_modules/a2r/server/api
+// modulePath: /Users/miguel/Proyectos/test-virgin-a2r/node_modules/a2r/server/api/ping.js
+// folderPath: server/api/
 
 /**
  * Import a single module to API from a single path
@@ -23,18 +27,20 @@ const importModule = async (
   const fileName = `${name}${ext}`;
   if (fileName) {
     const folderPath = modulePath.replace(new RegExp(`${fileName}$`), '');
+    out.verbose(
+      `Importing module with folderPath ${fullPath(folderPath)}, fileName ${fileNameOnLogs(
+        fileName,
+      )} and prefix "${prefix}"`,
+    );
     await addModule(
       folderPath,
       fileName,
       fileName.replace(/\.js$/, ''),
-      relativePath,
       compilerInfo,
       prefix,
     );
   } else {
-    out.error(
-      `${apiInLogs}: Wrong path given when trying to import ${fullPath(modulePath)}`,
-    );
+    out.error(`${apiInLogs}: Wrong path given when trying to import ${fullPath(modulePath)}`);
   }
   return api;
 };

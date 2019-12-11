@@ -9,12 +9,17 @@ export interface FrameworkSettings {
   minNodeVersion: string;
   taskConcurrency: number;
   boilerplatePath: string;
+  modelPath: string;
 };
 
 /**
  * Element that can be closed
  */
 export interface Closeable {
+  /**
+   * Method call when closing
+   * @memberof Closeable
+   */
   close: () => void;
 }
 
@@ -53,3 +58,36 @@ export interface CommandResponse {
    */
   error: Error | null;
 };
+
+/**
+ * Dependencies on `package.json`
+ */
+export interface DependencyMap {
+  [dependencyName: string]: string;
+}
+
+/**
+ * Scripts on `package.json`
+ */
+export interface ScriptsMap {
+  [scriptName: string]: string;
+}
+
+/**
+ * Structure for `package.json` content
+ */
+export interface PackageJSON extends Object {
+  name: string;
+  version: string;
+  dependencies: DependencyMap;
+  devDependencies: DependencyMap;
+  scripts: ScriptsMap;
+}
+
+/**
+ * Package manager (`package.json`)
+ */
+export interface PackageManager {
+  loadPackage: () => Promise<PackageJSON>;
+  savePackage: (newPackage: PackageJSON) => Promise<void>;
+}

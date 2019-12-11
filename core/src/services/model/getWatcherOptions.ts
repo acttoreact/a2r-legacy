@@ -1,22 +1,27 @@
 import path from 'path';
 
-import { WatcherOptions, addTask } from '../watcher/watchFolder';
+import { WatcherOptions, addTask, processTasks } from '../watcher/watchFolder';
 import out from '../../util/out';
 import fs from '../../util/fs';
-import { watcher, fullPath } from '../../util/terminalStyles';
+import { watcher as watcherOnLogs, fullPath } from '../../util/terminalStyles';
 import { addCommand } from '../commands/consoleCommands';
-import getProjectPath from '../../tools/getProjectPath';
-import compileFile from '../compiler';
 import getExportsIdentifiers from './getExportsIdentifiers';
 import { addKeys } from './model';
 import build from './build';
+import { setupModel } from '.';
+import getFrameworkPath from '../../tools/getFrameworkPath';
 
-const sourceDir = 'model';
+import settings from '../../config/settings';
+
+const watcher = `${watcherOnLogs} (Model)`;
+
+const { modelPath: sourceDir } = settings;
+
+let ready = false;
 
 const getOptions = async (): Promise<WatcherOptions> => {
-  const projectPath = await getProjectPath();
-  const destDir = path.resolve(projectPath, 'node_modules/model/dist');
-  const mainModelFile = path.resolve(destDir, 'index.ts');
+  const frameworkPath = await getFrameworkPath();
+  const destDir = path.resolve(frameworkPath, sourceDir);
 
   return {
     sourceDir,
@@ -36,50 +41,68 @@ const getOptions = async (): Promise<WatcherOptions> => {
       const folderRemoved = eventName === 'unlinkDir';
 
       if (fileAdded || fileChanged) {
-        addTask({
-          path: eventPath,
-          handler: async (): Promise<void> => {
-            out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
-            const modelKeys = await getExportsIdentifiers(rootFile);
-            await compileFile(rootFile, destPath);
-            addKeys(modelKeys, rootFile);
-            build(mainModelFile);
-            // update model
+        addTask(
+          {
+            path: eventPath,
+            handler: async (): Promise<void> => {
+              out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
+              const modelKeys = await getExportsIdentifiers(rootFile);
+              const modelCopyPath = path.resolve(destDir, sourceDir, relativePath);
+              await fs.ensureDir(path.dirname(modelCopyPath));
+              out.verbose(`${watcher}: Copying file ${fullPath(eventPath)} to ${fullPath(modelCopyPath)}`)
+              await fs.copyFile(eventPath, modelCopyPath);
+              addKeys(modelKeys, rootFile);
+              await build();
+            },
+            onError: (ex): void => {
+              out.error(
+                `${watcher}: Error(s) processing model file ${fullPath(rootFile)}: ${ex.message}\n${
+                  ex.stack
+                }`,
+              );
+            },
           },
-          onError: (ex): void => {
-            out.error(`${watcher}: Error(s) compiling file ${fullPath(rootFile)}: ${ex.message}`);
-          },
-        });
+          ready,
+        );
       }
 
       if (fileRemoved) {
-        addTask({
-          path: eventPath,
-          handler: async (): Promise<void> => {
-            out.verbose(`${watcher}: File removed: ${eventPath}`);
-            const mapDestPath = `${jsDestPath}.map`;
-            const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
-            await fs.unlink(jsDestPath);
-            await fs.unlink(mapDestPath);
-            await fs.unlink(dtsDestPath);
-            out.verbose(`${watcher}: Model Updated`);
+        addTask(
+          {
+            path: eventPath,
+            handler: async (): Promise<void> => {
+              out.verbose(`${watcher}: File removed: ${eventPath}`);
+              const mapDestPath = `${jsDestPath}.map`;
+              const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+              await fs.unlink(jsDestPath);
+              await fs.unlink(mapDestPath);
+              await fs.unlink(dtsDestPath);
+              out.verbose(`${watcher}: Model Updated`);
+            },
           },
-        });
+          ready,
+        );
       }
 
       if (folderRemoved) {
-        addTask({
-          path: eventPath,
-          handler: async (): Promise<void> => {
-            out.verbose(`${watcher}: Folder removed: ${eventPath}`);
-            await fs.rmDir(jsDestPath);
+        addTask(
+          {
+            path: eventPath,
+            handler: async (): Promise<void> => {
+              out.verbose(`${watcher}: Folder removed: ${eventPath}`);
+              await fs.rmDir(jsDestPath);
+            },
           },
-        });
+          ready,
+        );
       }
     },
     onReady: async (sourcePath, destPath): Promise<void> => {
       out.verbose(`${watcher}: Ready. Starting model setup.`);
-      out.verbose(`${watcher}: Model ready and watching for changes at ${fullPath(sourcePath)}`);
+      ready = true;
+      await setupModel();
+      out.verbose(`${watcher}: Setup ready. Watching for changes at ${fullPath(sourcePath)}`);
+      processTasks();
       addCommand({
         name: 'modelWatcherSource',
         description: `Prints the path ${watcher} is using as Model source`,

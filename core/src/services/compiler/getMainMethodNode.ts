@@ -11,9 +11,6 @@ const getMainMethodNode = (
     out.warn('Got no main method name, returning null as main method node');
     return null;
   }
-  out.verbose(
-    `Got main method name ${mainMethodName}, looking for node among ${nodes.length} file nodes`,
-  );
   let mainMethod: ts.FunctionDeclaration | ts.ArrowFunction | null = null;
   for (let i = 0, l = nodes.length; i < l && !mainMethod; i += 1) {
     const node = nodes[i];

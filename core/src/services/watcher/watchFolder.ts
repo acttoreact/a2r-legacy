@@ -49,15 +49,14 @@ const watchFolder = async (watcherOptions: WatcherOptions): Promise<void> =>
 
         await fs.mkDir(normalizedDestPath, { recursive: true });
 
-        out.verbose(`${watcherOnLogs}: Init`);
         const watcher = chokidar.watch(normalizedSourcePath, options);
         watcher.on('all', (eventName, eventPath, stats): void => {
           handler(normalizedSourcePath, normalizedDestPath, eventName, eventPath, stats);
         });
         watcher.on('error', onError);
-        watcher.on('ready', (): void => {
+        watcher.on('ready', async (): Promise<void> => {
           if (onReady) {
-            onReady(normalizedSourcePath, normalizedDestPath);
+            await onReady(normalizedSourcePath, normalizedDestPath);
           }
           resolve();
         });

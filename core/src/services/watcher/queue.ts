@@ -9,7 +9,7 @@ const { taskConcurrency } = settings;
 const taskQueue: WatcherEventInfo[] = [];
 const runningPromises: Function[] = [];
 
-export const processTask = (): void => {
+export const processTasks = (): void => {
   if (runningPromises.length < taskConcurrency) {
     const task = taskQueue.shift();
     if (task) {
@@ -32,18 +32,20 @@ export const processTask = (): void => {
         })
         .finally((): void => {
           runningPromises.splice(runningPromises.indexOf(handler), 1);
-          processTask();
+          processTasks();
         });
-      processTask();
+      processTasks();
     }
   }
 };
 
-export const addTask = (info: WatcherEventInfo, unshift: boolean = false): void => {
+export const addTask = (info: WatcherEventInfo, process: boolean, unshift: boolean = false): void => {
   if (unshift) {
     taskQueue.unshift(info);
   } else {
     taskQueue.push(info);
   }
-  processTask();
+  if (process) {
+    processTasks();
+  }
 };

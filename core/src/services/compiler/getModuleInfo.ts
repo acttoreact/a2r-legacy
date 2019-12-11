@@ -25,13 +25,11 @@ const getModuleInfo = async (filePath: string): Promise<CompilerFileInfo | null>
     moduleInfo.mainMethodName = getMainMethodName(fileNodes);
     moduleInfo.mainMethodNode = getMainMethodNode(fileNodes, moduleInfo.mainMethodName);
     if (moduleInfo.mainMethodNode) {
-      out.verbose('Getting params');
       moduleInfo.mainMethodNode.forEachChild((child): void => {
         if (ts.isParameter(child)) {
           moduleInfo.mainMethodParamNodes.push(child);
         }
       });
-      out.verbose('Getting docs');
       moduleInfo.mainMethodDocs = getFunctionDocContainer(moduleInfo.mainMethodNode);
       if (!moduleInfo.mainMethodDocs) {
         moduleInfo.validationErrors.push({
@@ -39,7 +37,6 @@ const getModuleInfo = async (filePath: string): Promise<CompilerFileInfo | null>
           message: `method ${methodOnLogs(moduleInfo.mainMethodName)} ${must} be documented`,
         });
       }
-      out.verbose('Getting return type info');
       moduleInfo.mainMethodReturnTypeInfo = getFunctionReturnTypeInfo(moduleInfo.mainMethodNode);
       if (moduleInfo.mainMethodReturnTypeInfo) {
         if (moduleInfo.mainMethodReturnTypeInfo.identifier !== 'Promise') {

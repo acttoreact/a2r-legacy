@@ -41,6 +41,10 @@ const rules = [
     alias: 'f',
     type: String,
   },
+  {
+    name: 'skipPatch',
+    type: Boolean,
+  },
 ];
 
 export default rules;

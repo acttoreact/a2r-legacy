@@ -15,7 +15,7 @@ const log = (message: string): void => {
  * Updates and installs latest A2R Framework version on project
  * @returns {Promise<void>}
  */
-const update = async (): Promise<void> => {
+const update = async (skipPatch: boolean = false): Promise<void> => {
   const parsedA2RPackage = await getCurrentA2RPackageInfo();
   const lastVersion = await getLastVersionOfA2R();
   const { version: currentVersion } = parsedA2RPackage;
@@ -34,7 +34,9 @@ const update = async (): Promise<void> => {
     );
     log('... ⏰ this process might take some minutes 🤷‍ ...');
     await exec('npm', 'install', `a2r@${lastVersion}`, '--save;');
-    await exec('npx', `a2r@${lastVersion}`, '--patch');
+    if (!skipPatch) {
+      await exec('npx', `a2r@${lastVersion}`, '--patch');
+    }
   }
 };
 

@@ -4,16 +4,20 @@ import getProjectPath from '../../tools/getProjectPath';
 import reportDiagnostic from '../../util/reportDiagnostic';
 import compileOptions from './compileOptions';
 import formatHost from './formatHost';
+import out from '../../util/out';
+import { fullPath } from '../../util/terminalStyles';
 
-const compileFile = async (
-  rootFile: string,
-  outDir: string,
-  rootDir?: string,
-): Promise<void> => {
+const compileFile = async (rootFile: string, outDir: string, rootDir?: string): Promise<void> => {
+  const theRootDir = rootDir || (await getProjectPath());
+  out.verbose(
+    `Compiling rootFile ${fullPath(rootFile)} from rootDir ${fullPath(
+      theRootDir,
+    )} to outDir ${fullPath(outDir)}`,
+  );
   const program = ts.createProgram([rootFile], {
     ...compileOptions,
     outDir,
-    rootDir: rootDir || (await getProjectPath()),
+    rootDir: theRootDir,
   });
 
   const emitResult = program.emit();

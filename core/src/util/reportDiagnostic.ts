@@ -9,7 +9,7 @@ const reportDiagnostic = (
   out.error(
     `Error code ${colors.bgRed.white(
       diagnostic.code.toString(),
-    )} compiling A2R Framework API File:\n${ts.formatDiagnosticsWithColorAndContext(
+    )} compiling A2R Framework file:\n${ts.formatDiagnosticsWithColorAndContext(
       [diagnostic],
       formatHost,
     )}`,
