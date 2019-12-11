@@ -65,6 +65,12 @@ export interface WatcherEventInfo {
    */
   path: string;
   /**
+   * Resulting task priority. Higher priority (with 0 being highest) tasks will be processed first.
+   * @type {number}
+   * @memberof WatcherEventInfo
+   */
+  priority?: number;
+  /**
    * Handler for this event
    * @memberof WatcherEventInfo
    */

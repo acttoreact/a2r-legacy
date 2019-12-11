@@ -93,5 +93,11 @@
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0",
     "ts-node-dev": "^1.0.0-pre.44"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Miguel Rodríguez Rosales",
+      "email": "miguel@binpar.com"
+    }
+  ]
 }

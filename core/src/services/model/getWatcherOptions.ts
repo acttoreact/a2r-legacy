@@ -13,9 +13,9 @@ import getFrameworkPath from '../../tools/getFrameworkPath';
 
 import settings from '../../config/settings';
 
-const watcher = `${watcherOnLogs} (Model)`;
-
 const { modelPath: sourceDir } = settings;
+const watcher = `${watcherOnLogs} (Model)`;
+const priority = 10;
 
 let ready = false;
 
@@ -61,6 +61,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
                 }`,
               );
             },
+            priority,
           },
           ready,
         );
@@ -79,6 +80,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               await fs.unlink(dtsDestPath);
               out.verbose(`${watcher}: Model Updated`);
             },
+            priority,
           },
           ready,
         );
@@ -92,6 +94,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: Folder removed: ${eventPath}`);
               await fs.rmDir(jsDestPath);
             },
+            priority,
           },
           ready,
         );

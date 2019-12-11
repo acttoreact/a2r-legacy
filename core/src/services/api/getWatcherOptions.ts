@@ -16,9 +16,9 @@ import disposeModule from './disposeModule';
 import { setupApi } from '.';
 
 const watcher = `${watcherOnLogs} (API)`;
-
 const sourceDir = 'api';
 const destDir = 'server';
+const priority = 20;
 
 let ready = false;
 
@@ -79,6 +79,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
                 `${watcher}: Error(s) compiling API file ${fullPath(rootFile)}: ${ex.message}`,
               );
             },
+            priority,
           },
           ready,
         );
@@ -98,6 +99,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               await disposeModule(jsDestPath);
               out.verbose(`${watcher}: API Updated`);
             },
+            priority,
           },
           ready,
         );
@@ -111,6 +113,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: API Folder removed: ${eventPath}`);
               await fs.rmDir(jsDestPath);
             },
+            priority,
           },
           ready,
         );
