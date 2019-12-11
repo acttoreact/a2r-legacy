@@ -23,4 +23,8 @@ export const getKeys = (): string[] => {
   return Array.from(model.keys());
 }
 
+export const getPaths = (): string[] => {
+  return Array.from(new Set(model.values()));
+}
+
 export default model;

@@ -1,5 +1,5 @@
-import capitalize from '../tools/capitalize';
 import { PingResult } from 'model';
+import capitalize from '../tools/capitalize';
 
 /**
  * Sample ping method

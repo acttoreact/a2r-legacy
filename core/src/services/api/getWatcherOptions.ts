@@ -49,7 +49,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
 
               const compilerInfo = await getModuleInfo(rootFile);
-              await compileFile(rootFile, destPath);
+              await compileFile([rootFile], destPath);
 
               if (compilerInfo && compilerInfo.mainMethodNode) {
                 if (compilerInfo.validationErrors.length) {
