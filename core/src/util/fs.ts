@@ -14,14 +14,33 @@ const unlink = util.promisify(fs.unlink);
 const writeFile = util.promisify(fs.writeFile);
 
 /**
+ * Empties given folder by removing it and creating it again
+ * 
+ * @param {string} folderPath Folder path to be emptied
+ */
+const emptyFolder = async (folderPath: string): Promise<void> => {
+  const pathExists = await exists(folderPath);
+  if (pathExists) {
+    await rimraf(folderPath);
+  }
+  await mkDir(folderPath, { recursive: true });
+};
+
+/**
+ * Empties all given folders by removing it and creating it again
+ * 
+ * @param {string[]} folderPaths Folders paths to be emptied
+ */
+const emptyFolders = async (folderPaths: string[]): Promise<void> => {
+  await Promise.all(folderPaths.map((folderPath) => emptyFolder(folderPath)));
+};
+
+/**
  * Ensures that given dir path exists
  *
  * @param {string} path Path to ensure
  */
-const ensureDir = async (
-  path: string,
-  options?: fs.MakeDirectoryOptions,
-): Promise<void> => {
+const ensureDir = async (path: string, options?: fs.MakeDirectoryOptions): Promise<void> => {
   await new Promise((resolve, reject): void => {
     fs.mkdir(
       path,
@@ -43,10 +62,7 @@ const ensureDir = async (
  * @param {string} path Path to check
  * @param {(fs.Stats | null | undefined)} stats Optional `fs.Stats` object
  */
-const isFile = async (
-  path: string,
-  stats?: fs.Stats | undefined,
-): Promise<boolean> => {
+const isFile = async (path: string, stats?: fs.Stats | undefined): Promise<boolean> => {
   const pathExists = await exists(path);
   if (pathExists) {
     if (stats) {
@@ -60,6 +76,8 @@ const isFile = async (
 
 export default {
   copyFile,
+  emptyFolder,
+  emptyFolders,
   ensureDir,
   exists,
   isFile,

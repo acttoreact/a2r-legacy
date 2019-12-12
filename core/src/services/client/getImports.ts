@@ -3,18 +3,6 @@ import ts from 'typescript';
 
 import { ImportItem } from '../../model/client';
 
-// '../../services/sockets' => '../dist/services/sockets'
-// './getSocket' => '../dist/client-api/getSocket'
-// '../../util/out' => '../dist/util/out'
-
-// clientApiPath = /node_modules/a2r/server/
-
-
-
-const getClientImportPath = (clientApiPath: string, importPath: string): string => {
-  return importPath;
-};
-
 const getClauseIdentifier = (importPath: string, alias?: string): string => {
   if (alias) {
     return alias;
@@ -47,13 +35,12 @@ const getImports = (
 ): string => {
   const declarations = imports.map((importInfo): string => {
     const { importPath } = importInfo;
-    const clientImportPath = getClientImportPath(clientApiPath, importPath);
     const importClause = getImportClause(importInfo);
     const node = ts.createImportDeclaration(
       undefined,
       undefined,
       importClause,
-      ts.createStringLiteral(clientImportPath),
+      ts.createStringLiteral(importPath),
     );
 
     return printer.printNode(ts.EmitHint.Unspecified, node, sourceFile);

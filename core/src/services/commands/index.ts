@@ -11,6 +11,7 @@ import { getCommandFunction } from './consoleCommands';
 import setup from './setup';
 import init from './init';
 import commandLineInfo from './commandLineInfo';
+import { setup as setupSocket } from '../sockets/getSocket';
 import out from '../../util/out';
 import update from '../../tools/update';
 import patch from '../../tools/patch';
@@ -130,7 +131,7 @@ if (options.help) {
             );
 
             await setup(rl, server);
-            // setupClientApi(port);
+            setupSocket(port);
 
             rl.on(
               'line',

@@ -9,6 +9,10 @@ const settings: FrameworkSettings = {
   taskConcurrency: 4,
   boilerplatePath: 'template',
   modelPath: 'model',
+  sharedModelFiles: [
+    'sockets',
+  ],
+  sharedModelFileName: 'a2r'
 };
 
 export default settings;

@@ -2,14 +2,14 @@ import { ImportItem } from '../../model/client';
 
 const frameworkImports: ImportItem[] = [
   {
-    importPath: '../../services/sockets',
+    importPath: '../model',
     namedImports: [
       'SocketMessage',
       'MethodCall',
     ],
   },
   {
-    importPath: './getSocket',
+    importPath: './dist/services/sockets/getSocket',
   },
 ];
 

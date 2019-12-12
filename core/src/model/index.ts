@@ -2,14 +2,67 @@
  * Framework internal settings
  */
 export interface FrameworkSettings {
+  /**
+   * Specific default log level when running `--dev` command
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
   defaultDevLogLevel: string;
+  /**
+   * Default log level when running without `--frameworkLogLevel` option
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
   defaultLogLevel: string;
+  /**
+   * Default port used when running without `--port` option
+   * @type {number}
+   * @memberof FrameworkSettings
+   */
   defaultPort: number;
+  /**
+   * Socket path where sockets must connect
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
   socketPath: string;
+  /**
+   * Minimum Node.js version needed
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
   minNodeVersion: string;
+  /**
+   * Max task concurrency allowed by internal task queue
+   * @type {number}
+   * @memberof FrameworkSettings
+   */
   taskConcurrency: number;
+  /**
+   * Folder name where framework boilerplate contents can be found
+   * (will be project initial contents when using `--init` to create one)
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
   boilerplatePath: string;
+  /**
+   * Name of model folder. Used by core to look for model files and build model sub-module
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
   modelPath: string;
+  /**
+   * Files containing modules that will be shared between server/core side and client side
+   * @type {string[]}
+   * @memberof FrameworkSettings
+   */
+  sharedModelFiles: string[];
+  /**
+   * Name given to the file that will import/export shared files from `sharedModelFiles` setting
+   * @type {string}
+   * @memberof FrameworkSettings
+   */
+  sharedModelFileName: string;
 };
 
 /**
@@ -77,10 +130,35 @@ export interface ScriptsMap {
  * Structure for `package.json` content
  */
 export interface PackageJSON extends Object {
+  /**
+   * Package name
+   * @type {string}
+   * @memberof PackageJSON
+   */
   name: string;
+  /**
+   * Current version
+   * @type {string}
+   * @memberof PackageJSON
+   */
   version: string;
+  /**
+   * List of dependencies in object/map style
+   * @type {DependencyMap}
+   * @memberof PackageJSON
+   */
   dependencies: DependencyMap;
+  /**
+   * List of development dependencies in object/map style
+   * @type {DependencyMap}
+   * @memberof PackageJSON
+   */
   devDependencies: DependencyMap;
+  /**
+   * List of available scripts available for `npm run`
+   * @type {ScriptsMap}
+   * @memberof PackageJSON
+   */
   scripts: ScriptsMap;
 }
 
@@ -88,6 +166,14 @@ export interface PackageJSON extends Object {
  * Package manager (`package.json`)
  */
 export interface PackageManager {
+  /**
+   * Reads package info
+   * @memberof PackageManager
+   */
   loadPackage: () => Promise<PackageJSON>;
+  /**
+   * Writes (and overwrites) package info
+   * @memberof PackageManager
+   */
   savePackage: (newPackage: PackageJSON) => Promise<void>;
 }

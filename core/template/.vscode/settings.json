@@ -1,4 +1,8 @@
 {
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",

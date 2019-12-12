@@ -49,7 +49,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               const modelKeys = await getExportsIdentifiers(rootFile);
               const modelCopyPath = path.resolve(destDir, sourceDir, relativePath);
               await fs.ensureDir(path.dirname(modelCopyPath));
-              out.verbose(`${watcher}: Copying file ${fullPath(eventPath)} to ${fullPath(modelCopyPath)}`)
+              out.verbose(
+                `${watcher}: Copying file ${fullPath(eventPath)} to ${fullPath(modelCopyPath)}`,
+              );
               await fs.copyFile(eventPath, modelCopyPath);
               addKeys(modelKeys, rootFile);
               await build();

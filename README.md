@@ -10,6 +10,7 @@
   - [Pages](#pages)
   - [Etc](#etc)
 - [Roadmap](#roadmap)
+- [A2R Style](#a2r-style)
 - [Misc](#misc)
 
 ## Core
@@ -45,6 +46,10 @@ Forget about updating all your dependencies on every project. You just need to u
 ## Roadmap
 
 Current [roadmap, to-do and wishlist](./docs/roadmap/README.md).
+
+## A2R Style
+
+Everything related to our opinionated framework can be found [here](.docs/style.md).
 
 ## Misc
 

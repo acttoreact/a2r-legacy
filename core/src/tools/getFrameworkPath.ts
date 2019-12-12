@@ -8,10 +8,10 @@ import { framework, fullPath } from '../util/terminalStyles';
 let frameworkPath = '';
 
 const getFrameworkPath = async (): Promise<string> => {
+  const projectPath = await getProjectPath();
+  const modulePackageJson = path.join(projectPath, 'node_modules', 'a2r', 'package.json');
+  const exists = await fs.exists(modulePackageJson);
   if (!frameworkPath) {
-    const projectPath = await getProjectPath();
-    const modulePackageJson = path.join(projectPath, 'node_modules', 'a2r', 'package.json');
-    const exists = await fs.exists(modulePackageJson);
     if (exists) {
       frameworkPath = path.dirname(modulePackageJson);
       out.verbose(
