@@ -12,11 +12,15 @@
   ],
   "settings": {
     "import/extensions": [
-      ".js",
-      ".jsx",
-      ".ts",
-      ".tsx"
-    ],
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
     "import/parsers": {
       "@typescript-eslint/parser": [
         ".ts",

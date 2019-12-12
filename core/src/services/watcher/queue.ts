@@ -1,3 +1,5 @@
+import { setTimeout, clearTimeout } from 'timers';
+
 import out from '../../util/out';
 import { watcher } from '../../util/terminalStyles';
 import { WatcherEventInfo } from '../../model/watcher';
@@ -6,6 +8,7 @@ import settings from '../../config/settings';
 
 const { taskConcurrency } = settings;
 
+let timeout: NodeJS.Timeout | undefined;
 let adding = false;
 const taskQueue: WatcherEventInfo[] = [];
 const runningPromises: Function[] = [];
@@ -15,8 +18,11 @@ const runningPromises: Function[] = [];
  * @returns {void}
  */
 export const processTasks = (): void => {
+  if (timeout) {
+    clearTimeout(timeout);
+  }
   if (adding) {
-    setTimeout(processTasks, 32);
+    timeout = setTimeout(processTasks, 32);
     return;
   }
   if (runningPromises.length < taskConcurrency) {
