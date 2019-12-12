@@ -31,7 +31,12 @@ const getOptions = async (): Promise<WatcherOptions> => {
       out.verbose(`${watcher}: Event ${eventName} from path ${fullPath(eventPath)}`);
       const rootFile = path.relative(process.cwd(), eventPath);
       const relativePath = path.relative(sourcePath, eventPath);
-      const jsDestPath = path.join(modulePath, destDir, sourceDir, relativePath.replace(/\.ts$/, '.js'));
+      const jsDestPath = path.join(
+        modulePath,
+        destDir,
+        sourceDir,
+        relativePath.replace(/\.ts$/, '.js'),
+      );
 
       const isFile = await fs.isFile(eventPath, stats);
       const fileAdded = eventName === 'add';
@@ -128,14 +133,14 @@ const getOptions = async (): Promise<WatcherOptions> => {
       addCommand({
         name: 'apiWatcherSource',
         description: `Prints the path ${watcher} is using as ${api} source`,
-        onExecute: async (write): Promise<void> => {
+        onExecute: (write): void => {
           write(`${watcher}: API source path is ${fullPath(sourcePath)}`);
         },
       });
       addCommand({
         name: 'apiWatcherDest',
         description: `Prints the path ${watcher} is using as ${api} compilation destination`,
-        onExecute: async (write): Promise<void> => {
+        onExecute: (write): void => {
           write(`${watcher}: API destination path is ${fullPath(destPath)}`);
         },
       });

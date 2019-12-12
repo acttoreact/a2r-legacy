@@ -9,7 +9,7 @@ export interface WriteMethod {
  * Console command function to be executed when command is invoked
  */
 export interface OnExecute {
-  (write: WriteMethod, param1?: string, param2?: string): Promise<void>;
+  (write: WriteMethod, param1?: string, param2?: string): Promise<void> | void;
 }
 
 /**

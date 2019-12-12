@@ -6,7 +6,7 @@ import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import addModuleToSubModuleDictionary from './addModuleToSubModuleDictionary';
 import api, { pathToModuleDictionary, moduleToPathDictionary } from './api';
-import buildClientApi from '../client';
+import build from '../client/build';
 
 // apiPath: /Users/miguel/Proyectos/test-virgin-a2r/node_modules/a2r/server/api
 
@@ -52,7 +52,7 @@ const addModule = async (
       if (prefix) {
         addModuleToSubModuleDictionary(folderPath, moduleName, prefix);
       }
-      await buildClientApi();
+      await build();
     })
     .catch((ex): void => {
       out.error(

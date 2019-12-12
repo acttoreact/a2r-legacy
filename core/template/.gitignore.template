@@ -62,6 +62,3 @@ typings/
 
 # Distribution-ready code folder
 dist
-
-# A2R Framework compiled files
-.a2r

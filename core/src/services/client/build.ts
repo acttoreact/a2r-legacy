@@ -4,12 +4,12 @@ import ts from 'typescript';
 import { APIModule } from '../../model/api';
 import { ApiNamespace } from '../../model/client';
 import api from '../api';
+import getFrameworkPath from '../../tools/getFrameworkPath';
 import getImports from './getImports';
 import getMethod from './getMethod';
 import getMethodWrapper from './getMethodWrapper';
 import getApiObjectText from './getApiObjectText';
 import updateApiObject from './updateApiObject';
-import frameworkImports from './frameworkImports';
 import packagesImports from './packagesImports';
 import fs from '../../util/fs';
 import out from '../../util/out';
@@ -40,8 +40,11 @@ const getDocs = (mod: APIModule): string => {
 };
 
 const getModelImport = (): string => `import * as model from '../${modelPath}';`;
+const getSocketImport = (): string => `import socket from './socket';`;
 
-const build = async (filePath: string): Promise<void> => {
+const build = async (): Promise<void> => {
+  const frameworkPath = await getFrameworkPath();
+  const filePath = path.resolve(frameworkPath, 'api', 'index.ts');
   out.verbose(`Building Client API at ${fullPath(filePath)}`);
   const fileDir = path.dirname(filePath);
   const entries = Object.entries(api);
@@ -56,10 +59,10 @@ const build = async (filePath: string): Promise<void> => {
     filePath,
     '',
     ts.ScriptTarget.Latest,
-    true,
+    false,
     ts.ScriptKind.TS,
   );
-  const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });
+  const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed,  });
   for (let i = 0, l = entries.length; i < l; i += 1) {
     const [key, mod] = entries[i];
     const methodName = getMethodName(key);
@@ -80,7 +83,7 @@ const build = async (filePath: string): Promise<void> => {
   const content = [
     getImports(printer, sourceFile, fileDir, packagesImports),
     getModelImport(),
-    getImports(printer, sourceFile, fileDir, frameworkImports),
+    getSocketImport(),
     getMethodWrapper(),
     ...methods,
     getApiObjectText(apiObject),
@@ -88,6 +91,7 @@ const build = async (filePath: string): Promise<void> => {
   ].join('\n\n');
 
   await fs.writeFile(filePath, content);
+  delete require.cache[filePath];
   out.verbose('Client API Built!');
 };
 

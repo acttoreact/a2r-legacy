@@ -1,6 +1,5 @@
 import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
-import getCurrentProjectInfo, { updateCurrentProjectPackageInfo,
-} from './getCurrentProjectInfo';
+import getCurrentProjectInfo, { updateCurrentProjectPackageInfo } from './getCurrentProjectInfo';
 
 const packageSetup = async (): Promise<void> => {
   const parsedPackage = await getCurrentProjectInfo();
@@ -11,7 +10,7 @@ const packageSetup = async (): Promise<void> => {
   if (
     parsedPackage.scripts &&
     parsedPackage.scripts.test &&
-    parsedPackage.scripts.test.indexOf('no test specified') !== -1
+    parsedPackage.scripts.test.includes('no test specified')
   ) {
     delete parsedPackage.scripts.test;
   }
@@ -21,7 +20,6 @@ const packageSetup = async (): Promise<void> => {
     dependencies: {
       a2r: `^${parsedA2RPackage.version}`,
       ...parsedPackage.dependencies,
-      typescript: parsedA2RPackage.devDependencies.typescript,
     },
     scripts: {
       dev: 'a2r --dev --port 9000',

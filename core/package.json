@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.3.105",
+  "version": "0.3.114",
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,9 +16,9 @@
     "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/services/commands/index.ts",
     "help": "ts-node-dev --respawn --transpileOnly ./src/services/commands/index.ts --frameworkLogLevel verbose -h",
     "start": "node ./dist/index.js",
-    "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.105 -s;npx a2r --frameworkLogLevel verbose --init;",
-    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.105 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
-    "initFromScratch": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm install a2r@0.3.105 -s;npx a2r --frameworkLogLevel verbose --init;",
+    "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.114 -s;npx a2r --frameworkLogLevel verbose --init;",
+    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.114 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
+    "initFromScratch": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm install a2r@0.3.114 -s;npx a2r --frameworkLogLevel verbose --init;",
     "uploadAndInitFromScratch": "npm run upload;ts-node-dev ./src/tools/waitForCurrentVersion.ts;npm run initFromScratch;",
     "uploadAndInstallGlobally": "ts-node-dev ./src/tools/increaseVersion.ts;npm run build;npm publish;sleep 10s;npm i -g a2r",
     "uploadAndStartProject": "npm run upload;ts-node-dev ./src/tools/waitForCurrentVersion.ts;npm run initEmptyAndStartProject;"
@@ -91,6 +91,7 @@
     "eslint-plugin-import": "^2.19.1",
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
     "ts-node-dev": "^1.0.0-pre.44"
   },
   "contributors": [

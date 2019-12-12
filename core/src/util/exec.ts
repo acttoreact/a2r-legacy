@@ -12,7 +12,7 @@ import { CommandResponse } from '../model';
  * @returns {Promise<CommandResponse>} Command response
  */
 const exec = (command: string, ...args: readonly string[]): Promise<CommandResponse> =>
-  new Promise(async (resolve, reject): Promise<void> => {
+  new Promise((resolve, reject): void => {
     const res: CommandResponse = {
       command,
       args: args.join(' '),

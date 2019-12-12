@@ -15,7 +15,7 @@ const log = (message: string): void => {
  * Updates and installs latest A2R Framework version on project
  * @returns {Promise<void>}
  */
-const update = async (skipPatch: boolean = false): Promise<void> => {
+const update = async (skipPatch = false): Promise<void> => {
   const parsedA2RPackage = await getCurrentA2RPackageInfo();
   const lastVersion = await getLastVersionOfA2R();
   const { version: currentVersion } = parsedA2RPackage;
