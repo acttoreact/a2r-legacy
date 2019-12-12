@@ -47,7 +47,7 @@ export interface ReturnTypeInfo {
    * @type {string}
    * @memberof CompilerFileInfo
    */
-  typeNode: ts.Node | null;
+  typeNode: ts.TypeNode | null;
 }
 
 /**

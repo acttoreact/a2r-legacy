@@ -3,21 +3,13 @@ import path from 'path';
 import fs from '../../util/fs';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import build from './build';
-// import getPath from './getPath';
 
 const buildClientApi = async(): Promise<void> => {
   const frameworkPath = await getFrameworkPath();
-  const clientPath = path.resolve(frameworkPath, 'client');
+  const clientPath = path.resolve(frameworkPath, 'api');
   await fs.ensureDir(clientPath);
-  const mainFilePath = path.resolve(clientPath, 'api.ts');
+  const mainFilePath = path.resolve(clientPath, 'index.ts');
   await build(mainFilePath);
-  // const apiModulePath = await getPath();
-  // Copy files
-  // Compile?
-  // Build main file: imports, export default like an object
-  // Build package.json and stuff
-  // delete require.cache[path] (indexOf('/api'))
-  // Copy contents to node_modules/api
 };
 
 export * from '../../model/client';

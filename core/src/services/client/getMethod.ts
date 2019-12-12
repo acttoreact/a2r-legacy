@@ -4,14 +4,32 @@ import { ParamInfo } from '../../model/client';
 import { ReturnTypeInfo } from '../compiler';
 import out from '../../util/out';
 
+import settings from '../../config/settings';
+
+const { modelPath } = settings;
+
+const getTypeNode = (node: ts.TypeNode): ts.TypeNode => {
+  const child = node.getChildAt(0);
+  if (ts.isIdentifier(child)) {
+    return ts.createTypeReferenceNode(
+      ts.createQualifiedName(
+        ts.createIdentifier(modelPath),
+        ts.createIdentifier(node.getText()),
+      ),
+      undefined,
+    );
+  }
+  return node;
+}
+
 const getMethodReturnType = (returnTypeInfo?: ReturnTypeInfo | null): ts.TypeNode => {
   if (returnTypeInfo) {
     out.verbose(`Return Type Info type: ${returnTypeInfo.type}`);
     out.verbose(`Return Type Info typeNode: ${returnTypeInfo.typeNode}`);
     if (returnTypeInfo.typeNode) {
       out.verbose(`Return Type Info typeNode text: ${returnTypeInfo.typeNode.getText()}`);
+      return getTypeNode(returnTypeInfo.typeNode);
     }
-    return returnTypeInfo.typeNode as ts.TypeNode;
   }
   return ts.createKeywordTypeNode(ts.SyntaxKind.AnyKeyword);
 };

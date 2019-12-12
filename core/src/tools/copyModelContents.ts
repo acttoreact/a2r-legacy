@@ -18,7 +18,7 @@ const filesToIgnore = ['.gitkeep'];
 const copyContents = async (
   fromPath: string,
   destPath: string,
-  relativePath: string = '',
+  relativePath = '',
 ): Promise<void> => {
   const contentsPath = path.resolve(fromPath, relativePath);
   out.verbose(`Processing path ${fullPath(contentsPath)}`);
@@ -38,7 +38,7 @@ const copyContents = async (
           out.verbose(`Path ${fileName(relPath)} is directory`);
           await fs.ensureDir(targetPath);
           await copyContents(fromPath, destPath, fullRelPath);
-        } else if (filesToIgnore.indexOf(relPath) === -1) {
+        } else if (filesToIgnore.includes(relPath)) {
           out.verbose(
             `Copying ${fullPath(sourcePath)} to ${fullPath(targetPath)}`,
           );

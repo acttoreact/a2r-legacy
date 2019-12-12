@@ -29,13 +29,13 @@ const getFunctionReturnTypeInfo = (
     const children = typeReference.getChildren();
     let identifier = '';
     let type = '';
-    let typeNode: ts.Node | null = null;
+    let typeNode: ts.TypeNode | null = null;
     for (let i = 0, l = children.length; i < l; i += 1) {
       const child = children[i];
       if (ts.isIdentifier(child)) {
         identifier = child.getText().trim();
       } else if (child.kind === ts.SyntaxKind.SyntaxList) {
-        typeNode = child.getChildAt(0);
+        typeNode = child.getChildAt(0) as ts.TypeNode;
         type = typeNode.getText().trim();
       } else {
         out.verbose(

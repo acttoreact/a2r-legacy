@@ -4,6 +4,12 @@
     "**/bower_components": true,
     "**/dist": true
   },
+  "files.associations": {
+    "*.ts.template": "typescript",
+    "*.tsx.template": "typescriptreact",
+    "*.js.template": "javascript",
+    "*.jsx.template": "javascriptreact"
+  },
   "cSpell.words": [
     "estree",
     "nextjs",

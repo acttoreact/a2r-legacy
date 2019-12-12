@@ -1,10 +1,10 @@
-import { PingResult } from 'model';
+import * as model from 'a2r/model';
 import capitalize from '../tools/capitalize';
 
 /**
  * Sample ping method
- * @returns {Promise<PingResult>}
+ * @returns {Promise<model.PingResult>}
  */
-const ping = async (): Promise<PingResult> => ({ result: capitalize('pong') });
+const ping = async (): Promise<model.PingResult> => ({ result: capitalize('pong') });
 
 export default ping;
