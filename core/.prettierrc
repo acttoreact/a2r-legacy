@@ -1,8 +1,8 @@
 {
- "printWidth": 80,
+ "printWidth": 100,
  "tabWidth": 2,
  "singleQuote": true,
- "trailingComma": "es5",
+ "trailingComma": "all",
  "semi": true,
  "newline-before-return": true,
  "no-duplicate-variable": [true, "check-parameters"],

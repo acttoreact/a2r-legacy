@@ -1,81 +1,126 @@
 import ts from 'typescript';
+import chokidar from 'chokidar';
 import colors from 'colors';
+import path from 'path';
+
 import out from './util/out';
+import fs from './util/fs';
 
 out.setLevel('verbose');
 
-const formatHost: ts.FormatDiagnosticsHost = {
-  getCanonicalFileName: (path): string => path,
-  getCurrentDirectory: ts.sys.getCurrentDirectory,
-  getNewLine: (): string => ts.sys.newLine,
-};
+const compileFiles = async (
+  sourcePath: string,
+  destPath: string
+): Promise<void> => {
+  const existsDestPath = await fs.exists(destPath);
 
-function reportDiagnostic(diagnostic: ts.Diagnostic): void {
-  out.error(
-    `Error code ${colors.bgRed.white(
-      diagnostic.code.toString()
-    )}:\n${ts.flattenDiagnosticMessageText(
-      diagnostic.messageText,
-      formatHost.getNewLine()
-    )}`
-  );
-}
+  if (existsDestPath) {
+    await fs.rimraf(destPath);
+  }
+  await fs.mkDir(destPath);
 
-/**
- * Prints a diagnostic every time the watch status changes.
- * This is mainly for messages like "Starting compilation" or "Compilation completed".
- */
-function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
-  out.info(ts.formatDiagnostic(diagnostic, formatHost));
-}
+  const formatHost: ts.FormatDiagnosticsHost = {
+    getCanonicalFileName: (fileNamePath): string => fileNamePath,
+    getCurrentDirectory: ts.sys.getCurrentDirectory,
+    getNewLine: (): string => ts.sys.newLine,
+  };
 
-function watchMain(): void {
-  const configPath = ts.findConfigFile(
-    /* searchPath */ '../test',
-    ts.sys.fileExists,
-    'tsconfig.json'
-  );
-  if (!configPath) {
-    throw new Error("Could not find a valid 'tsconfig.json'.");
+  function reportDiagnostic(diagnostic: ts.Diagnostic): void {
+    out.error(
+      `Error code ${colors.bgRed.white(
+        diagnostic.code.toString()
+      )} compiling A2R Framework API File:\n${ts.formatDiagnosticsWithColorAndContext(
+        [diagnostic],
+        formatHost
+      )}`
+    );
   }
 
-  const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
+  const deleteIfExists = async (fileNameToDelete: string): Promise<void> => {
+    const exists = await fs.exists(fileNameToDelete);
+    out.verbose(`Exists file ${fileNameToDelete}: ${exists}`);    
+    if (exists) {
+      const info = await fs.lStat(fileNameToDelete);
+      if (info.isFile()) {
+        out.verbose(`Deleting file ${fileNameToDelete}...`);    
+        await fs.unlink(fileNameToDelete);
+      }
+    }
+  };
 
-  // Note that there is another overload for `createWatchCompilerHost` that takes
-  // a set of root files.
-  const host = ts.createWatchCompilerHost(
-    configPath,
-    {},
-    ts.sys,
-    createProgram,
-    reportDiagnostic,
-    reportWatchStatusChanged
+  // Purge removed files
+  chokidar.watch(sourcePath).on(
+    'unlink',
+    async (fileNamePath: string): Promise<void> => {
+      out.verbose(
+        `Watcher detected file deletion (unlink): ${fileNamePath} with extension ${path.extname(
+          fileNamePath
+        )}`
+      );
+      const fileInfo = path.parse(fileNamePath);
+      const relative = path.relative(sourcePath, fileInfo.dir);
+      if (fileInfo.ext.toLowerCase() === '.ts') {
+        await deleteIfExists(path.join(destPath, `${relative}/${fileInfo.name}.js`));
+        await deleteIfExists(path.join(destPath, `${relative}/${fileInfo.name}.d.ts`));
+        await deleteIfExists(path.join(destPath, `${relative}/${fileInfo.name}.js.map`));
+      }
+    }
   );
 
-  // You can technically override any given hook on the host, though you probably
-  // don't need to.
-  const origCreateProgram = host.createProgram;
+  /**
+   * Prints a diagnostic every time the watch status changes.
+   * This is mainly for messages like "Starting compilation" or "Compilation completed".
+   */
+  function reportWatchStatusChanged(diagnostic: ts.Diagnostic): void {
+    out.verbose(ts.formatDiagnostic(diagnostic, formatHost));
+  }
 
-  host.createProgram = (
-    rootNames: readonly string[] | undefined,
-    options: ts.CompilerOptions | undefined,
-    currentHost: ts.CompilerHost | undefined,
-    oldProgram: ts.SemanticDiagnosticsBuilderProgram | undefined,
-  ): ts.SemanticDiagnosticsBuilderProgram => {
-    out.verbose("We're about to create the program!");
-    return origCreateProgram(rootNames, options, currentHost, oldProgram);
-  };
+  function watchMain(): void {
+    const configPath = path.join(sourcePath, '../tsconfig-api.json');
 
-  const origPostProgramCreate = host.afterProgramCreate;
+    const createProgram = ts.createSemanticDiagnosticsBuilderProgram;
 
-  host.afterProgramCreate = (program): void => {
-    out.info('We finished making the program!');
-    origPostProgramCreate!(program);
-  };
+    // Note that there is another overload for `createWatchCompilerHost` that takes
+    // a set of root files.
+    const host = ts.createWatchCompilerHost(
+      configPath,
+      {},
+      ts.sys,
+      createProgram,
+      reportDiagnostic,
+      reportWatchStatusChanged
+    );
 
-  // `createWatchProgram` creates an initial program, watches files, and updates
-  // the program over time.
-  ts.createWatchProgram(host);
-}
+    // You can technically override any given hook on the host, though you probably
+    // don't need to.
+    const origCreateProgram = host.createProgram;
 
-watchMain();
+    host.createProgram = (
+      rootNames: readonly string[] | undefined,
+      options: ts.CompilerOptions | undefined,
+      currentHost: ts.CompilerHost | undefined,
+      oldProgram: ts.SemanticDiagnosticsBuilderProgram | undefined
+    ): ts.SemanticDiagnosticsBuilderProgram => {
+      out.verbose('We are about to create the program!');
+      return origCreateProgram(rootNames, options, currentHost, oldProgram);
+    };
+
+    const origPostProgramCreate = host.afterProgramCreate;
+
+    host.afterProgramCreate = (program): void => {
+      out.info('We finished making the program!');
+      origPostProgramCreate!(program);
+    };
+
+    // `createWatchProgram` creates an initial program, watches files, and updates
+    // the program over time.
+    ts.createWatchProgram(host);
+  }
+
+  watchMain();
+};
+
+const sourcePathDir = path.join(__dirname, '../../test/api');
+const destPathDir = path.join(__dirname, '../../test/server');
+
+compileFiles(sourcePathDir, destPathDir);

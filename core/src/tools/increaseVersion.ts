@@ -1,13 +1,32 @@
+import path from 'path';
 import colors from 'colors';
+
+import fs from '../util/fs';
 import out from '../util/out';
-import getCurrentA2RPackageInfo, {updateCurrentA2RPackageInfo} from '../commands/getCurrentA2RPackageInfo';
+import packageInfoManager from './packageInfoManager';
+
+import settings from '../config/settings';
+
+const { boilerplatePath } = settings;
+
+const snippetsFileName = 'a2r.code-snippets';
+
+const updateSnippets = async (): Promise<void> => {
+  const a2rSnippetsPath = path.resolve(__dirname, `../../../.vscode/${snippetsFileName}`);
+  const modelSnippetsPath = path.resolve(
+    __dirname,
+    '../../',
+    boilerplatePath,
+    `.vscode/${snippetsFileName}`,
+  );
+  await fs.copyFile(a2rSnippetsPath, modelSnippetsPath);
+};
 
 const increaseVersion = async (): Promise<string> => {
-
-  const parsedPackage = await getCurrentA2RPackageInfo();
-
+  const packageJsonPath = path.resolve(__dirname, '../../package.json');
+  const { loadPackage, savePackage } = packageInfoManager(packageJsonPath);
+  const parsedPackage = await loadPackage();
   const currentVersion = parsedPackage.version;
-
   const currentVersionValues = currentVersion
     .split('.')
     .map((value: string): number => parseInt(value, 10));
@@ -19,28 +38,18 @@ const increaseVersion = async (): Promise<string> => {
 
   const { scripts } = parsedPackage;
   const versionRX = new RegExp(`a2r@${currentVersion}`, 'g');
-  Object.keys(scripts).forEach(
-    (key): void => {
-      scripts[key] = (scripts[key] as string).replace(
-        versionRX,
-        `a2r@${newVersion}`
-      );
-    }
-  );
-  await updateCurrentA2RPackageInfo(parsedPackage);
+  Object.keys(scripts).forEach((key): void => {
+    scripts[key] = (scripts[key] as string).replace(versionRX, `a2r@${newVersion}`);
+  });
+  await savePackage(parsedPackage);
+  await updateSnippets();
   return newVersion;
 };
 
 increaseVersion()
-  .then(
-    (newVersion): void => {
-      out.info(
-        colors.yellow(`Version increased to ${colors.green.bold(newVersion)}`)
-      );
-    }
-  )
-  .catch(
-    (err: Error): void => {
-      out.error(err.message, { stack: err.stack });
-    }
-  );
+  .then((newVersion): void => {
+    out.info(colors.yellow(`Version increased to ${colors.green.bold(newVersion)}`));
+  })
+  .catch((err: Error): void => {
+    out.error(err.message, { stack: err.stack });
+  });

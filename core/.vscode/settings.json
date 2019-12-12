@@ -1,0 +1,20 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true
+  },
+  "files.associations": {
+    "*.ts.template": "typescript",
+    "*.tsx.template": "typescriptreact",
+    "*.js.template": "javascript",
+    "*.jsx.template": "javascriptreact",
+    "*.gitignore.template": "ignore"
+  },
+  "cSpell.words": [
+    "estree",
+    "nextjs",
+    "reactjs",
+    "respawn"
+  ]
+}

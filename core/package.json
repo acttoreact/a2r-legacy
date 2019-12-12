@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "A2R Framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,16 +8,20 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf ./dist;rm -rf ./server;rm -rf ./client;rm -rf ./model;tsc",
+    "build-client-api": "ts-node-dev --respawn --transpileOnly ./src/services/client-api/build.ts",
     "test": "jest",
     "test-dev": "npx jest --watch",
     "upload": "ts-node-dev ./src/tools/increaseVersion.ts;npm run build;npm publish;",
-    "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/commands/index.ts",
-    "help": "ts-node-dev --respawn --transpileOnly ./src/commands/index.ts --frameworkLogLevel verbose -h",
+    "debug": "ts-node-dev --debug --respawn --transpileOnly ./src/services/commands/index.ts",
+    "help": "ts-node-dev --respawn --transpileOnly ./src/services/commands/index.ts --frameworkLogLevel verbose -h",
     "start": "node ./dist/index.js",
-    "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.1.105 -s;npx a2r --frameworkLogLevel verbose --init;",
-    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.2.33 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
-    "uploadAndStartProject": "npm run upload;ts-node-dev ./src/commands/waitForCurrentVersion.ts;npm run initEmptyAndStartProject;"
+    "initEmptyProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.114 -s;npx a2r --frameworkLogLevel verbose --init;",
+    "initEmptyAndStartProject": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm init --force;npm install a2r@0.3.114 --save;npx a2r --frameworkLogLevel verbose --init;npx a2r --dev  --frameworkLogLevel verbose",
+    "initFromScratch": "rm -rf ../examples/empty;mkdir ../examples/empty;cd ../examples/empty;npm install a2r@0.3.114 -s;npx a2r --frameworkLogLevel verbose --init;",
+    "uploadAndInitFromScratch": "npm run upload;ts-node-dev ./src/tools/waitForCurrentVersion.ts;npm run initFromScratch;",
+    "uploadAndInstallGlobally": "ts-node-dev ./src/tools/increaseVersion.ts;npm run build;npm publish;sleep 10s;npm i -g a2r",
+    "uploadAndStartProject": "npm run upload;ts-node-dev ./src/tools/waitForCurrentVersion.ts;npm run initEmptyAndStartProject;"
   },
   "repository": {
     "type": "git",
@@ -41,44 +45,59 @@
   },
   "homepage": "https://a2r.com",
   "bin": {
-    "a2r": "./dist/commands/index.js"
+    "a2r": "./dist/services/commands/index.js"
   },
   "dependencies": {
-    "@types/express": "^4.17.0",
-    "colors": "^1.3.3",
+    "chokidar": "^3.3.0",
+    "colors": "^1.4.0",
     "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.0.2",
+    "command-line-usage": "^6.1.0",
     "express": "^4.17.1",
     "get-port": "^5.0.0",
-    "next": "^9.0.2",
-    "open": "^6.4.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "socket.io": "^2.2.0",
-    "socket.io-client": "^2.2.0",
-    "typescript": "^3.5.3",
-    "winston": "^3.2.1"
+    "next": "^9.1.5",
+    "open": "^7.0.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rimraf": "^3.0.0",
+    "shortid": "^2.2.15",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "triple-beam": "^1.3.0",
+    "typescript": "^3.7.3",
+    "winston": "^3.2.1",
+    "winston-transport": "^4.3.0"
   },
   "devDependencies": {
+    "@types/colors": "^1.2.1",
     "@types/command-line-args": "^5.0.0",
     "@types/command-line-usage": "^5.0.1",
-    "@types/jest": "^24.0.17",
-    "@types/node": "^12.6.8",
-    "@types/react": "^16.8.23",
-    "@types/react-dom": "^16.8.5",
-    "@types/socket.io": "^2.1.2",
+    "@types/express": "^4.17.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.17",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "@types/rimraf": "^2.0.3",
+    "@types/shortid": "0.0.29",
+    "@types/socket.io": "^2.1.4",
     "@types/socket.io-client": "^1.4.32",
+    "@types/triple-beam": "^1.3.0",
     "@types/zen-observable": "^0.8.0",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2",
-    "jest": "^24.8.0",
-    "ts-jest": "^24.0.2",
-    "ts-node-dev": "^1.0.0-pre.40"
-  }
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "@typescript-eslint/typescript-estree": "^2.11.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "contributors": [
+    {
+      "name": "Miguel Rodríguez Rosales",
+      "email": "miguel@binpar.com"
+    }
+  ]
 }

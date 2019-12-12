@@ -1,28 +1,35 @@
 {
-  "material-icon-theme.folders.associations": {
-      "labs": "test"
-  },
+  "eslint.validate":  [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "cSpell.words": [
     "ESNEXT",
     "Inicializando",
     "Interop",
+    "babylonjs",
     "binpar",
+    "bpfs",
     "camelcase",
     "dotenv",
     "downlevel",
     "eslintcache",
+    "gtag",
     "jspm",
     "middlewares",
     "nextjs",
     "nqry",
     "pids",
+    "plusplus",
     "promisify",
     "reactjs",
     "respawn",
+    "roadmap",
     "sourcemap",
     "tslib",
     "typechecking",
-    "wscript",
-    "babylonjs"
+    "wscript"
   ]
 }
