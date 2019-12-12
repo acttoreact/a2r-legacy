@@ -70,6 +70,7 @@ const build = async (): Promise<void> => {
   const projectPath = await getProjectPath();
   const modelProjectPath = path.resolve(projectPath, modelPath);
   out.verbose(`Model project path: ${fullPath(modelProjectPath)}`);
+  // [Great code here, I'd have to kill you before sharing it]
 };
 
 // Export block
