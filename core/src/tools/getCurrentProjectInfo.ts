@@ -7,8 +7,8 @@ import packageInfoManager from './packageInfoManager';
 let manager: PackageManager | null = null;
 
 const getManager = async (): Promise<PackageManager> => {
+  const projectPath = await getProjectPath();
   if (!manager) {
-    const projectPath = await getProjectPath();
     manager = packageInfoManager(path.join(projectPath, 'package.json'));
   }
   return manager;
