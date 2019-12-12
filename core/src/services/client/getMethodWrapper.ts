@@ -1,11 +1,11 @@
 const getMethodWrapper = (): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> =>
-  new Promise<SocketMessage>((resolve, reject): void => {
+  new Promise<model.SocketMessage>((resolve, reject): void => {
     const socket = getSocket();
 
     if (socket) {
       const id = generateId();
-      socket.on(id, (res: SocketMessage): void => {
+      socket.on(id, (res: model.SocketMessage): void => {
         socket.off(id);
         if (res.o) {
           resolve(res.d);
@@ -16,7 +16,7 @@ const getMethodWrapper = (): string => {
         }
       });
 
-      const call: MethodCall = {
+      const call: model.MethodCall = {
         method,
         id,
         params: args,
