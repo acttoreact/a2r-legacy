@@ -3,6 +3,7 @@
 - [Interesting articles or docs](#interesting-articles-or-docs)
 - [Interesting libraries](#interesting-libraries)
 - [Interesting learnings](#interesting-learnings)
+  - [Linter (from 2019/12/12)](#linter-from-20191212)
 
 ## Interesting articles or docs
 
@@ -12,6 +13,8 @@
 - https://github.com/dsherret/ts-morph
 
 ## Interesting learnings
+
+### Linter (from 2019/12/12)
 
 Everyone at the office was having problems with linter lately. I decided to clean `core` from everything related to linter, prettier and airbnb and start from scratch. I followed simple guide from most important library, [`typescript-estlint`](https://github.com/typescript-eslint/typescript-eslint#how-do-i-configure-my-project-to-use-typescript-eslint). I installed recommended versions and introduced recommended settings from every one of them.
 
