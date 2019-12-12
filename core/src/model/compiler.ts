@@ -48,18 +48,6 @@ export interface ReturnTypeInfo {
    * @memberof CompilerFileInfo
    */
   typeNode: ts.Node | null;
-  /**
-   * Returns a type reference instead of a primitive type
-   * @type {boolean}
-   * @memberof CompilerFileInfo
-   */
-  isTypeReference: boolean;
-  /**
-   * Type reference path
-   * @type {string}
-   * @memberof CompilerFileInfo
-   */
-  typeReferencePath?: string;
 }
 
 /**

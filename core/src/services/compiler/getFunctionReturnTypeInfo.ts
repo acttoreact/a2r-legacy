@@ -12,7 +12,7 @@ const getTypeReference = (
   for (let i = 0, l = children.length; i < l && !typeReference; i += 1) {
     const child = children[i];
     if (ts.isTypeReferenceNode(child)) {
-      typeReference = child as ts.TypeReferenceNode;
+      typeReference = child;
     } else {
       typeReference = getTypeReference(child);
     }
@@ -30,8 +30,6 @@ const getFunctionReturnTypeInfo = (
     let identifier = '';
     let type = '';
     let typeNode: ts.Node | null = null;
-    let isTypeReference = false;
-    let typeReferencePath = '';
     for (let i = 0, l = children.length; i < l; i += 1) {
       const child = children[i];
       if (ts.isIdentifier(child)) {
@@ -39,13 +37,6 @@ const getFunctionReturnTypeInfo = (
       } else if (child.kind === ts.SyntaxKind.SyntaxList) {
         typeNode = child.getChildAt(0);
         type = typeNode.getText().trim();
-        if (ts.isTypeReferenceNode(typeNode)) {
-          isTypeReference = true;
-          // TODO: Check if type is imported and store type reference path
-          typeReferencePath = 'test';
-        } else if (ts.isArrayTypeNode(child)) {
-          // TODO: Check if array type is primitive type
-        }
       } else {
         out.verbose(
           `Skipping unknown node type looking for function return type ${
@@ -58,8 +49,6 @@ const getFunctionReturnTypeInfo = (
       identifier,
       type,
       typeNode,
-      isTypeReference,
-      typeReferencePath,
     };
   }
   return returnTypeInfo;

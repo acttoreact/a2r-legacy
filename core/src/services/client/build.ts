@@ -15,6 +15,10 @@ import fs from '../../util/fs';
 import out from '../../util/out';
 import { fullPath } from '../../util/terminalStyles';
 
+import settings from '../../config/settings';
+
+const { modelPath } = settings;
+
 const toUpperFirst = (src: string): string => `${src.charAt(0).toUpperCase()}${src.slice(1)}`;
 
 const getMethodName = (key: string): string =>
@@ -34,6 +38,8 @@ const getDocs = (mod: APIModule): string => {
   }
   return '';
 };
+
+const getModelImport = (): string => `import * as model from '../${modelPath}';`;
 
 const build = async (filePath: string): Promise<void> => {
   out.verbose(`Building Client API at ${fullPath(filePath)}`);
@@ -73,6 +79,7 @@ const build = async (filePath: string): Promise<void> => {
   out.verbose(`API Object content:\n${getApiObjectText(apiObject)}`);
   const content = [
     getImports(printer, sourceFile, fileDir, packagesImports),
+    getModelImport(),
     getImports(printer, sourceFile, fileDir, frameworkImports),
     getMethodWrapper(),
     ...methods,
