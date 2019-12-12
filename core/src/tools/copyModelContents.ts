@@ -38,7 +38,7 @@ const copyContents = async (
           out.verbose(`Path ${fileName(relPath)} is directory`);
           await fs.ensureDir(targetPath);
           await copyContents(fromPath, destPath, fullRelPath);
-        } else if (filesToIgnore.includes(relPath)) {
+        } else if (!filesToIgnore.includes(relPath)) {
           out.verbose(
             `Copying ${fullPath(sourcePath)} to ${fullPath(targetPath)}`,
           );
