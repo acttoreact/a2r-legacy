@@ -9,7 +9,7 @@ import api, {
   moduleToPathDictionary,
 } from './api';
 import removeModule from './removeModule';
-import build from '../client/build';
+import build from '../proxy/build';
 
 /**
  * Dispose an existing API module from a given path

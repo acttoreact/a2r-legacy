@@ -1,6 +1,6 @@
 import colors from 'colors';
 
-import setupClientApi from './client';
+import setupClientApi from './proxy';
 import watcher from './watcher';
 import out from '../util/out';
 

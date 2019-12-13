@@ -6,7 +6,7 @@ import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import addModuleToSubModuleDictionary from './addModuleToSubModuleDictionary';
 import api, { pathToModuleDictionary, moduleToPathDictionary } from './api';
-import build from '../client/build';
+import build from '../proxy/build';
 
 // apiPath: /Users/miguel/Proyectos/test-virgin-a2r/node_modules/a2r/server/api
 
