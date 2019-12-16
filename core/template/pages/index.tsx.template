@@ -1,4 +1,4 @@
-import React from 'a2r/react';
+import React, { Fragment, useEffect } from 'a2r/react';
 import Head from 'a2r/head';
 import styled from 'a2r/styled-components';
 
@@ -10,19 +10,19 @@ const H1  = styled.h1`
 `;
 
 const Index = (): JSX.Element => {
-  React.useEffect(() => {
+  useEffect(() => {
     api.ping().then((res) => {
       console.log('Ping result: ', res);
     })
   }, []);
   return (
-    <React.Fragment>
+    <Fragment>
       <Head>
         <title>Welcome to A2R!</title>
       </Head>
       <H1>Welcome to the A2R Framework</H1>
       <img src="/img/logo-principal.svg" alt="A2R Framework" />
-    </React.Fragment>
+    </Fragment>
   );
 }
 

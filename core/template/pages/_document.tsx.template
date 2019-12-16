@@ -2,7 +2,7 @@
 /* eslint-disable  class-methods-use-this */
 import Document, { DocumentContext, Html, Head, Main, NextScript } from 'a2r/document';
 import { ServerStyleSheet } from 'a2r/styled-components';
-import React from 'a2r/react';
+import React, { Fragment } from 'a2r/react';
 
 export default class MyDocument extends Document {
   public static async getInitialProps(ctx: DocumentContext): Promise<any> {
@@ -19,10 +19,10 @@ export default class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <React.Fragment>
+          <Fragment>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </React.Fragment>
+          </Fragment>
         ),
       };
     } finally {
