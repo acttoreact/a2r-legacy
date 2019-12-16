@@ -1,4 +1,4 @@
-# ![A2R Framework](../design/logo/githubImage.png)  <!-- omit in toc -->
+# ![A2R Framework](./design/logo/githubImage.png)  <!-- omit in toc -->
 
 - [Core](#core)
   - [Files Structure](#files-structure)
