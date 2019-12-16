@@ -18,6 +18,7 @@ List of command that would be nice having:
 
 - apiRebuild: rebuilds API
 - apiMethodInfo: shows method info based on passed argument
+- avoidOpen: avoids opening project on browser
 
 ## Enhancements
 

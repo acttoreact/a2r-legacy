@@ -44,7 +44,7 @@ const buildSocketProvider = async (clientApiPath: string, port: number): Promise
                 [
                   ts.createPropertyAssignment(
                     ts.createIdentifier('autoConnect'),
-                    ts.createFalse(),
+                    ts.createTrue(),
                   ),
                   ts.createPropertyAssignment(
                     ts.createIdentifier('path'),
