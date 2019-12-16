@@ -36,15 +36,23 @@ const buildSocketProvider = async (clientApiPath: string, port: number): Promise
             ts.createIdentifier('io'),
             undefined,
             [
-              ts.createNoSubstitutionTemplateLiteral(
-                url,
+              ts.createStringLiteral(
                 url,
               ),
               ts.createObjectLiteral(
                 [
                   ts.createPropertyAssignment(
                     ts.createIdentifier('autoConnect'),
-                    ts.createTrue(),
+                    ts.createPrefix(
+                      ts.SyntaxKind.ExclamationToken,
+                      ts.createPrefix(
+                        ts.SyntaxKind.ExclamationToken,
+                        ts.createPropertyAccess(
+                          ts.createIdentifier("process"),
+                          ts.createIdentifier("browser"),
+                        ),
+                      ),
+                    ),
                   ),
                   ts.createPropertyAssignment(
                     ts.createIdentifier('path'),

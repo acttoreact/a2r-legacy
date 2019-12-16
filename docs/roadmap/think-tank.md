@@ -16,6 +16,9 @@ This document has no intend to be a clean and organized place. This is just the 
 
 List of command that would be nice having:
 
+- build: compile files and run next build (add to package scripts)
+- start: run built version (add to package scripts)
+- traceSocket: activate client logs on sockets communication
 - apiRebuild: rebuilds API
 - apiMethodInfo: shows method info based on passed argument
 - avoidOpen: avoids opening project on browser
