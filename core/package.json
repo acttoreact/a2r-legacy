@@ -39,7 +39,7 @@
     "redis"
   ],
   "author": "Ignacio Ferro Picón <nacho@binpar.com> (https://a2r.com/)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/acttoreact/A2R/issues"
   },

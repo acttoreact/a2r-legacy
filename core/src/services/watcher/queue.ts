@@ -52,8 +52,8 @@ export const processTasks = (): void => {
 
 /**
  * Adds one task to queue, ordered by priority. Also removes existing tasks about same path.
- * @param {WatcherEventInfo} info
- * @param {boolean} process
+ * @param {WatcherEventInfo} info Event and task info
+ * @param {boolean} process Calls method to process task queue
  */
 export const addTask = (info: WatcherEventInfo, process: boolean): void => {
   adding = true;
