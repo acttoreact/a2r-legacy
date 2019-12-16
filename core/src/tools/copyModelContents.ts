@@ -39,10 +39,13 @@ const copyContents = async (
           await fs.ensureDir(targetPath);
           await copyContents(fromPath, destPath, fullRelPath);
         } else if (!filesToIgnore.includes(relPath)) {
-          out.verbose(
-            `Copying ${fullPath(sourcePath)} to ${fullPath(targetPath)}`,
-          );
-          await fs.copyFile(sourcePath, targetPath);
+          const exists = await fs.exists(targetPath);
+          if (!exists) {
+            out.verbose(
+              `Copying ${fullPath(sourcePath)} to ${fullPath(targetPath)}`,
+            );
+            await fs.copyFile(sourcePath, targetPath);
+          }
         }
       },
     ),
