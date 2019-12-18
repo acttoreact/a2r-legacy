@@ -25,9 +25,9 @@
     "node_modules"
   ],
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "next-env.d.ts",
     "node_modules/a2r/api"
   ]
 }
