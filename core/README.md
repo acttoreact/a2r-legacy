@@ -4,7 +4,7 @@
 
 <p align="center">
   <a aria-label="Act To React logo" href="https://github.com/acttoreact">
-    <img src="https://img.shields.io/badge/MADE%20BY%20ACT%20TO%20REACT-000000.svg?style=for-the-badge&logo=A2R&labelColor=000000&logoWidth=20">
+    <img alt="" src="https://img.shields.io/badge/MADE%20BY%20ACT%20TO%20REACT-000000.svg?style=for-the-badge&logo=A2R&labelColor=000000&logoWidth=20">
   </a>
   <a aria-label="NPM version" href="https://www.npmjs.com/package/a2r">
     <img alt="" src="https://img.shields.io/npm/v/a2r.svg?style=for-the-badge&labelColor=000000">
@@ -13,7 +13,6 @@
     <img alt="" src="https://img.shields.io/npm/l/a2r.svg?style=for-the-badge&labelColor=000000">
   </a>
 </p>
-
 <p align="center">
   <strong>A2R Framework</strong>
 </p>
