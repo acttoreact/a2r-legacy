@@ -19,7 +19,7 @@ Framework heart. Everything will be here.
 
 ### Files Structure
 
-A [brief explanation about the files structure](./docs/core/coreFilesStructure.md) so you know where to look when you're looking for something in particular.
+A [brief explanation about the files structure](./core/coreFilesStructure.md) so you know where to look when you're looking for something in particular.
 
 ### Initialization
 
@@ -45,12 +45,12 @@ Forget about updating all your dependencies on every project. You just need to u
 
 ## Roadmap
 
-Current [roadmap, to-do and wishlist](./docs/roadmap/README.md).
+Current [roadmap, to-do and wishlist](./roadmap/README.md).
 
 ## A2R Style
 
-Everything related to our opinionated framework can be found [here](./docs/style.md).
+Everything related to our opinionated framework can be found [here](./style.md).
 
 ## Misc
 
-Everything worth to be written that doesn't fit anywhere else. You can find it [here](./docs/misc.md).
+Everything worth to be written that doesn't fit anywhere else. You can find it [here](./misc.md).
