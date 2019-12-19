@@ -5,7 +5,7 @@
       "jsx": true
     },
     "useJSXTextNode": true,
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.eslint.json"
   },
   "plugins": ["@typescript-eslint"],
   "extends": [

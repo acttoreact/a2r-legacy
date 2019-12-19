@@ -6,9 +6,7 @@ import settings from '../../config/settings';
 export default [
   {
     header: framework,
-    content: `The isomorphic, reactive ${colors.italic(
-      'framework',
-    )} that scales.`,
+    content: `The isomorphic, reactive ${colors.italic('framework')} that scales.`,
   },
   {
     content: logo,
@@ -33,12 +31,22 @@ export default [
         name: 'update',
         alias: 'u',
         typeLabel: ' ',
-        description: `Updates the project to the last version of ${framework}`,
+        description: `Updates the project to the last version of ${framework} and runs "path" command`,
+      },
+      {
+        name: 'updateHard',
+        typeLabel: ' ',
+        description: `Runs "update" command and "patch", but overwriting any core files.`,
       },
       {
         name: 'patch',
         typeLabel: ' ',
-        description: `Processes all the dependencies and additional files used the by ${framework}`,
+        description: `Updates all dependencies to match framework current packages versions and writes missing core files used by ${framework}`,
+      },
+      {
+        name: 'patchHard',
+        typeLabel: ' ',
+        description: `Updates all dependencies to match framework current packages versions and overwrites every core file used by ${framework}`,
       },
       {
         name: 'help',
@@ -64,10 +72,9 @@ export default [
         name: 'frameworkLogLevel',
         alias: 'f',
         typeLabel: '{underline string}',
-        description:
-          `Set the log level (error, warning, info or verbose) that will be used by ${
-            framework
-          } (${colors.bold(settings.defaultLogLevel)})`,
+        description: `Set the log level (error, warning, info or verbose) that will be used by ${framework} (${colors.bold(
+          settings.defaultLogLevel,
+        )})`,
       },
     ],
   },

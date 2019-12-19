@@ -90,16 +90,16 @@ if (options.help) {
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
-    } else if (options.update) {
-      update(options.skipPatch)
+    } else if (options.update || options.updateHard) {
+      update(options.updateHard)
         .then((): void => {
           out.info(colors.yellow.bold(`<<< 👌 Project updated successfully`));
         })
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
-    } else if (options.patch) {
-      patch()
+    } else if (options.patch || options.patchHard) {
+      patch(options.patchHard)
         .then((): void => {
           out.info(colors.yellow.bold(`<<< 👌 Project patched successfully`));
         })

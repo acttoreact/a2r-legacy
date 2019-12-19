@@ -5,7 +5,7 @@ import out from '../util/out';
 import fs from '../util/fs';
 import { fullPath, fileName } from '../util/terminalStyles';
 
-const modelExtensionRegExp = /\.template$/i;
+const templateExtensionRegExp = /\.template$/i;
 
 const filesToIgnore = ['.gitkeep'];
 
@@ -18,6 +18,7 @@ const filesToIgnore = ['.gitkeep'];
 const copyContents = async (
   fromPath: string,
   destPath: string,
+  hard: boolean,
   relativePath = '',
 ): Promise<void> => {
   const contentsPath = path.resolve(fromPath, relativePath);
@@ -32,15 +33,15 @@ const copyContents = async (
         const sourcePath = path.resolve(fromPath, fullRelPath);
         const targetPath = path
           .resolve(destPath, fullRelPath)
-          .replace(modelExtensionRegExp, '');
+          .replace(templateExtensionRegExp, '');
 
         if (pathInfo.isDirectory()) {
           out.verbose(`Path ${fileName(relPath)} is directory`);
           await fs.ensureDir(targetPath);
-          await copyContents(fromPath, destPath, fullRelPath);
+          await copyContents(fromPath, destPath, hard, fullRelPath);
         } else if (!filesToIgnore.includes(relPath)) {
-          const exists = await fs.exists(targetPath);
-          if (!exists) {
+          const write = hard || !(await fs.exists(targetPath));
+          if (write) {
             out.verbose(
               `Copying ${fullPath(sourcePath)} to ${fullPath(targetPath)}`,
             );
@@ -53,15 +54,16 @@ const copyContents = async (
 };
 
 /**
- * Copies contents from `/model` folder to base project folder
- * @param {string} modelPath Model folder path
+ * Copies contents from `/template` folder to base project folder
+ * @param {string} templatePath Template folder path
  * @param {string} destPath Base target project folder
  */
-const copyModelContents = async (
-  modelPath: string,
+const copyTemplateContents = async (
+  templatePath: string,
   destPath: string,
+  hard = false,
 ): Promise<void> => {
-  return copyContents(modelPath, destPath);
+  return copyContents(templatePath, destPath, hard);
 }
 
-export default copyModelContents;
+export default copyTemplateContents;
