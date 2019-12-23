@@ -1,3 +1,10 @@
-const settings = {};
+import { A2RSettings } from 'a2r/model';
+
+interface ProjectSettings extends A2RSettings {};
+
+const settings: ProjectSettings = {
+  apiDestinationPaths: [],
+  modelDestinationPaths: [],
+};
 
 export default settings;

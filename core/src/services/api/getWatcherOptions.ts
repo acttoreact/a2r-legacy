@@ -14,6 +14,8 @@ import importModule from './importModule';
 import updateModule from './updateModule';
 import disposeModule from './disposeModule';
 import { setupApi } from '.';
+import getProjectSettings from '../../tools/getProjectSettings';
+import getProjectPath from '../../tools/getProjectPath';
 
 const watcher = `${watcherOnLogs} (API)`;
 const sourceDir = 'api';
@@ -24,6 +26,21 @@ let ready = false;
 
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
+
+  const { apiDestinationPaths } = await getProjectSettings();
+  const destinationPaths = new Array<string>();
+  if (apiDestinationPaths.length) {
+    const projectPath = await getProjectPath();
+    destinationPaths.push(
+      ...apiDestinationPaths.map(p => {
+        if (path.isAbsolute(p)) {
+          return p;
+        }
+        return path.resolve(projectPath, p);
+      }),
+    );
+  }
+
   return {
     sourceDir,
     destDir,
@@ -66,6 +83,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
                   }, new Array<string>());
                   throw Error(`${errors.length > 1 ? '\n- ' : ''}${errors.join('\n- ')}`);
                 } else {
+                  await Promise.all(
+                    destinationPaths.map(p => fs.copyFile(eventPath, path.resolve(p, relativePath))),
+                  );
                   const method = fileAdded ? importModule : updateModule;
                   out.verbose(
                     `${watcher}: ${
@@ -98,6 +118,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: File removed: ${eventPath}`);
               const mapDestPath = `${jsDestPath}.map`;
               const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+              await Promise.all(
+                destinationPaths.map(p => fs.unlink(path.resolve(p, relativePath))),
+              )
               await fs.unlink(jsDestPath);
               await fs.unlink(mapDestPath);
               await fs.unlink(dtsDestPath);
