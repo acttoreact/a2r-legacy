@@ -16,6 +16,7 @@ import disposeModule from './disposeModule';
 import { setupApi } from '.';
 import getProjectSettings from '../../tools/getProjectSettings';
 import getProjectPath from '../../tools/getProjectPath';
+import touchTsConfig from '../../tools/touchTsConfig';
 
 const watcher = `${watcherOnLogs} (API)`;
 const sourceDir = 'api';
@@ -70,6 +71,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
               out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
 
+              await touchTsConfig();
               const compilerInfo = await getModuleInfo(rootFile);
               await compileFile([rootFile], destPath);
 
@@ -84,7 +86,11 @@ const getOptions = async (): Promise<WatcherOptions> => {
                   throw Error(`${errors.length > 1 ? '\n- ' : ''}${errors.join('\n- ')}`);
                 } else {
                   await Promise.all(
-                    destinationPaths.map(p => fs.copyFile(eventPath, path.resolve(p, relativePath))),
+                    destinationPaths.map(async p => {
+                      const dest = path.resolve(p, relativePath);
+                      await fs.ensureDir(path.dirname(dest));
+                      await fs.copyFile(eventPath, dest);
+                    }),
                   );
                   const method = fileAdded ? importModule : updateModule;
                   out.verbose(
@@ -120,7 +126,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
               await Promise.all(
                 destinationPaths.map(p => fs.unlink(path.resolve(p, relativePath))),
-              )
+              );
               await fs.unlink(jsDestPath);
               await fs.unlink(mapDestPath);
               await fs.unlink(dtsDestPath);
@@ -139,7 +145,10 @@ const getOptions = async (): Promise<WatcherOptions> => {
             path: eventPath,
             handler: async (): Promise<void> => {
               out.verbose(`${watcher}: API Folder removed: ${eventPath}`);
-              await fs.rmDir(jsDestPath);
+              await Promise.all(
+                destinationPaths.map(p => fs.rmDir(path.resolve(p, relativePath))),
+              );
+              await fs.rmDir(eventPath);
             },
             priority,
           },

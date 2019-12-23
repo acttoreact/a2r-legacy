@@ -12,6 +12,7 @@ import { setupModel } from '.';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import getProjectSettings from '../../tools/getProjectSettings';
 import getProjectPath from '../../tools/getProjectPath';
+import touchTsConfig from '../../tools/touchTsConfig';
 
 import settings from '../../config/settings';
 
@@ -63,11 +64,16 @@ const getOptions = async (): Promise<WatcherOptions> => {
               const modelKeys = await getExportsIdentifiers(rootFile);
               const modelCopyPath = path.resolve(destPath, relativePath);
               await fs.ensureDir(path.dirname(modelCopyPath));
+              await touchTsConfig();
               out.verbose(
                 `${watcher}: Copying file ${fullPath(eventPath)} to ${fullPath(modelCopyPath)}`,
               );
               await Promise.all(
-                destinationPaths.map(p => fs.copyFile(eventPath, path.resolve(p, relativePath))),
+                destinationPaths.map(async p => {
+                  const dest = path.resolve(p, relativePath);
+                  await fs.ensureDir(path.dirname(dest));
+                  await fs.copyFile(eventPath, dest);
+                }),
               );
               await fs.copyFile(eventPath, modelCopyPath);
               addKeys(modelKeys, rootFile);
@@ -98,7 +104,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
               await Promise.all(
                 destinationPaths.map(p => fs.unlink(path.resolve(p, relativePath))),
-              )
+              );
               await fs.unlink(jsDestPath);
               await fs.unlink(mapDestPath);
               await fs.unlink(dtsDestPath);
@@ -118,6 +124,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
             path: eventPath,
             handler: async (): Promise<void> => {
               out.verbose(`${watcher}: Folder removed: ${eventPath}`);
+              await Promise.all(
+                destinationPaths.map(p => fs.rmDir(path.resolve(p, relativePath))),
+              );
               await fs.rmDir(eventPath);
             },
             priority,
