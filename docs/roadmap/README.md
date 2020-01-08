@@ -42,7 +42,8 @@ This is first approach a list of every desired functionality:
 
 ### Small tasks
 
-- Review `patch` and similar tools and use proper path functions instead of string manipulation.
+- [x] Review `patch` and similar tools and use proper path functions instead of string manipulation.
+- [ ] Use more extended [chalk](https://www.npmjs.com/package/chalk) instead of `colors`.
 
 ## Wishlist, other ideas, etc
 

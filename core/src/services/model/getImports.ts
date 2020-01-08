@@ -2,9 +2,9 @@ import path from 'path';
 
 import fs from '../../util/fs';
 
-const internalImports = [
-  './a2r'
-]
+const internalImports: string[] = [
+  // './a2r'
+];
 
 const getImports = async (
   mainPath: string,

@@ -41,6 +41,7 @@ const getDocs = (mod: APIModule): string => {
 
 const getModelImport = (): string => `import * as model from '../${modelPath}';`;
 const getSocketImport = (): string => `import socket from './socket';`;
+const getSharedTypesImport = (): string => `import { MethodCall, SocketMessage } from '../dist/';`;
 
 const build = async (): Promise<void> => {
   const frameworkPath = await getFrameworkPath();
@@ -84,6 +85,7 @@ const build = async (): Promise<void> => {
     getImports(printer, sourceFile, fileDir, packagesImports),
     getModelImport(),
     getSocketImport(),
+    getSharedTypesImport(),
     getMethodWrapper(),
     ...methods,
     getApiObjectText(apiObject),

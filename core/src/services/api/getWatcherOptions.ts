@@ -14,7 +14,7 @@ import importModule from './importModule';
 import updateModule from './updateModule';
 import disposeModule from './disposeModule';
 import { setupApi } from '.';
-import getProjectSettings from '../../tools/getProjectSettings';
+import { getSettings } from '../..';
 import getProjectPath from '../../tools/getProjectPath';
 import touchTsConfig from '../../tools/touchTsConfig';
 
@@ -28,9 +28,10 @@ let ready = false;
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
 
-  const { apiDestinationPaths } = await getProjectSettings();
+  const settings = getSettings();
+  const { apiDestinationPaths } = settings;
   const destinationPaths = new Array<string>();
-  if (apiDestinationPaths.length) {
+  if (apiDestinationPaths && apiDestinationPaths.length) {
     const projectPath = await getProjectPath();
     destinationPaths.push(
       ...apiDestinationPaths.map(p => {

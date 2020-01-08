@@ -19,10 +19,13 @@ import getVersion from '../../tools/getVersion';
 import checkNodeVersion from '../../tools/checkNodeVersion';
 import write from '../../util/write';
 import { framework } from '../../util/terminalStyles';
+import { getSettings } from '../..';
 
-import settings from '../../config/settings';
+import frameworkSettings from '../../config/settings';
 
-const { defaultDevLogLevel, defaultLogLevel, defaultPort } = settings;
+const { defaultDevLogLevel, defaultLogLevel } = frameworkSettings;
+const settings = getSettings();
+const { port: defaultPort } = settings;
 
 const options = args(rules);
 

@@ -10,8 +10,8 @@ const settings: FrameworkSettings = {
   boilerplatePath: 'template',
   modelPath: 'model',
   sharedModelFiles: [
-    'settings',
-    'sockets',
+    // 'settings',
+    // 'sockets',
   ],
   sharedModelFileName: 'a2r'
 };

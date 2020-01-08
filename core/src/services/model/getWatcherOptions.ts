@@ -10,7 +10,7 @@ import { addKeys, removeKeys } from './model';
 import build from './build';
 import { setupModel } from '.';
 import getFrameworkPath from '../../tools/getFrameworkPath';
-import getProjectSettings from '../../tools/getProjectSettings';
+import { getSettings } from '../..';
 import getProjectPath from '../../tools/getProjectPath';
 import touchTsConfig from '../../tools/touchTsConfig';
 
@@ -26,9 +26,10 @@ const getOptions = async (): Promise<WatcherOptions> => {
   const frameworkPath = await getFrameworkPath();
   const destDir = path.resolve(frameworkPath, sourceDir);
 
-  const { modelDestinationPaths } = await getProjectSettings();
+  const projectSettings = getSettings();
+  const { modelDestinationPaths } = projectSettings;
   const destinationPaths = new Array<string>();
-  if (modelDestinationPaths.length) {
+  if (modelDestinationPaths && modelDestinationPaths.length) {
     const projectPath = await getProjectPath();
     destinationPaths.push(
       ...modelDestinationPaths.map(p => {

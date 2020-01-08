@@ -1,10 +1,12 @@
-import { A2RSettings } from 'a2r/model';
+import { applySettings, Settings } from 'a2r';
 
-interface ProjectSettings extends A2RSettings {};
+interface ProjectSettings extends Settings {
+  mySettingKey: string;
+}
 
 const settings: ProjectSettings = {
-  apiDestinationPaths: [],
-  modelDestinationPaths: [],
+  mySettingKey: 'mySettingValue',
+  port: 9000,
 };
 
-export default settings;
+export default applySettings<ProjectSettings>(settings);

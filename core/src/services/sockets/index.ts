@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import http from 'http';
 import path from 'path';
 import io from 'socket.io';
@@ -30,7 +31,7 @@ const setup = (httpServer: http.Server): void => {
 
     socket.on(
       '*',
-      async (info: MethodCall): Promise<void> => {
+      async (info: MethodCall ): Promise<void> => {
         const { method, params, id } = info;
         out.verbose(
           `${socketsInLogs} Message received: id ${id}, method: ${method}, params: ${params.join(
@@ -54,5 +55,4 @@ const setup = (httpServer: http.Server): void => {
   addCommandsFromPath(commandsPath);
 };
 
-export * from '../../model/sockets';
 export default setup;
