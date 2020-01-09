@@ -20,6 +20,7 @@ This is the current MVP definition.
 - Automatically generated client API.
 - Isomorphic render model.
   - Subscriptions by route? Route determines needed data?
+- Email send via mailgun with templated email (I will recomend using https://www.npmjs.com/package/email-templates)
 
 ## Backlog
 
