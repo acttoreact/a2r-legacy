@@ -16,7 +16,7 @@ import touchTsConfig from '../../tools/touchTsConfig';
 
 import settings from '../../config/settings';
 
-const { modelPath: sourceDir } = settings;
+const { modelPath } = settings;
 const watcher = `${watcherOnLogs} (Model)`;
 const priority = 10;
 
@@ -24,7 +24,7 @@ let ready = false;
 
 const getOptions = async (): Promise<WatcherOptions> => {
   const frameworkPath = await getFrameworkPath();
-  const destDir = path.resolve(frameworkPath, sourceDir);
+  const destDir = path.resolve(frameworkPath, modelPath);
 
   const projectSettings = getSettings();
   const { modelDestinationPaths } = projectSettings;
@@ -42,7 +42,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
   }
 
   return {
-    sourceDir,
+    sourceDir: modelPath,
     destDir,
     handler: async (sourcePath, destPath, eventName, eventPath, stats): Promise<void> => {
       out.verbose(`${watcher}: Event ${eventName} from path ${fullPath(eventPath)}`);
@@ -63,7 +63,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
             handler: async (): Promise<void> => {
               out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
               const modelKeys = await getExportsIdentifiers(rootFile);
-              const modelCopyPath = path.resolve(destPath, relativePath);
+              const modelCopyPath = path.resolve(destPath, modelPath, relativePath);
               await fs.ensureDir(path.dirname(modelCopyPath));
               await touchTsConfig();
               out.verbose(

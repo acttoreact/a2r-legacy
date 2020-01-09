@@ -1,3 +1,7 @@
+const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
+
 module.exports = {
   webpack(cfg) {
     cfg.module.rules.push({
@@ -5,9 +9,16 @@ module.exports = {
       use: {
         loader: 'ts-loader',
         options: {
-          allowTsInNodeModules: true
-        }
+          allowTsInNodeModules: true,
+        },
       },
+    });
+    cfg.module.rules.push({
+      test: /\.tsx$/,
+      loader: 'ts-loader',
+      options: {
+        getCustomTransformers: () => ({ before: [styledComponentsTransformer] })
+      }
     });
     return cfg;
   }

@@ -31,7 +31,7 @@ export default [
         name: 'update',
         alias: 'u',
         typeLabel: ' ',
-        description: `Updates the project to the last version of ${framework} and runs "path" command`,
+        description: `Updates the project to the last version of ${framework} and runs "patch" command`,
       },
       {
         name: 'updateHard',

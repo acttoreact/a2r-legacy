@@ -43,7 +43,7 @@ const getModelImport = (): string => `import * as model from '../${modelPath}';`
 const getSocketImport = (): string => `import socket from './socket';`;
 const getSharedTypesImport = (): string => `import { MethodCall, SocketMessage } from '../dist/';`;
 
-const build = async (): Promise<void> => {
+const build = async (): Promise<string> => {
   const frameworkPath = await getFrameworkPath();
   const filePath = path.resolve(frameworkPath, 'api', 'index.ts');
   out.verbose(`Building Client API at ${fullPath(filePath)}`);
@@ -95,6 +95,7 @@ const build = async (): Promise<void> => {
   await fs.writeFile(filePath, content);
   delete require.cache[filePath];
   out.verbose('Client API Built!');
+  return filePath;
 };
 
 export default build;
