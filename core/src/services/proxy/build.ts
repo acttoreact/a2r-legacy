@@ -39,9 +39,12 @@ const getDocs = (mod: APIModule): string => {
   return '';
 };
 
-const getModelImport = (): string => `import * as model from '../${modelPath}';`;
-const getSocketImport = (): string => `import socket from './socket';`;
-const getSharedTypesImport = (): string => `import { MethodCall, SocketMessage } from '../dist/';`;
+const getInternalImports = (): string => [
+  `import * as model from '../${modelPath}';`,
+  `import socket from './socket';`,
+  `import { MethodCall, SocketMessage } from '../dist/';`,
+  `import { getModule } from '../dist/services/api';`
+].join('\n');
 
 const build = async (): Promise<string> => {
   const frameworkPath = await getFrameworkPath();
@@ -83,9 +86,7 @@ const build = async (): Promise<string> => {
   out.verbose(`API Object content:\n${getApiObjectText(apiObject)}`);
   const content = [
     getImports(printer, sourceFile, fileDir, packagesImports),
-    getModelImport(),
-    getSocketImport(),
-    getSharedTypesImport(),
+    getInternalImports(),
     getMethodWrapper(),
     ...methods,
     getApiObjectText(apiObject),

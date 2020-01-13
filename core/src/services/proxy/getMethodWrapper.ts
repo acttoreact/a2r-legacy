@@ -1,6 +1,15 @@
 const getMethodWrapper = (): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
+  if (typeof window === 'undefined') {
+    console.log('on server side, executing api method directly');
+    try {
+      const apiModule = getModule(method);
+      return apiModule.default(method, args);
+    } catch (ex) {
+      console.log('Error loading API module at server', ex.message, ex.stack);
+    }
+  }
   return new Promise<SocketMessage>((resolve, reject): void => {
     console.log('socket connected?', socket && socket.connected);
     if (socket) {

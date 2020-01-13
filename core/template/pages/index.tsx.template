@@ -4,12 +4,16 @@ import styled from 'a2r/styled-components';
 
 import api from 'a2r/api';
 
+interface Props {
+  info: string;
+}
+
 const H1  = styled.h1`
   color: #636;
   text-align: center;
 `;
 
-const Index = (): JSX.Element => {
+const Index = (props: Props): JSX.Element => {
   useEffect(() => {
     api.ping().then((res) => {
       console.log('Ping result: ', res);
@@ -21,9 +25,17 @@ const Index = (): JSX.Element => {
         <title>Welcome to A2R!</title>
       </Head>
       <H1>Welcome to the A2R Framework</H1>
+      <div>
+        Data: {props.info}
+      </div>
       <img src="/img/logo-principal.svg" alt="A2R Framework" />
     </Fragment>
   );
-}
+};
+
+Index.getInitialProps = async (): Promise<Props> => {
+  const data = await api.getData();
+  return data;
+};
 
 export default Index;
