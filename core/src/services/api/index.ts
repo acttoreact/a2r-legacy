@@ -6,6 +6,7 @@ import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import api, { apiPathKey, moduleToPathDictionary } from './api';
 import addCommandsFromPath from '../commands/addCommandsFromPath';
+import { setAPI } from './apiServer';
 
 /**
  * Setup API needed structure and commands
@@ -21,6 +22,8 @@ export const setupApi = async (mainPath: string): Promise<void> => {
   const commandsPath = path.resolve(__dirname, 'commands');
   await addCommandsFromPath(commandsPath);
 };
+
+setAPI(api);
 
 export * from '../../model/api';
 export default api;

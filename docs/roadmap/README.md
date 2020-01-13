@@ -25,24 +25,26 @@ This is the current MVP definition.
 
 This is first approach a list of every desired functionality:
 
-- Automatic test generation tool (record mode).
-- Generic authentication method and permissions system.
+- Automatic test generation tool (record mode)
+- Generic authentication method and permissions system
+- Email send via mailgun with templated email (I will recomend using https://www.npmjs.com/package/email-templates)
 - LiveObject: option to subscribe to an object. Reactive object model.
 - LiveQuery: option to subscribe to a query. Reactive query model.
-- Centralized built and deploy (CI/CD).
-- Horizontal scalability.
-- Services status check model (/health or /status).
-- Micro-services and external tasks model.
-- Project middlewares, automatic setup.
-- SEO and routes (basic automatic robots.txt and sitemap).
-- Localization and localized routes.
+- Centralized built and deploy (CI/CD)
+- Horizontal scalability
+- Services status check model (/health or /status)
+- Micro-services and external tasks model
+- Project middlewares, automatic setup
+- SEO and routes (basic automatic robots.txt and sitemap)
+- Localization and localized routes
 - Expo and multiple proxies
 - Generic hooks
 - Generic components?
 
 ### Small tasks
 
-- Review `patch` and similar tools and use proper path functions instead of string manipulation.
+- [x] Review `patch` and similar tools and use proper path functions instead of string manipulation.
+- [ ] Use more extended [chalk](https://www.npmjs.com/package/chalk) instead of `colors`.
 
 ## Wishlist, other ideas, etc
 

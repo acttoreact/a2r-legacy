@@ -1,7 +1,16 @@
 const getMethodWrapper = (): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
-  return new Promise<model.SocketMessage>((resolve, reject): void => {
+  if (typeof window === 'undefined') {
+    console.log('on server side, executing api method directly');
+    try {
+      const apiModule = getModule(method);
+      return apiModule.default(method, args);
+    } catch (ex) {
+      console.log('Error loading API module at server', ex.message, ex.stack);
+    }
+  }
+  return new Promise<SocketMessage>((resolve, reject): void => {
     console.log('socket connected?', socket && socket.connected);
     if (socket) {
       if (socket.disconnected) {
@@ -10,7 +19,7 @@ const getMethodWrapper = (): string => {
       }
       const id = generateId();
       console.log('id', id);
-      socket.on(id, (res: model.SocketMessage): void => {
+      socket.on(id, (res: SocketMessage): void => {
         socket.off(id);
         if (res.o) {
           resolve(res.d);
@@ -21,7 +30,7 @@ const getMethodWrapper = (): string => {
         }
       });
 
-      const call: model.MethodCall = {
+      const call: MethodCall = {
         method,
         id,
         params: args,

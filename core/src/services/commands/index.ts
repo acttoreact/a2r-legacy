@@ -19,10 +19,13 @@ import getVersion from '../../tools/getVersion';
 import checkNodeVersion from '../../tools/checkNodeVersion';
 import write from '../../util/write';
 import { framework } from '../../util/terminalStyles';
+import { getSettings } from '../..';
 
-import settings from '../../config/settings';
+import frameworkSettings from '../../config/settings';
 
-const { defaultDevLogLevel, defaultLogLevel, defaultPort } = settings;
+const { defaultDevLogLevel, defaultLogLevel } = frameworkSettings;
+const settings = getSettings();
+const { port: defaultPort } = settings;
 
 const options = args(rules);
 
@@ -90,16 +93,16 @@ if (options.help) {
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
-    } else if (options.update) {
-      update(options.skipPatch)
+    } else if (options.update || options.updateHard) {
+      update(options.updateHard)
         .then((): void => {
           out.info(colors.yellow.bold(`<<< 👌 Project updated successfully`));
         })
         .catch((err: Error): void => {
           out.error(err.message, { stack: err.stack });
         });
-    } else if (options.patch) {
-      patch()
+    } else if (options.patch || options.patchHard) {
+      patch(options.patchHard)
         .then((): void => {
           out.info(colors.yellow.bold(`<<< 👌 Project patched successfully`));
         })

@@ -10,14 +10,14 @@ const list: ConsoleCommand = {
     write(
       `${colors.green.bold(
         Object.keys(socketList).length.toString(),
-      )} active connections`,
+      )} active connections:\n`,
     );
     Object.keys(socketList).forEach((id): void => {
       const socket = socketList[id];
       write(
-        ` ${colors.green.bold(id)} from remote IP ${colors.red.bold(
+        `- ${colors.green.bold(id)} from remote IP ${colors.red.bold(
           socket.client.conn.remoteAddress,
-        )}`,
+        )}\n`,
       );
     });
   },

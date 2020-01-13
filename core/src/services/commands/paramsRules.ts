@@ -12,12 +12,20 @@ const rules = [
     type: Boolean,
   },
   {
+    name: 'updateHard',
+    type: Boolean,
+  },
+  {
     name: 'version',
     alias: 'v',
     type: Boolean,
   },
   {
     name: 'patch',
+    type: Boolean,
+  },
+  {
+    name: 'patchHard',
     type: Boolean,
   },
   {
@@ -40,10 +48,6 @@ const rules = [
     name: 'frameworkLogLevel',
     alias: 'f',
     type: String,
-  },
-  {
-    name: 'skipPatch',
-    type: Boolean,
   },
 ];
 
