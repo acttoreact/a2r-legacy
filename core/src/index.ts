@@ -1,5 +1,7 @@
 import { Settings as A2RSettings } from './model/settings';
 import frameworkSettings from './config/settings';
+import { APIModule } from './model/api';
+import { getAPI } from './services/api/apiServer';
 
 export type Settings = Partial<A2RSettings>;
 
@@ -19,5 +21,10 @@ export const applySettings = <SettingsType>(
   };
   return settings as Readonly<A2RSettings & SettingsType>;
 };
+
+export const getModule = (methodName: string): APIModule => {
+  const api = getAPI();
+  return api[methodName];
+}
 
 export { MethodCall, SocketMessage } from './model/sockets';

@@ -43,7 +43,7 @@ const getInternalImports = (): string => [
   `import * as model from '../${modelPath}';`,
   `import socket from './socket';`,
   `import { MethodCall, SocketMessage } from '../dist/';`,
-  `import { getModule } from '../dist/services/api';`
+  `import { getModule } from 'a2r';`
 ].join('\n');
 
 const build = async (): Promise<string> => {
