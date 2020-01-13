@@ -6,13 +6,13 @@ import out from '../util/out';
 import getFrameworkPath from './getFrameworkPath';
 import getProjectPath from './getProjectPath';
 import packageSetup from './packageSetup';
-import copyModelContents from './copyModelContents';
+import copyTemplateContents from './copyModelContents';
 
 import settings from '../config/settings';
 
 const { boilerplatePath } = settings;
 
-export default async (): Promise<void> => {
+export default async (hard = false): Promise<void> => {
   out.info(colors.yellow.bold(`>>> Patching project for ${colors.magenta('A2R')} Framework`));
 
   const modulePath = await getFrameworkPath();
@@ -26,5 +26,5 @@ export default async (): Promise<void> => {
 
   await packageSetup();
   await exec('npm', 'install');
-  await copyModelContents(modelPath, projectPath);
+  await copyTemplateContents(modelPath, projectPath, hard);
 };

@@ -51,18 +51,6 @@ export interface FrameworkSettings {
    * @memberof FrameworkSettings
    */
   modelPath: string;
-  /**
-   * Files containing modules that will be shared between server/core side and client side
-   * @type {string[]}
-   * @memberof FrameworkSettings
-   */
-  sharedModelFiles: string[];
-  /**
-   * Name given to the file that will import/export shared files from `sharedModelFiles` setting
-   * @type {string}
-   * @memberof FrameworkSettings
-   */
-  sharedModelFileName: string;
 };
 
 /**

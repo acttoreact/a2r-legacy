@@ -11,7 +11,7 @@ import {
   fileName,
   fullPath,
 } from '../../util/terminalStyles';
-import copyModelContents from '../../tools/copyModelContents';
+import copyTemplateContents from '../../tools/copyModelContents';
 import ensureNpmInit from '../../tools/ensureNpmInit';
 import packageSetup from '../../tools/packageSetup';
 
@@ -36,7 +36,7 @@ const init = async (projectPath: string = process.cwd()): Promise<void> => {
   out.verbose(`Ensuring npm is initialized in path ${fullPath(projectPath)}`);
   await ensureNpmInit(projectPath);
   out.verbose(`Copying model contents from path ${fullPath(modelPath)}`);
-  await copyModelContents(modelPath, projectPath);
+  await copyTemplateContents(modelPath, projectPath);
   out.verbose(colors.yellow.bold('Model contents copied'));
   await packageSetup();
   out.verbose(

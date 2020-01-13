@@ -1,3 +1,12 @@
-const settings = {};
+import { applySettings, Settings } from 'a2r';
 
-export default settings;
+interface ProjectSettings extends Settings {
+  mySettingKey: string;
+}
+
+const settings: ProjectSettings = {
+  mySettingKey: 'mySettingValue',
+  port: 9000,
+};
+
+export default applySettings<ProjectSettings>(settings);

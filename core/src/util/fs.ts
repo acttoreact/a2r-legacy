@@ -1,6 +1,7 @@
 import fs from 'fs';
 import originalRimraf from 'rimraf';
 import util from 'util';
+import touch from 'touch';
 
 const copyFile = util.promisify(fs.copyFile);
 const exists = util.promisify(fs.exists);
@@ -10,12 +11,13 @@ const readDir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 const rimraf = util.promisify(originalRimraf);
 const rmDir = util.promisify(fs.rmdir);
+const symlink = util.promisify(fs.symlink);
 const unlink = util.promisify(fs.unlink);
 const writeFile = util.promisify(fs.writeFile);
 
 /**
  * Empties given folder by removing it and creating it again
- * 
+ *
  * @param {string} folderPath Folder path to be emptied
  */
 const emptyFolder = async (folderPath: string): Promise<void> => {
@@ -28,11 +30,11 @@ const emptyFolder = async (folderPath: string): Promise<void> => {
 
 /**
  * Empties all given folders by removing it and creating it again
- * 
+ *
  * @param {string[]} folderPaths Folders paths to be emptied
  */
 const emptyFolders = async (folderPaths: string[]): Promise<void> => {
-  await Promise.all(folderPaths.map((folderPath) => emptyFolder(folderPath)));
+  await Promise.all(folderPaths.map(folderPath => emptyFolder(folderPath)));
 };
 
 /**
@@ -74,6 +76,23 @@ const isFile = async (path: string, stats?: fs.Stats | undefined): Promise<boole
   return false;
 };
 
+/**
+ * Touches file.
+ * Throws an exception if something goes wrong.
+ * 
+ * @param {string} path File path to touch
+ */
+const touchFile = (path: string): Promise<void> =>
+  new Promise((resolve, reject) => {
+    touch(path, err => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
+  });
+
 export default {
   copyFile,
   emptyFolder,
@@ -87,6 +106,8 @@ export default {
   rimraf,
   readDir,
   readFile,
+  symlink,
+  touchFile,
   unlink,
   writeFile,
 };

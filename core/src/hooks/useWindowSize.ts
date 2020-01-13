@@ -19,11 +19,10 @@ const useWindowSize = (): Size => {
     });
   };
   useEffect(() => {
-    const internalOnResize = onResize;
-    window.addEventListener('resize', internalOnResize);
+    window.addEventListener('resize', onResize);
     onResize();
     return (): void => {
-      window.removeEventListener('resize', internalOnResize);
+      window.removeEventListener('resize', onResize);
     };
   }, []);
 

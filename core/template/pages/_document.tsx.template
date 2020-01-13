@@ -1,8 +1,8 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-/* eslint-disable  class-methods-use-this */
+import React from 'a2r/react';
 import Document, { DocumentContext, Html, Head, Main, NextScript } from 'a2r/document';
 import { ServerStyleSheet } from 'a2r/styled-components';
-import React, { Fragment } from 'a2r/react';
 
 export default class MyDocument extends Document {
   public static async getInitialProps(ctx: DocumentContext): Promise<any> {
@@ -19,10 +19,10 @@ export default class MyDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <Fragment>
+          <>
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </Fragment>
+          </>
         ),
       };
     } finally {
@@ -34,6 +34,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="viewport" content="width=device-width" />
           <link rel="stylesheet" type="text/css" href="/css/reset.css" />
           <link rel="stylesheet" type="text/css" href="/css/default.css" />
         </Head>

@@ -2,16 +2,12 @@ import path from 'path';
 
 import fs from '../../util/fs';
 
-const internalImports = [
-  './a2r'
-]
-
 const getImports = async (
   mainPath: string,
   fromPath?: string,
   recursive = true,
 ): Promise<string[]> => {
-  const res = [...internalImports];
+  const res = new Array<string>();
   const contents = await fs.readDir(mainPath, { withFileTypes: true });
   const subFolders = [];
   for (let i = 0, l = contents.length; i < l; i += 1) {

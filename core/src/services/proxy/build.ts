@@ -39,10 +39,14 @@ const getDocs = (mod: APIModule): string => {
   return '';
 };
 
-const getModelImport = (): string => `import * as model from '../${modelPath}';`;
-const getSocketImport = (): string => `import socket from './socket';`;
+const getInternalImports = (): string => [
+  `import * as model from '../${modelPath}';`,
+  `import socket from './socket';`,
+  `import { MethodCall, SocketMessage } from '../dist/';`,
+  `import { getModule } from '../dist/services/api';`
+].join('\n');
 
-const build = async (): Promise<void> => {
+const build = async (): Promise<string> => {
   const frameworkPath = await getFrameworkPath();
   const filePath = path.resolve(frameworkPath, 'api', 'index.ts');
   out.verbose(`Building Client API at ${fullPath(filePath)}`);
@@ -82,8 +86,7 @@ const build = async (): Promise<void> => {
   out.verbose(`API Object content:\n${getApiObjectText(apiObject)}`);
   const content = [
     getImports(printer, sourceFile, fileDir, packagesImports),
-    getModelImport(),
-    getSocketImport(),
+    getInternalImports(),
     getMethodWrapper(),
     ...methods,
     getApiObjectText(apiObject),
@@ -93,6 +96,7 @@ const build = async (): Promise<void> => {
   await fs.writeFile(filePath, content);
   delete require.cache[filePath];
   out.verbose('Client API Built!');
+  return filePath;
 };
 
 export default build;

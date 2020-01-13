@@ -1,0 +1,52 @@
+/**
+ * === A2R Framework © 2019 ===
+ * In addition to our reset.css, this is our recommended default styles sheet.
+ * These are our basic opinionated rules. Feel free to edit and change anything.
+ */
+
+/* FONT FAMILY */
+
+body {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+/* CHROME AUTOFILL */
+
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  -webkit-text-fill-color: #000;
+}
+
+/* SELECTION */
+
+*::selection {
+  background: #e4e4e4;
+}
+
+/* SCROLLBARS */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  cursor: pointer;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3e2b99;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  * {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-scrollbar-highlight-color: #fff;
+    -ms-scrollbar-arrow-color: #3e2b99;
+    -ms-scrollbar-face-color: #3e2b99;
+  }
+}

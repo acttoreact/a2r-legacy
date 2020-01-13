@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -13,11 +14,21 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": false,
+    "plugins": [
+      {
+        "transform": "typescript-plugin-styled-components",
+        "type": "config",
+        "displayName": true,
+        "minify": true,
+        "ssr": true
+      }
+    ],
+    "preserveConstEnums": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "strict": false,
-    "target": "es5"
+    "strict": true,
+    "target": "esnext"
   },
   "exclude": [
     "api",

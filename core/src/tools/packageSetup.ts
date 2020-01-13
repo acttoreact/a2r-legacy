@@ -1,6 +1,10 @@
 import getCurrentA2RPackageInfo from './getCurrentA2RPackageInfo';
 import getCurrentProjectInfo, { updateCurrentProjectPackageInfo } from './getCurrentProjectInfo';
 
+import settings from '../config/settings';
+
+const { minNodeVersion } = settings;
+
 const packageSetup = async (): Promise<void> => {
   const parsedPackage = await getCurrentProjectInfo();
   const parsedA2RPackage = await getCurrentA2RPackageInfo();
@@ -17,6 +21,9 @@ const packageSetup = async (): Promise<void> => {
 
   const finalPackage = {
     ...parsedPackage,
+    engines: {
+      node: `>=${minNodeVersion}`,
+    },
     dependencies: {
       a2r: `^${parsedA2RPackage.version}`,
       ...parsedPackage.dependencies,
@@ -26,8 +33,8 @@ const packageSetup = async (): Promise<void> => {
       ...parsedPackage.scripts,
     },
     devDependencies: {
-      ...parsedA2RPackage.devDependencies,
       ...parsedPackage.devDependencies,
+      ...parsedA2RPackage.devDependencies,
     },
   };
 

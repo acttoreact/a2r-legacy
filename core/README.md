@@ -22,15 +22,22 @@
 
 - [How to use](#how-to-use)
   - [Pre-Requisites](#pre-requisites)
+  - [Recommendations](#recommendations)
   - [Setup](#setup)
   - [Work](#work)
   - [Update](#update)
+- [Settings](#settings)
+  - [Initial setup](#initial-setup)
 
 ## How to use
 
 ### Pre-Requisites
 
-- [Node.js]([https://](https://nodejs.org/)): v10.10 or higher.
+- [**Node.js**](https://nodejs.org/): v10.10 or higher. If you have any problem related with Node.js version, we recommend you to use [nvm](../docs/nvm.md).
+
+### Recommendations
+
+- [VS Code](https://code.visualstudio.com/): VS Code is our recommended code editor. Some framework features are exclusive for VS Code.
 
 ### Setup
 
@@ -55,3 +62,11 @@ Update to framework's latest version:
 ```bash
 npx a2r --update
 ```
+
+## Settings
+
+### Initial setup
+
+Framework will do everything for you, but of course you can change settings anytime you want.
+We include our opinionated linter settings, our default styles, etc.
+If you are using VSCode, we have some snippets for you and also you'll see our recommended extensions when you open the marketplace.

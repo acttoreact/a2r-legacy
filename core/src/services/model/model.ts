@@ -7,7 +7,13 @@ export const addKeys = (keys: string[], filePath: string): Map<string, string> =
   return model;
 };
 
-export const removeKeys = (keys: string[]): Map<string, string> => {
+export const removeKeys = (path: string): Map<string, string> => {
+  const keys = Array.from(model.entries()).reduce((t, [key, filePath]): string[] => {
+    if (filePath === path) {
+      t.push(key);
+    }
+    return t;
+  }, new Array<string>());
   for (let i = 0, l = keys.length; i < l; i += 1) {
     model.delete(keys[i]);
   }

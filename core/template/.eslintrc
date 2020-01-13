@@ -4,7 +4,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "project": "./tsconfig.json",
+    "project": "./tsconfig.eslint.json",
     "useJSXTextNode": true
   },
   "plugins": ["@typescript-eslint"],
@@ -74,6 +74,12 @@
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": ["error"]
+      }
+    },
+    {
+      "files": ["api/**/*"],
+      "rules": {
+        "@typescript-eslint/require-await": "off"
       }
     }
   ]

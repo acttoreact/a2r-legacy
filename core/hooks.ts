@@ -1,5 +1,4 @@
-import useWindowSize from './dist/hooks/useWindowSize';
+import hooks from './dist/hooks';
 
-export default {
-  useWindowSize,
-};
+export * from './dist/hooks';
+export default hooks;

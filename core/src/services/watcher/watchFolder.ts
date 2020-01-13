@@ -54,9 +54,9 @@ const watchFolder = async (watcherOptions: WatcherOptions): Promise<void> =>
           handler(normalizedSourcePath, normalizedDestPath, eventName, eventPath, stats);
         });
         watcher.on('error', onError);
-        watcher.on('ready', async (): Promise<void> => {
+        watcher.on('ready', (): void => {
           if (onReady) {
-            await onReady(normalizedSourcePath, normalizedDestPath);
+            onReady(normalizedSourcePath, normalizedDestPath);
           }
           resolve();
         });

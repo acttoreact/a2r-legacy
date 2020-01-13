@@ -14,6 +14,9 @@ import importModule from './importModule';
 import updateModule from './updateModule';
 import disposeModule from './disposeModule';
 import { setupApi } from '.';
+import { getSettings } from '../..';
+import getProjectPath from '../../tools/getProjectPath';
+import touchTsConfig from '../../tools/touchTsConfig';
 
 const watcher = `${watcherOnLogs} (API)`;
 const sourceDir = 'api';
@@ -24,6 +27,22 @@ let ready = false;
 
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
+
+  const settings = getSettings();
+  const { apiDestinationPaths } = settings;
+  const destinationPaths = new Array<string>();
+  if (apiDestinationPaths && apiDestinationPaths.length) {
+    const projectPath = await getProjectPath();
+    destinationPaths.push(
+      ...apiDestinationPaths.map(p => {
+        if (path.isAbsolute(p)) {
+          return p;
+        }
+        return path.resolve(projectPath, p);
+      }),
+    );
+  }
+
   return {
     sourceDir,
     destDir,
@@ -53,6 +72,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
               out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
 
+              await touchTsConfig();
               const compilerInfo = await getModuleInfo(rootFile);
               await compileFile([rootFile], destPath);
 
@@ -66,6 +86,13 @@ const getOptions = async (): Promise<WatcherOptions> => {
                   }, new Array<string>());
                   throw Error(`${errors.length > 1 ? '\n- ' : ''}${errors.join('\n- ')}`);
                 } else {
+                  await Promise.all(
+                    destinationPaths.map(async p => {
+                      const dest = path.resolve(p, relativePath);
+                      await fs.ensureDir(path.dirname(dest));
+                      await fs.copyFile(eventPath, dest);
+                    }),
+                  );
                   const method = fileAdded ? importModule : updateModule;
                   out.verbose(
                     `${watcher}: ${
@@ -98,6 +125,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: File removed: ${eventPath}`);
               const mapDestPath = `${jsDestPath}.map`;
               const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+              await Promise.all(
+                destinationPaths.map(p => fs.unlink(path.resolve(p, relativePath))),
+              );
               await fs.unlink(jsDestPath);
               await fs.unlink(mapDestPath);
               await fs.unlink(dtsDestPath);
@@ -116,7 +146,10 @@ const getOptions = async (): Promise<WatcherOptions> => {
             path: eventPath,
             handler: async (): Promise<void> => {
               out.verbose(`${watcher}: API Folder removed: ${eventPath}`);
-              await fs.rmDir(jsDestPath);
+              await Promise.all(
+                destinationPaths.map(p => fs.rmDir(path.resolve(p, relativePath))),
+              );
+              await fs.rmDir(eventPath);
             },
             priority,
           },

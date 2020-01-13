@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 import http from 'http';
 import path from 'path';
 import io from 'socket.io';
@@ -16,7 +17,7 @@ import settings from '../../config/settings';
 const options = { path: settings.socketPath };
 
 const onDisconnect = (socket: io.Socket): void => {
-  out.verbose(colors.white.bold(`${socketsInLogs}: Disconnected ${colors.yellow.bold(socket.id)}`));
+  out.verbose(colors.white.bold(`${socketsInLogs} Disconnected ${colors.yellow.bold(socket.id)}`));
   delete socketList[socket.id];
 };
 
@@ -33,9 +34,7 @@ const setup = (httpServer: http.Server): void => {
       async (info: MethodCall): Promise<void> => {
         const { method, params, id } = info;
         out.verbose(
-          `${socketsInLogs} Message received: id ${id}, method: ${method}, params: ${params.join(
-            ', ',
-          )}`,
+          `${socketsInLogs} Message received: id ${id}, method: ${method}, params: ${params.length}`,
         );
         const apiModule = api[method];
         try {
@@ -54,5 +53,4 @@ const setup = (httpServer: http.Server): void => {
   addCommandsFromPath(commandsPath);
 };
 
-export * from '../../model/sockets';
 export default setup;

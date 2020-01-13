@@ -16,5 +16,6 @@
     "nextjs",
     "reactjs",
     "respawn"
-  ]
+  ],
+  "eslint.enable": true
 }

@@ -5,7 +5,12 @@ import fs from '../../util/fs';
 import out from '../../util/out';
 import { api as apiInLogs, fullPath } from '../../util/terminalStyles';
 import api, { apiPathKey, moduleToPathDictionary } from './api';
+import { APIModule } from '../../model/api';
 import addCommandsFromPath from '../commands/addCommandsFromPath';
+
+export const getModule = (methodName: string): APIModule => {
+  return api[methodName];
+}
 
 /**
  * Setup API needed structure and commands

@@ -7,7 +7,7 @@ import { logo } from '../util/terminalStyles';
 const help: ConsoleCommand = {
   name: 'help',
   description: 'Displays this help window',
-  onExecute: async (write): Promise<void> => {
+  onExecute: (write): void => {
     write(`${logo}\n\n`);
     write(`Commands:\n`);
 

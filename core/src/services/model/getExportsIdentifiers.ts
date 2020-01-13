@@ -43,7 +43,7 @@ const getExportsIdentifiersFromNodes = (
 };
 
 const getExportsIdentifiers = async (filePath: string): Promise<string[]> => {
-  out.verbose(`Getting module info from ${fullPath(filePath)}`);
+  out.verbose(`Getting exports identifiers info from ${fullPath(filePath)}`);
   const content = await fs.readFile(filePath, 'utf8');
   const keys = new Array<string>();
   if (content) {
