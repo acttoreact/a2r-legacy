@@ -5,6 +5,11 @@ export interface Size {
   height: number;
 }
 
+/**
+ * Returns the size of the current browser window.
+ * innerWidth as Width
+ * innerHeight as Height
+ */
 const useWindowSize = (): Size => {
   const [size, setSize] = useState<Size>({ width: 0, height: 0 });
   const onResize = (): void => {
