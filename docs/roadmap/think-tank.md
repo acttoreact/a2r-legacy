@@ -23,6 +23,12 @@ List of command that would be nice having:
 - apiMethodInfo: shows method info based on passed argument
 - avoidOpen: avoids opening project on browser
 
+## Hooks
+
+List of hooks that would be nice having:
+
+- [Request]: localStorage wrapper
+
 ## Enhancements
 
 ### Watcher
