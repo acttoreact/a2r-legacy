@@ -3,7 +3,7 @@ import { GetData, DataProvider, A2RContext} from '../../model/data';
 import { getGlobalProvider } from './globalProps';
 import { Session } from '../../model/session';
 
-let getDataProvider: DataProvider = <ReturnType>(): Promise<GetData<ReturnType>> => {
+let getDataProvider: DataProvider = <T>(): Promise<GetData<T>> => {
   throw new Error('Not implemented');
 };
 
