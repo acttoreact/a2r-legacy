@@ -3,10 +3,18 @@ import jsCookie from 'js-cookie';
 import getId from 'shortid';
 import { NextPageContext } from "next";
 
-import getCookieKey from './getCookieKey';
+import { CookieKeyProvider } from '../../model/session';
+
+let cookieKeyProvider: CookieKeyProvider = (): Promise<string> => {
+  throw new Error('Not implemented');
+}
+
+export const setCookieKeyProvider = (newProvider: CookieKeyProvider): void => {
+  cookieKeyProvider = newProvider;
+}
 
 const getSessionId = async (ctx: NextPageContext): Promise<string> => {
-  const cookieKey = await getCookieKey();
+  const cookieKey = await cookieKeyProvider();
   const header = ctx.req && ctx.req.headers && ctx.req.headers.cookie;
   const cookies = new Cookies(header);
   let sessionId = cookies.get(cookieKey);

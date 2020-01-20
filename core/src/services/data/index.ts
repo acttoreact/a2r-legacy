@@ -3,7 +3,8 @@ import { GetData, DataProvider, A2RContext} from '../../model/data';
 import { getGlobalProvider } from './globalProps';
 import { Session } from '../../model/session';
 
-let getDataProvider:DataProvider = async <ReturnType>(pathname: string): Promise<GetData<ReturnType>> => {
+// eslint-disable-next-line @typescript-eslint/require-await
+let getDataProvider: DataProvider = async <ReturnType>(): Promise<GetData<ReturnType>> => {
   throw new Error('Not implemented');
 };
 

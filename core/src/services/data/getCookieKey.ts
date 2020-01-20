@@ -1,4 +1,5 @@
 import getProjectInfo from '../../tools/getCurrentProjectInfo';
+import { setCookieKeyProvider } from './getSessionId';
 
 let cookieKey = '';
 
@@ -9,5 +10,7 @@ const getCookieKey = async (): Promise<string> => {
   }
   return cookieKey;
 };
+
+setCookieKeyProvider(getCookieKey);
 
 export default getCookieKey;
