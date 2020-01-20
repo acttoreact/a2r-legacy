@@ -3,8 +3,7 @@ import { GetData, DataProvider, A2RContext} from '../../model/data';
 import { getGlobalProvider } from './globalProps';
 import { Session } from '../../model/session';
 
-// eslint-disable-next-line @typescript-eslint/require-await
-let getDataProvider: DataProvider = async <ReturnType>(): Promise<GetData<ReturnType>> => {
+let getDataProvider: DataProvider = <ReturnType>(): Promise<GetData<ReturnType>> => {
   throw new Error('Not implemented');
 };
 
@@ -27,10 +26,6 @@ const getData = async <GlobalPropsType = {}, SessionPropsType extends Session = 
   const session: SessionPropsType | Session = {
     id: sessionId,
   };
-
-  // if (Component.getInitialProps) {
-  //   out.warn(`You should use ${method('getData')} method instead of ${method('getInitialProps')}.`);
-  // }
 
   const globalProvider = getGlobalProvider<GlobalPropsType>();
   const globalProps = globalProvider ? await globalProvider() : {};

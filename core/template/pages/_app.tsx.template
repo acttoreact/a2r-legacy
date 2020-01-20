@@ -25,6 +25,7 @@ class A2RApp extends App {
       Component,
       pageProps: { sessionId, ...props },
     } = this.props;
+
     return (
       <SessionContext.Provider value={sessionId}>
         <Component {...props} />
@@ -33,6 +34,6 @@ class A2RApp extends App {
   }
 }
 
-export const useSession = (): string => useContext(SessionContext);
+export const useSessionId = (): string => useContext(SessionContext);
 
 export default A2RApp;

@@ -2,7 +2,7 @@ import React, { Fragment } from 'a2r/react';
 import Head from 'a2r/head';
 import styled from 'a2r/styled-components';
 
-import { useSession } from './_app';
+import { useSessionId } from './_app';
 
 const H1  = styled.h1`
   color: #336;
@@ -10,8 +10,8 @@ const H1  = styled.h1`
 `;
 
 const Test = (): JSX.Element => {
-  const session = useSession();
-  console.log('session at test:', {...session});
+  const sessionId = useSessionId();
+  console.log('session id at test:', sessionId);
   return (
     <Fragment>
       <Head>
