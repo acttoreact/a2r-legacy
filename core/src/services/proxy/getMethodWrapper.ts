@@ -5,7 +5,7 @@ const getMethodWrapper = (): string => {
     console.log('on server side, executing api method directly');
     try {
       const apiModule = getModule(method);
-      return apiModule.default(method, args);
+      return apiModule.default(...args);
     } catch (ex) {
       console.log('Error loading API module at server', ex.message, ex.stack);
     }

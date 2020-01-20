@@ -1,0 +1,25 @@
+import React, { Fragment } from 'a2r/react';
+import Head from 'a2r/head';
+import styled from 'a2r/styled-components';
+
+import { useSession } from './_app';
+
+const H1  = styled.h1`
+  color: #336;
+  text-align: center;
+`;
+
+const Test = (): JSX.Element => {
+  const session = useSession();
+  console.log('session at test:', {...session});
+  return (
+    <Fragment>
+      <Head>
+        <title>Testing A2R!</title>
+      </Head>
+      <H1>Testing Styled Components</H1>
+    </Fragment>
+  );
+}
+
+export default Test;

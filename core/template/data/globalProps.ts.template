@@ -1,0 +1,13 @@
+import { registerGlobal } from 'a2r';
+
+export interface GlobalProps {
+  test: string;
+}
+
+const provider = (): GlobalProps => {
+  return {
+    test: 'test',
+  };
+}
+
+registerGlobal<GlobalProps>(provider);

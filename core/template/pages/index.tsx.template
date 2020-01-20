@@ -4,16 +4,14 @@ import styled from 'a2r/styled-components';
 
 import api from 'a2r/api';
 
-interface Props {
-  info: string;
-}
+import { Data } from '../model/data';
 
 const H1  = styled.h1`
   color: #636;
   text-align: center;
 `;
 
-const Index = (props: Props): JSX.Element => {
+const Index = (props: Data): JSX.Element => {
   useEffect(() => {
     api.ping().then((res) => {
       console.log('Ping result: ', res);
@@ -33,7 +31,7 @@ const Index = (props: Props): JSX.Element => {
   );
 };
 
-Index.getInitialProps = async (): Promise<Props> => {
+Index.getInitialProps = async (): Promise<Data> => {
   const data = await api.getData();
   return data;
 };
