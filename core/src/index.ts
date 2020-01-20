@@ -2,12 +2,13 @@ import { Settings as A2RSettings } from './model/settings';
 import frameworkSettings from './config/settings';
 import { APIModule } from './model/api';
 import { getAPI } from './services/api/apiServer';
-
+import './services/data/getDataProvider';
 export { Session } from './model/session';
 export { GetData } from './model/data';
 export { registerGlobal } from './services/data/globalProps';
 export { default as getData } from './services/data';
 export { default as getSessionId } from './services/data/getSessionId';
+
 
 export type Settings = Partial<A2RSettings>;
 

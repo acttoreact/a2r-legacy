@@ -1,7 +1,7 @@
 import path from 'path';
-
 import { GetData } from '../../model/data';
 import getProjectPath from '../../tools/getProjectPath';
+import { setDataProvider } from '.';
 
 const getDataProvider = async <ReturnType>(pathname: string): Promise<GetData<ReturnType>> => {
   const projectPath = await getProjectPath();
@@ -10,5 +10,7 @@ const getDataProvider = async <ReturnType>(pathname: string): Promise<GetData<Re
   const { getData } = component;
   return getData;
 };
+
+setDataProvider(getDataProvider);
 
 export default getDataProvider;

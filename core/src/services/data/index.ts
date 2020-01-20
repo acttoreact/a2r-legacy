@@ -1,10 +1,15 @@
 import { AppContext } from 'next/app';
-import getDataProvider from './getDataProvider';
+import { GetData, DataProvider, A2RContext} from '../../model/data';
 import { getGlobalProvider } from './globalProps';
 import { Session } from '../../model/session';
-import { A2RContext } from '../../model/data';
-// import out from '../../util/out';
-// import { method } from '../../util/terminalStyles';
+
+let getDataProvider:DataProvider = async <ReturnType>(pathname: string): Promise<GetData<ReturnType>> => {
+  throw new Error('Not implemented');
+};
+
+export const setDataProvider = (newProvider: DataProvider): void => {
+  getDataProvider = newProvider;
+}
 
 const getData = async <GlobalPropsType = {}, SessionPropsType extends Session = Session>(
   appContext: AppContext,
