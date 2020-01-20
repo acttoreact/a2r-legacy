@@ -2,9 +2,6 @@ import { Settings as A2RSettings } from './model/settings';
 import frameworkSettings from './config/settings';
 import { APIModule } from './model/api';
 import { getAPI } from './services/api/apiServer';
-import './services/data/getDataProvider';
-import './services/data/getCookieKey';
-
 export { Session } from './model/session';
 export { GetData } from './model/data';
 export { registerGlobal } from './services/data/globalProps';
