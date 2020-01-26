@@ -1,7 +1,7 @@
 const getMethodWrapper = (): string => {
   return `const methodWrapper = (method: string, ...args: any[]): Promise<any> => {
   console.log('methodWrapper', method, [...args]);
-  if (typeof window === 'undefined') {
+  if (!process.browser) {
     console.log('on server side, executing api method directly');
     try {
       const apiModule = getModule(method);
@@ -10,7 +10,7 @@ const getMethodWrapper = (): string => {
       console.log('Error loading API module at server', ex.message, ex.stack);
     }
   }
-  return new Promise<SocketMessage>((resolve, reject): void => {
+  return new Promise<any>((resolve, reject): void => {
     console.log('socket connected?', socket && socket.connected);
     if (socket) {
       if (socket.disconnected) {
@@ -40,6 +40,7 @@ const getMethodWrapper = (): string => {
       socket.emit('*', call);
     } else {
       console.error('No client socket available!');
+      reject(new Error('No client socket available!'));
     }
   });
 };`;

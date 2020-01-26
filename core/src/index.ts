@@ -2,12 +2,12 @@ import { Settings as A2RSettings } from './model/settings';
 import frameworkSettings from './config/settings';
 import { APIModule } from './model/api';
 import { getAPI } from './services/api/apiServer';
+import { setGlobalProvider } from './services/data/globalProps';
 
 export { Session } from './model/session';
 export { GetData } from './model/data';
-export { registerGlobal } from './services/data/globalProps';
-export { default as getData } from './services/data';
 export { default as getSessionId } from './services/data/getSessionId';
+export { default as getDataByServer } from './services/data/getDataByServer';
 
 export type Settings = Partial<A2RSettings>;
 
@@ -28,9 +28,17 @@ export const applySettings = <SettingsType>(
   return settings as Readonly<A2RSettings & SettingsType>;
 };
 
+export const registerGlobal = <GlobalPropsType>(
+  globalProvider: () => GlobalPropsType | Promise<GlobalPropsType>,
+): void => {
+  console.log('registerGlobal called!');
+  setGlobalProvider<GlobalPropsType>(globalProvider);
+};
+
 export const getModule = (methodName: string): APIModule => {
   const api = getAPI();
   return api[methodName];
-}
+};
 
 export { MethodCall, SocketMessage } from './model/sockets';
+export { AppData } from './model/data';

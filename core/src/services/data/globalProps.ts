@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let globalProvider: any;
 
-export const registerGlobal = <GlobalPropsType>(
+export const setGlobalProvider = <GlobalPropsType>(
   provider: () => GlobalPropsType | Promise<GlobalPropsType>,
 ): void => {
   globalProvider = provider;
@@ -12,6 +12,6 @@ export const getGlobalProvider = <GlobalPropsType>(): (() => GlobalPropsType | P
 }
 
 export default {
-  registerGlobal,
+  setGlobalProvider,
   getGlobalProvider,
 };

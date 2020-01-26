@@ -1,8 +1,10 @@
-import { getData, getSessionId } from 'a2r';
+import { getData, getSessionId, registerGlobal } from 'a2r';
 import App, { AppInitialProps, AppContext } from 'a2r/app';
 import React, { createContext, useContext } from 'a2r/react';
 
-import { GlobalProps } from '../data/globalProps';
+import { GlobalProps, provider } from '../data/globalProps';
+
+registerGlobal(provider);
 
 const SessionContext = createContext<string>('');
 

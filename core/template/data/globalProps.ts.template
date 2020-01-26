@@ -1,13 +1,9 @@
-import { registerGlobal } from 'a2r';
-
 export interface GlobalProps {
-  test: string;
+  country: string;
 }
 
-const provider = (): GlobalProps => {
+export const provider = (): GlobalProps => {
   return {
-    test: 'test',
+    country: 'es',
   };
-}
-
-registerGlobal<GlobalProps>(provider);
+};

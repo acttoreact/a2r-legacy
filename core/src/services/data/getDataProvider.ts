@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import path from 'path';
-import { GetData, DataProvider } from '../../model/data';
 import getProjectPath from '../../tools/getProjectPath';
-import { setDataProvider } from '.';
+import { setDataProvider } from './getDataByServer';
+import { BasicContext } from '../../model/data';
 
-const getDataProvider: DataProvider = async <R>(
+const getDataProvider = async (
   pathname: string,
-): Promise<GetData<R>> => {
+): Promise<(a2rContext: BasicContext) => any> => {
   const projectPath = await getProjectPath();
   const componentPath = path.resolve(
     projectPath,

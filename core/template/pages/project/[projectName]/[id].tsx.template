@@ -4,11 +4,9 @@ import Head from 'a2r/head';
 import { useRouter } from 'a2r/router';
 import { GetData } from 'a2r';
 
-interface GlobalProps {
-  country: string;
-}
+import { GlobalProps } from '../../../data/globalProps';
 
-interface TestProps extends GlobalProps {
+interface TestProps {
   userName: string;
 }
 
@@ -30,11 +28,10 @@ const Test = (): JSX.Element => {
   );
 };
 
-export const getData: GetData<TestProps> = (a2rContext) => {
-  const { session } = a2rContext;
+export const getData: GetData<TestProps, GlobalProps> = (a2rContext) => {
+  const { globalProps, session } = a2rContext;
   return {
-    ...global,
-    country: 'es',
+    globalProps,
     userName: `user_${session.id}`,
   };
 };

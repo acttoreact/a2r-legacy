@@ -11,7 +11,7 @@ let cookieKeyProvider: CookieKeyProvider = (): Promise<string> => {
 
 export const setCookieKeyProvider = (newProvider: CookieKeyProvider): void => {
   cookieKeyProvider = newProvider;
-}
+};
 
 const getSessionId = async (ctx: NextPageContext): Promise<string> => {
   const cookieKey = await cookieKeyProvider();
