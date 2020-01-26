@@ -19,7 +19,7 @@ export interface AppData {
 
 export type GetData<PageData, GlobalData, AppSession extends Session = Session> = (
   a2rContext: A2RContext<GlobalData, AppSession>,
-) => GlobalData & PageData;
+) => Promise<PageData> | PageData;
 
 export type GetDataProvider = (
   pathname: string,

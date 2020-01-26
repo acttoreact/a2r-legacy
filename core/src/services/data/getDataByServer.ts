@@ -36,7 +36,10 @@ const getDataByServer = async <GlobalProps>(
 
   return {
     sessionId,
-    data,
+    data: {
+      ...globalProps,
+      ...data,
+    },
   };
 };
 

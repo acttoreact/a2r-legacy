@@ -3,11 +3,14 @@ import fs from '../../util/fs';
 
 const getDataContent = `import generateId from 'shortid';
 import { ParsedUrlQuery } from 'querystring';
-import { AppContext } from 'a2r/app';
-import { getSessionId, getDataByServer } from 'a2r';
-import { AppData, SocketMessage, DataProviderCall } from '../dist/';
+import { getSessionId, getDataByServer, AppData, SocketMessage, DataProviderCall } from 'a2r';
+import { NextPageContext } from 'a2r/next';
 
 import socket from './socket';
+
+interface A2RSocket extends SocketIOClient.Socket {
+  sessionId: string;
+}
 
 const getDataBySocket = (
   pathname: string,
@@ -15,17 +18,18 @@ const getDataBySocket = (
 ): Promise<AppData & { data: any }> => {
   return new Promise((resolve, reject) => {
     if (socket) {
-      if (socket.disconnected) {
+      const a2rSocket = socket as A2RSocket;
+      if (a2rSocket.disconnected) {
         console.log('socket disconnected, connecting');
-        socket.connect();
+        a2rSocket.connect();
       }
       const id = generateId();
-      socket.on(id, (res: SocketMessage): void => {
-        console.log('Socket data callback', res);
-        socket.off(id);
+      a2rSocket.on(id, (res: SocketMessage): void => {
+        console.log('Socket data callback', pathname, res);
+        a2rSocket.off(id);
         if (res.o) {
           const appData = {
-            sessionId: socket.sessionId,
+            sessionId: a2rSocket.sessionId,
             data: res.d,
           };
           resolve(appData);
@@ -42,7 +46,7 @@ const getDataBySocket = (
         query,
       };
 
-      socket.emit('data', call);
+      a2rSocket.emit('data', call);
     } else {
       console.error('No client socket available!');
       reject(new Error('No client socket available!'));
@@ -50,8 +54,8 @@ const getDataBySocket = (
   });
 };
 
-const getData = async <GlobalProps>(appContext: AppContext): Promise<AppData & { data: any }> => {
-  const { ctx, router: { pathname, query } } = appContext;
+const getData = async <GlobalProps>(ctx: NextPageContext): Promise<AppData & { data: any }> => {
+  const { pathname, query } = ctx;
   if (process.browser) {
     return getDataBySocket(pathname, query);
   }

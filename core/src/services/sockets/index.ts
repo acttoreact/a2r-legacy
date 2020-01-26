@@ -76,7 +76,7 @@ const setup = (httpServer: http.Server): void => {
         const { id, pathname, query } = info;
         out.verbose(`${socketsInLogs} Data request by socket with id ${socket.id}`);
         try {
-          const data = await getDataByServer(pathname, query, socket.sessionId);
+          const { data } = await getDataByServer(pathname, query, socket.sessionId);
           socket.emit(id, { o: 1, d: data });
         } catch (ex) {
           socket.emit(id, { o: 0, e: ex.message, s: ex.stack });

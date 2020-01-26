@@ -40,5 +40,5 @@ export const getModule = (methodName: string): APIModule => {
   return api[methodName];
 };
 
-export { MethodCall, SocketMessage } from './model/sockets';
+export { MethodCall, SocketMessage, DataProviderCall } from './model/sockets';
 export { AppData } from './model/data';

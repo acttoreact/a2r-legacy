@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.5.18",
+  "version": "0.5.25",
   "description": "A2R Framework",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,6 +14,7 @@
     "hooks.ts",
     "global.d.ts",
     "link.ts",
+    "next.ts",
     "polished.ts",
     "react.ts",
     "router.ts",
