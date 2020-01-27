@@ -34,7 +34,7 @@ export interface WatcherOptions {
    * Errors handler
    * @memberof WatcherOptions
    */
-  onError: (er: Error) => void;
+  onError: (er: Error) => void | Promise<void>;
   /**
    * Method executed once internal watcher (chokidar) is ready
    * @memberof WatcherOptions
@@ -42,7 +42,7 @@ export interface WatcherOptions {
   onReady?: (
     sourcePath: string,
     destPath: string,
-  ) => {};
+  ) => void | Promise<void>;
   /**
    * Internal watcher options:
    * WatchOptions from [chokidar](https://github.com/paulmillr/chokidar#api)

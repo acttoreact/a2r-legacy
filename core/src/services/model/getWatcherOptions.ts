@@ -48,7 +48,6 @@ const getOptions = async (): Promise<WatcherOptions> => {
       out.verbose(`${watcher}: Event ${eventName} from path ${fullPath(eventPath)}`);
       const rootFile = path.relative(process.cwd(), eventPath);
       const relativePath = path.relative(sourcePath, eventPath);
-      out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
 
       const isFile = await fs.isFile(eventPath, stats);
       const fileAdded = eventName === 'add';
