@@ -5,8 +5,6 @@ import getData from 'a2r/api/getData';
 import React, { createContext, useContext } from 'react';
 import { GlobalProps, globalProvider } from '../config/data';
 
-registerGlobal(globalProvider);
-
 const SessionContext = createContext<string>('');
 
 class A2RApp extends App {
@@ -19,37 +17,29 @@ class A2RApp extends App {
       },
     };    
   }
+  public getMemoComponent() {
+    const MemoComponent = React.memo(this.props.Component);
+    return <MemoComponent {...this.props.pageProps} />;
+  }
 }
 
 export const useSessionId = (): string => useContext(SessionContext);
 
+/*--------- Client ------------*/
+
+registerGlobal(globalProvider);
 
 class MyApp extends A2RApp {
-
-  public render(): JSX.Element {    
-    const MemoComponent = React.memo(this.props.Component);
-    return (
-      <>
-        <Head>
-          <title>{this.props.pageProps.title}</title>
-        </Head>
-        <SessionContext.Provider value={this.props.pageProps.sessionId}>
-          <MemoComponent {...this.props.pageProps} />
-        </SessionContext.Provider>
-      </>
-    );
-  }
-
+  public render = () => (
+    <>
+      <Head>
+        <title>{this.props.pageProps.title}</title>
+      </Head>
+      <SessionContext.Provider value={this.props.pageProps.sessionId}>
+        {this.getMemoComponent()}
+      </SessionContext.Provider>
+    </>
+  );
 }
 
 export default MyApp;
-
-
-
-
-
-
-
-
-
-
