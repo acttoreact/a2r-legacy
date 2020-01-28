@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ParsedUrlQuery } from 'querystring';
 
-import { AppData, GetDataProvider } from '../../model/data';
-import { Session } from '../../model/session'; 
+import { AppData, GetDataProvider, A2RGlobalProps } from '../../model/data';
+import { A2RSession } from '../../model/session'; 
 import { getGlobalProvider } from './globalProps';
 
 let getDataProvider: GetDataProvider = () => {
@@ -13,16 +13,16 @@ export const setDataProvider = (newProvider: GetDataProvider): void => {
   getDataProvider = newProvider;
 }
 
-const getDataByServer = async <GlobalProps>(
+const getDataByServer = async (
   pathname: string,
   query: ParsedUrlQuery,
   sessionId: string,
 ): Promise<AppData> => {
-  const session: Session = {
+  const session: A2RSession = {
     id: sessionId,
   };
 
-  const globalPropsProvider = getGlobalProvider<GlobalProps>();
+  const globalPropsProvider = getGlobalProvider<A2RGlobalProps>();
   const globalProps = globalPropsProvider ? await globalPropsProvider() : {};
 
   const a2rContext = {

@@ -3,7 +3,7 @@ import fs from '../../util/fs';
 
 const getDataContent = `import generateId from 'shortid';
 import { ParsedUrlQuery } from 'querystring';
-import { getSessionId, getDataByServer, AppData, SocketMessage, DataProviderCall } from 'a2r';
+import { getSessionId, getDataByServer, registerGetData, AppData, SocketMessage, DataProviderCall } from 'a2r';
 import { NextPageContext } from 'a2r/next';
 
 import socket from './socket';
@@ -54,16 +54,16 @@ const getDataBySocket = (
   });
 };
 
-const getData = async <GlobalProps>(ctx: NextPageContext): Promise<AppData & { data: any }> => {
+const getData = async (ctx: NextPageContext): Promise<AppData & { data: any }> => {
   const { pathname, query } = ctx;
   if (process.browser) {
     return getDataBySocket(pathname, query);
   }
   const sessionId = await getSessionId(ctx);
-  return getDataByServer<GlobalProps>(pathname, query, sessionId);
+  return getDataByServer(pathname, query, sessionId);
 };
 
-export default getData;
+registerGetData(getData);
 `;
 
 const buildDataProvider = async (clientApiPath: string): Promise<void> => {

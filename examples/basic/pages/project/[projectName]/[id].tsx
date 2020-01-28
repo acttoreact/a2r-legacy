@@ -1,9 +1,8 @@
 import React, { Fragment } from 'a2r/react';
 import Head from 'a2r/head';
 import { useRouter } from 'a2r/router';
-import { GetPageData } from '../../../config/data';
 
-interface TestProps {
+export interface TestProps {
   userName: string;
 }
 
@@ -23,14 +22,6 @@ const Test = (): JSX.Element => {
       </div>
     </Fragment>
   );
-};
-
-export const getData: GetPageData<TestProps> = (a2rContext) => {
-  const { globalProps, session } = a2rContext;
-  return {
-    ...globalProps,
-    userName: `user_${session.id}`,
-  };
 };
 
 Test.displayName = 'Test';

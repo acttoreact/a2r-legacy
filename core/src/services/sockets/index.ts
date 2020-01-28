@@ -9,7 +9,7 @@ import Cookies from 'universal-cookie';
 
 import { socketList } from './connection';
 import { A2RSocket, MethodCall, DataProviderCall } from '../../model/sockets';
-import { Session } from '../../model/session'
+import { A2RSession } from '../../model/session'
 import out from '../../util/out';
 import api from '../api';
 import addCommandsFromPath from '../commands/addCommandsFromPath';
@@ -21,7 +21,7 @@ import settings from '../../config/settings';
 
 const options = { path: settings.socketPath };
 
-const sessions = new Map<string, Session>();
+const sessions = new Map<string, A2RSession>();
 
 const setupSession = (sessionId: string): void => {
   const session = sessions.get(sessionId);

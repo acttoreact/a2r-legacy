@@ -7,6 +7,7 @@ import out from '../../util/out';
 import fs from '../../util/fs';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import touchTsConfig from '../../tools/touchTsConfig';
+import { removeModuleCacheFromFilePath } from './cache';
 
 const sourceDir = 'data';
 const destDir = 'server';
@@ -70,6 +71,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: File removed: ${eventPath}`);
               const mapDestPath = `${jsDestPath}.map`;
               const dtsDestPath = jsDestPath.replace(/\.js$/, '.d.ts');
+              removeModuleCacheFromFilePath(jsDestPath);
               await fs.unlink(jsDestPath);
               await fs.unlink(mapDestPath);
               await fs.unlink(dtsDestPath);

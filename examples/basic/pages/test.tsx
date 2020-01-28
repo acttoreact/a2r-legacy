@@ -2,8 +2,7 @@ import React, { Fragment } from 'a2r/react';
 import Head from 'a2r/head';
 import Link from 'a2r/link';
 import styled from 'a2r/styled-components';
-
-import { useSessionId } from './_app';
+import { useSessionId } from 'a2r/hooks';
 
 const H1  = styled.h1`
   color: #336;

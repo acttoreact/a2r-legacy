@@ -34,7 +34,7 @@ export default class MyDocument extends Document<GlobalProps> {
 
   public render(): JSX.Element {
     return (
-      <Html>
+      <Html lang="es-ES">
         <Head>
           <meta name="viewport" content="width=device-width" />
           <link rel="stylesheet" type="text/css" href="/css/reset.css" />

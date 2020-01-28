@@ -1,4 +1,5 @@
 import { GetData, A2RSession, A2RGlobalProps, registerGlobal } from 'a2r';
+import 'a2r/api/getData';
 
 /**
  * App Global Props interface

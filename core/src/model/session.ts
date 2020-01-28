@@ -1,4 +1,4 @@
-export interface Session {
+export interface A2RSession {
   id: string;
 }
 
