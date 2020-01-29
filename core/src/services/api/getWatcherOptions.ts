@@ -30,8 +30,8 @@ const getOptions = async (): Promise<WatcherOptions> => {
   const settings = getSettings();
   const { apiDestinationPaths } = settings;
   const destinationPaths = new Array<string>();
+  const projectPath = await getProjectPath();
   if (apiDestinationPaths && apiDestinationPaths.length) {
-    const projectPath = await getProjectPath();
     destinationPaths.push(
       ...apiDestinationPaths.map(p => {
         if (path.isAbsolute(p)) {

@@ -15,7 +15,7 @@
     "node": ">=10.10"
   },
   "dependencies": {
-    "a2r": "^0.5.28"
+    "a2r": "^0.5.47"
   },
   "devDependencies": {
     "@types/colors": "^1.2.1",

@@ -10,10 +10,10 @@ import watchFolder from './watchFolder';
 const init = async (): Promise<void> => {
   const modelWatcherOptions = await getModelWatcherOptions();
   await watchFolder(modelWatcherOptions);
-  const dataWatcherOptions = await getDataWatcherOptions();
-  await watchFolder(dataWatcherOptions);
   const apiWatcherOptions = await getApiWatcherOptions();
   await watchFolder(apiWatcherOptions);
+  const dataWatcherOptions = await getDataWatcherOptions();
+  await watchFolder(dataWatcherOptions);
 };
 
 export default init;

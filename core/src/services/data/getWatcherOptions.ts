@@ -1,3 +1,4 @@
+import ts from 'typescript';
 import path from 'path';
 import { WatcherOptions } from '../../model/watcher';
 import { addTask, processTasks } from '../watcher/watchFolder';
@@ -8,6 +9,7 @@ import fs from '../../util/fs';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import touchTsConfig from '../../tools/touchTsConfig';
 import { removeModuleCacheFromFilePath } from './cache';
+import getProjectPath from '../../tools/getProjectPath';
 
 const sourceDir = 'data';
 const destDir = 'server';
@@ -18,6 +20,10 @@ let ready = false;
 
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
+  const projectPath = await getProjectPath();
+  const options: ts.CompilerOptions = {
+    traceResolution: true,
+  };
 
   return {
     sourceDir,
@@ -48,7 +54,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               const dataCopyPath = path.resolve(destPath, sourceDir, relativePath);
               await fs.ensureDir(path.dirname(dataCopyPath));
               await touchTsConfig();
-              await compileFile([rootFile], destPath);
+              await compileFile([rootFile], destPath, projectPath, options);
             },
             onError: (ex): void => {
               out.error(

@@ -3,7 +3,7 @@ import Link from 'a2r/link';
 import styled from 'a2r/styled-components';
 import api from 'a2r/api';
 import { transparentize } from 'a2r/polished';
-import { PageData } from '../_data/index';
+import { PageData } from '../data/index';
 
 const H1  = styled.h1`
   color: ${transparentize(0.5, '#636')};

@@ -9,4 +9,8 @@ const getData: GetPageData<PageData> = async () => {
   return {...data};
 };
 
+// const getData: GetPageData<PageData> = () => {
+//   return { info: 'test' };
+// };
+
 export default getData;

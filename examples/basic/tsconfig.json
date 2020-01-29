@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -14,6 +15,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": false,
+    "paths": {
+      "api": [
+        "node_modules/a2r/api/index.ts",
+      ]
+    },
     "plugins": [
       {
         "transform": "typescript-plugin-styled-components",

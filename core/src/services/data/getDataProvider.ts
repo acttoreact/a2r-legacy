@@ -26,7 +26,9 @@ const getDataProvider = async (
   const modulePath = await getModulePath(pathname);
   if (!moduleCache.has(pathname)) {
     const getData = await import(modulePath);
-    moduleCache.set(pathname, getData);
+    if (getData && getData.default) {
+      moduleCache.set(pathname, getData.default);
+    }
   }
   return moduleCache.get(pathname) as (a2rContext: BasicContext) => any;
 };

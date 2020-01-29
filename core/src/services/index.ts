@@ -1,5 +1,6 @@
 import colors from 'colors';
 
+import setupCompiler from './compiler/setup';
 import setupClientApi from './proxy';
 import watcher from './watcher';
 import out from '../util/out';
@@ -11,6 +12,7 @@ import out from '../util/out';
 const services = async (port: number): Promise<void> => {
   out.verbose(`Starting services...`);
   try {
+    await setupCompiler();
     await setupClientApi(port);
     await watcher();
   } catch (ex) {

@@ -1,6 +1,6 @@
 {
   "name": "a2r",
-  "version": "0.5.28",
+  "version": "0.5.47",
   "description": "A2R Framework",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -12,14 +12,14 @@
     "dynamic.ts",
     "head.ts",
     "hooks.ts",
-    "global.d.ts",
     "link.ts",
     "next.ts",
     "polished.ts",
     "react.ts",
     "router.ts",
     "shortid.ts",
-    "styled-components.ts"
+    "styled-components.ts",
+    "types/index.d.ts"
   ],
   "engines": {
     "node": ">=10"
