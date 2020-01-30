@@ -38,7 +38,7 @@ describe('Framework Compiler', (): void => {
     // await compileFile([rootFile], outDir, rootDir);
 
     const program = ts.createProgram([rootFile], {
-      // ...compileOptions,
+      ...compileOptions,
       outDir,
       rootDir,
     });
