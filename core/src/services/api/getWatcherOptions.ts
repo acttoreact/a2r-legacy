@@ -71,7 +71,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
               out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
 
-              await touchTsConfig();
+              if (fileAdded) {
+                await touchTsConfig();
+              }
               const compilerInfo = await getModuleInfo(rootFile);
               await compileFile([rootFile], destPath);
 

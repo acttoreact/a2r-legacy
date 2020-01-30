@@ -12,7 +12,7 @@ import { removeModuleCacheFromFilePath } from './cache';
 import getProjectPath from '../../tools/getProjectPath';
 
 const sourceDir = 'data';
-const destDir = 'server';
+const destDir = 'data';
 const watcher = `${watcherOnLogs} (Model)`;
 const priority = 20;
 
@@ -22,7 +22,21 @@ const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
   const projectPath = await getProjectPath();
   const options: ts.CompilerOptions = {
-    traceResolution: true,
+    allowJs: true,
+    allowSyntheticDefaultImports: true,
+    esModuleInterop: true,
+    forceConsistentCasingInFileNames: true,
+    isolatedModules: true,
+    jsx: ts.JsxEmit.Preserve,
+    module: ts.ModuleKind.CommonJS,
+    moduleResolution: ts.ModuleResolutionKind.NodeJs,
+    noEmit: false,
+    preserveConstEnums: true,
+    resolveJsonModule: true,
+    skipLibCheck: true,
+    sourceMap: true,
+    strict: true,
+    target: ts.ScriptTarget.ESNext,
   };
 
   return {
@@ -53,7 +67,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
               const dataCopyPath = path.resolve(destPath, sourceDir, relativePath);
               await fs.ensureDir(path.dirname(dataCopyPath));
-              await touchTsConfig();
+              if (fileAdded) {
+                await touchTsConfig();
+              }
               await compileFile([rootFile], destPath, projectPath, options);
             },
             onError: (ex): void => {

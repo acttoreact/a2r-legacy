@@ -19,14 +19,21 @@ const compileFile = async (
       .map((f): string => fullPath(f))
       .join(', ')} in working directory ${fullPath(process.cwd())} from rootDir ${fullPath(
       theRootDir,
-    )} to outDir ${fullPath(outDir)}`,
+    )} to outDir ${fullPath(outDir)} with options ${options}`,
   );
+  
   const program = ts.createProgram(rootFiles, {
     ...compileOptions,
     ...options,
     outDir,
     rootDir: theRootDir,
   });
+  
+  // const transformers: ts.CustomTransformers = {
+  //   before: [
+  //     () => {},
+  //   ]
+  // };
 
   const emitResult = program.emit();
   const diagnostics = [
