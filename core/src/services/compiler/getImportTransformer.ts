@@ -17,7 +17,7 @@ const visitNode = (
   transformer: ImportTransformer,
 ): ts.SourceFile | ts.Node => {
   if (ts.isStringLiteral(node) && isInsideImportDeclaration(node)) {
-    return ts.createStringLiteral(transformer(node.getText()));
+    return ts.createStringLiteral(transformer(node.text));
   }
   return node;
 };

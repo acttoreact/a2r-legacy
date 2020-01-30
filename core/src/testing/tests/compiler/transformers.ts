@@ -2,10 +2,8 @@ import ts from 'typescript';
 import path from 'path';
 
 import fs from '../../../util/fs';
-import compileOptions from '../../../services/compiler/compileOptions';
 import formatHost from '../../../services/compiler/formatHost';
 import reportDiagnostic from '../../../util/reportDiagnostic';
-import compileFile from '../../../services/compiler/index';
 import getImportTransformer, { ImportTransformer } from '../../../services/compiler/getImportTransformer';
 
 const emit = (program: ts.Program, transformers?: ts.CustomTransformers): void => {
@@ -26,7 +24,7 @@ const emit = (program: ts.Program, transformers?: ts.CustomTransformers): void =
 describe('Framework Compiler', (): void => {
   test('Should transform framework imports to relative imports', async (): Promise<void> => {
     const fileName = 'frameworkImport';
-    const rootDir = path.resolve(__dirname, '../../../');
+    const rootDir = path.resolve(__dirname, '../../../../');
     const dataDir = path.resolve(__dirname, '../../data');
     const outDir = path.resolve(__dirname, '../../out');
     const filePath = path.resolve(dataDir, `${fileName}.ts`);
@@ -35,16 +33,17 @@ describe('Framework Compiler', (): void => {
     const fileExists = await fs.exists(filePath);
     expect(fileExists).toBe(true);
 
-    // await compileFile([rootFile], outDir, rootDir);
-
     const program = ts.createProgram([rootFile], {
-      ...compileOptions,
+      module: ts.ModuleKind.CommonJS,
+      moduleResolution: ts.ModuleResolutionKind.NodeJs,
+      target: ts.ScriptTarget.ES2017,
+      skipLibCheck: true,
       outDir,
       rootDir,
     });
 
     const importTransformer: ImportTransformer = (originalImport) =>
-      originalImport.replace('a2r', 'transformed');
+      originalImport.replace('colors', "transformed");
 
     const transformers: ts.CustomTransformers = {
       before: [getImportTransformer(importTransformer)],
@@ -52,12 +51,13 @@ describe('Framework Compiler', (): void => {
     
     emit(program, transformers);
 
-    const outPath = path.resolve(outDir, `${fileName}.js`);
+    const outPath = path.resolve(outDir, rootFile.replace(/ts$/, 'js'));
+    console.log(outPath);
     const outputExists = await fs.exists(outPath);
     expect(outputExists).toBe(true);
 
     const content = await fs.readFile(outPath, 'utf8');
-    expect(content.indexOf('a2r/api')).toBe(-1);
-    expect(content.indexOf('transformed/api')).toBeGreaterThan(-1);
+    expect(content.indexOf(`'colors'`)).toBe(-1);
+    expect(content.indexOf('transformed')).toBeGreaterThan(-1);
   });
 });

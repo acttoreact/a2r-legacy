@@ -12,6 +12,7 @@ const compileFile = async (
   outDir: string,
   rootDir?: string,
   options: ts.CompilerOptions = {},
+  transformers?: ts.CustomTransformers,
 ): Promise<void> => {
   const theRootDir = rootDir || (await getProjectPath());
   out.verbose(
@@ -28,14 +29,8 @@ const compileFile = async (
     outDir,
     rootDir: theRootDir,
   });
-  
-  // const transformers: ts.CustomTransformers = {
-  //   before: [
-  //     () => {},
-  //   ]
-  // };
 
-  const emitResult = program.emit();
+  const emitResult = program.emit(undefined, undefined, undefined, undefined, transformers);
   const diagnostics = [
     ...ts.getPreEmitDiagnostics(program),
     ...emitResult.diagnostics,

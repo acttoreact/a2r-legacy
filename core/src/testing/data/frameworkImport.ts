@@ -1,10 +1,3 @@
-import api from 'a2r/api';
+import { green } from 'colors';
 
-export interface PageData {}
-
-const getData: PageData = async () => {
-  const data = await api.getData();
-  return {...data};
-};
-
-export default getData;
+console.log(green('test'));

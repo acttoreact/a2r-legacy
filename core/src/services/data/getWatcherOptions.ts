@@ -10,6 +10,7 @@ import getFrameworkPath from '../../tools/getFrameworkPath';
 import touchTsConfig from '../../tools/touchTsConfig';
 import { removeModuleCacheFromFilePath } from './cache';
 import getProjectPath from '../../tools/getProjectPath';
+import getImportTransformer, { ImportTransformer } from '../compiler/getImportTransformer';
 
 const sourceDir = 'data';
 const destDir = 'data';
@@ -18,26 +19,16 @@ const priority = 20;
 
 let ready = false;
 
+const importTransformer: ImportTransformer = (originalImport) =>
+  originalImport.replace('a2r/', '../../');
+
+const transformers: ts.CustomTransformers = {
+  before: [getImportTransformer(importTransformer)],
+};
+
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
   const projectPath = await getProjectPath();
-  const options: ts.CompilerOptions = {
-    allowJs: true,
-    allowSyntheticDefaultImports: true,
-    esModuleInterop: true,
-    forceConsistentCasingInFileNames: true,
-    isolatedModules: true,
-    jsx: ts.JsxEmit.Preserve,
-    module: ts.ModuleKind.CommonJS,
-    moduleResolution: ts.ModuleResolutionKind.NodeJs,
-    noEmit: false,
-    preserveConstEnums: true,
-    resolveJsonModule: true,
-    skipLibCheck: true,
-    sourceMap: true,
-    strict: true,
-    target: ts.ScriptTarget.ESNext,
-  };
 
   return {
     sourceDir,
@@ -70,7 +61,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               if (fileAdded) {
                 await touchTsConfig();
               }
-              await compileFile([rootFile], destPath, projectPath, options);
+              await compileFile([rootFile], destPath, projectPath, {}, transformers);
             },
             onError: (ex): void => {
               out.error(
