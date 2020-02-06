@@ -1,0 +1,41 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { Fragment } from 'a2r/react';
+import Head from 'a2r/head';
+import { useRouter } from 'a2r/router';
+import { GetData } from 'a2r';
+
+import { GlobalProps } from '../../../data/globalProps';
+
+interface TestProps {
+  userName: string;
+}
+
+const Test = (): JSX.Element => {
+  const router = useRouter();
+  const { projectName, id } = router.query;
+  return (
+    <Fragment>
+      <Head>
+        <title>Project / User</title>
+      </Head>
+      <div>
+        Project: {projectName}
+        <br />
+        User ID: {id}
+        <br />
+      </div>
+    </Fragment>
+  );
+};
+
+export const getData: GetData<TestProps, GlobalProps> = (a2rContext) => {
+  const { globalProps, session } = a2rContext;
+  return {
+    globalProps,
+    userName: `user_${session.id}`,
+  };
+};
+
+Test.displayName = 'Test';
+
+export default Test;

@@ -1,0 +1,41 @@
+import { getData, getSessionId, registerGlobal } from 'a2r';
+import App, { AppInitialProps, AppContext } from 'a2r/app';
+import React, { createContext, useContext } from 'a2r/react';
+
+import { GlobalProps, provider } from '../data/globalProps';
+
+registerGlobal(provider);
+
+const SessionContext = createContext<string>('');
+
+class A2RApp extends App {
+  public static async getInitialProps(appContext: AppContext): Promise<AppInitialProps> {
+    const { ctx } = appContext;
+    const sessionId = await getSessionId(ctx);
+    const data = await getData<GlobalProps>(appContext, sessionId);
+
+    return {
+      pageProps: {
+        sessionId,
+        data,
+      },
+    };
+  }
+
+  public render(): JSX.Element {
+    const {
+      Component,
+      pageProps: { sessionId, ...props },
+    } = this.props;
+
+    return (
+      <SessionContext.Provider value={sessionId}>
+        <Component {...props} />
+      </SessionContext.Provider>
+    );
+  }
+}
+
+export const useSessionId = (): string => useContext(SessionContext);
+
+export default A2RApp;

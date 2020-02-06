@@ -27,12 +27,11 @@ let ready = false;
 
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
-
   const settings = getSettings();
   const { apiDestinationPaths } = settings;
   const destinationPaths = new Array<string>();
+  const projectPath = await getProjectPath();
   if (apiDestinationPaths && apiDestinationPaths.length) {
-    const projectPath = await getProjectPath();
     destinationPaths.push(
       ...apiDestinationPaths.map(p => {
         if (path.isAbsolute(p)) {
@@ -72,7 +71,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
               out.verbose(`${watcher}: js file destination path => ${fullPath(jsDestPath)}`);
 
-              await touchTsConfig();
+              if (fileAdded) {
+                await touchTsConfig();
+              }
               const compilerInfo = await getModuleInfo(rootFile);
               await compileFile([rootFile], destPath);
 
@@ -141,6 +142,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
       }
 
       if (folderRemoved) {
+        const folderPath = path.join(modulePath, destDir, sourceDir, relativePath);
         addTask(
           {
             path: eventPath,
@@ -149,7 +151,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
               await Promise.all(
                 destinationPaths.map(p => fs.rmDir(path.resolve(p, relativePath))),
               );
-              await fs.rmDir(eventPath);
+              await fs.rmDir(folderPath);
             },
             priority,
           },
@@ -179,7 +181,7 @@ const getOptions = async (): Promise<WatcherOptions> => {
       });
     },
     onError: (ex): void => {
-      out.error(`${watcher} ${api} Error: ${ex.message}\n${ex.stack}`);
+      out.error(`${watcher} Error: ${ex.message}\n${ex.stack}`);
     },
   };
 };

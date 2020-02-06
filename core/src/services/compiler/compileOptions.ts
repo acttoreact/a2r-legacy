@@ -1,7 +1,9 @@
 import ts from 'typescript';
 
-const compileOptions = {
+const compileOptions: ts.CompilerOptions = {
   declaration: true,
+  esModuleInterop: true,
+  isolatedModules: true,
   module: ts.ModuleKind.CommonJS,
   moduleResolution: ts.ModuleResolutionKind.NodeJs,
   skipLibCheck: true,

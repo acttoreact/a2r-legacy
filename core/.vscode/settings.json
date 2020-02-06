@@ -12,7 +12,9 @@
     "*.gitignore.template": "ignore"
   },
   "cSpell.words": [
+    "Interop",
     "estree",
+    "middlewares",
     "nextjs",
     "reactjs",
     "respawn"

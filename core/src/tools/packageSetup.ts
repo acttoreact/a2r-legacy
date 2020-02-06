@@ -30,6 +30,8 @@ const packageSetup = async (): Promise<void> => {
     },
     scripts: {
       dev: 'a2r --dev --port 9000',
+      build: 'next build',
+      'check-build': 'NODE_ENV=production next build',
       ...parsedPackage.scripts,
     },
     devDependencies: {

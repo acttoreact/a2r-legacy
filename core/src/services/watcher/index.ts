@@ -1,5 +1,6 @@
 import getApiWatcherOptions from '../api/getWatcherOptions';
 import getModelWatcherOptions from '../model/getWatcherOptions';
+import getDataWatcherOptions from '../data/getWatcherOptions';
 import watchFolder from './watchFolder';
 
 /**
@@ -11,6 +12,8 @@ const init = async (): Promise<void> => {
   await watchFolder(modelWatcherOptions);
   const apiWatcherOptions = await getApiWatcherOptions();
   await watchFolder(apiWatcherOptions);
+  const dataWatcherOptions = await getDataWatcherOptions();
+  await watchFolder(dataWatcherOptions);
 };
 
 export default init;

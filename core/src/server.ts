@@ -4,6 +4,9 @@ import colors from 'colors';
 import next from 'next';
 import open from 'open';
 
+import './services/data/getDataProvider';
+import './services/data/getCookieKey';
+
 import out from './util/out';
 import services from './services';
 import sockets from './services/sockets';

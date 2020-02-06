@@ -48,7 +48,6 @@ const getOptions = async (): Promise<WatcherOptions> => {
       out.verbose(`${watcher}: Event ${eventName} from path ${fullPath(eventPath)}`);
       const rootFile = path.relative(process.cwd(), eventPath);
       const relativePath = path.relative(sourcePath, eventPath);
-      out.verbose(`${watcher}: file relative path => ${fullPath(relativePath)}`);
 
       const isFile = await fs.isFile(eventPath, stats);
       const fileAdded = eventName === 'add';
@@ -65,7 +64,9 @@ const getOptions = async (): Promise<WatcherOptions> => {
               const modelKeys = await getExportsIdentifiers(rootFile);
               const modelCopyPath = path.resolve(destPath, modelPath, relativePath);
               await fs.ensureDir(path.dirname(modelCopyPath));
-              await touchTsConfig();
+              if (fileAdded) {
+                await touchTsConfig();
+              }
               out.verbose(
                 `${watcher}: Copying file ${fullPath(eventPath)} to ${fullPath(modelCopyPath)}`,
               );
