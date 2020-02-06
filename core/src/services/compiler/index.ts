@@ -12,6 +12,7 @@ const compileFile = async (
   outDir: string,
   rootDir?: string,
   options: ts.CompilerOptions = {},
+  transformers?: ts.CustomTransformers,
 ): Promise<void> => {
   const theRootDir = rootDir || (await getProjectPath());
   out.verbose(
@@ -19,8 +20,9 @@ const compileFile = async (
       .map((f): string => fullPath(f))
       .join(', ')} in working directory ${fullPath(process.cwd())} from rootDir ${fullPath(
       theRootDir,
-    )} to outDir ${fullPath(outDir)}`,
+    )} to outDir ${fullPath(outDir)} with options ${options}`,
   );
+  
   const program = ts.createProgram(rootFiles, {
     ...compileOptions,
     ...options,
@@ -28,7 +30,7 @@ const compileFile = async (
     rootDir: theRootDir,
   });
 
-  const emitResult = program.emit();
+  const emitResult = program.emit(undefined, undefined, undefined, undefined, transformers);
   const diagnostics = [
     ...ts.getPreEmitDiagnostics(program),
     ...emitResult.diagnostics,

@@ -10,20 +10,25 @@ import getFrameworkPath from '../../tools/getFrameworkPath';
 import touchTsConfig from '../../tools/touchTsConfig';
 import { removeModuleCacheFromFilePath } from './cache';
 import getProjectPath from '../../tools/getProjectPath';
+import getImportTransformer, { ImportTransformer } from '../compiler/getImportTransformer';
 
 const sourceDir = 'data';
-const destDir = 'server';
+const destDir = 'data';
 const watcher = `${watcherOnLogs} (Model)`;
 const priority = 20;
 
 let ready = false;
 
+const importTransformer: ImportTransformer = (originalImport) =>
+  originalImport.replace('a2r/', '../../');
+
+const transformers: ts.CustomTransformers = {
+  before: [getImportTransformer(importTransformer)],
+};
+
 const getOptions = async (): Promise<WatcherOptions> => {
   const modulePath = await getFrameworkPath();
   const projectPath = await getProjectPath();
-  const options: ts.CompilerOptions = {
-    traceResolution: true,
-  };
 
   return {
     sourceDir,
@@ -53,8 +58,10 @@ const getOptions = async (): Promise<WatcherOptions> => {
               out.verbose(`${watcher}: File ${fileAdded ? 'added' : 'changed'}: ${eventPath}`);
               const dataCopyPath = path.resolve(destPath, sourceDir, relativePath);
               await fs.ensureDir(path.dirname(dataCopyPath));
-              await touchTsConfig();
-              await compileFile([rootFile], destPath, projectPath, options);
+              if (fileAdded) {
+                await touchTsConfig();
+              }
+              await compileFile([rootFile], destPath, projectPath, {}, transformers);
             },
             onError: (ex): void => {
               out.error(

@@ -1,15 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import path from 'path';
 import fs from '../../util/fs';
+// import out from '../../util/out';
 import getFrameworkPath from '../../tools/getFrameworkPath';
 import { setDataProvider } from './getDataByServer';
 import { BasicContext } from '../../model/data';
 import { pathCache, moduleCache } from './cache';
+// import { fullPath } from '../../util/terminalStyles';
 
 const getModulePath = async (pathname: string): Promise<string> => {
   if (!pathCache.has(pathname)) {
     const frameworkPath = await getFrameworkPath();
-    const dataPath = path.resolve(frameworkPath, 'server', 'data', pathname.slice(1));
+    const dataPath = path.resolve(frameworkPath, 'data', 'data', pathname.slice(1));
     let modulePath = `${dataPath}.js`;
     const isFile = await fs.isFile(modulePath);
     if (!isFile) {
@@ -29,6 +31,15 @@ const getDataProvider = async (
     if (getData && getData.default) {
       moduleCache.set(pathname, getData.default);
     }
+    // try {
+    //   const getData = await import(modulePath);
+    //   if (getData && getData.default) {
+    //     moduleCache.set(pathname, getData.default);
+    //   }
+    // } catch (ex) {
+    //   out.warn(`Couldn't find page data provider at ${fullPath(modulePath)}`);
+    //   return (): {} => ({});
+    // }
   }
   return moduleCache.get(pathname) as (a2rContext: BasicContext) => any;
 };
