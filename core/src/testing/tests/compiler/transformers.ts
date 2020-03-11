@@ -48,7 +48,7 @@ describe('Framework Compiler', (): void => {
     const transformers: ts.CustomTransformers = {
       before: [getImportTransformer(importTransformer)],
     };
-    
+
     emit(program, transformers);
 
     const outPath = path.resolve(outDir, rootFile.replace(/ts$/, 'js'));
