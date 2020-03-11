@@ -19,8 +19,11 @@ const priority = 20;
 
 let ready = false;
 
-const importTransformer: ImportTransformer = (originalImport) =>
-  originalImport.replace('a2r/', '../../');
+const importTransformer: ImportTransformer = (originalImport) => {
+  const res = originalImport.replace('a2r/', '../../');
+  out.verbose(`importTransformer: "${originalImport}" => "${res}"`);
+  return res;
+}
 
 const transformers: ts.CustomTransformers = {
   before: [getImportTransformer(importTransformer)],
