@@ -32,7 +32,7 @@
 
 ### Pre-Requisites
 
-- [**Node.js**](https://nodejs.org/): v10.10 or higher. If you have any problem related with Node.js version, we recommend you to use [nvm](./nvm.md).
+- [**Node.js**](https://nodejs.org/): v10.10 or higher. If you have any problem related with Node.js version, we recommend you to use [nvm](/docs/nvm.md).
 
 ### Recommendations
 
